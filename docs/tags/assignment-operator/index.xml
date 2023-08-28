@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>assignment operator on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/assignment-operator/</link>
+    <description>Recent content in assignment operator on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 19 Jul 2023 15:52:27 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/assignment-operator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4.赋值运算符</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/4.assignment-operator/</link>
+      <pubDate>Wed, 19 Jul 2023 15:52:27 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/4.assignment-operator/</guid>
+      <description>赋值运算符和赋值表达式#赋值运算时BDL中常见运算，一般用来改变变量的值。 BDL中提供了赋值运算符号let =，和函数返回值赋值returning两种估值方式。
+赋值表达式#let = 赋值 之前我们已经多次使用let a = 1对变量进行赋值，我们可以看到使用这种方式赋值的方式，=左边是我们要赋值的变量，且只有一个。 =右边是我们要赋予的值。
+let a = a + 1之前我们还是用过这样的方式进行求和，=右边作为一个整体计算结果之后，再赋值给=左边。
+returning 函数返回值赋值 函数之后会详细讲解，我们现使用我们已经用过的sfmt()函数作为说明。
+运行以下代码：
+database ds define a,b,c integer MAIN define s string call to_day() returning s display s sleep 1 --这里是暂停一秒的意思，防止时间太接近而无法区分 let s = to_day() display s END MAIN function to_day() return current end function 我们可以看到以下内容，s的值被赋值了两次。
+2023-07-19 16:03:11.275 2023-07-19 16:03:12.276 这说明使用let s = 函数()和call 函数() returning s两种方式都可以赋值给s，那么为什么还要使用第二种方式呢。</description>
+    </item>
+    
+  </channel>
+</rss>

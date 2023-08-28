@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="输出-处理-输出&ndash;这就是程序#工厂的生产车间生产出来的产品是最终的输出。
+比如某药厂生产的保健药，号称是经历了80多道工序。 这些工序，当然是从输入原材料开始，每道工序处理-件事情，最终生产出包装精美的保健药品。
+第一道工序，清洗，输人的是刚刚采摘下来的药材，其中，有不少的烂叶子、烂根。 清洗工序处理完毕后，输出来的是干净的有用的药材。
+第二道工序，榨汁，输人的是干净有用的药材，榨汁工序处理时，添加纯净水，榨出药汁。 接着是萃取工序，将药汁中的有用的部分苹取.来&hellip;.80多道工序就这样一一处理完毕， 保健 药就制作完毕。
+从进场时的原材料，到最终出产的保健药，就是一个“输入一处理一输出” 的过程。 深入到药厂中的处理部分，80多道工序，每个工序也是一个“输入- -处理一输出”的过程。 没有输入，就没有处理的素材，也就没有输出。
+程序就是这样，根据输人进行不同的处理，输入不同，处理结果不同，这就是程序。 没有输出的程序是没有用的;没有输入的程序，缺乏灵活性，因为运行一次后，由于处理的数据相同，下一次运行结果也&ndash;样，而程序在多次运行时，用到的数据可能是不同的。
+在程序运行时，由用户临时根据情况输人所需的数据，可以提高程序的通用性，增加程序的利用价值。
+BDL语言中有多种多样的输出方式，大部分是封装好的函数，只要调用就可以将结果输出出来。之前我们使用的display后面直接方变量或者直接写的字符串数字，就可以将结果直接打印输出到控制到命令行。本章我们还会介绍输入和其它输出方式。">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="1.输出-处理-输出" />
+<meta property="og:description" content="输出-处理-输出&ndash;这就是程序#工厂的生产车间生产出来的产品是最终的输出。
+比如某药厂生产的保健药，号称是经历了80多道工序。 这些工序，当然是从输入原材料开始，每道工序处理-件事情，最终生产出包装精美的保健药品。
+第一道工序，清洗，输人的是刚刚采摘下来的药材，其中，有不少的烂叶子、烂根。 清洗工序处理完毕后，输出来的是干净的有用的药材。
+第二道工序，榨汁，输人的是干净有用的药材，榨汁工序处理时，添加纯净水，榨出药汁。 接着是萃取工序，将药汁中的有用的部分苹取.来&hellip;.80多道工序就这样一一处理完毕， 保健 药就制作完毕。
+从进场时的原材料，到最终出产的保健药，就是一个“输入一处理一输出” 的过程。 深入到药厂中的处理部分，80多道工序，每个工序也是一个“输入- -处理一输出”的过程。 没有输入，就没有处理的素材，也就没有输出。
+程序就是这样，根据输人进行不同的处理，输入不同，处理结果不同，这就是程序。 没有输出的程序是没有用的;没有输入的程序，缺乏灵活性，因为运行一次后，由于处理的数据相同，下一次运行结果也&ndash;样，而程序在多次运行时，用到的数据可能是不同的。
+在程序运行时，由用户临时根据情况输人所需的数据，可以提高程序的通用性，增加程序的利用价值。
+BDL语言中有多种多样的输出方式，大部分是封装好的函数，只要调用就可以将结果输出出来。之前我们使用的display后面直接方变量或者直接写的字符串数字，就可以将结果直接打印输出到控制到命令行。本章我们还会介绍输入和其它输出方式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-07-18T10:55:59+08:00" />
+<meta property="article:modified_time" content="2023-08-28T21:31:30+08:00" />
+<title>1.输出-处理-输出 | BDL教程</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/zh.search.min.bce4b9835716006b69c10228bd38d64ffda527f1a478bbbc4bed29f6ccc617fc.js" integrity="sha256-vOS5g1cWAGtpwQIovTjWT/2lJ/GkeLu8S&#43;0p9szGF/w=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>BDL教程</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        简体中文
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="https://bdl.darcyjoven.com/en/">
+          English
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-63887b83bfdc979c57f35135504bfffc" class="toggle" checked />
+    <label for="section-63887b83bfdc979c57f35135504bfffc" class="flex justify-between">
+      <a href="/docs/BDL/" class="">BDL有钱途的编程语言(tiptop)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>BDL基础</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8570694e01377e866dd8769cca0a3ed2" class="toggle"  />
+    <label for="section-8570694e01377e866dd8769cca0a3ed2" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/1.before_all/" class="">第一章 踏上征程前的思想动员</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/1.why-dbl/" class="">1.为什么学习（使用）BDL语言</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/2.how-learn-dbl/" class="">2.如何学好BDL语言</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/3.what-is-language/" class="">3.语言概述</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/4.program-life-cycle/" class="">4.程序开发生命周期</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/5.write-your-fisrt-program/" class="">5.开始你的第一个程序</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3bc72501c45696f4b226f48839799b4d" class="toggle"  />
+    <label for="section-3bc72501c45696f4b226f48839799b4d" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/2.first_code/" class="">第二章 第一行代码</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/1.wirte-program-by-youself/" class="">1.自己动手创建程序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/2.environment_of_BDL/" class="">2.BDL开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/3.see-your-program/" class="">3.编译运行</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/4.debug/" class="">4.调试排错</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-10e11da0807d13140e34e2285990e2d3" class="toggle"  />
+    <label for="section-10e11da0807d13140e34e2285990e2d3" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/3.composition_of_bdl/" class="">第三章 最简单bdl程序的组成</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/1.BDL-look/" class="">1.BDL程序全貌</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/2.annotation/" class="">2.为何要注释</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/3.main-function/" class="">3.main函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/4.call-function/" class="">4.函数调用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/5.count-1&#43;1/" class="">5.计算1&#43;1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/6.variable/" class="">6.变量</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/7.create-a-function/" class="">7.设计一个BDL函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/8.statement/" class="">8.语句</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/9.code-style/" class="">9.代码风格</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/10.practice/" class="">10.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d954a0c0f4ada652ecd68a56de434ffe" class="toggle"  />
+    <label for="section-d954a0c0f4ada652ecd68a56de434ffe" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/4.how_save_and_get_data/" class="">第四章 存储和获取数据</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/1.binary-octal-hexadecimal/" class="">1.二进制、八进制、十六进制</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/2.bite-bit/" class="">2.字节和位</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/3.data-types/" class="">3.数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/" class="">4.变量</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a23be7d9f2449a182157aaf1b0d447f4" class="toggle" checked />
+    <label for="section-a23be7d9f2449a182157aaf1b0d447f4" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/" class="">第五章 利用键盘、鼠标与程序交互</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/" class="active">1.输出-处理-输出</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/2.sfmt/" class="">2.display与sfmt函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/3.format-number/" class="">3.数字的格式化</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/4.input/" class="">4.输入</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d7fe71403ddec54176e1a6d5828be8e9" class="toggle"  />
+    <label for="section-d7fe71403ddec54176e1a6d5828be8e9" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/6.operators_and_expressions/" class="">第六章 运算符和表达式-程序基本构成</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/1.operators/" class="">1.运算符和表达式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/2.relational-operator/" class="">2.关系运算符</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/3.logical-operator/" class="">3.逻辑运算符</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/4.assignment-operator/" class="">4.赋值运算符</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/5.type-conversion/" class="">5.类型转换</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/6.operation-priority/" class="">6.运算符优先级</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/7.practice/" class="">7.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9cb9e9e6474fb16320830a8665ed0dd6" class="toggle"  />
+    <label for="section-9cb9e9e6474fb16320830a8665ed0dd6" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/7.atoml_statement/" class="">第七章 语句-程序最小构成单元</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/7.atoml_statement/1.statement-type/" class="">1.语句类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/" class="">2.结构化设计程序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/7.atoml_statement/3.practice/" class="">3.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e176cd6599dbc20680961374ac58eb6" class="toggle"  />
+    <label for="section-3e176cd6599dbc20680961374ac58eb6" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/8.condition/" class="">第八章 条件判断-分支结构</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/1.judgment-statement-if/" class="">1.if语句--简单条件判断</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/2.if-else/" class="">2.if else--两条岔路的选择</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/3.multi-branch/" class="">3.多分枝语句和分支语句嵌套</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/4.case/" class="">4.case--开关语句</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a341e1fadb71dba21eccbf89f2161491" class="toggle"  />
+    <label for="section-a341e1fadb71dba21eccbf89f2161491" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/9.over_and_over_again/" class="">第九章 循环结构--一遍又一遍</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/1.create-cycle/" class="">1.构造循环</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/2.for/" class="">2.for结构</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/3.cycle-in-cycle/" class="">3.循环嵌套</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/4.cycle-and-flow-control/" class="">4.流程转向控制语句</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>渐入佳境</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2a090047313f5c65727b369daef4dca9" class="toggle"  />
+    <label for="section-2a090047313f5c65727b369daef4dca9" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/10.function/" class="">第十章 函数入门-写程序就是写函数</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/1.what-is-function/" class="">1.什么是函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/2.diy-function/" class="">2.自定义函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/3.formal-actual/" class="">3.函数调用与返回</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/4.process-oriented/" class="">4.面向过程编程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-af013eadae5d0507c05560d9c6cf66bc" class="toggle"  />
+    <label for="section-af013eadae5d0507c05560d9c6cf66bc" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/11.array/" class="">第十一章 数组-同一类型的多个元素的集合</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/1.what-is-array/" class="">1.什么是数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/2.one-dimensional-array/" class="">2.一维数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/3.two-dimensional/" class="">3.二维数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/4.multi-dimensional/" class="">4.多维数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f3616fd81a7fecb20f927a9e79579b09" class="toggle"  />
+    <label for="section-f3616fd81a7fecb20f927a9e79579b09" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/12.string/" class="">第十二章 字符串操作</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/12.string/1.dynamic-string/" class="">1.动态长度字符串</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/12.string/2.practice/" class="">2.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-613b859b1f689b5e9dc09309bb2963b8" class="toggle"  />
+    <label for="section-613b859b1f689b5e9dc09309bb2963b8" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/13.struct/" class="">第十三章 结构体</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/1.record/" class="">1.结构体</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/2.type/" class="">2.声明结构体类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/3.nesting-record/" class="">3.结构体嵌套</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/4.record-in-array/" class="">4.结构体数组嵌套</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-125817952e3d1ea4ebe39f22ce2c6dc2" class="toggle"  />
+    <label for="section-125817952e3d1ea4ebe39f22ce2c6dc2" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/14.database/" class="">第十四章 数据库使用</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/" class="">1.数据库连接</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/2.schema/" class="">2.数据表结构在BDL中的使用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/3.update-insert-delete/" class="">3.插入更新删除</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/4.select-single-row/" class="">4.查询单笔资料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/5.select-rows/" class="">5.多笔查询</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/6.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-30f3022fe79a1f15ebb24e96fa4026a7" class="toggle"  />
+    <label for="section-30f3022fe79a1f15ebb24e96fa4026a7" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/15.function_plus/" class="">第十五章 函数进阶</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/1.parameter/" class="">1.函数的参数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/2.parament/" class="">2.函数的返回值</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/3.life-cycle/" class="">3.生命周期</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/4.practise/" class="">4.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-77fe291b3afa7e47cf0a1baa2d48e2bf" class="toggle"  />
+    <label for="section-77fe291b3afa7e47cf0a1baa2d48e2bf" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/16.module/" class="">第十六章 模块</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/1.%E9%87%8D%E6%96%B0%E5%9B%9E%E9%A1%BE%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/" class="">1.重新回顾编译链接</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/2.lib-sub/" class="">2.lib和sub函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/3.p_link/" class="">3.p_link作业</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/4.module/" class="">4.BDL中的模块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/5.preprocessor/" class="">5.预编译</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aea1d8080c20e4f4e3c07beabc856ab8" class="toggle"  />
+    <label for="section-aea1d8080c20e4f4e3c07beabc856ab8" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/17.interface/" class="">第十七章 用户界面</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9bd9fb382e6b3ed244b1d053297b825d" class="toggle"  />
+    <label for="section-9bd9fb382e6b3ed244b1d053297b825d" class="flex justify-between">
+      <a role="button" class="">BDL进阶</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4f163508f77fe54fd4eef7f90c0174a1" class="toggle"  />
+    <label for="section-4f163508f77fe54fd4eef7f90c0174a1" class="flex justify-between">
+      <a role="button" class="">第十九章 异常处理</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3533b80c4ef5db47a17c45b692d613f0" class="toggle"  />
+    <label for="section-3533b80c4ef5db47a17c45b692d613f0" class="flex justify-between">
+      <a href="/docs/BDL/3.advance/20.build-in-packages/" class="">第二十章 标准包</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1b2d9f6e2935b38e2dce8583d2172c7f" class="toggle"  />
+    <label for="section-1b2d9f6e2935b38e2dce8583d2172c7f" class="flex justify-between">
+      <a role="button" class="">BDL实战</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-45dc22155750af7958cacd6a2952ab76" class="toggle"  />
+    <label for="section-45dc22155750af7958cacd6a2952ab76" class="flex justify-between">
+      <a href="/docs/BDL/4.actual-combat/1.%E5%8D%95%E6%A1%A3/" class="">第一章 单档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6a37b1a8ed711a7eb6a9d790c42f73fd" class="toggle"  />
+    <label for="section-6a37b1a8ed711a7eb6a9d790c42f73fd" class="flex justify-between">
+      <a href="/docs/BDL/4.actual-combat/2.%E5%8F%8C%E6%A1%A3/" class="">第二章 双档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e455a871ac0e3640fdfb28f989fe1a1" class="toggle"  />
+    <label for="section-4e455a871ac0e3640fdfb28f989fe1a1" class="flex justify-between">
+      <a role="button" class="">第三章 双档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fa715394aef5d5af148dce1e869ba45" class="toggle"  />
+    <label for="section-5fa715394aef5d5af148dce1e869ba45" class="flex justify-between">
+      <a role="button" class="">第四章 双档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f745973faac9b396d210658216512d2" class="toggle"  />
+    <label for="section-5f745973faac9b396d210658216512d2" class="flex justify-between">
+      <a role="button" class="">第五章 批处理作业</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e8c5fb6439d623d00ba329ff6dc53a3" class="toggle"  />
+    <label for="section-4e8c5fb6439d623d00ba329ff6dc53a3" class="flex justify-between">
+      <a role="button" class="">第六章 webservice</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a6b5e5f811434cb992fdebac0e1d7718" class="toggle"  />
+    <label for="section-a6b5e5f811434cb992fdebac0e1d7718" class="flex justify-between">
+      <a href="/docs/Practice/" class="">BDL练习题</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Practice/basic/" class="">基础练习题</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/darcyjoven/bdl"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>1.输出-处理-输出</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#输出-处理-输出--这就是程序">输出-处理-输出&ndash;这就是程序</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="输出-处理-输出--这就是程序">
+  输出-处理-输出&ndash;这就是程序
+  <a class="anchor" href="#%e8%be%93%e5%87%ba-%e5%a4%84%e7%90%86-%e8%be%93%e5%87%ba--%e8%bf%99%e5%b0%b1%e6%98%af%e7%a8%8b%e5%ba%8f">#</a>
+</h1>
+<p>工厂的生产车间生产出来的产品是最终的输出。</p>
+<p>比如某药厂生产的保健药，号称是经历了80多道工序。
+这些工序，当然是从输入原材料开始，每道工序处理-件事情，最终生产出包装精美的保健药品。</p>
+<p>第一道工序，清洗，输人的是刚刚采摘下来的药材，其中，有不少的烂叶子、烂根。
+清洗工序处理完毕后，输出来的是干净的有用的药材。</p>
+<p>第二道工序，榨汁，输人的是干净有用的药材，榨汁工序处理时，添加纯净水，榨出药汁。
+接着是萃取工序，将药汁中的有用的部分苹取.来&hellip;.80多道工序就这样一一处理完毕， 保健
+药就制作完毕。</p>
+<p>从进场时的原材料，到最终出产的保健药，就是一个“输入一处理一输出” 的过程。
+深入到药厂中的处理部分，80多道工序，每个工序也是一个“输入- -处理一输出”的过程。
+没有输入，就没有处理的素材，也就没有输出。</p>
+<p>程序就是这样，根据输人进行不同的处理，输入不同，处理结果不同，这就是程序。
+没有输出的程序是没有用的;没有输入的程序，缺乏灵活性，因为运行一次后，由于处理的数据相同，下一次运行结果也&ndash;样，而程序在多次运行时，用到的数据可能是不同的。</p>
+<p>在程序运行时，由用户临时根据情况输人所需的数据，可以提高程序的通用性，增加程序的利用价值。</p>
+<p>BDL语言中有多种多样的输出方式，大部分是封装好的函数，只要调用就可以将结果输出出来。之前我们使用的<code>display</code>后面直接方变量或者直接写的字符串数字，就可以将结果直接打印输出到控制到命令行。本章我们还会介绍输入和其它输出方式。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/9e9ff3bb0497843529aa05e79bfb99e34b76c83b" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2023年8月28日</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>编辑本页</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#输出-处理-输出--这就是程序">输出-处理-输出&ndash;这就是程序</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

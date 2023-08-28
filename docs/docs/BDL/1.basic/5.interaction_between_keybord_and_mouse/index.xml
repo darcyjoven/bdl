@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第五章 利用键盘、鼠标与程序交互 on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/</link>
+    <description>Recent content in 第五章 利用键盘、鼠标与程序交互 on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.输出-处理-输出</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/</link>
+      <pubDate>Tue, 18 Jul 2023 10:55:59 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/</guid>
+      <description>输出-处理-输出&amp;ndash;这就是程序#工厂的生产车间生产出来的产品是最终的输出。
+比如某药厂生产的保健药，号称是经历了80多道工序。 这些工序，当然是从输入原材料开始，每道工序处理-件事情，最终生产出包装精美的保健药品。
+第一道工序，清洗，输人的是刚刚采摘下来的药材，其中，有不少的烂叶子、烂根。 清洗工序处理完毕后，输出来的是干净的有用的药材。
+第二道工序，榨汁，输人的是干净有用的药材，榨汁工序处理时，添加纯净水，榨出药汁。 接着是萃取工序，将药汁中的有用的部分苹取.来&amp;hellip;.80多道工序就这样一一处理完毕， 保健 药就制作完毕。
+从进场时的原材料，到最终出产的保健药，就是一个“输入一处理一输出” 的过程。 深入到药厂中的处理部分，80多道工序，每个工序也是一个“输入- -处理一输出”的过程。 没有输入，就没有处理的素材，也就没有输出。
+程序就是这样，根据输人进行不同的处理，输入不同，处理结果不同，这就是程序。 没有输出的程序是没有用的;没有输入的程序，缺乏灵活性，因为运行一次后，由于处理的数据相同，下一次运行结果也&amp;ndash;样，而程序在多次运行时，用到的数据可能是不同的。
+在程序运行时，由用户临时根据情况输人所需的数据，可以提高程序的通用性，增加程序的利用价值。
+BDL语言中有多种多样的输出方式，大部分是封装好的函数，只要调用就可以将结果输出出来。之前我们使用的display后面直接方变量或者直接写的字符串数字，就可以将结果直接打印输出到控制到命令行。本章我们还会介绍输入和其它输出方式。</description>
+    </item>
+    
+    <item>
+      <title>2.display与sfmt函数</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/2.sfmt/</link>
+      <pubDate>Tue, 18 Jul 2023 11:25:43 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/2.sfmt/</guid>
+      <description>display与sfmt函数#display函数已经接触过，是将后面的变量或者值显示到控制台的命令行中。
+请尝试下以下代码，看看运行的值有何区别
+define a integer define b decimal(20,6) define c varchar(20) define d decimal(10,6) let a = 1 let b = 1 let c = 1 let d = 1 display &amp;#34;&amp;#34; display a display b display d display c let c = &amp;#34;1&amp;#34; display c let c = b display c 运行后，会发现显示如下
+11.0000001.000000111.000000 是否很你想像中的不一样，我们没有输入空格，却打印了很多空格。
+隐式转换字符串 display会将任何变量转换为字符串，如果后面不是字符串会自动转化为字符串格式。
+这个转换时隐式的，隐式转化字符串会将数字剩余长度用空格补上。所以
+display adisplay bdisplay c 这两句将补上对于数量的空格: integer 最大表示2147483647，10位，1只有一位所以补上9个空格，因为integer正负数都有可能，还要补上一个符号位值，一共10个空格。</description>
+    </item>
+    
+    <item>
+      <title>3.数字的格式化</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/3.format-number/</link>
+      <pubDate>Tue, 18 Jul 2023 13:24:57 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/3.format-number/</guid>
+      <description>数字的格式化#之前我们说过日期在BDL语言也是储存为整数类型，请运行以下代码，观察其输出值
+define t date display t 发现其结果是
+1899/12/31 如果你的环境是1899/12/31，是因为DBDATE环境变量为Y2MD/，修改为Y4MD/之后就变为4位。不建议修改，因为已有代码可能是按照2位编写的。
+日期类型会自动格式输出，那么我如果也想数字格式化输出字符串，应该如果写呢？
+本章就来介绍以下，数字的格式化方式。
+数字货币格式化#在介绍之前，我们尝试运行一下如下代码：
+define a integer define b decimal(20,6) let a = 12345 let b = 2345.1235 display sfmt(&amp;#34;a=%1,b=%2&amp;#34;,a,b) display sfmt(&amp;#34;a=%1,b=%2&amp;#34;,a using &amp;#34;******&amp;#34;,b using &amp;#34;#####.###&amp;#34;) a=12345,b=2345.123500 a=*12345,b= 2345.124 使用了 using &amp;ldquo;******&amp;rdquo; 的12345 在最前面多了一个* 使用了 using &amp;ldquo;#####.###&amp;rdquo; 的2345.1235，整数前多了一个空格，小数保留了3位，且进了一位。 这里的数字/数字变量 using 格式化字符串的格式就是在格式化数字格式。
+格式化字符串中有固定的写法，如下：
+类型 格式化规则 * 不足的位数补上* # 不足的位数补上空格 &amp;amp; 不足的位数补上0 &amp;lt; 和&amp;amp;一样，但是左对齐 - 和#一样，但负数会加上-号 + 和-一样，但整数会加上+号 ( 和-一样，但负数会加上()号 ) 和(一样 $ 数值前加上一个币种符号 , ,号左侧有数字才显示, .</description>
+    </item>
+    
+    <item>
+      <title>4.输入</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/4.input/</link>
+      <pubDate>Tue, 18 Jul 2023 14:51:44 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/4.input/</guid>
+      <description>输入&amp;ndash;键盘与鼠标的交互#之前的程序，我们都是在输出，输入的值，我们都是编写在程序中。
+但这让程序每次输出的结果都一样，如果我们要其它结果就要重新编写代码。
+为了解决上述问题，我们引入BDL语言可以支持的输入方式。
+Prompt&amp;ndash;初次接触用户界面#请运行一下代码，查看输出情况，运行前请确保打开GDC客户端
+define birth date prompt &amp;#34;请输入你的生日:&amp;#34; for birth display birth using &amp;#34;yyyy年mm月dd日&amp;#34; 是否出现了这个弹窗，如果未出现，请检查GDC安全性设置，调整为最低，且端口为6400。
+随便输入一点东西试试看，报错了！String to date conversion errr.。 字符串转日期格式失败，它可以帮我自动转为日期格式！而且会检查是否正确！
+我们尝试输入19900101或者900101。
+现在查看控制台，成功转为了日期！
+1990年01月01日 代码分析
+prompt &amp;quot;请输入你的生日:&amp;quot; for birth 这一行为我们做了不少事情，我们来分析一下
+弹出一个新窗，且有一个可以输入的地方和确定取消按钮。 可入处有输入说明。 可输入的地方只能输入能转为日期的内容，否则无法确定并完成。 将输入的内容转为birth变量的数据类型。 仅一行代码，就可以做这么多事情，这就是一开始说的BDL抽象级别比较高。 将大量的常使用功能集成到一起，不需要我们为重复的事情编写代码。
+让我们试一试下面这些代码:
+define birth date define name varchar(6) define sex varchar(1) prompt &amp;#34;请输入你的生日:&amp;#34; for birth prompt &amp;#34;请输入你的姓名:&amp;#34; for name prompt &amp;#34;你是男生吗y/n:&amp;#34; for sex display sfmt(&amp;#34;\n%1你好,你是否是男生(%2),你的生日是%3&amp;#34;,name,sex,birth using &amp;#34;yy/mm/dd&amp;#34;) 你会发现，prompt除了可以转换资料类型，还能够限制可以输入的字数。（一个中文汉字需要yi\一个varchar(3)）
+练习#编写一个程序，首先输入一个日期a，然后输入一个整数b，计算a经过这个b天后的日期是哪一天。计算后将结果在控制台打印。 </description>
+    </item>
+    
+    <item>
+      <title>5.练习</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/5.practice/</link>
+      <pubDate>Tue, 18 Jul 2023 16:00:50 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/5.practice/</guid>
+      <description>练习#输出一下样式的数据 +------------------+-----+| 姓名| 年纪|+------------------+-----+| 小| 10|| 小蜜蜂| 9|| 小明| 8|| 小刚| 12|| 小红| 24|+------------------+-----+ 输入身份证号，输出身份证号的后4位。 </description>
+    </item>
+    
+  </channel>
+</rss>

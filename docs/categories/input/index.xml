@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>input on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/categories/input/</link>
+    <description>Recent content in input on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 Jul 2023 14:51:44 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/input/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.输出-处理-输出</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/</link>
+      <pubDate>Tue, 18 Jul 2023 10:55:59 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/</guid>
+      <description>输出-处理-输出&amp;ndash;这就是程序#工厂的生产车间生产出来的产品是最终的输出。
+比如某药厂生产的保健药，号称是经历了80多道工序。 这些工序，当然是从输入原材料开始，每道工序处理-件事情，最终生产出包装精美的保健药品。
+第一道工序，清洗，输人的是刚刚采摘下来的药材，其中，有不少的烂叶子、烂根。 清洗工序处理完毕后，输出来的是干净的有用的药材。
+第二道工序，榨汁，输人的是干净有用的药材，榨汁工序处理时，添加纯净水，榨出药汁。 接着是萃取工序，将药汁中的有用的部分苹取.来&amp;hellip;.80多道工序就这样一一处理完毕， 保健 药就制作完毕。
+从进场时的原材料，到最终出产的保健药，就是一个“输入一处理一输出” 的过程。 深入到药厂中的处理部分，80多道工序，每个工序也是一个“输入- -处理一输出”的过程。 没有输入，就没有处理的素材，也就没有输出。
+程序就是这样，根据输人进行不同的处理，输入不同，处理结果不同，这就是程序。 没有输出的程序是没有用的;没有输入的程序，缺乏灵活性，因为运行一次后，由于处理的数据相同，下一次运行结果也&amp;ndash;样，而程序在多次运行时，用到的数据可能是不同的。
+在程序运行时，由用户临时根据情况输人所需的数据，可以提高程序的通用性，增加程序的利用价值。
+BDL语言中有多种多样的输出方式，大部分是封装好的函数，只要调用就可以将结果输出出来。之前我们使用的display后面直接方变量或者直接写的字符串数字，就可以将结果直接打印输出到控制到命令行。本章我们还会介绍输入和其它输出方式。</description>
+    </item>
+    
+    <item>
+      <title>4.输入</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/4.input/</link>
+      <pubDate>Tue, 18 Jul 2023 14:51:44 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/4.input/</guid>
+      <description>输入&amp;ndash;键盘与鼠标的交互#之前的程序，我们都是在输出，输入的值，我们都是编写在程序中。
+但这让程序每次输出的结果都一样，如果我们要其它结果就要重新编写代码。
+为了解决上述问题，我们引入BDL语言可以支持的输入方式。
+Prompt&amp;ndash;初次接触用户界面#请运行一下代码，查看输出情况，运行前请确保打开GDC客户端
+define birth date prompt &amp;#34;请输入你的生日:&amp;#34; for birth display birth using &amp;#34;yyyy年mm月dd日&amp;#34; 是否出现了这个弹窗，如果未出现，请检查GDC安全性设置，调整为最低，且端口为6400。
+随便输入一点东西试试看，报错了！String to date conversion errr.。 字符串转日期格式失败，它可以帮我自动转为日期格式！而且会检查是否正确！
+我们尝试输入19900101或者900101。
+现在查看控制台，成功转为了日期！
+1990年01月01日 代码分析
+prompt &amp;quot;请输入你的生日:&amp;quot; for birth 这一行为我们做了不少事情，我们来分析一下
+弹出一个新窗，且有一个可以输入的地方和确定取消按钮。 可入处有输入说明。 可输入的地方只能输入能转为日期的内容，否则无法确定并完成。 将输入的内容转为birth变量的数据类型。 仅一行代码，就可以做这么多事情，这就是一开始说的BDL抽象级别比较高。 将大量的常使用功能集成到一起，不需要我们为重复的事情编写代码。
+让我们试一试下面这些代码:
+define birth date define name varchar(6) define sex varchar(1) prompt &amp;#34;请输入你的生日:&amp;#34; for birth prompt &amp;#34;请输入你的姓名:&amp;#34; for name prompt &amp;#34;你是男生吗y/n:&amp;#34; for sex display sfmt(&amp;#34;\n%1你好,你是否是男生(%2),你的生日是%3&amp;#34;,name,sex,birth using &amp;#34;yy/mm/dd&amp;#34;) 你会发现，prompt除了可以转换资料类型，还能够限制可以输入的字数。（一个中文汉字需要yi\一个varchar(3)）
+练习#编写一个程序，首先输入一个日期a，然后输入一个整数b，计算a经过这个b天后的日期是哪一天。计算后将结果在控制台打印。 </description>
+    </item>
+    
+  </channel>
+</rss>

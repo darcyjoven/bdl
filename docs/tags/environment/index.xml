@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>environment on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/environment/</link>
+    <description>Recent content in environment on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 17 Jul 2023 13:31:16 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/environment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.BDL开发环境</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/2.first_code/2.environment_of_BDL/</link>
+      <pubDate>Mon, 17 Jul 2023 13:31:16 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/2.first_code/2.environment_of_BDL/</guid>
+      <description>BDL开发环境#本书所有代码运行的环境都在fjs-fgl-2.4版本，开发环境为linux系统。 本书不涉及环境如何部署。
+项目目录结构#tiptop gp 和 t100 都有固定的项目结构，点此查看。 建议你在不影响正式使用的程序前提下，建立或修改程序代码。
+tiptop gp编译#tiptop gp环境中需在代码对应的4gl目录下，运行命令r.c2 czzi001，czzi001是你建立的程序编号。即4gl文件去掉后缀名后的内容。
+连接#tiptop gp连接命令为 r.l2 czzi001，注意：这里的czzi001不是4gl文件程序编号，而是在p_zz中注册的程序。所以在运行r.l2连接之前，你还需要做以下这些步骤。
+新增p_zz资料 如果你现在还不知道p_zz作业的功能，没关系，现在你可以参考czzi001的内容，将czzi001替换为你的程序编号，czz替换为你的程序编号前三位。 需要注意的时czzi001.4gl 一般放在czz/4gl目录下，同样azzi001.4gl 也放在azz/4gl目录下，在你更进一步理解BDL的目录结构前，就一直按照这种方式建立新程序。
+点击维护链接资料建立连接资料 (链接和连接是同一种说法的不同翻译) 新建程序时，会提示你无资料，是否建立，这里选择是。 看到下方有一笔路径为$CUST/czz/42m/czz_czzi001.42m的资料。 当后续我们程序更复杂时，会主动添加更多需要的连接资料。
+最后保存时此弹窗的意思，是让你自动连接一次，可以选择是，连接失败也不要仅，只要资料有产生就可以。
+t100编译#开始编辑代码#以上设置好之后，你就可以编辑代码了。
+我用的vs code编辑器，配合Informix 4GL这款插件，所以代码可以高亮，不同的单次有不同的颜色，起到了提醒的作用。
+除了vscode，t100自带的开发平台T100 design、submlime text、4js官方提供的genero studio等工具也能有高亮样式。
+database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使用数据，所以这里必须先连接数据库 MAIN --主函数 入口点 DISPLAY &amp;#34;Hello World&amp;#34; -- 打印字符串 END MAIN 也许你注意到了，database是小写，MAIN是大写，在BDL语言中，大小写是不区分了，类似于SQL。你甚至了混合使用。</description>
+    </item>
+    
+  </channel>
+</rss>

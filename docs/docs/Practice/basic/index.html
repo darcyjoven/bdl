@@ -1,0 +1,2795 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="基础练习题#基础练习题目，并不是指难度基础，而是不涉及到除了语言特性其它的范围。
+不涉及到画面规格（GUI）、和数据库等，专注于 BDL 基础语法。
+反而某些题目难度可能很大，不必强求所有题目都能解出，果断时间再来看，可能就可以解出了。
+第 1 题#题目： 有 1、2、3、4 四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
+程序分析： 可填在百位、十位、个位的数字都是 1、2、3、4，组成所有的排列后再去掉不满足条件的排列。第 2 题#题目： 企业发放的奖金根据利润提成。
+利润(I)低于或等于 10 万元时，奖金可提 10%； 利润高于 10 万元，低于 20 万元时，低于 10 万元的部分按 10%提成，高于 10 万元的部分，可提&#43; 成 7.5%； 20 万到 40 万之间时，高于 20 万元的部分，可提成 5%； 40 万到 60 万之间时高于 40 万元的部分，可提成 3%； 60 万到 100 万之间时，高于 60 万元的部分，可提成 1.5%； 高于 100 万元时，超过 100 万元的部分按 1%提成。 从键盘输入当月利润 I，求应发放奖金总数？ 程序分析： 请利用数轴来分界，定位。注意定义时需把奖金定义成双精度浮点(double)型。第 3 题#题目： 一个整数，它加上 100 后是一个完全平方数，再加上 168 又是一个完全平方数，请问该数是多少？">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="基础练习题" />
+<meta property="og:description" content="基础练习题#基础练习题目，并不是指难度基础，而是不涉及到除了语言特性其它的范围。
+不涉及到画面规格（GUI）、和数据库等，专注于 BDL 基础语法。
+反而某些题目难度可能很大，不必强求所有题目都能解出，果断时间再来看，可能就可以解出了。
+第 1 题#题目： 有 1、2、3、4 四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
+程序分析： 可填在百位、十位、个位的数字都是 1、2、3、4，组成所有的排列后再去掉不满足条件的排列。第 2 题#题目： 企业发放的奖金根据利润提成。
+利润(I)低于或等于 10 万元时，奖金可提 10%； 利润高于 10 万元，低于 20 万元时，低于 10 万元的部分按 10%提成，高于 10 万元的部分，可提&#43; 成 7.5%； 20 万到 40 万之间时，高于 20 万元的部分，可提成 5%； 40 万到 60 万之间时高于 40 万元的部分，可提成 3%； 60 万到 100 万之间时，高于 60 万元的部分，可提成 1.5%； 高于 100 万元时，超过 100 万元的部分按 1%提成。 从键盘输入当月利润 I，求应发放奖金总数？ 程序分析： 请利用数轴来分界，定位。注意定义时需把奖金定义成双精度浮点(double)型。第 3 题#题目： 一个整数，它加上 100 后是一个完全平方数，再加上 168 又是一个完全平方数，请问该数是多少？" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bdl.darcyjoven.com/docs/Practice/basic/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-07-20T10:09:06+08:00" />
+<meta property="article:modified_time" content="2023-08-28T21:31:30+08:00" />
+<title>基础练习题 | BDL教程</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/zh.search.min.bce4b9835716006b69c10228bd38d64ffda527f1a478bbbc4bed29f6ccc617fc.js" integrity="sha256-vOS5g1cWAGtpwQIovTjWT/2lJ/GkeLu8S&#43;0p9szGF/w=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>BDL教程</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        简体中文
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="https://bdl.darcyjoven.com/en/">
+          English
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-63887b83bfdc979c57f35135504bfffc" class="toggle"  />
+    <label for="section-63887b83bfdc979c57f35135504bfffc" class="flex justify-between">
+      <a href="/docs/BDL/" class="">BDL有钱途的编程语言(tiptop)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>BDL基础</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8570694e01377e866dd8769cca0a3ed2" class="toggle"  />
+    <label for="section-8570694e01377e866dd8769cca0a3ed2" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/1.before_all/" class="">第一章 踏上征程前的思想动员</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/1.why-dbl/" class="">1.为什么学习（使用）BDL语言</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/2.how-learn-dbl/" class="">2.如何学好BDL语言</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/3.what-is-language/" class="">3.语言概述</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/4.program-life-cycle/" class="">4.程序开发生命周期</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/1.before_all/5.write-your-fisrt-program/" class="">5.开始你的第一个程序</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3bc72501c45696f4b226f48839799b4d" class="toggle"  />
+    <label for="section-3bc72501c45696f4b226f48839799b4d" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/2.first_code/" class="">第二章 第一行代码</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/1.wirte-program-by-youself/" class="">1.自己动手创建程序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/2.environment_of_BDL/" class="">2.BDL开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/3.see-your-program/" class="">3.编译运行</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/4.debug/" class="">4.调试排错</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/2.first_code/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-10e11da0807d13140e34e2285990e2d3" class="toggle"  />
+    <label for="section-10e11da0807d13140e34e2285990e2d3" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/3.composition_of_bdl/" class="">第三章 最简单bdl程序的组成</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/1.BDL-look/" class="">1.BDL程序全貌</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/2.annotation/" class="">2.为何要注释</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/3.main-function/" class="">3.main函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/4.call-function/" class="">4.函数调用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/5.count-1&#43;1/" class="">5.计算1&#43;1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/6.variable/" class="">6.变量</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/7.create-a-function/" class="">7.设计一个BDL函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/8.statement/" class="">8.语句</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/9.code-style/" class="">9.代码风格</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/3.composition_of_bdl/10.practice/" class="">10.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d954a0c0f4ada652ecd68a56de434ffe" class="toggle"  />
+    <label for="section-d954a0c0f4ada652ecd68a56de434ffe" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/4.how_save_and_get_data/" class="">第四章 存储和获取数据</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/1.binary-octal-hexadecimal/" class="">1.二进制、八进制、十六进制</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/2.bite-bit/" class="">2.字节和位</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/3.data-types/" class="">3.数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/" class="">4.变量</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/4.how_save_and_get_data/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a23be7d9f2449a182157aaf1b0d447f4" class="toggle"  />
+    <label for="section-a23be7d9f2449a182157aaf1b0d447f4" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/" class="">第五章 利用键盘、鼠标与程序交互</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/" class="">1.输出-处理-输出</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/2.sfmt/" class="">2.display与sfmt函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/3.format-number/" class="">3.数字的格式化</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/4.input/" class="">4.输入</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d7fe71403ddec54176e1a6d5828be8e9" class="toggle"  />
+    <label for="section-d7fe71403ddec54176e1a6d5828be8e9" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/6.operators_and_expressions/" class="">第六章 运算符和表达式-程序基本构成</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/1.operators/" class="">1.运算符和表达式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/2.relational-operator/" class="">2.关系运算符</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/3.logical-operator/" class="">3.逻辑运算符</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/4.assignment-operator/" class="">4.赋值运算符</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/5.type-conversion/" class="">5.类型转换</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/6.operation-priority/" class="">6.运算符优先级</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/6.operators_and_expressions/7.practice/" class="">7.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9cb9e9e6474fb16320830a8665ed0dd6" class="toggle"  />
+    <label for="section-9cb9e9e6474fb16320830a8665ed0dd6" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/7.atoml_statement/" class="">第七章 语句-程序最小构成单元</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/7.atoml_statement/1.statement-type/" class="">1.语句类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/" class="">2.结构化设计程序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/7.atoml_statement/3.practice/" class="">3.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e176cd6599dbc20680961374ac58eb6" class="toggle"  />
+    <label for="section-3e176cd6599dbc20680961374ac58eb6" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/8.condition/" class="">第八章 条件判断-分支结构</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/1.judgment-statement-if/" class="">1.if语句--简单条件判断</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/2.if-else/" class="">2.if else--两条岔路的选择</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/3.multi-branch/" class="">3.多分枝语句和分支语句嵌套</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/4.case/" class="">4.case--开关语句</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/8.condition/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a341e1fadb71dba21eccbf89f2161491" class="toggle"  />
+    <label for="section-a341e1fadb71dba21eccbf89f2161491" class="flex justify-between">
+      <a href="/docs/BDL/1.basic/9.over_and_over_again/" class="">第九章 循环结构--一遍又一遍</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/1.create-cycle/" class="">1.构造循环</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/2.for/" class="">2.for结构</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/3.cycle-in-cycle/" class="">3.循环嵌套</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/4.cycle-and-flow-control/" class="">4.流程转向控制语句</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/1.basic/9.over_and_over_again/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>渐入佳境</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2a090047313f5c65727b369daef4dca9" class="toggle"  />
+    <label for="section-2a090047313f5c65727b369daef4dca9" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/10.function/" class="">第十章 函数入门-写程序就是写函数</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/1.what-is-function/" class="">1.什么是函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/2.diy-function/" class="">2.自定义函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/3.formal-actual/" class="">3.函数调用与返回</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/4.process-oriented/" class="">4.面向过程编程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/10.function/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-af013eadae5d0507c05560d9c6cf66bc" class="toggle"  />
+    <label for="section-af013eadae5d0507c05560d9c6cf66bc" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/11.array/" class="">第十一章 数组-同一类型的多个元素的集合</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/1.what-is-array/" class="">1.什么是数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/2.one-dimensional-array/" class="">2.一维数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/3.two-dimensional/" class="">3.二维数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/4.multi-dimensional/" class="">4.多维数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/11.array/5.practice/" class="">5.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f3616fd81a7fecb20f927a9e79579b09" class="toggle"  />
+    <label for="section-f3616fd81a7fecb20f927a9e79579b09" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/12.string/" class="">第十二章 字符串操作</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/12.string/1.dynamic-string/" class="">1.动态长度字符串</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/12.string/2.practice/" class="">2.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-613b859b1f689b5e9dc09309bb2963b8" class="toggle"  />
+    <label for="section-613b859b1f689b5e9dc09309bb2963b8" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/13.struct/" class="">第十三章 结构体</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/1.record/" class="">1.结构体</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/2.type/" class="">2.声明结构体类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/3.nesting-record/" class="">3.结构体嵌套</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/13.struct/4.record-in-array/" class="">4.结构体数组嵌套</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-125817952e3d1ea4ebe39f22ce2c6dc2" class="toggle"  />
+    <label for="section-125817952e3d1ea4ebe39f22ce2c6dc2" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/14.database/" class="">第十四章 数据库使用</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/" class="">1.数据库连接</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/2.schema/" class="">2.数据表结构在BDL中的使用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/3.update-insert-delete/" class="">3.插入更新删除</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/4.select-single-row/" class="">4.查询单笔资料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/5.select-rows/" class="">5.多笔查询</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/6.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-30f3022fe79a1f15ebb24e96fa4026a7" class="toggle"  />
+    <label for="section-30f3022fe79a1f15ebb24e96fa4026a7" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/15.function_plus/" class="">第十五章 函数进阶</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/1.parameter/" class="">1.函数的参数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/2.parament/" class="">2.函数的返回值</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/3.life-cycle/" class="">3.生命周期</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/15.function_plus/4.practise/" class="">4.练习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-77fe291b3afa7e47cf0a1baa2d48e2bf" class="toggle"  />
+    <label for="section-77fe291b3afa7e47cf0a1baa2d48e2bf" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/16.module/" class="">第十六章 模块</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/1.%E9%87%8D%E6%96%B0%E5%9B%9E%E9%A1%BE%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/" class="">1.重新回顾编译链接</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/2.lib-sub/" class="">2.lib和sub函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/3.p_link/" class="">3.p_link作业</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/4.module/" class="">4.BDL中的模块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/5.preprocessor/" class="">5.预编译</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aea1d8080c20e4f4e3c07beabc856ab8" class="toggle"  />
+    <label for="section-aea1d8080c20e4f4e3c07beabc856ab8" class="flex justify-between">
+      <a href="/docs/BDL/2.medium/17.interface/" class="">第十七章 用户界面</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9bd9fb382e6b3ed244b1d053297b825d" class="toggle"  />
+    <label for="section-9bd9fb382e6b3ed244b1d053297b825d" class="flex justify-between">
+      <a role="button" class="">BDL进阶</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4f163508f77fe54fd4eef7f90c0174a1" class="toggle"  />
+    <label for="section-4f163508f77fe54fd4eef7f90c0174a1" class="flex justify-between">
+      <a role="button" class="">第十九章 异常处理</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3533b80c4ef5db47a17c45b692d613f0" class="toggle"  />
+    <label for="section-3533b80c4ef5db47a17c45b692d613f0" class="flex justify-between">
+      <a href="/docs/BDL/3.advance/20.build-in-packages/" class="">第二十章 标准包</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1b2d9f6e2935b38e2dce8583d2172c7f" class="toggle"  />
+    <label for="section-1b2d9f6e2935b38e2dce8583d2172c7f" class="flex justify-between">
+      <a role="button" class="">BDL实战</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-45dc22155750af7958cacd6a2952ab76" class="toggle"  />
+    <label for="section-45dc22155750af7958cacd6a2952ab76" class="flex justify-between">
+      <a href="/docs/BDL/4.actual-combat/1.%E5%8D%95%E6%A1%A3/" class="">第一章 单档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6a37b1a8ed711a7eb6a9d790c42f73fd" class="toggle"  />
+    <label for="section-6a37b1a8ed711a7eb6a9d790c42f73fd" class="flex justify-between">
+      <a href="/docs/BDL/4.actual-combat/2.%E5%8F%8C%E6%A1%A3/" class="">第二章 双档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e455a871ac0e3640fdfb28f989fe1a1" class="toggle"  />
+    <label for="section-4e455a871ac0e3640fdfb28f989fe1a1" class="flex justify-between">
+      <a role="button" class="">第三章 双档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fa715394aef5d5af148dce1e869ba45" class="toggle"  />
+    <label for="section-5fa715394aef5d5af148dce1e869ba45" class="flex justify-between">
+      <a role="button" class="">第四章 双档</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f745973faac9b396d210658216512d2" class="toggle"  />
+    <label for="section-5f745973faac9b396d210658216512d2" class="flex justify-between">
+      <a role="button" class="">第五章 批处理作业</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e8c5fb6439d623d00ba329ff6dc53a3" class="toggle"  />
+    <label for="section-4e8c5fb6439d623d00ba329ff6dc53a3" class="flex justify-between">
+      <a role="button" class="">第六章 webservice</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a6b5e5f811434cb992fdebac0e1d7718" class="toggle" checked />
+    <label for="section-a6b5e5f811434cb992fdebac0e1d7718" class="flex justify-between">
+      <a href="/docs/Practice/" class="">BDL练习题</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Practice/basic/" class="active">基础练习题</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/darcyjoven/bdl"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>基础练习题</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础练习题">基础练习题</a>
+      <ul>
+        <li><a href="#第-1-题">第 1 题</a></li>
+        <li><a href="#第-2-题">第 2 题</a></li>
+        <li><a href="#第-3-题">第 3 题</a></li>
+        <li><a href="#第-4-题">第 4 题</a></li>
+        <li><a href="#第-5-题">第 5 题</a></li>
+        <li><a href="#第-6-题">第 6 题</a></li>
+        <li><a href="#第-7-题">第 7 题</a></li>
+        <li><a href="#第-8-题">第 8 题</a></li>
+        <li><a href="#第-9-题">第 9 题</a></li>
+        <li><a href="#第-10-题">第 10 题</a></li>
+        <li><a href="#第-11-题">第 11 题</a></li>
+        <li><a href="#第-12-题">第 12 题</a></li>
+        <li><a href="#第-13-题">第 13 题</a></li>
+        <li><a href="#第-14-题">第 14 题</a></li>
+        <li><a href="#第-16-题">第 16 题</a></li>
+        <li><a href="#第-18-题">第 18 题</a></li>
+        <li><a href="#第-19-题">第 19 题</a></li>
+        <li><a href="#第-20-题">第 20 题</a></li>
+        <li><a href="#第-21-题">第 21 题</a></li>
+        <li><a href="#第-22-题">第 22 题</a></li>
+        <li><a href="#第-23-题">第 23 题</a></li>
+        <li><a href="#第-24-题">第 24 题</a></li>
+        <li><a href="#第-25-题">第 25 题</a></li>
+        <li><a href="#第-26-题">第 26 题</a></li>
+        <li><a href="#第-27-题">第 27 题</a></li>
+        <li><a href="#第-28-题">第 28 题</a></li>
+        <li><a href="#第-29-题">第 29 题</a></li>
+        <li><a href="#第-30-题">第 30 题</a></li>
+        <li><a href="#第-31-题">第 31 题</a></li>
+        <li><a href="#第-32-题">第 32 题</a></li>
+        <li><a href="#第-33-题">第 33 题</a></li>
+        <li><a href="#第-34-题">第 34 题</a></li>
+        <li><a href="#第-35-题">第 35 题</a></li>
+        <li><a href="#第-36-题">第 36 题</a></li>
+        <li><a href="#第-37-题">第 37 题</a></li>
+        <li><a href="#第-38-题">第 38 题</a></li>
+        <li><a href="#第-39-题">第 39 题</a></li>
+        <li><a href="#第-40-题">第 40 题</a></li>
+        <li><a href="#第-41-题">第 41 题</a></li>
+        <li><a href="#第-42-题">第 42 题</a></li>
+        <li><a href="#第-43-题">第 43 题</a></li>
+        <li><a href="#第-44-题">第 44 题</a></li>
+        <li><a href="#第-45-题">第 45 题</a></li>
+        <li><a href="#第-46-题">第 46 题</a></li>
+        <li><a href="#第-47-题">第 47 题</a></li>
+        <li><a href="#第-48-题">第 48 题</a></li>
+        <li><a href="#第-49-题">第 49 题</a></li>
+        <li><a href="#第-50-题">第 50 题</a></li>
+        <li><a href="#第-51-题">第 51 题</a></li>
+        <li><a href="#第-52-题">第 52 题</a></li>
+        <li><a href="#第-53-题">第 53 题</a></li>
+        <li><a href="#第-54-题">第 54 题</a></li>
+        <li><a href="#第-55-题">第 55 题</a></li>
+        <li><a href="#第-56-题">第 56 题</a></li>
+        <li><a href="#第-57-题">第 57 题</a></li>
+        <li><a href="#第-58-题">第 58 题</a></li>
+        <li><a href="#第-59-题">第 59 题</a></li>
+        <li><a href="#第-60-题">第 60 题</a></li>
+        <li><a href="#第-61-题">第 61 题</a></li>
+        <li><a href="#第-62-题">第 62 题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="基础练习题">
+  基础练习题
+  <a class="anchor" href="#%e5%9f%ba%e7%a1%80%e7%bb%83%e4%b9%a0%e9%a2%98">#</a>
+</h1>
+<p>基础练习题目，并不是指难度基础，而是不涉及到除了语言特性其它的范围。</p>
+<p>不涉及到画面规格（GUI）、和数据库等，专注于 BDL 基础语法。</p>
+<p>反而某些题目难度可能很大，不必强求所有题目都能解出，果断时间再来看，可能就可以解出了。</p>
+<h2 id="第-1-题">
+  第 1 题
+  <a class="anchor" href="#%e7%ac%ac-1-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+有 1、2、3、4 四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+可填在百位、十位、个位的数字都是 1、2、3、4，组成所有的排列后再去掉不满足条件的排列。
+</blockquote>
+
+<h2 id="第-2-题">
+  第 2 题
+  <a class="anchor" href="#%e7%ac%ac-2-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+企业发放的奖金根据利润提成。</p>
+<ul>
+<li>利润(I)低于或等于 10 万元时，奖金可提 10%；</li>
+<li>利润高于 10 万元，低于 20 万元时，低于 10 万元的部分按 10%提成，高于 10 万元的部分，可提+ 成 7.5%；</li>
+<li>20 万到 40 万之间时，高于 20 万元的部分，可提成 5%；</li>
+<li>40 万到 60 万之间时高于 40 万元的部分，可提成 3%；</li>
+<li>60 万到 100 万之间时，高于 60 万元的部分，可提成 1.5%；</li>
+<li>高于 100 万元时，超过 100 万元的部分按 1%提成。
+从键盘输入当月利润 I，求应发放奖金总数？</li>
+</ul>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+请利用数轴来分界，定位。注意定义时需把奖金定义成双精度浮点(double)型。
+</blockquote>
+
+<h2 id="第-3-题">
+  第 3 题
+  <a class="anchor" href="#%e7%ac%ac-3-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+一个整数，它加上 100 后是一个完全平方数，再加上 168 又是一个完全平方数，请问该数是多少？</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong>
+假设该数为 x。</p>
+<ol>
+<li>则：x + 100 = n2, x + 100 + 168 = m2</li>
+<li>计算等式：m2 - n2 = (m + n)(m - n) = 168</li>
+<li>设置： m + n = i，m - n = j，i * j =168，i 和 j 至少一个是偶数</li>
+<li>可得： m = (i + j) / 2， n = (i - j) / 2，i 和 j 要么都是偶数，要么都是奇数。</li>
+<li>从 3 和 4 推导可知道，i 与 j 均是大于等于 2 的偶数。</li>
+<li>由于 i * j = 168， j&gt;=2，则 1 &lt; i &lt; 168 / 2 + 1。</li>
+<li>接下来将 i 的所有数字循环计算即可。</li>
+</ol>
+
+</blockquote>
+
+<h2 id="第-4-题">
+  第 4 题
+  <a class="anchor" href="#%e7%ac%ac-4-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+输入某年某月某日，判断这一天是这一年的第几天？</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+以 3 月 5 日为例，应该先把前两个月的加起来，然后再加上 5 天即本年的第几天，特殊情况，闰年且输入月份大于 3 时需考虑多加一天。
+</blockquote>
+
+<h2 id="第-5-题">
+  第 5 题
+  <a class="anchor" href="#%e7%ac%ac-5-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+输入三个整数 x,y,z，请把这三个数由小到大输出。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+我们想办法把最小的数放到 x 上，先将 x 与 y 进行比较，如果 x&gt;y 则将 x 与 y 的值进行交换，然后再用 x 与 z 进行比较，如果 x&gt;z 则将 x 与 z 的值进行交换，这样能使 x 最小。
+</blockquote>
+
+<h2 id="第-6-题">
+  第 6 题
+  <a class="anchor" href="#%e7%ac%ac-6-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+用*号输出字母 C 的图案。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+可先用&rsquo;*&lsquo;号在纸上写出字母 C，再分行输出。
+</blockquote>
+
+<h2 id="第-7-题">
+  第 7 题
+  <a class="anchor" href="#%e7%ac%ac-7-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+打印楼梯，同时在楼梯上方打印两个笑脸。</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>用 i 控制行，j 来控制列，j 根据 i 的变化来控制输出黑方格的个数。</p>
+<pre tabindex="0"><code>:):)
+##
+####
+######
+########
+##########
+############
+</code></pre>
+</blockquote>
+
+<h2 id="第-8-题">
+  第 8 题
+  <a class="anchor" href="#%e7%ac%ac-8-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+输出 9*9 口诀。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+分行与列考虑，共 9 行 9 列，i 控制行，j 控制列。
+</blockquote>
+
+<h2 id="第-9-题">
+  第 9 题
+  <a class="anchor" href="#%e7%ac%ac-9-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+古典问题（兔子生崽）：有一对兔子，从出生后第 3 个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少？（输出前 40 个月即可）</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+兔子的规律为数列 1,1,2,3,5,8,13,21&hellip;.，即下个月是上两个月之和（从第三个月开始）.
+</blockquote>
+
+<h2 id="第-10-题">
+  第 10 题
+  <a class="anchor" href="#%e7%ac%ac-10-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+判断 101 到 200 之间的素数。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+判断素数的方法：用一个数分别去除 2 到 sqrt(这个数)，如果能被整除，则表明此数不是素数，反之是素数。
+</blockquote>
+
+<h2 id="第-11-题">
+  第 11 题
+  <a class="anchor" href="#%e7%ac%ac-11-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+打印出所有的&quot;水仙花数&quot;，所谓&quot;水仙花数&quot;是指一个三位数，其各位数字立方和等于该数 本身。例如：153 是一个&quot;水仙花数&quot;，因为 153=1 的三次方＋ 5 的三次方＋ 3 的三次方。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+利用 for 循环控制 100-999 个数，每个数分解出个位，十位，百位。
+</blockquote>
+
+<h2 id="第-12-题">
+  第 12 题
+  <a class="anchor" href="#%e7%ac%ac-12-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+将一个正整数分解质因数。例如：输入 90,打印出 90=2*3*3*5。</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong>
+对 n 进行分解质因数，应先找到一个最小的质数 k，然后按下述步骤完成：</p>
+<ol>
+<li>如果这个质数恰等于（小于的时候，继续执行循环）n，则说明分解质因数的过程已经结束，另外 打印出即可。</li>
+<li>但 n 能被 k 整除，则应打印出 k 的值，并用 n 除以 k 的商,作为新的正整数 n.重复执行第二步。</li>
+<li>如果 n 不能被 k 整除，则用 k+1 作为 k 的值,重复执行第一步。</li>
+</ol>
+
+</blockquote>
+
+<h2 id="第-13-题">
+  第 13 题
+  <a class="anchor" href="#%e7%ac%ac-13-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+利用条件运算符的嵌套来完成此题：学习成绩&gt;=90 分的同学用 A 表示，60-89 分之间的用 B 表示，60 分以下的用 C 表示。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+iif(a&gt;b,a,b) 这是条件运算符的基本例子。
+</blockquote>
+
+<h2 id="第-14-题">
+  第 14 题
+  <a class="anchor" href="#%e7%ac%ac-14-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+输入两个正整数 m 和 n，求其最大公约数和最小公倍数。</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<ol>
+<li>
+<p>最小公倍数=输入的两个数之积除于它们的最大公约数，关键是求出最大公约数；</p>
+</li>
+<li>
+<p>求最大公约数用辗转相除法（又名欧几里德算法）</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>证明：设 c 是 a 和 b 的最大公约数，记为 c=gcd(a,b),a&gt;=b,
+令 r=a mod b
+设 a=kc，b=jc，则 k，j 互素，否则 c 不是最大公约数
+据上，r=a-mb=kc-mjc=(k-mj)c
+可知 r 也是 c 的倍数，且 k-mj 与 j 互素，否则与前述 k，j 互素矛盾,
+由此可知，b 与 r 的最大公约数也是 c，即 gcd(a,b)=gcd(b,a mod b)，得证。</p>
+</li>
+<li>
+<p>算法描述：</p>
+</li>
+</ul>
+<p>第一步：a ÷ b，令 r 为所得余数（0≤r 第二步：互换：置 a←b，b←r，并返回第一步。</p>
+
+</blockquote>
+
+<h2 id="第-16-题">
+  第 16 题
+  <a class="anchor" href="#%e7%ac%ac-16-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+取字符串第几位。
+</blockquote>
+
+<h2 id="第-18-题">
+  第 18 题
+  <a class="anchor" href="#%e7%ac%ac-18-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+求 s=a+aa+aaa+aaaa+aa&hellip;a 的值，其中 a 是一个数字由键盘输入。
+例如 2+22+222+2222+22222(此时共有 5 个数相加)，几个数相加由键盘输入。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+关键是计算出每一项的值。
+</blockquote>
+
+<h2 id="第-19-题">
+  第 19 题
+  <a class="anchor" href="#%e7%ac%ac-19-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+一个数如果恰好等于它的因子之和，这个数就称为&quot;完数&quot;。例如 6=1 ＋ 2 ＋ 3.编程找出 1000 以内的所有完数。</p>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+参考正整数分解质因数
+</blockquote>
+
+<h2 id="第-20-题">
+  第 20 题
+  <a class="anchor" href="#%e7%ac%ac-20-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+一球从 100 米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第 10 次落地时，共经过多少米？第 10 次反弹多高？</p>
+<h2 id="第-21-题">
+  第 21 题
+  <a class="anchor" href="#%e7%ac%ac-21-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不瘾，又多吃了一个 第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下 的一半零一个。到第 10 天早上想再吃时，见只剩下一个桃子了。求第一天共摘了多少。</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong>
+采取逆向思维的方法，从后往前推断。</p>
+<ol>
+<li>设 x1 为前一天桃子数，设 x2 为第二天桃子数， 则：</li>
+</ol>
+<p>x2=x1/2-1, x1=(x2+1)*2</p>
+<p>x3=x2/2-1, x2=(x3+1)*2</p>
+<p>以此类推： x 前=(x 后+1)*2</p>
+<ol start="2">
+<li>从第 10 天可以类推到第 1 天，是一个循环过程。</li>
+</ol>
+
+</blockquote>
+
+<h2 id="第-22-题">
+  第 22 题
+  <a class="anchor" href="#%e7%ac%ac-22-%e9%a2%98">#</a>
+</h2>
+<p><strong>问题：</strong>
+两个乒乓球队进行比赛，各出三人。甲队为 a,b,c 三人，乙队为 x,y,z 三人。已抽签决定比赛名单。有人向队员打听比赛的名单。a 说他不和 x 比，c 说他不和 x,z 比，请编程序找出三队赛手的名单。</p>
+<h2 id="第-23-题">
+  第 23 题
+  <a class="anchor" href="#%e7%ac%ac-23-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+打印出如下图案（菱形）。</p>
+<pre><code>   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+</code></pre>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+先把图形分成两部分来看待，前四行一个规律，后三行一个规律，利用双重 for 循环，第一层控制行，第二层控制列。
+</blockquote>
+
+<h2 id="第-24-题">
+  第 24 题
+  <a class="anchor" href="#%e7%ac%ac-24-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13&hellip;求出这个数列的前 20 项之和。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+请抓住分子与分母的变化规律。
+</blockquote>
+</p>
+<h2 id="第-25-题">
+  第 25 题
+  <a class="anchor" href="#%e7%ac%ac-25-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+求 1+2!+3!+&hellip;+20!的和。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+此程序只是把累加变成了累乘。
+</blockquote>
+</p>
+<h2 id="第-26-题">
+  第 26 题
+  <a class="anchor" href="#%e7%ac%ac-26-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+利用递归方法求 5!。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+递归公式：fn=fn_1*4!
+</blockquote>
+</p>
+<h2 id="第-27-题">
+  第 27 题
+  <a class="anchor" href="#%e7%ac%ac-27-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+利用递归函数调用方式，将所输入的 5 个字符，以相反顺序打印出来。</p>
+<h2 id="第-28-题">
+  第 28 题
+  <a class="anchor" href="#%e7%ac%ac-28-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+有 5 个人坐在一起，问第五个人多少岁？他说比第 4 个人大 2 岁。问第 4 个人岁数，他说比第 3 个人大 2 岁。问第三个人，又说比第 2 人大两岁。问第 2 个人，说比第一个人大两岁。最后问第一个人，他说是 10 岁。请问第五个人多大？
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+利用递归的方法，递归分为回推和递推两个阶段。要想知道第五个人岁数，需知道第四人的岁数，依次类推，推到第一人（10 岁），再往回推。
+</blockquote>
+</p>
+<h2 id="第-29-题">
+  第 29 题
+  <a class="anchor" href="#%e7%ac%ac-29-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+给一个不多于 5 位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+学会分解出每一位数。
+</blockquote>
+</p>
+<h2 id="第-30-题">
+  第 30 题
+  <a class="anchor" href="#%e7%ac%ac-30-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+一个 5 位数，判断它是不是回文数。即 12321 是回文数，个位与万位相同，十位与千位相同。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+学会分解出每一位数。
+</blockquote>
+</p>
+<h2 id="第-31-题">
+  第 31 题
+  <a class="anchor" href="#%e7%ac%ac-31-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+请输入星期几的第一个字母来判断一下是星期几，如果第一个字母一样，则继续判断第二个字母。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+用情况语句比较好，如果第一个字母一样，则判断用情况语句或 if 语句判断第二个字母
+</blockquote>
+</p>
+<h2 id="第-32-题">
+  第 32 题
+  <a class="anchor" href="#%e7%ac%ac-32-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+删除一个字符串中的指定字母，如：字符串 &ldquo;aca&rdquo;，删除其中的 a 字母。</p>
+<h2 id="第-33-题">
+  第 33 题
+  <a class="anchor" href="#%e7%ac%ac-33-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+判断一个数字是否为质数。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+质数（prime number）又称素数，有无限个。一个大于 1 的自然数，除了 1 和它本身外，不能被其他自然数整除。
+</blockquote>
+</p>
+<h2 id="第-34-题">
+  第 34 题
+  <a class="anchor" href="#%e7%ac%ac-34-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+字符串反转，如将字符串 &ldquo;
+  <a href="https://www.runoob.com">www.runoob.com</a>&rdquo; 反转为 &ldquo;moc.boonur.www&rdquo;。</p>
+<h2 id="第-35-题">
+  第 35 题
+  <a class="anchor" href="#%e7%ac%ac-35-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+求 100 之内的素数。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>质数（prime number）又称素数，有无限个。一个大于 1 的自然数，除了 1 和它本身外，不能被其他自然数整除。</p>
+
+</blockquote>
+</p>
+<h2 id="第-36-题">
+  第 36 题
+  <a class="anchor" href="#%e7%ac%ac-36-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**对 10 个数进行排序。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>可以利用选择法，即从后 9 个比较过程中，选择一个最小的与第一个元素交换， 下次类推，即用第二个元素与后 8 个进行比较，并进行交换。</p>
+
+</blockquote>
+</p>
+<h2 id="第-37-题">
+  第 37 题
+  <a class="anchor" href="#%e7%ac%ac-37-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**求一个 3*3 矩阵对角线元素之和
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>利用双重 for 循环控制输入二维数组，再将 a[i,i]累加后输出。</p>
+
+</blockquote>
+</p>
+<h2 id="第-38-题">
+  第 38 题
+  <a class="anchor" href="#%e7%ac%ac-38-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**有一个已经排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>首先判断此数是否大于最后一个数,然后再考虑插入中间的数的情况,插入后此元素之后的数,依次后移一个位置。</p>
+
+</blockquote>
+</p>
+<h2 id="第-39-题">
+  第 39 题
+  <a class="anchor" href="#%e7%ac%ac-39-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**将一个数组逆序输出。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>用第一个与最后一个交换。</p>
+
+</blockquote>
+</p>
+<h2 id="第-40-题">
+  第 40 题
+  <a class="anchor" href="#%e7%ac%ac-40-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**打印出杨辉三角形（要求打印出 10 行）。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>结构如下：</p>
+<pre tabindex="0"><code>    1
+    1 1
+    1 2 1
+    1 3 3 1
+    1 4 6 4 1
+</code></pre>
+</blockquote>
+</p>
+<h2 id="第-41-题">
+  第 41 题
+  <a class="anchor" href="#%e7%ac%ac-41-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**输入 3 个数 a,b,c，按大小顺序输出。</p>
+<h2 id="第-42-题">
+  第 42 题
+  <a class="anchor" href="#%e7%ac%ac-42-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+输入数组，最大的与第一个元素交换，最小的与最后一个元素交换，输出数组。</p>
+<h2 id="第-43-题">
+  第 43 题
+  <a class="anchor" href="#%e7%ac%ac-43-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**有 n 个整数，使其前面各数顺序向后移 m 个位置，最后 m 个数变成最前面的 m 个数。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>可以使用一个辅助数组来保存需要移动的元素，然后再将元素按照要求移动到正确的位置。</p>
+
+</blockquote>
+</p>
+<h2 id="第-44-题">
+  第 44 题
+  <a class="anchor" href="#%e7%ac%ac-44-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+有 n 个人围成一圈，顺序排号。从第一个人开始报数（从 1 到 3 报数），凡报到 3 的人退出圈子，问最后留下的是原来第几号的那位。</p>
+<h2 id="第-45-题">
+  第 45 题
+  <a class="anchor" href="#%e7%ac%ac-45-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong></p>
+<p>写一个函数，求一个字符串的长度，在 main 函数中输入字符串，并输出其长度。
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+</blockquote>
+</p>
+<h2 id="第-46-题">
+  第 46 题
+  <a class="anchor" href="#%e7%ac%ac-46-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+编写 input()和 output()函数输入，输出 5 个学生的数据记录。</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>学生信息包括姓名、性别、年纪。请用 record 实现。</p>
+
+</blockquote>
+
+<h2 id="第-47-题">
+  第 47 题
+  <a class="anchor" href="#%e7%ac%ac-47-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**输入一个整数，并将其反转后输出。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>拆分每一位</p>
+
+</blockquote>
+</p>
+<h2 id="第-48-题">
+  第 48 题
+  <a class="anchor" href="#%e7%ac%ac-48-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+编写一个函数，输入 n 为偶数时，调用函数求 1/2+1/4+&hellip;+1/n,当输入 n 为奇数时，调用函数 1/1+1/3+&hellip;+1/n(利用指针函数)。</p>
+<h2 id="第-49-题">
+  第 49 题
+  <a class="anchor" href="#%e7%ac%ac-49-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+海滩上有一堆桃子，五只猴子来分。第一只猴子把这堆桃子平均分为五份，多了一个，这只 猴子把多的一个扔入海中，拿走了一份。第二只猴子把剩下的桃子又平均分成五份，又多了 一个，它同样把多的一个扔入海中，拿走了一份，第三、第四、第五只猴子都是这样做的， 问海滩上原来最少有多少个桃子？</p>
+<h2 id="第-50-题">
+  第 50 题
+  <a class="anchor" href="#%e7%ac%ac-50-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+809*??=800*??+9*?? 其中??代表的两位数, 809*??为四位数，8*??的结果为两位数，9*??的结果为 3 位数。求??代表的两位数，及 809*??后的结果。</p>
+<h2 id="第-51-题">
+  第 51 题
+  <a class="anchor" href="#%e7%ac%ac-51-%e9%a2%98">#</a>
+</h2>
+<p>**题目：**八进制转换为十进制</p>
+<h2 id="第-52-题">
+  第 52 题
+  <a class="anchor" href="#%e7%ac%ac-52-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+求 0—7 所能组成的奇数个数。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>这个问题其实是一个排列组合的问题，设这个数为 sun=a1a2a3a4a5a6a7a8,a1-a8 表示这个数的某位的数值，当一个数的最后一位为奇数时，那么这个数一定为奇数，不管前面几位是什么数字。如果最后一位数为偶数，则这个数一定为偶数。</p>
+<p>a1-a8 可以取 0-7 这个八个数字，首位数字不为 0。
+从该数为一位数到该数为 8 位数开始统计奇数的个数：</p>
+<ol>
+<li>
+<p>当只有一位数时也就是该数的最后一位，奇数个数为 4</p>
+</li>
+<li>
+<p>当该数为两位数时，奇数个数为 4*7=28</p>
+</li>
+<li>
+<p>当该数为三位数时，奇数个数为：4<em>8</em>7=224</p>
+<p>&hellip;</p>
+</li>
+<li>
+<p>当该数为八位数时，奇数个数为：4<em>8</em>8<em>8</em>8<em>8</em>8*7(依次为最后一位到第一位)</p>
+</li>
+</ol>
+
+</blockquote>
+</p>
+<h2 id="第-53-题">
+  第 53 题
+  <a class="anchor" href="#%e7%ac%ac-53-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+一个偶数总能表示为两个素数之和。
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>我去，这是什么题目，要我证明这个问题吗？真不知道怎么证明。那就把一个偶数分解成两个素数吧。</p>
+
+</blockquote>
+</p>
+<h2 id="第-54-题">
+  第 54 题
+  <a class="anchor" href="#%e7%ac%ac-54-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong></p>
+<p>判断一个素数能被几个 9 整除。</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>丫的！这题目的意思是判断一个素数能整除几个 9 组成的数吧？我就这么理解吧。素数是不 能被除 1 和自身之外的数整除的</p>
+
+</blockquote>
+
+<h2 id="第-55-题">
+  第 55 题
+  <a class="anchor" href="#%e7%ac%ac-55-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+</blockquote>
+</p>
+<h2 id="第-56-题">
+  第 56 题
+  <a class="anchor" href="#%e7%ac%ac-56-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+读取 7 个数（1—50）的整数值，每读取一个值，程序打印出该值个数的 ＊。</p>
+<h2 id="第-57-题">
+  第 57 题
+  <a class="anchor" href="#%e7%ac%ac-57-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+某个公司采用公用电话传递数据，数据是四位的整数，在传递过程中是加密的，加密规则如下： 每位数字都加上 5,然后用和除以 10 的余数代替该数字，再将第一位和第四位交换，第二位和第三位交换。</p>
+<h2 id="第-58-题">
+  第 58 题
+  <a class="anchor" href="#%e7%ac%ac-58-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+猜数字游戏，用户可以输入数字，提示用户输入的数字是大了，还是小了。
+猜中后提示一共猜了多少次，并可以选择是否继续猜数字。</p>
+<h2 id="第-59-题">
+  第 59 题
+  <a class="anchor" href="#%e7%ac%ac-59-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+从键盘输入一个字符串，将小写字母全部转换成大写字母，然后输出到一个磁盘文件&quot;test&quot;中保存。 输入的字符串以！结束。</p>
+<h2 id="第-60-题">
+  第 60 题
+  <a class="anchor" href="#%e7%ac%ac-60-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+有两个磁盘文件 A 和 B,各存放一行字母，要求把这两个文件中的信息合并（按字母顺序排列），输出到一个新文件 C 中。</p>
+<blockquote class="book-hint info">
+  <p><strong>程序分析：</strong></p>
+<p>你需要先创建 A.txt 与 B.txt。
+A.txt 文件内容：</p>
+<pre><code>123
+</code></pre>
+<p>B.txt 文件内容：</p>
+<pre><code>456
+</code></pre>
+
+</blockquote>
+
+<h2 id="第-61-题">
+  第 61 题
+  <a class="anchor" href="#%e7%ac%ac-61-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+<blockquote class="book-hint info">
+  <strong>程序分析：</strong>
+</blockquote>
+</p>
+<h2 id="第-62-题">
+  第 62 题
+  <a class="anchor" href="#%e7%ac%ac-62-%e9%a2%98">#</a>
+</h2>
+<p><strong>题目：</strong>
+有五个学生，每个学生有 3 门课的成绩，从键盘输入以上数据（包括学生号，姓名，三门课成绩），计算出平均成绩，况原有的数据和计算出的平均分数存放在磁盘文件&quot;stud&quot;中。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/9e9ff3bb0497843529aa05e79bfb99e34b76c83b" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2023年8月28日</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/Practice/basic/index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>编辑本页</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础练习题">基础练习题</a>
+      <ul>
+        <li><a href="#第-1-题">第 1 题</a></li>
+        <li><a href="#第-2-题">第 2 题</a></li>
+        <li><a href="#第-3-题">第 3 题</a></li>
+        <li><a href="#第-4-题">第 4 题</a></li>
+        <li><a href="#第-5-题">第 5 题</a></li>
+        <li><a href="#第-6-题">第 6 题</a></li>
+        <li><a href="#第-7-题">第 7 题</a></li>
+        <li><a href="#第-8-题">第 8 题</a></li>
+        <li><a href="#第-9-题">第 9 题</a></li>
+        <li><a href="#第-10-题">第 10 题</a></li>
+        <li><a href="#第-11-题">第 11 题</a></li>
+        <li><a href="#第-12-题">第 12 题</a></li>
+        <li><a href="#第-13-题">第 13 题</a></li>
+        <li><a href="#第-14-题">第 14 题</a></li>
+        <li><a href="#第-16-题">第 16 题</a></li>
+        <li><a href="#第-18-题">第 18 题</a></li>
+        <li><a href="#第-19-题">第 19 题</a></li>
+        <li><a href="#第-20-题">第 20 题</a></li>
+        <li><a href="#第-21-题">第 21 题</a></li>
+        <li><a href="#第-22-题">第 22 题</a></li>
+        <li><a href="#第-23-题">第 23 题</a></li>
+        <li><a href="#第-24-题">第 24 题</a></li>
+        <li><a href="#第-25-题">第 25 题</a></li>
+        <li><a href="#第-26-题">第 26 题</a></li>
+        <li><a href="#第-27-题">第 27 题</a></li>
+        <li><a href="#第-28-题">第 28 题</a></li>
+        <li><a href="#第-29-题">第 29 题</a></li>
+        <li><a href="#第-30-题">第 30 题</a></li>
+        <li><a href="#第-31-题">第 31 题</a></li>
+        <li><a href="#第-32-题">第 32 题</a></li>
+        <li><a href="#第-33-题">第 33 题</a></li>
+        <li><a href="#第-34-题">第 34 题</a></li>
+        <li><a href="#第-35-题">第 35 题</a></li>
+        <li><a href="#第-36-题">第 36 题</a></li>
+        <li><a href="#第-37-题">第 37 题</a></li>
+        <li><a href="#第-38-题">第 38 题</a></li>
+        <li><a href="#第-39-题">第 39 题</a></li>
+        <li><a href="#第-40-题">第 40 题</a></li>
+        <li><a href="#第-41-题">第 41 题</a></li>
+        <li><a href="#第-42-题">第 42 题</a></li>
+        <li><a href="#第-43-题">第 43 题</a></li>
+        <li><a href="#第-44-题">第 44 题</a></li>
+        <li><a href="#第-45-题">第 45 题</a></li>
+        <li><a href="#第-46-题">第 46 题</a></li>
+        <li><a href="#第-47-题">第 47 题</a></li>
+        <li><a href="#第-48-题">第 48 题</a></li>
+        <li><a href="#第-49-题">第 49 题</a></li>
+        <li><a href="#第-50-题">第 50 题</a></li>
+        <li><a href="#第-51-题">第 51 题</a></li>
+        <li><a href="#第-52-题">第 52 题</a></li>
+        <li><a href="#第-53-题">第 53 题</a></li>
+        <li><a href="#第-54-题">第 54 题</a></li>
+        <li><a href="#第-55-题">第 55 题</a></li>
+        <li><a href="#第-56-题">第 56 题</a></li>
+        <li><a href="#第-57-题">第 57 题</a></li>
+        <li><a href="#第-58-题">第 58 题</a></li>
+        <li><a href="#第-59-题">第 59 题</a></li>
+        <li><a href="#第-60-题">第 60 题</a></li>
+        <li><a href="#第-61-题">第 61 题</a></li>
+        <li><a href="#第-62-题">第 62 题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

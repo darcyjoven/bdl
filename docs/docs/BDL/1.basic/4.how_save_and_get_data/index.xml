@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第四章 存储和获取数据 on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/</link>
+    <description>Recent content in 第四章 存储和获取数据 on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.二进制、八进制、十六进制</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/1.binary-octal-hexadecimal/</link>
+      <pubDate>Mon, 17 Jul 2023 18:48:00 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/1.binary-octal-hexadecimal/</guid>
+      <description>二进制、八进制、十六进制#二进制、八进制和十六进制是计算机中常用的进制形式。N进制的算法就是逢N进1。
+二进制 二进制数使用0和1两个数码来表示的书，如111110112表示二进制。它的基数是2，进位规则是“逢二进一”。
+八进制 八进制是用0~7 8个数码来表示的数，如1678,进为规则是“逢八进一”。
+十六进制 十六进制是用0~9和A~F 16个字符表示，如1AE16,它的基数是16,进为规则为“逢16进1”。</description>
+    </item>
+    
+    <item>
+      <title>2.字节和位</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/2.bite-bit/</link>
+      <pubDate>Mon, 17 Jul 2023 18:56:08 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/2.bite-bit/</guid>
+      <description>字节和为&amp;ndash;计算机表示数据的方法#程序员编写的程序以及所使用的数据在计算机中是以二进制位序列的方式保存的。 典型的计算机内存段二进制位如下：
+...010010101010101010010001100111001100... 上面的二进制位序列中，每个数字，要么是0，要么是1。在计算机中，位（bit）是包含-或者1的一个单元。在物理上，它的值是一负或者一个正电荷。 也就是计算机中通过电压高低来表示以为所含有的值。 如果是0，则用低电压表示；如果是1，则用高电压表示。
+在上述的二进制位序这个层次上，位的集合没有结构，很难解释这些系列的意义。 为了能够从整体上考虑这些位，于是给这些位序列枪架上结构的概念，这样的结构被称为字节（byte）和字（word）。 通常，一个字节由8位构成，而一个字由32位构成，或者说4个字节构成。
+经常可能被问到的一个问题是：“存款有几位数了？”如果回答是4位数，那了不起也就是万元少点。如果回答是6位数，那就是几十万了。 日常生活中，通过十进制的位数，就可以发现要表达的数越大，需要十进制的位数也就越多。
+一个字节只有8位，一个字节能表达的最大数据也就是111111112，即8位数的二进制就是255。也就是说，一个字节最大能存储的证书是255。两个字节呢？11111111111111112的十进制是65535。四个字节呢？是4294967295。32位计算机中，一个整型需要4个字节博爱是，所以最大整数是4294967295，超过4294967295之后，比如4294967296在计算机中用一个整型就表示不了了。 在计算机中，需要表示的数越大，需要的二进制位也就越多，也需要更多字节来保存。
+26个英文字母可以用26个数字分别对应，如果算上大小写，也就52个数字。再加上英文标点符号和10个数字，总共加起来也不足127个字符。 于是美国有关的标准化组织就出台了所谓的美国标准信息交换码（ASCII编码），同意规定了上述常用符号用那些二进制数来表示。
+如果汉字要在计算机中表示，就没那么简单了。 汉字由上万个，用一个字节表示一个汉字的话，最多只能表示256个汉字，必须使用两个字节才能把所有汉字表示完全。 所以在计算机中，一个汉字用两个字节表示。 假设一篇文章由100个汉字组成，那么至少需要2*100=200个字节表示。
+计算机中物理内存的空间大小是有限的，现在内存条一般是8G大小。 硬盘的空间也有限，现在的硬盘一般都超过了512G大小。 在这里8G 和512G是什么意思呢？ 这里其实是一个简单的单位换算。
+1字节=8位1K字节=1024字节=2&amp;lt;sup&amp;gt;10&amp;lt;/sup&amp;gt;字节，也就是1K=10241M字节=1024K字节=1024*1024字节=2&amp;lt;sup&amp;gt;20&amp;lt;/sup&amp;gt;字节，也就是1M=1024K1G字节=1024M=1024*1024*1024字节=2&amp;lt;sup&amp;gt;30&amp;lt;/sup&amp;gt;字节，也就是1G =1024M所以如果一个512G大小的硬盘用来全部储存汉字，可以储存多少个字呢？ 512G =512*1024*1024*1024/2个汉字=274,877,906,944个汉字。</description>
+    </item>
+    
+    <item>
+      <title>3.数据类型</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/3.data-types/</link>
+      <pubDate>Tue, 18 Jul 2023 08:10:23 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/3.data-types/</guid>
+      <description>数据类型#BDL语言规定，程序中使用的每一个数据，必须指定其数据类型。
+BDL语言数据类型
+graph TD;BDL语言数据类型--&gt;构造类型BDL语言数据类型--&gt;基本类型构造类型--&gt;数组构造类型--&gt;结构体基本类型--&gt;字符串类型基本类型--&gt;数值类型数值类型--&gt;整型数值类型--&gt;浮点型graph TD;整型--&gt;DATE整型--&gt;BINGINT整型--&gt;INTEGER整型--&gt;SMALLINT整型--&gt;TINYINT整型--&gt;BOOLEANgraph TD;浮点型--&gt;c[&#34;FLOAT[(p)]&#34;]浮点型--&gt;d[&#34;SMALLFLOAT&#34;]浮点型--&gt;e[&#34;DECIMAL[(p[,s])]&#34;]浮点型--&gt;f[&#34;MONEY[(p[,s])]&#34;]graph TD;字符串类型--&gt;a[&#34;CHAR[(n)]&#34;]字符串类型--&gt;b[&#34;VARCHAR[(n[,r])]&#34;]字符串类型--&gt;STRING字符串类型--&gt;BYTE字符串类型--&gt;TEXT基本类型是最基础的简单数据类型，其值无法再分解为其它类型 构造数据类型：顾名思义，构造数据类型是根据已经定义的一个或读个数据类型用构造的方法来定义的。 构造数据类型有多个其它数据类型组合而成。 一个构造类型的值可以分解成若干个成员或元素。 其中每个成员要么是一个基本数据类型，要么又是一个构造类型。 再BDL语言中构造类型又以下几种： 数组类型：所有元素都是同一类型。即数组类型是统一数据类型元素的集合 结构类型：不同数据类型的组合 本节只介绍基本数据类型，其它数据类型再后续陆续介绍。
+整数类型#整数是日常生活和计算机中用得最频繁的数据类型，也比较容易理解。 整数从数学意义上来说就是从负无穷到正无穷之间的任意整型的数据，也就是任意自然数(如1、2、3、4、5)以及它们的负数或0。 如果用十进制表示一个自然数，十进制的位数越多，表示的整数也越大。 在计算机中用二进制表示数据，二进制的位数不能无限使用，所以在计算机中，整数有一定的大小限制，只能在一定的范围之内。 在以前内存“寸土寸金”的时代，哪怕是为了节约2个字节的内存，也是非常有必要的。
+所以BDL语言的整数类型，又分为BINGINT8，INTEGER4，SMALLINT2，TINYINT1。
+在BDL语言中，日期也是用整型标识的，DATE4,它和INTEGER4在内存中存储方式一致，并规定1899/12/31这一天为0，1900/01/01为1。
+除了这些比较大的整数还有一个1位的整型BOOLEAN，它只能保存1或者0。
+请验证以下代码的运行值，后续所有代码不需要的地方都不会在包括main函数：
+define a smallint let a = 32767 display a let a = a + 1 display a let a = a + 1 display a 整数的正负#浮点型#FLOAT[(p)]8</description>
+    </item>
+    
+    <item>
+      <title>4.变量</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/</link>
+      <pubDate>Tue, 18 Jul 2023 09:23:44 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/</guid>
+      <description>变量#变量定义#变量定义，变量申明，都是同一个意思的两种翻译方法。
+在定义变量的时候，需要给这个变量-一个名字。有了名字之后才能使用这个变量。回顾曾经编写的BDL语言代码，可以发现这些代码中，凡是用双引号括起来的部分，都是字符串。 那些没有用引号括起来的单词，一部分是C语言提供的关键字，比如integer，string等， 还有一部分是BDL语言提供的符号，如=、+、-、()、{}等，这些单词和符号就是BDL语言的核心部分，编译器生来就认识它们。 另外没有使用双引号括起来的单词，如define a integer,其中的integer是关键字，a就是非BDL语言的关键字，对于编译器来说，它是不认识的。 要让编译器知道这个单词是什么意思，所以有了定义(define)。
+对于变量来说，变量的定义会使得编译器在变量符号表中新增一条记录。 这样编译器在后面如果读入了一个变量名，通过查询符号表，就知道是否声明过了。
+一行可以定义多个变量 define a,b,c integer 一样也可以拆成两行 define a, b, c integer 每行也可以只定义一个变量 define a integer define b integer define c integer 变量定义的顺序可以打乱 define b integer define a integer define c integer 不同类型可以定义在同一个define中，但必须指定每个不同类型变量的数据类型 define a, b integer c varchar(10) 定义变量的意义#BDL为什么要规定要先定义变量呢？ 为什么要指定变量的名字和对应的数据类型呢？
+建立变量符号表 通过声明变量，编译器可以建立变量符号表，如此一来，程序中用到了多少变量，每个变量的类型是什么，编译器非常清楚。如果使用了没有声明的变量，编译器在编译期间就可以发现，从而帮助程序员远离由于疏忽而将变量名写错的情况。下面演示了写错变量名后编译器编译时的提示信息。
+define a integer let a = 1 let b = a * 10 display b 编译提示变量未定义</description>
+    </item>
+    
+    <item>
+      <title>5.练习</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/5.practice/</link>
+      <pubDate>Tue, 18 Jul 2023 10:22:43 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/5.practice/</guid>
+      <description>练习-几个与变量相关的经典算法#几乎每一个程序 都必须使用到变量，因为程序就是处理数据的，而数据必须存储在变量中。 本节仅举几个简单的变量使用的例子。 这些例子都是一些经 典的做法，请读者深刻理解并记住。
+累加和累乘#所谓累加，就是将一系列的数字分别相加，最后得到一个结果。 如计算1+2+3+4+5：
+define x integer let x = x + 1 let x = x + 2 let x = x + 3 let x = x + 4 let x = x + 5 display sfmt(&amp;#34;\n1+2+3+4+5=%1&amp;#34;,x) 编译运行，结果为：
+1+2+3+4+5=15 代码解析
+不要认为这道算术题如此简单，让计算机来计算是大材小用。 读者要知道，通过一些简单的算术计算，可以理解编程中的一些基本技巧，为今后的真正开发软件打基础。
+这些简单的数学题，是在锻炼读者的编程能力。
+define x integer 定义了x为整型，整型的默认初始值为0。
+重点来关注:
+let x = x + 1 这行代码就使用到了一个非常经典的累加算法。 这行代码是一个赋值语句。就是将赋值号“=”右边计算后所得的值，赋给左边的变量。再重申一次，这里的等号“=”是BDL语言中的赋值号，不是数学里表示相等的等号。
+该语句的运算过程是:
+先计算x+1的值，计算得到数值1。 将x+1的值(也就是1)赋给变量x。变量x现在的值是1。 来仔细分析这个过程。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>module on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/module/</link>
+    <description>Recent content in module on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 28 Aug 2023 20:06:19 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4.BDL中的模块</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/4.module/</link>
+      <pubDate>Mon, 28 Aug 2023 20:06:19 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/4.module/</guid>
+      <description>BDL中的模块#BDL源代码从编译主程序、子程序，链接主程序，过程中会产生多个文件。
+所以按照模块可以将BDL程序划分为不同的块，一个程序的执行往往依赖大量的模块。
+globals#如果说不同文件之间的通过链接的形式，组成不同模组最终组成了一个可执行程序。
+那么globals就是使不同模块中共享变量不可缺少的关键字。
+我们已知的变量最大的作用域，也就是函数外，即全局变量。在本文件中所有函数都可以使用。但是随之我们编写程序复杂度增加，我们使用很多不同文件，不同的模块，这个时候即使是全局变量也无法在不同文件中使用。
+globals就是解决这个问题的，在globals中定义的变量，在程序整个运行周期都是可用的，无论你是哪个文件、模块中的函数。
+globals是一个块语句，它有对于的end globals结束语。只能定义在函数外。 它的用法是，在块中包裹变量或者自定义类型&amp;ndash;即define和type语句。
+使用方法有两种
+在源代码中直接定义 globals define g_cnt integer end globals main end main 定义一个globals文件，然后在源码中引入文件 文件czzi004.global globals define g_cnt integer end globals 文件czzi004.4gl globals &amp;#34;./czzi004.global&amp;#34; main end main 第二种方式是我们常用的方式，这样不同文件只要引入同一个global文件即可，不需要每次修改globals变量，都修改所有文件。
+练习#观察分析azz/4gl/p_zz.4gl和lib/4gl/cl_null.4gl文件中globals的使用。</description>
+    </item>
+    
+  </channel>
+</rss>

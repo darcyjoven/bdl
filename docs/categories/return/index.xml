@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>return on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/categories/return/</link>
+    <description>Recent content in return on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 20 Jul 2023 11:27:41 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/return/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3.函数调用与返回</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/10.function/3.formal-actual/</link>
+      <pubDate>Thu, 20 Jul 2023 11:27:41 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/10.function/3.formal-actual/</guid>
+      <description>函数调用与返回#形参和实参#请观察一下代码：
+main define x,y,sum integer let x = 5 let y = 7 call add(x,y) returning sum display sum end main function add(a,b) define a,b integer return a + b end function 在上面代码中参数列表是a和b，而在函数调用时传递进来的参数是x和y，这两种参数是申明关系呢？ 打个形象的比方，这是角色和演员的关系。
+函数定义时列表中参数为形数，是“剧本角色”，而函数调用时传递进来的参数称为实参，是“演员”，函数执行的过程就是演戏的过程。
+程序刚开始执行的时候，系统并不为形参分配存储空间，因为它只是个角色，不是实体，一直要到函数调用时，系统为形参分配存储空间，并将实参的值复制给形参。
+结合代码上面代码可知，在call add(x,y) returning sum语句调用前，a和b都不是真正的程序变量，一直到add函数被调用，a和b才被创建，并分别用x和y为其赋值，在这种情况下，在函数内对a和b的处理并不影响x和y，这类似于“ 某个演员扮演的角色在戏中受伤，并不是说演员真的受伤了”，而且，在函数执行结束返回时，创建的形参被撤销，这类似于“戏演完 了，剧中角色自然也就停止了”。
+举例来看，下列示例代码先交换两个变量的值，但并没有成功，为什么?请试着用演员和角色的关系来解释一下。
+--视图交换两个变量的值 main define num1,num2 integer display &amp;#34;&amp;#34; display sfmt(&amp;#34;num1 is %1,num2 is %2 &amp;#34;,num1,num2) call swap2Variable(num1,num2) display sfmt(&amp;#34;num1 is %1,num2 is %2 &amp;#34;,num1,num2) end mian function swap2Variable(a,b) define a,b,c integer display sfmt(&amp;#34;a is %1,b is %2 &amp;#34;,a,b) let c = a let a = b let b = c display sfmt(&amp;#34;a is %1,b is %2 &amp;#34;,a,b) end function 输出结果为：</description>
+    </item>
+    
+  </channel>
+</rss>

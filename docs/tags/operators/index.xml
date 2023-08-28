@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>operators on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/operators/</link>
+    <description>Recent content in operators on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 Jul 2023 16:10:57 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/operators/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.运算符和表达式</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/1.operators/</link>
+      <pubDate>Tue, 18 Jul 2023 16:10:57 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/1.operators/</guid>
+      <description>认识BDL语言中的运算符和表达式#在前面的章节中，已经接触过运算符和表达式了。 可以说，运算符和表达式是BDL语言的最基本构成，没有运算符和表达式，则不能编写任何程序。 程序的任务是对数据进行处理，数据是程序处理的对象，而运算符是施加给这些数据的操作。数据和运算符是表达式的基本元素。
+认识运算符和表达式#最近本的运算符，莫过于加、减、乘、除四则运算了
+1+12*410-20100/3 由于键盘无法输出算数中的乘号(✖)，和出号(➗)，改用*和、代替。删改你的例子都是常量参与运算，在BDL中，变量也可以参与运算，如：
+define a,b,c integer let a = 0 let b = 10 b - a a +b +10 a+b+10/b 上面的每一个式子都可以称为一个表达式。 BDL中的算术表达式和普通算术中的表达式写法基本一样，运算符两边是参与运算的对象，非常容易理解； 而有些语言，其表达式的写法非常古怪，让人望而生畏。 同样地，算术运算中，除数是不能为0的，在计算机中，如果除数为0，将产生一个“除数为0的异常”。 所以上面的示例中，有一个表达式因为除数为0，将使得程序运行崩溃。
+另外在给变量赋值的时候，使用赋值运算符=，如：
+let a = a+b+10/b let b = a+b+10 在介绍这个运算符的时候，特别强调了它和算术运算中的等号“=”的区别。 BDL中的“=”，是将右边的值赋给左边的变量，而并不表示等号两边相等。 在BDL中，要表示两边是否相等，可用“==”表示（你也可能见到过使用一个“=”比较大小的，这样语法也没问题，但建议使用两个），即两个等号连接在一起，用来检查等号两边是否相等。 类似这种进行两个对象的大小关系比较的运算，是一种关系运算。
+操作数、运算符和表达式#参与运算的对象称做操作数（operator）。 如3+5中的3和5，a+b+10中的a，b和10，他们是参与具体预算的对象。同样地：
+(3+5)*a 这个表达式中，对于运算符“*”，两边的操作数就分别是(3+5)和a。 可见，操作数也可以是比较复杂的对象。 3+5也可以看做是一个加法表达式。
+运算符是指定要执行某项操作的一个标志符号，它指明了对操作数所进行的运算。 如“+”号，表示了一个相加运算;“==” 号表示了一个关系判断是否“ 相等”的运算。 表达式表示一个求值的规则。 表达式是由变量、常量、运算符、函数和圆括号按一定的规则组合而成的。 BDL语言的表达式可根据运算的不同而分为不同的表达式类型，如算术表达式、关系表达式、函数表达式等。一般来说，表达式有如下的书写规则。
+运算符不能相邻。如a+-b是错误的。 乘号不能省略。如x乘以y应写成: x*y， 不能写成xy。 可用多层括号表示运算次序，括号必须成对出现，均使用小括号。 注意</description>
+    </item>
+    
+  </channel>
+</rss>

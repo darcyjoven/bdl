@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>for on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/for/</link>
+    <description>Recent content in for on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 20 Jul 2023 08:30:40 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/for/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.for结构</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/2.for/</link>
+      <pubDate>Thu, 20 Jul 2023 08:30:40 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/2.for/</guid>
+      <description>for结构&amp;ndash;更常用的循环结构#阅读代码时可以发现，for结 构是应用最多的一种 循环控制结构，这大抵是因为for结构提供的控制功能更为完善，而且，相比while结构，for结构写出的代码也更为简洁，可读性也稍好。
+基本形式#for 变量 = 初始值 to 目的值 step 每次增加的量 循环结构 end for 注意 这里的step关键不写的时候，默认每次+1，step还可以跟负数，如果是负数，每次判断的就是小于目的值时跳出循环。用while表示同样的表达式:
+let 变量 = 初始值 while 变量&amp;lt;=目的值 循环结构 let 变量 = 变量 + 每次增加的量 end while 由此可见，要写出同样功能代码，for结构比while结构简洁易读。
+for结构执行流程图：
+flowchart TDa[&#34;变量 = 初始值&#34;]--&gt;d{&#34;变量是否超过目的值&#34;}c[&#34;循环结构&#34;]c--&gt;b[&#34;变量增加&#34;]b--&gt;dd--&#34;yes&#34;--&gt;e[&#34;跳出循环&#34;]d--&#34;no&#34;--&gt;c其执行过程如下：
+变量赋初始值 判断变量是否超过目的值，超过退出循环，进行第5步；不超过执行循环结构，执行第3步 自动变量增加指定的值 再判断第2步 循环结果，跳出for结构，继续向下执行 利用for结构改写我们之前计算1到100和的代码：
+define i,sum integer for i =1 to 100 let sum = sum + 1 end for display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) </description>
+    </item>
+    
+  </channel>
+</rss>

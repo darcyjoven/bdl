@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>create cycle on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/categories/create-cycle/</link>
+    <description>Recent content in create cycle on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 20 Jul 2023 08:12:40 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/create-cycle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.构造循环</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/1.create-cycle/</link>
+      <pubDate>Thu, 20 Jul 2023 08:12:40 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/1.create-cycle/</guid>
+      <description>构造循环#循环结构有两大要素:循环条件和循环体，当满足某个条件时，重复执行某些动作，直到该条件不再满足，这个表述很好地体现了循环条件和循环体的关系。
+构造循环时，首先应明白要做什么，即“循环体是什么”，这是和程序的目的相关的。知道要干什么了还不够，还要明白什么时候开始做，什么时候停，如果没有设定合理的循环条件，很容易造成程序死循环，至使资源耗尽而导致电脑死机。
+举个最简单的例子，要求计算从1加到100，因为本章讨论的是循环，所以我们撇开高斯的简便方法((1+100)*50=5050)。
+程序的编写采用如下形式显然是不现实的:sum=1+2+3+.....+100写完这个式子就够费劲的，还好只有100个，要是有成千上万个，活活要累个半死。
+在这种应用背景下，需要使用循环结构，只要一小段代码，如下。
+define i,sum integer while i&amp;lt;=100 let sum = sum + i let i = i + 1 end while display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) 输出结果是结果是：5050。
+代码解析
+代码中采用的是while结构，i作为加数，sum作为被加数，用以保存结果，程序的关键部分是第3~4行。
+i的初始值为1，当i小于等于100时( 循环条件)，会重复执行循环体，在循环体内做了两件事情，- -是将i和sum相加，结果重新保存到sum中，二是将i增加1，一步步逼近循环结束的条件。
+由此可知，循环条件和循环体相互配合完成特定的功能。一次次的循环，距离循环结束 应越来越近，避免出现死循环，试想，如果循环体中只是完成let sum=sum+i 这一操，而不对i进行修改，那么循环条件i&amp;lt;=100 的条件将一 直满足，循环永不会终止。
+注意 在代码中，即使要计算1加到10000，只要将100修改为10000即可，十分方便快捷。语法规则#while 表达式 循环结构体 end while 在while结构中，表达式既可以是逻辑表达式或关系表达式，也可以是普通表达式，甚至常量或变量，判断的关键这个值是否为真（非0），下面看一下表达式仅是个变量的示例：
+define sum,i integer let i =100 while i let sum = sum + i let i = i -1 end while display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) 编译运行后结果为：</description>
+    </item>
+    
+  </channel>
+</rss>

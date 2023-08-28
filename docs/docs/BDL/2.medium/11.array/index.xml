@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第十一章 数组-同一类型的多个元素的集合 on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/</link>
+    <description>Recent content in 第十一章 数组-同一类型的多个元素的集合 on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.什么是数组</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/1.what-is-array/</link>
+      <pubDate>Thu, 20 Jul 2023 13:45:07 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/1.what-is-array/</guid>
+      <description>什么是数组#程序经常使用同类型的数据，比如要处理某个班级的学生成绩信息，如果只有几个学生，我们可以使用几个同类型的变量，比如：define mark0, mark1, mark2, mark3, mark4 integer;` 这样，便可以存放5个学生的成绩，但如果是几百人呢?要一直这么写下去吗?如果读者觉得继续写下去没什么不妥的话，那几千甚至几万人呢!所以，如何合理组织大量同类数据是个问题。
+在这种应用背景下，数组应运而生，成功解决了上述问题。
+数组是一大片连续的存储空间#声明一个数组时，编译器为数组分配内存存储空间，以存放多个同型数据。每个数据称为数组的一个元素，要存储的元素个数称为数组的大小，元素的类型称为数组的类型。数据占据的内存空间大小取决于数组的大小和类型，而且，编译器为数组分配一片连续的内存空间。很容易计算数组占据的内存大小和每个元素对应的内存首地址。
+下图，形象地示意了数组占据内存空间的情况，其中每个小方框代表一个内存字节，smallint占据2个内存字节，因此，数组中每个元素占据2个内存字节。
+数组元素的访问#下面来看要解决的第2个问题“每个数据应当有唯一的标识符进行读写和查找”，这是通过下标来实现的。以一-维数组为例，元素的访问形式为:
+数组名[下标] 举例来说，有一个数组，名为mark,里面记录着全班60个人的成绩，mark中的第1个元素可写为mark[1]，第2个元素为mark[2]，第3个元素为mark[3]，以此类推，第60个元素为mark[60]，好了，结束。有效的下标为1到N,不在此范围的下标访问都会引发越界错误。 线界错误是初学者经常犯错的地方。
+了解了数组的基本组织形式，下面具体看一下如何使用数组解决实际问题。</description>
+    </item>
+    
+    <item>
+      <title>2.一维数组</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/2.one-dimensional-array/</link>
+      <pubDate>Thu, 20 Jul 2023 13:51:56 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/2.one-dimensional-array/</guid>
+      <description>一维数组#一维数组也称向量，用以组织具有一维顺序关系的一组同类型数据，在使用数组前，必须先声明数组，编译器根据声明语句为其分配内存，这样数组才有意义。
+一维数组如何定义#与简单数据类型一样，数组也由关键字define定义
+define 数组名 array [size] of 类型 --定长数组 define 数组名 dynamic array of 类型 --动态长度数组 数组由两种形式：
+指定长度的定长数组 不指定长度动态长度数组 一位数组的访问#之前我们提过，数组越界的错误，对于定长的数组，超过原来长度的访问，或程序奔溃。对于动态长度的数组，访问未经过初始化的长度的时候，会对之前没有初始化的索引赋空值。
+我们通过一个例子看一下一位数组的访问方式：
+define score array [6] of integer define sum,i integer define average decimal(10,2) prompt &amp;#34;请输入第1名学生的成绩&amp;#34; for score[1] prompt &amp;#34;请输入第2名学生的成绩&amp;#34; for score[2] prompt &amp;#34;请输入第3名学生的成绩&amp;#34; for score[3] prompt &amp;#34;请输入第4名学生的成绩&amp;#34; for score[4] prompt &amp;#34;请输入第5名学生的成绩&amp;#34; for score[5] prompt &amp;#34;请输入第6名学生的成绩&amp;#34; for score[6] for i = 1 to 6 let sum = sum + score[i] end for let average = sum/6 display sfmt(&amp;#34;\n平均成绩：%1&amp;#34;,average) 数值的初始化#上面我们说过动态数组访问超界时会将之前数组都赋值为null，如果每次都是这样，那么不小心写了一次array[1000]，那么这个数组长度之后都从1000后开始用吗？</description>
+    </item>
+    
+    <item>
+      <title>3.二维数组</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/3.two-dimensional/</link>
+      <pubDate>Thu, 20 Jul 2023 16:20:31 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/3.two-dimensional/</guid>
+      <description>二维数组#一维数组常称为向量，本节介绍二维数组。所谓二维数组，最简单的理解是“有两个下标’如果把一维数组理解为一行数据，那么，二维数组可形象地表示为行列结构，如图所示,左侧表示的是一个大小为M的一维数组：
+A[1] A[2] &amp;hellip; A[M] 右侧表示的是-一个大小为M*N的二维数组：
+A[0,1] A[0,2] &amp;hellip; A[0,N] A[1,1] A[1,2] &amp;hellip; A[1,N] &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; A[M,1] A[M,2] &amp;hellip; A[M,N] 二维数组的定义#和一维数组一样，定义二维数组时，要告诉编译器以下信息：数组名、元素类型、元素的个数。对二维数组来说，元素个数时两位大小的成绩。
+动态数组时只要定义数组的维度即可。
+示例如下：
+define a array [2,3] integer -- 定义一个2x3的定长数组，一共有2*3=6个元素。 define b dynamic with dimension 2 of string --定义一个二维的动态字符串数组 定长和动态二维数组都可以访问的语法都是一样的。
+array[m,n] 二维数组应用举例#查看以下代码，演示二维数组的使用方式。
+define score array[6,3] of integer --表示6个学生的3门成绩 define s array[3] of integer --每门课的总成绩 define i , j integer -- 输入总共18门成绩 for i = 1 to 6 prompt sfmt(&amp;#34;请输入第%1位学生的成绩%2：&amp;#34;,i,1) for score[i,1] prompt sfmt(&amp;#34;请输入第%1位学生的成绩%2：&amp;#34;,i,2) for score[i,2] prompt sfmt(&amp;#34;请输入第%1位学生的成绩%2：&amp;#34;,i,3) for score[i,3] end for -- 计算每门课总成绩 for i = 1 to 3 let s[i] = 0 for j = 1 to 6 let s[i] = s[i] + score[j,i] end for end for display &amp;#34;\n平均成绩：&amp;#34; for i = 1 to 3 display sfmt(&amp;#34;第%1门课的平均成绩为%2&amp;#34;,i,(s[i]/6 using &amp;#34;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;##.</description>
+    </item>
+    
+    <item>
+      <title>4.多维数组</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/4.multi-dimensional/</link>
+      <pubDate>Thu, 20 Jul 2023 17:03:58 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/4.multi-dimensional/</guid>
+      <description>更高维的数组#在了解二位数字定义、初始化和引用之后，不难将概念引申到三维，思维，甚至是更高维数组，本章讨论更高维数组的使用方式。
+高维数组的定义和元素访问#细心的读者不难发现，如果数组是N维，就需要N个下标来访问数组中的元素，同样，在声明高维数组时，除了和一-维、二维数组声明一样要指定元素类型和数组名外，还要指定每一维的大小，以帮助编译器确定到底要分配多大的内存块。
+举例来说，要声明一个int型3维数组sz,大小为345,代码如下:
+define sz array[3,4,5] of integer 多维数组在内存中如何排列元素#维度决定了数组中元素的组织方式及访问元素所用的下标个数，但本质上讲，所有的数组在内存中都是一维线性的，所有元素都是连续排列的，中间没有间隔。
+以二维数组为例，内存中是先放第一行的元素，再放第二行的元素。下面给出了大小为3*4的二维数组A的排列顺序：
+A[1,1]-&amp;gt;A[1,2]-&amp;gt;A[1,3]-&amp;gt;A[1,4]-&amp;gt; A[2,1]-&amp;gt;A[2,2]-&amp;gt;A[2,3]-&amp;gt;A[2,4]-&amp;gt; A[3,1]-&amp;gt;A[3,2]-&amp;gt;A[3,3]-&amp;gt;A[3,4] 多维数组的存储方式与此类似，可以将下标看成是-一个计数器，像计数的万位、千位、百位、十位和个位一样，右边的下标(靠后的下标)是低位，每一位都在上下界间变化，变化的范围是1到声明时指定的下标值，当某一低位计数器超出范围时(达到声明时指定的下标值)，左边下标加1，同时该低位计数器及其右边的更低位计算器置1 (回到下界)。这样，最左边一维下标变化是最慢的，最右一维 下标变化最快。
+下面给出2*3*2的三维数组B中元素在内存中的排列顺序:
+B[1,1,1]-&amp;gt;B[1,1,2]-&amp;gt;B[1,2,1]-&amp;gt;B[1,2,2]-&amp;gt;B[1,3,1]-&amp;gt;B[1,3,2]-&amp;gt;B[2,1,1]-&amp;gt;B[2,1,2]-&amp;gt;B[2,2,1]-&amp;gt;B[2,2,2]-&amp;gt;B[2,3,1]-&amp;gt;B[2,3,2] </description>
+    </item>
+    
+    <item>
+      <title>5.练习</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/5.practice/</link>
+      <pubDate>Thu, 20 Jul 2023 17:49:58 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/5.practice/</guid>
+      <description>练习#定义一个字符串数组，并输出每个字符串字符对应ASCII的值#字符串数组的值分别为&amp;quot;A&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;d&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;F&amp;quot;,&amp;quot;G&amp;quot;
+写出下列代码输出结果#define i,j integer define a array[4] of integer let a[1]=1 let a[2]=2 let a[3]=3 let a[4] =4 for i = 1 to 4 for k = 1 to i let a[i] = a[j] - a[i] end for end for for i = 1 to 4 display sfmt(&amp;#34;%1&amp;#34;,a[i]) end for </description>
+    </item>
+    
+  </channel>
+</rss>

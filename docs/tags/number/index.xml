@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>number on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/number/</link>
+    <description>Recent content in number on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 Jul 2023 13:24:57 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/number/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3.数字的格式化</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/3.format-number/</link>
+      <pubDate>Tue, 18 Jul 2023 13:24:57 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/3.format-number/</guid>
+      <description>数字的格式化#之前我们说过日期在BDL语言也是储存为整数类型，请运行以下代码，观察其输出值
+define t date display t 发现其结果是
+1899/12/31 如果你的环境是1899/12/31，是因为DBDATE环境变量为Y2MD/，修改为Y4MD/之后就变为4位。不建议修改，因为已有代码可能是按照2位编写的。
+日期类型会自动格式输出，那么我如果也想数字格式化输出字符串，应该如果写呢？
+本章就来介绍以下，数字的格式化方式。
+数字货币格式化#在介绍之前，我们尝试运行一下如下代码：
+define a integer define b decimal(20,6) let a = 12345 let b = 2345.1235 display sfmt(&amp;#34;a=%1,b=%2&amp;#34;,a,b) display sfmt(&amp;#34;a=%1,b=%2&amp;#34;,a using &amp;#34;******&amp;#34;,b using &amp;#34;#####.###&amp;#34;) a=12345,b=2345.123500 a=*12345,b= 2345.124 使用了 using &amp;ldquo;******&amp;rdquo; 的12345 在最前面多了一个* 使用了 using &amp;ldquo;#####.###&amp;rdquo; 的2345.1235，整数前多了一个空格，小数保留了3位，且进了一位。 这里的数字/数字变量 using 格式化字符串的格式就是在格式化数字格式。
+格式化字符串中有固定的写法，如下：
+类型 格式化规则 * 不足的位数补上* # 不足的位数补上空格 &amp;amp; 不足的位数补上0 &amp;lt; 和&amp;amp;一样，但是左对齐 - 和#一样，但负数会加上-号 + 和-一样，但整数会加上+号 ( 和-一样，但负数会加上()号 ) 和(一样 $ 数值前加上一个币种符号 , ,号左侧有数字才显示, .</description>
+    </item>
+    
+  </channel>
+</rss>

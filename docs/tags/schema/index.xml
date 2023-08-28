@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>schema on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/schema/</link>
+    <description>Recent content in schema on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 24 Aug 2023 08:36:16 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/schema/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.数据表结构在BDL中的使用</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/2.schema/</link>
+      <pubDate>Thu, 24 Aug 2023 08:36:16 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/2.schema/</guid>
+      <description>数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
+在我们使用数据库时，如果你需要大量的数据中的资料，不需要频繁的查询数据中的表结构，通过表结构中字段的数据类型去对应BDL中的数据类型。在BDL中已经为我们做好了这一步，ORACLE中大部分数据类型在BDL中都映射到指定的类型。
+我们只要使用数据库的schema文件，就能通过数据的字段去定义BDL中的数据类型。
+上一章我们学到了function main() end function这种main函数写法，只会使用表结构，而不连接到数据库，指得就是使用schema文件，而不连接到数据库。
+在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
+其中ds:库名可以省略，如果省略，表示使用当前已经连接到的库。
+例如:
+database ds main define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
+type_file字段清单如下
+字段名称 数据类型 字段名称 数据类型 chr1000 varchar2(1000) chr6 varchar2(6) chr1 varchar2(1) chr50 varchar2(50) num5 number(5) chr37 varchar2(37) num20_6 number(20,6) chr9 varchar2(9) dat date chr12 varchar2(12) chr18 varchar2(18) chr30 varchar2(30) num10 number(10) chr14 varchar2(14) chr8 varchar2(8) chr7 varchar2(7) chr20 varchar2(20) chr10 varchar2(10) chr21 varchar2(21) chr100 varchar2(100) num20 number(20) chr200 varchar2(200) chr3 varchar2(3) chr300 varchar2(300) num26_10 number(26,10) chr500 varchar2(500) chr2 varchar2(2) blob blob chr4 varchar2(4) num15_3 number(15,3) chr5 varchar2(5) row_id varchar2(18) 进阶使用&amp;ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。</description>
+    </item>
+    
+  </channel>
+</rss>

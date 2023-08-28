@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第十四章 数据库使用 on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/</link>
+    <description>Recent content in 第十四章 数据库使用 on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.数据库连接</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/</link>
+      <pubDate>Thu, 24 Aug 2023 08:06:11 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/</guid>
+      <description>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
+本章所有内容都是基于ORACLE DB，但大部门内容应该是通用的。
+数据库已经配置的连接可以在文件$FGLPROFILE中看见，这里配置好的数据库都是可以在BDL中使用的。
+连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
+database就是连接数据库的语句，ds就是要连接的数据库。ds为TIPTOP中一个特殊的数据库，此数据保存了所有表的表结构，和同义词表的数据。
+同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
+database ds1即可切换到ds1数据库中。
+main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
+这两者在连接数据库时是有区别main end main 会自动连接到 main之外的databse ds数据库。 而function main() end function只会用到databse ds的表结构，而不会自动连接到数据库。
+使用表结构的方法在下一节将会讲到
+除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。</description>
+    </item>
+    
+    <item>
+      <title>2.数据表结构在BDL中的使用</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/2.schema/</link>
+      <pubDate>Thu, 24 Aug 2023 08:36:16 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/2.schema/</guid>
+      <description>数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
+在我们使用数据库时，如果你需要大量的数据中的资料，不需要频繁的查询数据中的表结构，通过表结构中字段的数据类型去对应BDL中的数据类型。在BDL中已经为我们做好了这一步，ORACLE中大部分数据类型在BDL中都映射到指定的类型。
+我们只要使用数据库的schema文件，就能通过数据的字段去定义BDL中的数据类型。
+上一章我们学到了function main() end function这种main函数写法，只会使用表结构，而不连接到数据库，指得就是使用schema文件，而不连接到数据库。
+在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
+其中ds:库名可以省略，如果省略，表示使用当前已经连接到的库。
+例如:
+database ds main define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
+type_file字段清单如下
+字段名称 数据类型 字段名称 数据类型 chr1000 varchar2(1000) chr6 varchar2(6) chr1 varchar2(1) chr50 varchar2(50) num5 number(5) chr37 varchar2(37) num20_6 number(20,6) chr9 varchar2(9) dat date chr12 varchar2(12) chr18 varchar2(18) chr30 varchar2(30) num10 number(10) chr14 varchar2(14) chr8 varchar2(8) chr7 varchar2(7) chr20 varchar2(20) chr10 varchar2(10) chr21 varchar2(21) chr100 varchar2(100) num20 number(20) chr200 varchar2(200) chr3 varchar2(3) chr300 varchar2(300) num26_10 number(26,10) chr500 varchar2(500) chr2 varchar2(2) blob blob chr4 varchar2(4) num15_3 number(15,3) chr5 varchar2(5) row_id varchar2(18) 进阶使用&amp;ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。</description>
+    </item>
+    
+    <item>
+      <title>3.插入更新删除</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/3.update-insert-delete/</link>
+      <pubDate>Thu, 24 Aug 2023 09:33:25 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/3.update-insert-delete/</guid>
+      <description>插入更新删除&amp;ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
+不要更新错了库！
+本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
+插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
+原生语句#将要执行SQL语句放到字符串中 let l_sql = &amp;#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&amp;#39;mar-001&amp;#39;,&amp;#39;xxx&amp;#39;,&amp;#39;xxx&amp;#39;)&amp;#34; prepare SQL语句 prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句 execute demo_ins 检查SQL是否执行成功 在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
+define sqlca record sqlcode integer, -- 报错代码 100 表示未找到 &amp;lt;0表示有错误 sqlerrm string, --错误消息数量 sqlerrp string, sqlerrd array[6] integer, -- 1. 未使用 -- 2. 最后一个Serial或错误代码 -- 3. 最后一条语句处理的行数 -- 4. CPU使用时间 -- 5. SQL文件错误偏移量 -- 6.</description>
+    </item>
+    
+    <item>
+      <title>4.查询单笔资料</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/4.select-single-row/</link>
+      <pubDate>Thu, 24 Aug 2023 14:49:27 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/4.select-single-row/</guid>
+      <description>查询单笔资料#BDL SQL#同插入一样，查询时BDL SQL也有特殊的语法，但仅可以查询单笔资料，如果查询结果包含多笔，程序报错退出。
+define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 select ima01,ima02 into l_ima01,l_ima02 from ima_file where rownum = 1 在select关键之前from关键字之后，可以使用into关键字，后面可以指定查询保存到哪些变量。
+我们在定义变量类型时有使用过一下语法
+define l_ima record like ima_file.* 在查询时我们也可以将表中所有内容查询出来。
+define l_ima record like ima_file.* select * into l_ima.* from ima_file where rownum = 1 EXECUTE#除了BDL自带SQL语法，我们依然可以使用数据库的原生语法，和插入语法类型，我们需要将SQL放到字符串中。
+define l_sql string define l_ima record like ima_file.* let l_sql = &amp;#34;select * into l_ima.* from ima_file where rownum = ?</description>
+    </item>
+    
+    <item>
+      <title>5.多笔查询</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</link>
+      <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</guid>
+      <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
+这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
+FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
+现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
+让我们利用上一节的FETCH来完成上述需求。
+define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34; -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt fetch absolute l_i ima_sel into l_ima[l_i].</description>
+    </item>
+    
+    <item>
+      <title>6.练习</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</link>
+      <pubDate>Sun, 27 Aug 2023 15:45:02 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</guid>
+      <description>练习#创建学生资料表student#字段 数据类型 字段说明 name varchar(20) 姓名 grade varchar(4) 年级 course varchar(40) 课程名称 score number(5) 得分 输入学生资料信息，插入到数据库#如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入 姓名 年级 课程名称 得分 查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98</description>
+    </item>
+    
+  </channel>
+</rss>

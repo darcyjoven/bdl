@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>one-dimensional on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/one-dimensional/</link>
+    <description>Recent content in one-dimensional on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 20 Jul 2023 13:51:56 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/one-dimensional/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.一维数组</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/2.one-dimensional-array/</link>
+      <pubDate>Thu, 20 Jul 2023 13:51:56 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/2.one-dimensional-array/</guid>
+      <description>一维数组#一维数组也称向量，用以组织具有一维顺序关系的一组同类型数据，在使用数组前，必须先声明数组，编译器根据声明语句为其分配内存，这样数组才有意义。
+一维数组如何定义#与简单数据类型一样，数组也由关键字define定义
+define 数组名 array [size] of 类型 --定长数组 define 数组名 dynamic array of 类型 --动态长度数组 数组由两种形式：
+指定长度的定长数组 不指定长度动态长度数组 一位数组的访问#之前我们提过，数组越界的错误，对于定长的数组，超过原来长度的访问，或程序奔溃。对于动态长度的数组，访问未经过初始化的长度的时候，会对之前没有初始化的索引赋空值。
+我们通过一个例子看一下一位数组的访问方式：
+define score array [6] of integer define sum,i integer define average decimal(10,2) prompt &amp;#34;请输入第1名学生的成绩&amp;#34; for score[1] prompt &amp;#34;请输入第2名学生的成绩&amp;#34; for score[2] prompt &amp;#34;请输入第3名学生的成绩&amp;#34; for score[3] prompt &amp;#34;请输入第4名学生的成绩&amp;#34; for score[4] prompt &amp;#34;请输入第5名学生的成绩&amp;#34; for score[5] prompt &amp;#34;请输入第6名学生的成绩&amp;#34; for score[6] for i = 1 to 6 let sum = sum + score[i] end for let average = sum/6 display sfmt(&amp;#34;\n平均成绩：%1&amp;#34;,average) 数值的初始化#上面我们说过动态数组访问超界时会将之前数组都赋值为null，如果每次都是这样，那么不小心写了一次array[1000]，那么这个数组长度之后都从1000后开始用吗？</description>
+    </item>
+    
+  </channel>
+</rss>

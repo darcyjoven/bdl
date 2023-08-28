@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>relational operator on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/categories/relational-operator/</link>
+    <description>Recent content in relational operator on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 19 Jul 2023 15:12:11 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/relational-operator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.关系运算符</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/2.relational-operator/</link>
+      <pubDate>Wed, 19 Jul 2023 15:12:11 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/2.relational-operator/</guid>
+      <description>关系运算符和关系表达式#关系运算就是作比较，日常生活中经常遇到一些真假判断，比如说，“张三比李四高”，“济南到北京比到上海近”，“5大于2”，这些问题的答案是真或假。
+程序设计是对实际问题解决过程的模拟，长城需要左判断，像“如果这样，我就执行动作A，如果那样，我就执行动作B”。
+那么怎么判断这样那样呢？ 这就需要用到关系运算和关系表达式。
+关系运算符号种类#关系运算就是比较变量或常量是否符和预期，比较结果为一个逻辑值“真”或“假”。 举个简单的例子，说“x&amp;lt;10”，如果x值为9，“9&amp;lt;10”成立，故上述式子的值为“真”，若x的值为15，则“15&amp;lt;10”不成立，上述式子的值为“假”。
+BDL中，“真”和“假”也是用数值来体现的，0就是“假”，其它值为“真”。
+关系运算符
+运算符 描述 is null 判断控制 like 如果字符串和给定的格式匹配成功返回true matches 如果字符串和给定的格式匹配成功返回true 相同(==or=) 判断两个值是否相同 不相同(!=or&amp;lt;&amp;gt;) 判断两个值是否不相同 小于&amp;lt; 判断左边的值小于右边 小于等于&amp;lt;= 判断左边的值小于等于右边 大于&amp;gt; 判断左边的值大于右边 大于等于&amp;gt;= 判断左边的值大于等于右边 nvl() 如果第一参数为空，返回第二个参数 iif() 如果第一个参数为true,返回第二个参数，否则返回第三个参数 in() 判断值是否在一个范围内 运算顺序#关系运算符比算数运算符优先级低，这说明：
+x+5&amp;gt;y-7和(x+5)&amp;gt;(y-7)是等价的。
+以下是关系表达式的常见用法
+define a ,b ,f integer define c ,d, e decimal(6,3) define s string let a = 1 let b = 2 let c = 1.51 let d = 2.</description>
+    </item>
+    
+  </channel>
+</rss>

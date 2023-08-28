@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proces on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/categories/proces/</link>
+    <description>Recent content in proces on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 Jul 2023 10:55:59 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/proces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.输出-处理-输出</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/</link>
+      <pubDate>Tue, 18 Jul 2023 10:55:59 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/1.input-proces-output/</guid>
+      <description>输出-处理-输出&amp;ndash;这就是程序#工厂的生产车间生产出来的产品是最终的输出。
+比如某药厂生产的保健药，号称是经历了80多道工序。 这些工序，当然是从输入原材料开始，每道工序处理-件事情，最终生产出包装精美的保健药品。
+第一道工序，清洗，输人的是刚刚采摘下来的药材，其中，有不少的烂叶子、烂根。 清洗工序处理完毕后，输出来的是干净的有用的药材。
+第二道工序，榨汁，输人的是干净有用的药材，榨汁工序处理时，添加纯净水，榨出药汁。 接着是萃取工序，将药汁中的有用的部分苹取.来&amp;hellip;.80多道工序就这样一一处理完毕， 保健 药就制作完毕。
+从进场时的原材料，到最终出产的保健药，就是一个“输入一处理一输出” 的过程。 深入到药厂中的处理部分，80多道工序，每个工序也是一个“输入- -处理一输出”的过程。 没有输入，就没有处理的素材，也就没有输出。
+程序就是这样，根据输人进行不同的处理，输入不同，处理结果不同，这就是程序。 没有输出的程序是没有用的;没有输入的程序，缺乏灵活性，因为运行一次后，由于处理的数据相同，下一次运行结果也&amp;ndash;样，而程序在多次运行时，用到的数据可能是不同的。
+在程序运行时，由用户临时根据情况输人所需的数据，可以提高程序的通用性，增加程序的利用价值。
+BDL语言中有多种多样的输出方式，大部分是封装好的函数，只要调用就可以将结果输出出来。之前我们使用的display后面直接方变量或者直接写的字符串数字，就可以将结果直接打印输出到控制到命令行。本章我们还会介绍输入和其它输出方式。</description>
+    </item>
+    
+  </channel>
+</rss>

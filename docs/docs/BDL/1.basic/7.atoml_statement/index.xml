@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第七章 语句-程序最小构成单元 on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/</link>
+    <description>Recent content in 第七章 语句-程序最小构成单元 on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.语句类型</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/1.statement-type/</link>
+      <pubDate>Wed, 19 Jul 2023 18:01:22 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/1.statement-type/</guid>
+      <description>语句类型#前文已经介绍过，BDL中有4中类型的语句，分别是表达式语句、流程控制语句、函数调用语句和符和语句。
+flowchart LRa[&#34;BDL语言&#34;]b1[&#34;表达式语句&#34;]b2[&#34;函数调用语句&#34;]b3[&#34;复合语句&#34;]b4[&#34;流程控制语句&#34;]c1[&#34;运算符表达式语句&#34;]c2[&#34;赋值语句&#34;]c3[&#34;结构化语句&#34;]c4[&#34;非结构化语句&#34;]d1[&#34;条件语句&#34;]d2[&#34;循环语句&#34;]d3[&#34;限定转向语句&#34;]d4[&#34;非限定转向语句&#34;]e1[&#34;if语句&#34;]e2[&#34;case语句&#34;]e3[&#34;while语句&#34;]e4[&#34;for语句&#34;]e5[&#34;break语句&#34;]e6[&#34;continue语句&#34;]e7[&#34;return语句&#34;]e8[&#34;goto语句&#34;]a--&gt;b1a--&gt;b2a--&gt;b3a--&gt;b4b1--&gt;c1b1--&gt;c2b4--&gt;c3b4--&gt;c4c3--&gt;d1c3--&gt;d2c4--&gt;d3c4--&gt;d4d1--&gt;e1d1--&gt;e2d2--&gt;e3d2--&gt;e4d3--&gt;e5d3--&gt;e6d3--&gt;e7d4--&gt;e8表达式语句#在上一章，我们已经介绍了表达式的概念，通俗说，“有表达式组成的语句叫做表达式语句”。
+表达式语句只有一种赋值表达式，在BDL中不允许计算一个值而不使用。
+下属语句都是赋值语句：
+let x = 3 let x = x + 1 let y = 1 &amp;gt; 2 函数调用语句#以下语句都是函数调用语句。</description>
+    </item>
+    
+    <item>
+      <title>2.结构化设计程序</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/</link>
+      <pubDate>Wed, 19 Jul 2023 18:34:31 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/</guid>
+      <description>结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
+什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
+算法的思维体现在生活的各个方面,比如我们要去北京旅游，会问一些问题:“用什么交通工具?”“在哪里中转?”“是否要去奥运现场?”等，这都包含着算法。
+可见，算法的步骤间有一定的逻辑顺序，按这些顺序执行步骤便可以解决问题，达到目的。这种逻辑顺序，在BDL语言中体现为控制结构。
+算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
+原则上，自然语言也可用于算法表示，但由于自然语言的多义性，不同的人对同-一个版本的描述可能有不同的理解，因此，一般不采用自然语言来描述算法，要求采用一种精确的、无歧义的机制。
+有两种广泛使用的算法表示方法，一是伪代码法，二是流程图法。
+算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
+使用伪代码表示算法无须遵守严格的语法规则，只要完整表达了意思，书写清晰，容易阅读和读懂即可。举例如下:
+用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
+算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
+现在通用的流程图符号画法采纳的是ANSI (美国国家标准化协会)的标准，如图所示。
+flowchart LRid1([&#34;起止框，表示程序起始和结束&#34;])id2{&#34;判断框&#34;}id3[/&#34;输入输出框，表示输入输出数据&#34;/]id4[&#34;处理框，完成某些操作&#34;]subgraph a[&#34;这是连接点，如果流程太长将用词截断&#34;]id5((...))endid6--&#34;程序执行方向&#34;--&gt;id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
+在描述基本结构时，本书尽量采用流程图方式。
+以上伪代码，用流程表示如下:
+flowchart TDa([&#34;开始&#34;])--&gt;b[/&#34;用户输入&#34;/]b--&gt;c{&#34;判断是否是字符Y&#34;}c--&#34;YES&#34;--&gt;d[&#34;C操作&#34;]c--&#34;NO&#34;--&gt;e[&#34;B操作&#34;]d--&gt;f([&#34;结束&#34;])e--&gt;f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
+flowchart TDa[&#34;语句1&#34;] --&gt; b[&#34;语句2&#34;]b--&gt; c[&#34;语句3&#34;]flowchart TDa{&#34;条件1&#34;}--&gt;b[&#34;语句1&#34;]a--&gt;c[&#34;语句2&#34;]flowchart TDa{&#34;</description>
+    </item>
+    
+    <item>
+      <title>3.练习</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/3.practice/</link>
+      <pubDate>Wed, 19 Jul 2023 19:05:11 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/3.practice/</guid>
+      <description>练习#根据以下伪代码，写一个小程序#大于等于60分的输出“合格”，小于60分的输出“不合格”。
+用户输入如果（用户输入的数值小于60）执行A操作否则执行B操作 </description>
+    </item>
+    
+  </channel>
+</rss>

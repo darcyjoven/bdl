@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第十六章 模块 on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/</link>
+    <description>Recent content in 第十六章 模块 on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.重新回顾编译链接</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/1.%E9%87%8D%E6%96%B0%E5%9B%9E%E9%A1%BE%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/</link>
+      <pubDate>Mon, 28 Aug 2023 14:38:36 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/1.%E9%87%8D%E6%96%B0%E5%9B%9E%E9%A1%BE%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/</guid>
+      <description>重新回顾编译链接#在第二章时，我们就介绍了r.c2与r.l2编译链接的命令。 还介绍了exe2运行的命令。
+现在我们新建一个czzi004.4gl程序：
+main display &amp;#34;program code is czzi004&amp;#34; end main 我们上传在$TOP/czz/4gl目录中，运行r.c2命令：
+如果环境没有问题，将输出类似下面结果:
+czzi004 .............. 编译成功，因为我们没有调用外部函数，所以不用链接也可以运行。
+我们使用exe2命令运行，如没有意外，会出现以下意外：
+这是因为我们在tiptop gp中，未通过p_zz作业建立程序，所以系统找不到执行文件目录。
+我们运行以下命令
+cd $CZZ/42m fglrun czz_czzi004 ... program code is czzi004 成功运行！这是因为我们的可执行文件是在czz/42m目录下，我们来看下42m生成的文件。
+cd $CZZ/42m ls -l *czzi004* -rw-rw-rw- 1 tiptop tiptop 242 Aug 28 14:46 czz_czzi004.42m -rw-rw-r-- 1 tiptop tiptop 52 Aug 28 14:46 czz_czzi004.4gl czz_czzi004.42m是4gl编译后的二进制文件，czz_czzi004.4gl是我们在使用r.d2+debug调式时需要的文件。
+而fglrun命令是真正的BDL执行文件，exe2命令其实是tiptop gp专用的运行命令，所以p_zz中没有录入的程序无法用exe2运行。
+既然运行有底层命令，那么编译、链接自然也有对应的底层命令。
+fglcomp#还是之前的czzi004.4gl文件，我们切换到4gl目录下，使用底层函数编译。
+cd $CZZ/4gl fglcomp czzi004.4gl 注意
+使用fglcomp编译时需要指定文件的全名，包括扩展名。</description>
+    </item>
+    
+    <item>
+      <title>2.lib和sub函数</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/2.lib-sub/</link>
+      <pubDate>Mon, 28 Aug 2023 16:00:05 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/2.lib-sub/</guid>
+      <description>lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
+但是我们来看下一下p_zz.4gl的源码中调用了多少次 lib 函数(lib 函数一般以cl开始，有误差，但误差不大)，$AZZ/4gl目录下。
+cd $AZZ/4gl grep -c &amp;#34;cl&amp;#34; p_zz.4gl ... 265 调用了 265 次 lib 函数，如果按照上一节的办法，我们要找到这 265 个 lib 函数对应的文件，链接后并编译。
+这实在太不方便了，所以 BDL 在链接时其实还隐藏了一个功能。
+不需要额外的命令和源代码，我们依然使用czzi004.4gl和s_czzi004.4gl进行示例。
+我们先删除之前生成的文件，防止影响本次结果。
+cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r 编译 czzi004.4gl和s_czzi004.4gl，和之前一样
+单独链接 s_czzi004.42m
+fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004 一样可以运行，看起来并没有减少步骤。
+但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.42x文件，那么之后不管哪个作业调用多少个 lib 函数，那么我们只要在编译这个新作业后，将lib.42x这个文件和主程序链接以下即可。
+只要当lib目录下哪个文件修改了，才需要重新连接lib.42x文件。
+这一步tiptop gp已经替我们做好了，$LIB/42m目录下有一个lib.42x文件。</description>
+    </item>
+    
+    <item>
+      <title>3.p_link作业</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/3.p_link/</link>
+      <pubDate>Mon, 28 Aug 2023 16:27:00 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/3.p_link/</guid>
+      <description>p_link作业&amp;ndash;使用r.l2 链接作业#无论是链接所有42m文件，还是先链接为42r文件，再链接到主程序。都需要我们将需要调用程序链接起来，如果只运行一次还好。 但是编写程序过程中难免会出错，即使能力很强，能够保证每次不出错，后续新功能增加时，也需要重新连接编译。
+我们需要一种新的简单的方式去链接主程序。
+p_link#之前我们使用r.c2命令时，此命令自动将42m文件放到42m目录下，如果链接也能够自动链接对应的文件就好了。
+p_link就是方便程序链接的作业。
+你可以直接运行exe2 p_link打开作业，也可以再p_zz中维护链结档资料按钮中打开。
+让我们用tiptop gp方式重新编译链接czzi004.4gl文件。
+建立p_zz资料 运行指令其实就是42r文件，$CZZi目录就是czz/42r目录。
+点击维护链结档资料 如果第一次建立，会提示生成链接档资料，选择是会打开p_link作业
+自动新增的p_link资料只包含czzi004.42m主程序文件。
+r.c2 s_czzi004并在p_link中新增 必须先使用r.c2编译，42m目录中没有czzi004.42m的话，会报错 完整路径是由模组编号和程序代码组合生成的 输入完成后，会自动链接，如果有报错，先忽略报错，关掉报错窗口
+回到命令行r.c2 czzi004编译主程序
+database ds编译前在第一行增加这个语句，否则会报错
+链接主程序r.l2 czzi004 /u1/genero/fgl.dev/bin/fgl2p -o czzi004.42r libgre.42x WSHelper.42m lib.42x sub.42x qry.42x czz_czzi004.42m czz_s_czzi004.42m czzi004.42r has been generated successfully! 上面为成功通知。
+我们看链接的过程，和我们直接fgllink有很多区别
+fgl2p r.l2 没有使用fgllink fgl2p 相比fgllink除了有链接的功能，如果链接文件包含4gl文件，还可以自动将4gl编译为42m后再链接。
+libgre.42x WSHelper.42m qry.42x 这几个也是类似lib和sub函数库。
+程序开发流程#</description>
+    </item>
+    
+    <item>
+      <title>4.BDL中的模块</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/4.module/</link>
+      <pubDate>Mon, 28 Aug 2023 20:06:19 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/4.module/</guid>
+      <description>BDL中的模块#BDL源代码从编译主程序、子程序，链接主程序，过程中会产生多个文件。
+所以按照模块可以将BDL程序划分为不同的块，一个程序的执行往往依赖大量的模块。
+globals#如果说不同文件之间的通过链接的形式，组成不同模组最终组成了一个可执行程序。
+那么globals就是使不同模块中共享变量不可缺少的关键字。
+我们已知的变量最大的作用域，也就是函数外，即全局变量。在本文件中所有函数都可以使用。但是随之我们编写程序复杂度增加，我们使用很多不同文件，不同的模块，这个时候即使是全局变量也无法在不同文件中使用。
+globals就是解决这个问题的，在globals中定义的变量，在程序整个运行周期都是可用的，无论你是哪个文件、模块中的函数。
+globals是一个块语句，它有对于的end globals结束语。只能定义在函数外。 它的用法是，在块中包裹变量或者自定义类型&amp;ndash;即define和type语句。
+使用方法有两种
+在源代码中直接定义 globals define g_cnt integer end globals main end main 定义一个globals文件，然后在源码中引入文件 文件czzi004.global globals define g_cnt integer end globals 文件czzi004.4gl globals &amp;#34;./czzi004.global&amp;#34; main end main 第二种方式是我们常用的方式，这样不同文件只要引入同一个global文件即可，不需要每次修改globals变量，都修改所有文件。
+练习#观察分析azz/4gl/p_zz.4gl和lib/4gl/cl_null.4gl文件中globals的使用。</description>
+    </item>
+    
+    <item>
+      <title>5.预编译</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/5.preprocessor/</link>
+      <pubDate>Mon, 28 Aug 2023 20:52:53 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/5.preprocessor/</guid>
+      <description>预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
+预编译指令在编译之后就不影响程序了，所以不会影响程序运行效能。
+预编译执行可以在程序任何位置写入。
+&amp;amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;amp;include。
+&amp;amp;include并不是一个语法，而是一个预编译指令&amp;ndash;在编译时就生效。
+&amp;amp;include用法是，后续跟需要导入的源代码文件，当编译时，编译到&amp;amp;include指令行数时，将后面文件原样导入到当前文件中。所以此指令不会影响到运行时效率。在编译后此指令依据不存在了。
+当然这样也有缺点，我们在debug调试的时候，无法通过step in进入到&amp;amp;include中查看了，为排查错误带来了负向影响。
+&amp;amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
+&amp;amp;define MAX_TEST 12 &amp;amp;define HW &amp;#34;Hello world&amp;#34; MAIN DEFINE i INTEGER FOR i=1 TO MAX_TEST DISPLAY HW END FOR END MAIN 你甚至可以定义&amp;amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
+&amp;amp;define mian main mian display &amp;#34;123&amp;#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
+&amp;amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef
+标记粘贴运算 ###在宏定义中使用##可以将两个标记合并。
+&amp;amp;define disp(x) DISPLAY ok##x main define ok34 string let ok34 =&amp;#34;ok is ok !</description>
+    </item>
+    
+  </channel>
+</rss>
