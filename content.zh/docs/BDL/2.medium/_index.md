@@ -1,6 +1,6 @@
 ---
 weight: 20
 bookFlatSection: true
-bookCollapseSection: false
+bookCollapseSection: true
 title: 渐入佳境
 ---
