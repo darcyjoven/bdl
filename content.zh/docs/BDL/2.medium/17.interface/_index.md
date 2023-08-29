@@ -14,3 +14,5 @@ weight: 170
 + prompt ***
 + dialog ****
 + Drag & drop *
+
+[参考文档](./Genero%20BDL%20HB%205.2%20簡.pdf)
