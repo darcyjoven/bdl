@@ -3,39 +3,38 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="认识BDL语言中的运算符和表达式#在前面的章节中，已经接触过运算符和表达式了。 可以说，运算符和表达式是BDL语言的最基本构成，没有运算符和表达式，则不能编写任何程序。 程序的任务是对数据进行处理，数据是程序处理的对象，而运算符是施加给这些数据的操作。数据和运算符是表达式的基本元素。
-认识运算符和表达式#最近本的运算符，莫过于加、减、乘、除四则运算了
+<meta name="description" content="认识BDL语言中的运算符和表达式#在前面的章节中，已经接触过运算符和表达式了。 可以说，运算符和表达式是BDL语言的最基本构成，没有运算符和表达式，则不能编写任何程序。 程序的任务是对数据进行处理，数据是程序处理的对象，而运算符是施加给这些数据的操作。数据和运算符是表达式的基本元素。
+认识运算符和表达式#最近本的运算符，莫过于加、减、乘、除四则运算了
 1&#43;12*410-20100/3 由于键盘无法输出算数中的乘号(✖)，和出号(➗)，改用*和、代替。删改你的例子都是常量参与运算，在BDL中，变量也可以参与运算，如：
 define a,b,c integer let a = 0 let b = 10 b - a a &#43;b &#43;10 a&#43;b&#43;10/b 上面的每一个式子都可以称为一个表达式。 BDL中的算术表达式和普通算术中的表达式写法基本一样，运算符两边是参与运算的对象，非常容易理解； 而有些语言，其表达式的写法非常古怪，让人望而生畏。 同样地，算术运算中，除数是不能为0的，在计算机中，如果除数为0，将产生一个“除数为0的异常”。 所以上面的示例中，有一个表达式因为除数为0，将使得程序运行崩溃。
 另外在给变量赋值的时候，使用赋值运算符=，如：
 let a = a&#43;b&#43;10/b let b = a&#43;b&#43;10 在介绍这个运算符的时候，特别强调了它和算术运算中的等号“=”的区别。 BDL中的“=”，是将右边的值赋给左边的变量，而并不表示等号两边相等。 在BDL中，要表示两边是否相等，可用“==”表示（你也可能见到过使用一个“=”比较大小的，这样语法也没问题，但建议使用两个），即两个等号连接在一起，用来检查等号两边是否相等。 类似这种进行两个对象的大小关系比较的运算，是一种关系运算。
-操作数、运算符和表达式#参与运算的对象称做操作数（operator）。 如3&#43;5中的3和5，a&#43;b&#43;10中的a，b和10，他们是参与具体预算的对象。同样地：
+操作数、运算符和表达式#参与运算的对象称做操作数（operator）。 如3&#43;5中的3和5，a&#43;b&#43;10中的a，b和10，他们是参与具体预算的对象。同样地：
 (3&#43;5)*a 这个表达式中，对于运算符“*”，两边的操作数就分别是(3&#43;5)和a。 可见，操作数也可以是比较复杂的对象。 3&#43;5也可以看做是一个加法表达式。
 运算符是指定要执行某项操作的一个标志符号，它指明了对操作数所进行的运算。 如“&#43;”号，表示了一个相加运算;“==” 号表示了一个关系判断是否“ 相等”的运算。 表达式表示一个求值的规则。 表达式是由变量、常量、运算符、函数和圆括号按一定的规则组合而成的。 BDL语言的表达式可根据运算的不同而分为不同的表达式类型，如算术表达式、关系表达式、函数表达式等。一般来说，表达式有如下的书写规则。
- 运算符不能相邻。如a&#43;-b是错误的。 乘号不能省略。如x乘以y应写成: x*y， 不能写成xy。 可用多层括号表示运算次序，括号必须成对出现，均使用小括号。  注意">
+运算符不能相邻。如a&#43;-b是错误的。 乘号不能省略。如x乘以y应写成: x*y， 不能写成xy。 可用多层括号表示运算次序，括号必须成对出现，均使用小括号。 注意">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="1.运算符和表达式" />
-<meta property="og:description" content="认识BDL语言中的运算符和表达式#在前面的章节中，已经接触过运算符和表达式了。 可以说，运算符和表达式是BDL语言的最基本构成，没有运算符和表达式，则不能编写任何程序。 程序的任务是对数据进行处理，数据是程序处理的对象，而运算符是施加给这些数据的操作。数据和运算符是表达式的基本元素。
-认识运算符和表达式#最近本的运算符，莫过于加、减、乘、除四则运算了
+<meta property="og:description" content="认识BDL语言中的运算符和表达式#在前面的章节中，已经接触过运算符和表达式了。 可以说，运算符和表达式是BDL语言的最基本构成，没有运算符和表达式，则不能编写任何程序。 程序的任务是对数据进行处理，数据是程序处理的对象，而运算符是施加给这些数据的操作。数据和运算符是表达式的基本元素。
+认识运算符和表达式#最近本的运算符，莫过于加、减、乘、除四则运算了
 1&#43;12*410-20100/3 由于键盘无法输出算数中的乘号(✖)，和出号(➗)，改用*和、代替。删改你的例子都是常量参与运算，在BDL中，变量也可以参与运算，如：
 define a,b,c integer let a = 0 let b = 10 b - a a &#43;b &#43;10 a&#43;b&#43;10/b 上面的每一个式子都可以称为一个表达式。 BDL中的算术表达式和普通算术中的表达式写法基本一样，运算符两边是参与运算的对象，非常容易理解； 而有些语言，其表达式的写法非常古怪，让人望而生畏。 同样地，算术运算中，除数是不能为0的，在计算机中，如果除数为0，将产生一个“除数为0的异常”。 所以上面的示例中，有一个表达式因为除数为0，将使得程序运行崩溃。
 另外在给变量赋值的时候，使用赋值运算符=，如：
 let a = a&#43;b&#43;10/b let b = a&#43;b&#43;10 在介绍这个运算符的时候，特别强调了它和算术运算中的等号“=”的区别。 BDL中的“=”，是将右边的值赋给左边的变量，而并不表示等号两边相等。 在BDL中，要表示两边是否相等，可用“==”表示（你也可能见到过使用一个“=”比较大小的，这样语法也没问题，但建议使用两个），即两个等号连接在一起，用来检查等号两边是否相等。 类似这种进行两个对象的大小关系比较的运算，是一种关系运算。
-操作数、运算符和表达式#参与运算的对象称做操作数（operator）。 如3&#43;5中的3和5，a&#43;b&#43;10中的a，b和10，他们是参与具体预算的对象。同样地：
+操作数、运算符和表达式#参与运算的对象称做操作数（operator）。 如3&#43;5中的3和5，a&#43;b&#43;10中的a，b和10，他们是参与具体预算的对象。同样地：
 (3&#43;5)*a 这个表达式中，对于运算符“*”，两边的操作数就分别是(3&#43;5)和a。 可见，操作数也可以是比较复杂的对象。 3&#43;5也可以看做是一个加法表达式。
 运算符是指定要执行某项操作的一个标志符号，它指明了对操作数所进行的运算。 如“&#43;”号，表示了一个相加运算;“==” 号表示了一个关系判断是否“ 相等”的运算。 表达式表示一个求值的规则。 表达式是由变量、常量、运算符、函数和圆括号按一定的规则组合而成的。 BDL语言的表达式可根据运算的不同而分为不同的表达式类型，如算术表达式、关系表达式、函数表达式等。一般来说，表达式有如下的书写规则。
- 运算符不能相邻。如a&#43;-b是错误的。 乘号不能省略。如x乘以y应写成: x*y， 不能写成xy。 可用多层括号表示运算次序，括号必须成对出现，均使用小括号。  注意" />
+运算符不能相邻。如a&#43;-b是错误的。 乘号不能省略。如x乘以y应写成: x*y， 不能写成xy。 可用多层括号表示运算次序，括号必须成对出现，均使用小括号。 注意" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/1.operators/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-18T16:10:57+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
-
 <title>1.运算符和表达式 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2347,7 +2346,7 @@ BDL语言有两大类运算符:算术、关系与逻辑。
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/1.basic/6.operators_and_expressions/1.operators/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/6.operators_and_expressions/1.operators/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2358,7 +2357,7 @@ BDL语言有两大类运算符:算术、关系与逻辑。
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

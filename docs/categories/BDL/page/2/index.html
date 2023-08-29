@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/categories/BDL/" />
-
 <title>BDL | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/categories/BDL/index.xml" title="BDL教程" />
@@ -2328,7 +2327,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2768,23 +2767,23 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>p_link作业&ndash;使用r.l2 链接作业#无论是链接所有42m文件，还是先链接为42r文件，再链接到主程序。都需要我们将需要调用程序链接起来，如果只运行一次还好。 但是编写程序过程中难免会出错，即使能力很强，能够保证每次不出错，后续新功能增加时，也需要重新连接编译。
+    <p>p_link作业&ndash;使用r.l2 链接作业#无论是链接所有42m文件，还是先链接为42r文件，再链接到主程序。都需要我们将需要调用程序链接起来，如果只运行一次还好。 但是编写程序过程中难免会出错，即使能力很强，能够保证每次不出错，后续新功能增加时，也需要重新连接编译。
 我们需要一种新的简单的方式去链接主程序。
-p_link#之前我们使用r.c2命令时，此命令自动将42m文件放到42m目录下，如果链接也能够自动链接对应的文件就好了。
+p_link#之前我们使用r.c2命令时，此命令自动将42m文件放到42m目录下，如果链接也能够自动链接对应的文件就好了。
 p_link就是方便程序链接的作业。
 你可以直接运行exe2 p_link打开作业，也可以再p_zz中维护链结档资料按钮中打开。
 让我们用tiptop gp方式重新编译链接czzi004.4gl文件。
- 建立p_zz资料  运行指令其实就是42r文件，$CZZi目录就是czz/42r目录。
-点击维护链结档资料  如果第一次建立，会提示生成链接档资料，选择是会打开p_link作业
-自动新增的p_link资料只包含czzi004.42m主程序文件。
-r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中没有czzi004.42m的话，会报错 完整路径是由模组编号和程序代码组合生成的   输入完成后，会自动链接，如果有报错，先忽略报错，关掉报错窗口
-  回到命令行r.c2 czzi004编译主程序
-  database ds编译前在第一行增加这个语句，否则会报错
-链接主程序r.l2 czzi004  /u1/genero/fgl.dev/bin/fgl2p -o czzi004.42r libgre.42x WSHelper.42m lib.42x sub.42x qry.42x czz_czzi004.42m czz_s_czzi004.42m  czzi004.42r has been generated successfully! 上面为成功通知。
+建立p_zz资料 运行指令其实就是42r文件，$CZZi目录就是czz/42r目录。
+点击维护链结档资料 如果第一次建立，会提示生成链接档资料，选择是会打开p_link作业
+自动新增的p_link资料只包含czzi004.42m主程序文件。
+r.c2 s_czzi004并在p_link中新增 必须先使用r.c2编译，42m目录中没有czzi004.42m的话，会报错 完整路径是由模组编号和程序代码组合生成的 输入完成后，会自动链接，如果有报错，先忽略报错，关掉报错窗口
+回到命令行r.c2 czzi004编译主程序
+database ds编译前在第一行增加这个语句，否则会报错
+链接主程序r.l2 czzi004 /u1/genero/fgl.dev/bin/fgl2p -o czzi004.42r libgre.42x WSHelper.42m lib.42x sub.42x qry.42x czz_czzi004.42m czz_s_czzi004.42m czzi004.42r has been generated successfully! 上面为成功通知。
 我们看链接的过程，和我们直接fgllink有很多区别
- fgl2p r.l2 没有使用fgllink  fgl2p 相比fgllink除了有链接的功能，如果链接文件包含4gl文件，还可以自动将4gl编译为42m后再链接。
-        <a href="/docs/BDL/2.medium/16.module/3.p_link/">...</a>
-      
+fgl2p r.l2 没有使用fgllink fgl2p 相比fgllink除了有链接的功能，如果链接文件包含4gl文件，还可以自动将4gl编译为42m后再链接。
+libgre.42x WSHelper.42m qry.42x 这几个也是类似lib和sub函数库。
+程序开发流程#
     </p>
   </article>
   
@@ -2814,19 +2813,19 @@ r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中�
 
 
 
-    <p>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
+    <p>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
 函数的开始就是函数调用，结束就是函数最后一行运行结束，或者运行到return处。
 调用
- call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip;  mermaid.initialize({"theme": "neutral"})graph LRa0(["开始"])--a["调用"]a--b["执行语句"]b--c["end funtion/return"]c--d(["结束"])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
+call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip; graph LRa0(["开始"])-->a["调用"]a-->b["执行语句"]b-->c["end funtion/return"]c-->d(["结束"])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
 输入的是变量，输出的是变量。处理的也是变量。
 如果程序中一直增加功能，那么变量的数量会一直增加，如果不停增加下去，内存迟早有用完的一天。
 但实际上一个规划良好的程序并不会将内存全部占用。
 这是因为，在BDL中变量不是一直加载到内存中，有些变量用到的时候才会分配内存，不用的时候，内存会释放掉。
 那么变量在定义时就会分配内存，那么什么时候释放其内存呢？
 变量所在的作用域，所有语句执行完成时释放内存，在BDL中最小的作用域是函数。
-  所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
-  定义在main函数之前的函数，在main执行结束后才能释放内存。
-  函数中定义的变量 graph LRa["函数调用"]--b[["分配内存"]]b--c(("..."))c--d["end funtion/return"]d--z[["释放内存"]]
+所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
+定义在main函数之前的函数，在main执行结束后才能释放内存。
+函数中定义的变量 graph LRa["函数调用"]-->b[["分配内存"]]b-->c(("..."))c-->d["end funtion/return"]d-->z[["释放内存"]]
     </p>
   </article>
   
@@ -2856,12 +2855,12 @@ r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中�
 
 
 
-    <p>插入更新删除&ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
+    <p>插入更新删除&ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
 不要更新错了库！
- 本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
- 插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
-原生语句# 将要执行SQL语句放到字符串中  let l_sql = &#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&#39;mar-001&#39;,&#39;xxx&#39;,&#39;xxx&#39;)&#34; prepare SQL语句  prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句  execute demo_ins 检查SQL是否执行成功  在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
- define sqlca record  sqlcode integer, -- 报错代码 100 表示未找到 &lt;0表示有错误  sqlerrm string, --错误消息数量  sqlerrp string,  sqlerrd array[6] integer,  -- 1.
+本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
+插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
+原生语句#将要执行SQL语句放到字符串中 let l_sql = &#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&#39;mar-001&#39;,&#39;xxx&#39;,&#39;xxx&#39;)&#34; prepare SQL语句 prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句 execute demo_ins 检查SQL是否执行成功 在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
+define sqlca record sqlcode integer, -- 报错代码 100 表示未找到 &lt;0表示有错误 sqlerrm string, --错误消息数量 sqlerrp string, sqlerrd array[6] integer, -- 1. 未使用 -- 2. 最后一个Serial或错误代码 -- 3. 最后一条语句处理的行数 -- 4. CPU使用时间 -- 5. SQL文件错误偏移量 -- 6.
         <a href="/docs/BDL/2.medium/14.database/3.update-insert-delete/">...</a>
       
     </p>
@@ -2893,16 +2892,16 @@ r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中�
 
 
 
-    <p>main函数&ndash;从哪里开始，到哪里结束#先看以下代码
-main  display sfmt(&#34;hello world&#34;) end main 代码解析 main ...end main这一段是在定义BDL程序的主函数。函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。每一个BDL程序必须有且仅有一个main函 数，它是由程序员提供的。
+    <p>main函数&ndash;从哪里开始，到哪里结束#先看以下代码
+main display sfmt(&#34;hello world&#34;) end main 代码解析 main ...end main这一段是在定义BDL程序的主函数。函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。每一个BDL程序必须有且仅有一个main函 数，它是由程序员提供的。
 请读者思考一个问题:操作系统是如何开始运行调用一个程序的? 这个问题的意思是操作系统怎么知道一个程序的入口点在哪里?所谓入口点，就是程序的第一条指令。 操作系统调入程序二进制代码到内存后，从哪条指令开始运行程序呢?
 一种办法是从文件第一行开始，一行一行往下执行，直到文件结束。 很多语言就是采用这种方式。 比如QBASIC语言。 这种方法的好处显而易见，人类是怎么阅读的，计算机就是怎么执行的。 但是缺点也很多，当有两个源文件的时候，从哪个文件开始呢? 另一种办法是和运行程序的启动者协商一个规定的入口名字，从这个名字开始进入。这种方法就是BDL语言采用的方法。
 main函数就是BDL程序的入口点。无论整个工程有多少个C源文件，必须编写且只能编写一个main函数。程序就是从main的第一条语句开始执行，然后在main函数中，顺序执行其他语句，在这些语句中，调用其他函数，从而使整个程序运行起来。 main函数结束了，整个程序也就结束了。 由此可见，写BDL程序，就是写main函数。
- 简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
- 对于BDL语言，定义函数的语法规则如下：
+简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
+对于BDL语言，定义函数的语法规则如下：
 function 函数名称(参数1，参数2)函数体return 返回值end function 对比上面的语法规则可以看出，在main这一行中，main是函数名称。 函数可以是BDL语言系统提供的系统函数，也可以是用户自己编写的函数。 用户自己编写的函数，函数名字可以自行决定。
 例如：
-funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。 类 似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
+funtion add(x,y) define x,y integer return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。 类 似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
 每个参数都有一个数据类型。本例中的参数的数据类型是integer（整数）。 在function ... end funtion之间的的代码就是add函数实现的功能，被称做函数体。 在函数体里能做哪些事情，也是有规定的。在函数一章里再详细说明。
     </p>
   </article>
@@ -2934,7 +2933,7 @@ funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，
 
 
 
-    <p>Window &amp; Form#
+    <p>Window &amp; Form#
     </p>
   </article>
   
@@ -2964,16 +2963,16 @@ funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，
 
 
 
-    <p>BDL中的模块#BDL源代码从编译主程序、子程序，链接主程序，过程中会产生多个文件。
+    <p>BDL中的模块#BDL源代码从编译主程序、子程序，链接主程序，过程中会产生多个文件。
 所以按照模块可以将BDL程序划分为不同的块，一个程序的执行往往依赖大量的模块。
-globals#如果说不同文件之间的通过链接的形式，组成不同模组最终组成了一个可执行程序。
+globals#如果说不同文件之间的通过链接的形式，组成不同模组最终组成了一个可执行程序。
 那么globals就是使不同模块中共享变量不可缺少的关键字。
 我们已知的变量最大的作用域，也就是函数外，即全局变量。在本文件中所有函数都可以使用。但是随之我们编写程序复杂度增加，我们使用很多不同文件，不同的模块，这个时候即使是全局变量也无法在不同文件中使用。
 globals就是解决这个问题的，在globals中定义的变量，在程序整个运行周期都是可用的，无论你是哪个文件、模块中的函数。
 globals是一个块语句，它有对于的end globals结束语。只能定义在函数外。 它的用法是，在块中包裹变量或者自定义类型&ndash;即define和type语句。
 使用方法有两种
- 在源代码中直接定义  globals  define g_cnt integer end globals main end main 定义一个globals文件，然后在源码中引入文件   文件czzi004.global  globals  define g_cnt integer end globals  文件czzi004.4gl  globals &#34;./czzi004.global&#34; main end main 第二种方式是我们常用的方式，这样不同文件只要引入同一个global文件即可，不需要每次修改globals变量，都修改所有文件。
-练习#观察分析azz/4gl/p_zz.4gl和lib/4gl/cl_null.4gl文件中globals的使用。
+在源代码中直接定义 globals define g_cnt integer end globals main end main 定义一个globals文件，然后在源码中引入文件 文件czzi004.global globals define g_cnt integer end globals 文件czzi004.4gl globals &#34;./czzi004.global&#34; main end main 第二种方式是我们常用的方式，这样不同文件只要引入同一个global文件即可，不需要每次修改globals变量，都修改所有文件。
+练习#观察分析azz/4gl/p_zz.4gl和lib/4gl/cl_null.4gl文件中globals的使用。
     </p>
   </article>
   
@@ -3003,9 +3002,9 @@ globals是一个块语句，它有对于的end globals结束语。只能定义�
 
 
 
-    <p>练习#生成一个长度为100的整数数组，并输出数组中可以被5整除的个数# 长度100的整数数组，每个元素都为随机数，大于0且小于1000的整数  提示
+    <p>练习#生成一个长度为100的整数数组，并输出数组中可以被5整除的个数#长度100的整数数组，每个元素都为随机数，大于0且小于1000的整数 提示
 util.Math.rand(100)可以获取小于等于100的随机整数。
-import util main  display util.Math.rand(100) end main 生成随机数功能写为一个函数，且接受两个参数，生成数组的长度和随机数最大整数  生成一个长度为50的整数数组，并从小到大排序，排序后输出到屏幕# 随机数生成请参考上一题  
+import util main display util.Math.rand(100) end main 生成随机数功能写为一个函数，且接受两个参数，生成数组的长度和随机数最大整数 生成一个长度为50的整数数组，并从小到大排序，排序后输出到屏幕#随机数生成请参考上一题 
     </p>
   </article>
   
@@ -3035,7 +3034,7 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
 
 
 
-    <p>Menu#
+    <p>Menu#
     </p>
   </article>
   
@@ -3060,17 +3059,19 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
 
 
 
-    <p>预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
+    <p>预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
 预编译指令在编译之后就不影响程序了，所以不会影响程序运行效能。
 预编译执行可以在程序任何位置写入。
-&amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;include。
+&amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;include。
 &amp;include并不是一个语法，而是一个预编译指令&ndash;在编译时就生效。
 &amp;include用法是，后续跟需要导入的源代码文件，当编译时，编译到&amp;include指令行数时，将后面文件原样导入到当前文件中。所以此指令不会影响到运行时效率。在编译后此指令依据不存在了。
 当然这样也有缺点，我们在debug调试的时候，无法通过step in进入到&amp;include中查看了，为排查错误带来了负向影响。
-&amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
-&amp;define MAX_TEST 12 &amp;define HW &#34;Hello world&#34;  MAIN  DEFINE i INTEGER  FOR i=1 TO MAX_TEST  DISPLAY HW  END FOR END MAIN 你甚至可以定义&amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
-&amp;define mian main mian  display &#34;123&#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
+&amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
+&amp;define MAX_TEST 12 &amp;define HW &#34;Hello world&#34; MAIN DEFINE i INTEGER FOR i=1 TO MAX_TEST DISPLAY HW END FOR END MAIN 你甚至可以定义&amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
+&amp;define mian main mian display &#34;123&#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
 &amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef
+标记粘贴运算 ###在宏定义中使用##可以将两个标记合并。
+&amp;define disp(x) DISPLAY ok##x main define ok34 string let ok34 =&#34;ok is ok !
         <a href="/docs/BDL/2.medium/16.module/5.preprocessor/">...</a>
       
     </p>
@@ -3102,12 +3103,12 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
 
 
 
-    <p>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
+    <p>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
 这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
-FETCH&ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
+FETCH&ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
 现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
 让我们利用上一节的FETCH来完成上述需求。
-define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &#34;select count(*) from ima_file where ima01 like ? &#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &#34;E%&#34;  -- let l_sql = &#34;select * from ima_file where ima01 like ? &#34; declare ima_sel cursor from l_sql  open ima_sel using &#34;E%&#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].
+define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string -- 获取查询结果的资料总笔数 let l_sql = &#34;select count(*) from ima_file where ima01 like ? &#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &#34;E%&#34; -- let l_sql = &#34;select * from ima_file where ima01 like ? &#34; declare ima_sel cursor from l_sql open ima_sel using &#34;E%&#34; for l_i = 1 to l_cnt fetch absolute l_i ima_sel into l_ima[l_i].
         <a href="/docs/BDL/2.medium/14.database/5.select-rows/">...</a>
       
     </p>
@@ -3153,7 +3154,7 @@ define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer de
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3490,7 +3491,7 @@ define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer de
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

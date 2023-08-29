@@ -3,39 +3,38 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
+<meta name="description" content="数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
 在我们使用数据库时，如果你需要大量的数据中的资料，不需要频繁的查询数据中的表结构，通过表结构中字段的数据类型去对应BDL中的数据类型。在BDL中已经为我们做好了这一步，ORACLE中大部分数据类型在BDL中都映射到指定的类型。
 我们只要使用数据库的schema文件，就能通过数据的字段去定义BDL中的数据类型。
 上一章我们学到了function main() end function这种main函数写法，只会使用表结构，而不连接到数据库，指得就是使用schema文件，而不连接到数据库。
-在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
+在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
 其中ds:库名可以省略，如果省略，表示使用当前已经连接到的库。
 例如:
-database ds main  define l_ima01 like ima_file.ima01  define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
- type_file字段清单如下
-    字段名称 数据类型 字段名称 数据类型     chr1000 varchar2(1000) chr6 varchar2(6)   chr1 varchar2(1) chr50 varchar2(50)   num5 number(5) chr37 varchar2(37)   num20_6 number(20,6) chr9 varchar2(9)   dat date chr12 varchar2(12)   chr18 varchar2(18) chr30 varchar2(30)   num10 number(10) chr14 varchar2(14)   chr8 varchar2(8) chr7 varchar2(7)   chr20 varchar2(20) chr10 varchar2(10)   chr21 varchar2(21) chr100 varchar2(100)   num20 number(20) chr200 varchar2(200)   chr3 varchar2(3) chr300 varchar2(300)   num26_10 number(26,10) chr500 varchar2(500)   chr2 varchar2(2) blob blob   chr4 varchar2(4) num15_3 number(15,3)   chr5 varchar2(5) row_id varchar2(18)    进阶使用&ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。">
+database ds main define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
+type_file字段清单如下
+字段名称 数据类型 字段名称 数据类型 chr1000 varchar2(1000) chr6 varchar2(6) chr1 varchar2(1) chr50 varchar2(50) num5 number(5) chr37 varchar2(37) num20_6 number(20,6) chr9 varchar2(9) dat date chr12 varchar2(12) chr18 varchar2(18) chr30 varchar2(30) num10 number(10) chr14 varchar2(14) chr8 varchar2(8) chr7 varchar2(7) chr20 varchar2(20) chr10 varchar2(10) chr21 varchar2(21) chr100 varchar2(100) num20 number(20) chr200 varchar2(200) chr3 varchar2(3) chr300 varchar2(300) num26_10 number(26,10) chr500 varchar2(500) chr2 varchar2(2) blob blob chr4 varchar2(4) num15_3 number(15,3) chr5 varchar2(5) row_id varchar2(18) 进阶使用&ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="2.数据表结构在BDL中的使用" />
-<meta property="og:description" content="数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
+<meta property="og:description" content="数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
 在我们使用数据库时，如果你需要大量的数据中的资料，不需要频繁的查询数据中的表结构，通过表结构中字段的数据类型去对应BDL中的数据类型。在BDL中已经为我们做好了这一步，ORACLE中大部分数据类型在BDL中都映射到指定的类型。
 我们只要使用数据库的schema文件，就能通过数据的字段去定义BDL中的数据类型。
 上一章我们学到了function main() end function这种main函数写法，只会使用表结构，而不连接到数据库，指得就是使用schema文件，而不连接到数据库。
-在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
+在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
 其中ds:库名可以省略，如果省略，表示使用当前已经连接到的库。
 例如:
-database ds main  define l_ima01 like ima_file.ima01  define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
- type_file字段清单如下
-    字段名称 数据类型 字段名称 数据类型     chr1000 varchar2(1000) chr6 varchar2(6)   chr1 varchar2(1) chr50 varchar2(50)   num5 number(5) chr37 varchar2(37)   num20_6 number(20,6) chr9 varchar2(9)   dat date chr12 varchar2(12)   chr18 varchar2(18) chr30 varchar2(30)   num10 number(10) chr14 varchar2(14)   chr8 varchar2(8) chr7 varchar2(7)   chr20 varchar2(20) chr10 varchar2(10)   chr21 varchar2(21) chr100 varchar2(100)   num20 number(20) chr200 varchar2(200)   chr3 varchar2(3) chr300 varchar2(300)   num26_10 number(26,10) chr500 varchar2(500)   chr2 varchar2(2) blob blob   chr4 varchar2(4) num15_3 number(15,3)   chr5 varchar2(5) row_id varchar2(18)    进阶使用&ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。" />
+database ds main define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
+type_file字段清单如下
+字段名称 数据类型 字段名称 数据类型 chr1000 varchar2(1000) chr6 varchar2(6) chr1 varchar2(1) chr50 varchar2(50) num5 number(5) chr37 varchar2(37) num20_6 number(20,6) chr9 varchar2(9) dat date chr12 varchar2(12) chr18 varchar2(18) chr30 varchar2(30) num10 number(10) chr14 varchar2(14) chr8 varchar2(8) chr7 varchar2(7) chr20 varchar2(20) chr10 varchar2(10) chr21 varchar2(21) chr100 varchar2(100) num20 number(20) chr200 varchar2(200) chr3 varchar2(3) chr300 varchar2(300) num26_10 number(26,10) chr500 varchar2(500) chr2 varchar2(2) blob blob chr4 varchar2(4) num15_3 number(15,3) chr5 varchar2(5) row_id varchar2(18) 进阶使用&ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/2.schema/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-24T08:36:16+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
-
 <title>2.数据表结构在BDL中的使用 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2232,7 +2231,7 @@ l_ima的结构体自动就包含了ima_file中的所有字段，使用<code>l_im
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/14.database/2.schema/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/14.database/2.schema/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2243,7 +2242,7 @@ l_ima的结构体自动就包含了ima_file中的所有字段，使用<code>l_im
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

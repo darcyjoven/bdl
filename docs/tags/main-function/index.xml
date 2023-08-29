@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/main-function/</link>
     <description>Recent content in main function on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Mon, 17 Jul 2023 15:12:04 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/main-function/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3.main函数</title>
@@ -12,16 +13,16 @@
       <pubDate>Mon, 17 Jul 2023 15:12:04 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/3.main-function/</guid>
-      <description>main函数&amp;ndash;从哪里开始，到哪里结束#先看以下代码
-main  display sfmt(&amp;#34;hello world&amp;#34;) end main 代码解析 main ...end main这一段是在定义BDL程序的主函数。函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。每一个BDL程序必须有且仅有一个main函 数，它是由程序员提供的。
+      <description>main函数&amp;ndash;从哪里开始，到哪里结束#先看以下代码
+main display sfmt(&amp;#34;hello world&amp;#34;) end main 代码解析 main ...end main这一段是在定义BDL程序的主函数。函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。每一个BDL程序必须有且仅有一个main函 数，它是由程序员提供的。
 请读者思考一个问题:操作系统是如何开始运行调用一个程序的? 这个问题的意思是操作系统怎么知道一个程序的入口点在哪里?所谓入口点，就是程序的第一条指令。 操作系统调入程序二进制代码到内存后，从哪条指令开始运行程序呢?
 一种办法是从文件第一行开始，一行一行往下执行，直到文件结束。 很多语言就是采用这种方式。 比如QBASIC语言。 这种方法的好处显而易见，人类是怎么阅读的，计算机就是怎么执行的。 但是缺点也很多，当有两个源文件的时候，从哪个文件开始呢? 另一种办法是和运行程序的启动者协商一个规定的入口名字，从这个名字开始进入。这种方法就是BDL语言采用的方法。
 main函数就是BDL程序的入口点。无论整个工程有多少个C源文件，必须编写且只能编写一个main函数。程序就是从main的第一条语句开始执行，然后在main函数中，顺序执行其他语句，在这些语句中，调用其他函数，从而使整个程序运行起来。 main函数结束了，整个程序也就结束了。 由此可见，写BDL程序，就是写main函数。
- 简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
- 对于BDL语言，定义函数的语法规则如下：
+简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
+对于BDL语言，定义函数的语法规则如下：
 function 函数名称(参数1，参数2)函数体return 返回值end function 对比上面的语法规则可以看出，在main这一行中，main是函数名称。 函数可以是BDL语言系统提供的系统函数，也可以是用户自己编写的函数。 用户自己编写的函数，函数名字可以自行决定。
 例如：
-funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。 类 似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
+funtion add(x,y) define x,y integer return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。 类 似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
 每个参数都有一个数据类型。本例中的参数的数据类型是integer（整数）。 在function ... end funtion之间的的代码就是add函数实现的功能，被称做函数体。 在函数体里能做哪些事情，也是有规定的。在函数一章里再详细说明。</description>
     </item>
     

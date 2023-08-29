@@ -4,25 +4,26 @@
     <title>第九章 循环结构--一遍又一遍 on BDL教程</title>
     <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/</link>
     <description>Recent content in 第九章 循环结构--一遍又一遍 on BDL教程</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.构造循环</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/1.create-cycle/</link>
       <pubDate>Thu, 20 Jul 2023 08:12:40 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/1.create-cycle/</guid>
-      <description>构造循环#循环结构有两大要素:循环条件和循环体，当满足某个条件时，重复执行某些动作，直到该条件不再满足，这个表述很好地体现了循环条件和循环体的关系。
+      <description>构造循环#循环结构有两大要素:循环条件和循环体，当满足某个条件时，重复执行某些动作，直到该条件不再满足，这个表述很好地体现了循环条件和循环体的关系。
 构造循环时，首先应明白要做什么，即“循环体是什么”，这是和程序的目的相关的。知道要干什么了还不够，还要明白什么时候开始做，什么时候停，如果没有设定合理的循环条件，很容易造成程序死循环，至使资源耗尽而导致电脑死机。
 举个最简单的例子，要求计算从1加到100，因为本章讨论的是循环，所以我们撇开高斯的简便方法((1+100)*50=5050)。
 程序的编写采用如下形式显然是不现实的:sum=1+2+3+.....+100写完这个式子就够费劲的，还好只有100个，要是有成千上万个，活活要累个半死。
 在这种应用背景下，需要使用循环结构，只要一小段代码，如下。
- define i,sum integer  while i&amp;lt;=100  let sum = sum + i  let i = i + 1  end while  display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) 输出结果是结果是：5050。
+define i,sum integer while i&amp;lt;=100 let sum = sum + i let i = i + 1 end while display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) 输出结果是结果是：5050。
 代码解析
 代码中采用的是while结构，i作为加数，sum作为被加数，用以保存结果，程序的关键部分是第3~4行。
 i的初始值为1，当i小于等于100时( 循环条件)，会重复执行循环体，在循环体内做了两件事情，- -是将i和sum相加，结果重新保存到sum中，二是将i增加1，一步步逼近循环结束的条件。
 由此可知，循环条件和循环体相互配合完成特定的功能。一次次的循环，距离循环结束 应越来越近，避免出现死循环，试想，如果循环体中只是完成let sum=sum+i 这一操，而不对i进行修改，那么循环条件i&amp;lt;=100 的条件将一 直满足，循环永不会终止。
-注意 在代码中，即使要计算1加到10000，只要将100修改为10000即可，十分方便快捷。语法规则#while 表达式  循环结构体 end while 在while结构中，表达式既可以是逻辑表达式或关系表达式，也可以是普通表达式，甚至常量或变量，判断的关键这个值是否为真（非0），下面看一下表达式仅是个变量的示例：
- define sum,i integer  let i =100  while i  let sum = sum + i  let i = i -1  end while  display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) 编译运行后结果为：</description>
+注意 在代码中，即使要计算1加到10000，只要将100修改为10000即可，十分方便快捷。语法规则#while 表达式 循环结构体 end while 在while结构中，表达式既可以是逻辑表达式或关系表达式，也可以是普通表达式，甚至常量或变量，判断的关键这个值是否为真（非0），下面看一下表达式仅是个变量的示例：
+define sum,i integer let i =100 while i let sum = sum + i let i = i -1 end while display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) 编译运行后结果为：</description>
     </item>
     
     <item>
@@ -31,13 +32,13 @@ i的初始值为1，当i小于等于100时( 循环条件)，会重复执行循�
       <pubDate>Thu, 20 Jul 2023 08:30:40 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/2.for/</guid>
-      <description>for结构&amp;ndash;更常用的循环结构#阅读代码时可以发现，for结 构是应用最多的一种 循环控制结构，这大抵是因为for结构提供的控制功能更为完善，而且，相比while结构，for结构写出的代码也更为简洁，可读性也稍好。
-基本形式#for 变量 = 初始值 to 目的值 step 每次增加的量  循环结构 end for 注意 这里的step关键不写的时候，默认每次+1，step还可以跟负数，如果是负数，每次判断的就是小于目的值时跳出循环。用while表示同样的表达式:
-let 变量 = 初始值 while 变量&amp;lt;=目的值  循环结构  let 变量 = 变量 + 每次增加的量 end while 由此可见，要写出同样功能代码，for结构比while结构简洁易读。
+      <description>for结构&amp;ndash;更常用的循环结构#阅读代码时可以发现，for结 构是应用最多的一种 循环控制结构，这大抵是因为for结构提供的控制功能更为完善，而且，相比while结构，for结构写出的代码也更为简洁，可读性也稍好。
+基本形式#for 变量 = 初始值 to 目的值 step 每次增加的量 循环结构 end for 注意 这里的step关键不写的时候，默认每次+1，step还可以跟负数，如果是负数，每次判断的就是小于目的值时跳出循环。用while表示同样的表达式:
+let 变量 = 初始值 while 变量&amp;lt;=目的值 循环结构 let 变量 = 变量 + 每次增加的量 end while 由此可见，要写出同样功能代码，for结构比while结构简洁易读。
 for结构执行流程图：
-mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart TDa[&#34;变量 = 初始值&#34;]--d{&#34;变量是否超过目的值&#34;}c[&#34;循环结构&#34;]c--b[&#34;变量增加&#34;]b--dd--&#34;yes&#34;--e[&#34;跳出循环&#34;]d--&#34;no&#34;--c其执行过程如下：
- 变量赋初始值 判断变量是否超过目的值，超过退出循环，进行第5步；不超过执行循环结构，执行第3步 自动变量增加指定的值 再判断第2步 循环结果，跳出for结构，继续向下执行  利用for结构改写我们之前计算1到100和的代码：
-define i,sum integer for i =1 to 100  let sum = sum + 1 end for display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) </description>
+flowchart TDa[&#34;变量 = 初始值&#34;]--&gt;d{&#34;变量是否超过目的值&#34;}c[&#34;循环结构&#34;]c--&gt;b[&#34;变量增加&#34;]b--&gt;dd--&#34;yes&#34;--&gt;e[&#34;跳出循环&#34;]d--&#34;no&#34;--&gt;c其执行过程如下：
+变量赋初始值 判断变量是否超过目的值，超过退出循环，进行第5步；不超过执行循环结构，执行第3步 自动变量增加指定的值 再判断第2步 循环结果，跳出for结构，继续向下执行 利用for结构改写我们之前计算1到100和的代码：
+define i,sum integer for i =1 to 100 let sum = sum + 1 end for display sfmt(&amp;#34;\n结果是：%1&amp;#34;,sum) </description>
     </item>
     
     <item>
@@ -46,11 +47,11 @@ define i,sum integer for i =1 to 100  let sum = sum + 1 end for display sfmt(&am
       <pubDate>Thu, 20 Jul 2023 08:53:09 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/3.cycle-in-cycle/</guid>
-      <description>循环嵌套#循环结构也支持嵌套，如果把简单的循环内容为“一遍又一遍”，那循环嵌套便可称为“一层又一层，一遍又一遍”。
+      <description>循环嵌套#循环结构也支持嵌套，如果把简单的循环内容为“一遍又一遍”，那循环嵌套便可称为“一层又一层，一遍又一遍”。
 可以用始终来打比方，走一个代表执行一次循环，那么一小时里，分针又要走60个格，而分针每走一格，秒针也要走60格。
 如此，秒针的走动可以看成是内存循环，而分针的走动可看成是外层循环。
-嵌套示例#已for循环结构举例，限制想在屏幕上输出4*9个星号，这可以利用双重循环来做：
- define i,j integer  define s string  display &amp;#34;&amp;#34;  for i = 1 to 4  let s = &amp;#34;&amp;#34;  for j = 1 to 9  let s = s, &amp;#34;* &amp;#34;  end for  display s  end for 输出结果为：
+嵌套示例#已for循环结构举例，限制想在屏幕上输出4*9个星号，这可以利用双重循环来做：
+define i,j integer define s string display &amp;#34;&amp;#34; for i = 1 to 4 let s = &amp;#34;&amp;#34; for j = 1 to 9 let s = s, &amp;#34;* &amp;#34; end for display s end for 输出结果为：
 * * * * * * * * ** * * * * * * * ** * * * * * * * ** * * * * * * * * 代码解析</description>
     </item>
     
@@ -60,15 +61,17 @@ define i,sum integer for i =1 to 100  let sum = sum + 1 end for display sfmt(&am
       <pubDate>Thu, 20 Jul 2023 09:08:04 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/4.cycle-and-flow-control/</guid>
-      <description>流程转向控制语句#之前我们了解到BDL中除了判断语句，循环语句，还有大量的流程转向控制语句。
+      <description>流程转向控制语句#之前我们了解到BDL中除了判断语句，循环语句，还有大量的流程转向控制语句。
 他们是continue、exit、goto语句，本章节会一一讲述。
-exit&amp;ndash;跳出循环#如果把重复结构视为一层壳，那么exit的作用可说是“破壳而出”，当流程执行到循环结构中的break语句时，循环结构提前结束，程序转而执行循环结构之后的那条语句，用流程图来表示，如图所示。
-mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart TDa{&#34;?&#34;}--b{&#34;exit?&#34;}b--&#34;no&#34;--d[&#34;语句&#34;]b--&#34;yes&#34;--c[&#34;...&#34;]d--a图中，如果在循环体内部执行了exit语句，程序流程会直接从循环结构中跳出，转而执行循环结构后面的语句，这类似于电路中的“短路”。
+exit&amp;ndash;跳出循环#如果把重复结构视为一层壳，那么exit的作用可说是“破壳而出”，当流程执行到循环结构中的break语句时，循环结构提前结束，程序转而执行循环结构之后的那条语句，用流程图来表示，如图所示。
+flowchart TDa{&#34;?&#34;}--&gt;b{&#34;exit?&#34;}b--&#34;no&#34;--&gt;d[&#34;语句&#34;]b--&#34;yes&#34;--&gt;c[&#34;...&#34;]d--&gt;a图中，如果在循环体内部执行了exit语句，程序流程会直接从循环结构中跳出，转而执行循环结构后面的语句，这类似于电路中的“短路”。
 前面讲过，“如非故意为之，不要让循环成为死循环”，那这“故意为之”是怎么回事?如何“从死循环中跳出”，可用break语句实现，见示例代码：
- define i integer  display &amp;#34;\n&amp;#34;  while 1  display &amp;#34;Hello&amp;#34;  let i = i + 1  if i &amp;gt; 5 then  exit while  end if  end while 尝试编译运行，你会发现，while 1看起来是个死循环，但是我们再循环结构中，增加了一个可以exit的机会。
+define i integer display &amp;#34;\n&amp;#34; while 1 display &amp;#34;Hello&amp;#34; let i = i + 1 if i &amp;gt; 5 then exit while end if end while 尝试编译运行，你会发现，while 1看起来是个死循环，但是我们再循环结构中，增加了一个可以exit的机会。
 i每次循环都会+1，当i大于5时，就会运行到exit，退出循环。
-注意 当循环有多层时，exit只能剥一层“壳”，向外跳出一层。continue&amp;ndash;重来一次#exit语句时结果整个循环结构，而continue语句结束的只是当前一次循环，形象的说时“再来一次”，流程图如下：
-flowchart TDa{&#34;?&#34;}--b{&#34;continue?&#34;}b--&#34;</description>
+注意 当循环有多层时，exit只能剥一层“壳”，向外跳出一层。continue&amp;ndash;重来一次#exit语句时结果整个循环结构，而continue语句结束的只是当前一次循环，形象的说时“再来一次”，流程图如下：
+flowchart TDa{&#34;?&#34;}--&gt;b{&#34;continue?&#34;}b--&#34;yes&#34;--&gt;ab--&#34;no&#34;--&gt;c[&#34;语句&#34;]c--&gt;a比较和之前exit，很容易发现两者的不同，continue短路只是本次循环后的内容，不会跳出循环结构，所以，continue语句被称为循环继续语句。
+以下代码演示了continue语句的用法：
+define i integer display &amp;#34;&amp;#34; for i = 0 to 20 if i mod 3 !</description>
     </item>
     
     <item>
@@ -77,7 +80,7 @@ flowchart TDa{&#34;?&#34;}--b{&#34;continue?&#34;}b--&#34;</description>
       <pubDate>Thu, 20 Jul 2023 09:59:33 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/5.practice/</guid>
-      <description>练习#以下代码输出结果是什么# define i,j integer  let i = 1 let j = 3  while j&amp;lt;5 or i&amp;gt;3  let i = i + 1  let j = j + 1  display &amp;#34;*&amp;#34;  end while 根据以下代码，写出变量a和b的值# define a,b integer  while a &amp;gt; 0  let b = b + 1  let a = a - 2  end while  display sfmt(&amp;#34;\na=%1,b=%2&amp;#34;,a,b) 已以下这种格式控制台打印99乘法表#1*1=11*2=2 2*2=41*3=3 2*3=6 3*3 =9.</description>
+      <description>练习#以下代码输出结果是什么#define i,j integer let i = 1 let j = 3 while j&amp;lt;5 or i&amp;gt;3 let i = i + 1 let j = j + 1 display &amp;#34;*&amp;#34; end while 根据以下代码，写出变量a和b的值#define a,b integer while a &amp;gt; 0 let b = b + 1 let a = a - 2 end while display sfmt(&amp;#34;\na=%1,b=%2&amp;#34;,a,b) 已以下这种格式控制台打印99乘法表#1*1=11*2=2 2*2=41*3=3 2*3=6 3*3 =9.</description>
     </item>
     
   </channel>

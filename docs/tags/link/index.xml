@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/link/</link>
     <description>Recent content in link on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Mon, 28 Aug 2023 16:27:00 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/link/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3.p_link作业</title>
@@ -12,21 +13,23 @@
       <pubDate>Mon, 28 Aug 2023 16:27:00 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/3.p_link/</guid>
-      <description>p_link作业&amp;ndash;使用r.l2 链接作业#无论是链接所有42m文件，还是先链接为42r文件，再链接到主程序。都需要我们将需要调用程序链接起来，如果只运行一次还好。 但是编写程序过程中难免会出错，即使能力很强，能够保证每次不出错，后续新功能增加时，也需要重新连接编译。
+      <description>p_link作业&amp;ndash;使用r.l2 链接作业#无论是链接所有42m文件，还是先链接为42r文件，再链接到主程序。都需要我们将需要调用程序链接起来，如果只运行一次还好。 但是编写程序过程中难免会出错，即使能力很强，能够保证每次不出错，后续新功能增加时，也需要重新连接编译。
 我们需要一种新的简单的方式去链接主程序。
-p_link#之前我们使用r.c2命令时，此命令自动将42m文件放到42m目录下，如果链接也能够自动链接对应的文件就好了。
+p_link#之前我们使用r.c2命令时，此命令自动将42m文件放到42m目录下，如果链接也能够自动链接对应的文件就好了。
 p_link就是方便程序链接的作业。
 你可以直接运行exe2 p_link打开作业，也可以再p_zz中维护链结档资料按钮中打开。
 让我们用tiptop gp方式重新编译链接czzi004.4gl文件。
- 建立p_zz资料  运行指令其实就是42r文件，$CZZi目录就是czz/42r目录。
-点击维护链结档资料  如果第一次建立，会提示生成链接档资料，选择是会打开p_link作业
-自动新增的p_link资料只包含czzi004.42m主程序文件。
-r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中没有czzi004.42m的话，会报错 完整路径是由模组编号和程序代码组合生成的   输入完成后，会自动链接，如果有报错，先忽略报错，关掉报错窗口
-  回到命令行r.c2 czzi004编译主程序
-  database ds编译前在第一行增加这个语句，否则会报错
-链接主程序r.l2 czzi004  /u1/genero/fgl.dev/bin/fgl2p -o czzi004.42r libgre.42x WSHelper.42m lib.42x sub.42x qry.42x czz_czzi004.42m czz_s_czzi004.42m  czzi004.42r has been generated successfully! 上面为成功通知。
+建立p_zz资料 运行指令其实就是42r文件，$CZZi目录就是czz/42r目录。
+点击维护链结档资料 如果第一次建立，会提示生成链接档资料，选择是会打开p_link作业
+自动新增的p_link资料只包含czzi004.42m主程序文件。
+r.c2 s_czzi004并在p_link中新增 必须先使用r.c2编译，42m目录中没有czzi004.42m的话，会报错 完整路径是由模组编号和程序代码组合生成的 输入完成后，会自动链接，如果有报错，先忽略报错，关掉报错窗口
+回到命令行r.c2 czzi004编译主程序
+database ds编译前在第一行增加这个语句，否则会报错
+链接主程序r.l2 czzi004 /u1/genero/fgl.dev/bin/fgl2p -o czzi004.42r libgre.42x WSHelper.42m lib.42x sub.42x qry.42x czz_czzi004.42m czz_s_czzi004.42m czzi004.42r has been generated successfully! 上面为成功通知。
 我们看链接的过程，和我们直接fgllink有很多区别
- fgl2p r.l2 没有使用fgllink  fgl2p 相比fgllink除了有链接的功能，如果链接文件包含4gl文件，还可以自动将4gl编译为42m后再链接。</description>
+fgl2p r.l2 没有使用fgllink fgl2p 相比fgllink除了有链接的功能，如果链接文件包含4gl文件，还可以自动将4gl编译为42m后再链接。
+libgre.42x WSHelper.42m qry.42x 这几个也是类似lib和sub函数库。
+程序开发流程#</description>
     </item>
     
   </channel>

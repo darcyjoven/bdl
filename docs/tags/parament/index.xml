@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/parament/</link>
     <description>Recent content in parament on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Sun, 27 Aug 2023 16:11:25 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/parament/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.函数的参数</title>
@@ -12,17 +13,17 @@
       <pubDate>Sun, 27 Aug 2023 16:11:25 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/1.parameter/</guid>
-      <description>函数的参数#在BDL中除了变量定义，其它所有操作都需要在函数中进行。
+      <description>函数的参数#在BDL中除了变量定义，其它所有操作都需要在函数中进行。
 所以能够灵活使用函数是编程能力重要体现，使用函数时，除了程序逻辑需要考虑，如何定义函数的结构也是值得考虑的。
 函数的结构包括两部分，参数与返回值。
-参数个数#函数的参数个数是无上限的，且不是必须含有参数。
-&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD#0个参数#       1d67cdd5786f4fafd74c3017d23ade5bb17724be 如果你的函数不受程序的上下文影响，或者说不需要考虑调用之前做了哪些操作，那么你的函数就不要参数。
-       BDL自带函数中有不少类似函数如下：
-fgl_lastkey() --获取最后一次按下的按键 &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD#任意个数参数#任意个数的参数需要在在定义function时就确认，参数时变量的一种，需要定义在函数体的括号中，由,作为分隔符。
+参数个数#函数的参数个数是无上限的，且不是必须含有参数。
+&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD#0个参数#1d67cdd5786f4fafd74c3017d23ade5bb17724be 如果你的函数不受程序的上下文影响，或者说不需要考虑调用之前做了哪些操作，那么你的函数就不要参数。
+BDL自带函数中有不少类似函数如下：
+fgl_lastkey() --获取最后一次按下的按键 &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD#任意个数参数#任意个数的参数需要在在定义function时就确认，参数时变量的一种，需要定义在函数体的括号中，由,作为分隔符。
 在函数中还必须定义所有参数的数据类型。 调用时传入的参数需要和定义的参数个数一样，且数据类型一致(可以转换的数据类型会自动转换)。
-main  display add(1,&amp;#39;2&amp;#39;,3,&amp;#39;4&amp;#39;,...,n) end main function add(x1,x2,x3,x4,...,xn)  return x1+x2+x3+x4+...+xn function 参数类型#字符串、数值参数#在BDL中，基本类型只有两种字符串和数值，如果参数是这两种基础类型之一，那么参数是将实际的值传递到函数中。
+main display add(1,&amp;#39;2&amp;#39;,3,&amp;#39;4&amp;#39;,...,n) end main function add(x1,x2,x3,x4,...,xn) return x1+x2+x3+x4+...+xn function 参数类型#字符串、数值参数#在BDL中，基本类型只有两种字符串和数值，如果参数是这两种基础类型之一，那么参数是将实际的值传递到函数中。
 例如：
-main  define x,y string  define i,j integer  let x = &amp;#39;demo&amp;#39;  let i = 2  let j = 3  display sfmt(&amp;#39;add(i,j) is %1,i is %2 ,j is %3&amp;#39;,add(i,j),i,j)   let y = ext(x)  display sfmt(&amp;#34;x is %1 y is %2&amp;#34;,x,y) end main function add(a,b)  define a,b integer  let a = a + 1  let b = b + 1  return a+b end function function ext(x)  define x string  let x = x+&amp;#34;.</description>
+main define x,y string define i,j integer let x = &amp;#39;demo&amp;#39; let i = 2 let j = 3 display sfmt(&amp;#39;add(i,j) is %1,i is %2 ,j is %3&amp;#39;,add(i,j),i,j) let y = ext(x) display sfmt(&amp;#34;x is %1 y is %2&amp;#34;,x,y) end main function add(a,b) define a,b integer let a = a + 1 let b = b + 1 return a+b end function function ext(x) define x string let x = x+&amp;#34;.</description>
     </item>
     
   </channel>

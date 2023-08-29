@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/database/</link>
     <description>Recent content in database on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Thu, 24 Aug 2023 08:06:11 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.数据库连接</title>
@@ -12,17 +13,17 @@
       <pubDate>Thu, 24 Aug 2023 08:06:11 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/</guid>
-      <description>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
+      <description>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
 本章所有内容都是基于ORACLE DB，但大部门内容应该是通用的。
 数据库已经配置的连接可以在文件$FGLPROFILE中看见，这里配置好的数据库都是可以在BDL中使用的。
-连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
+连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
 database就是连接数据库的语句，ds就是要连接的数据库。ds为TIPTOP中一个特殊的数据库，此数据保存了所有表的表结构，和同义词表的数据。
- 同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
- database ds1即可切换到ds1数据库中。
-main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
+同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
+database ds1即可切换到ds1数据库中。
+main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
 这两者在连接数据库时是有区别main end main 会自动连接到 main之外的databse ds数据库。 而function main() end function只会用到databse ds的表结构，而不会自动连接到数据库。
- 使用表结构的方法在下一节将会讲到
- 除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。</description>
+使用表结构的方法在下一节将会讲到
+除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。</description>
     </item>
     
   </channel>

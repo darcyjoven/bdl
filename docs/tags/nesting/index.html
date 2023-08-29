@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/nesting/" />
-
 <title>nesting | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/nesting/index.xml" title="BDL教程" />
@@ -2328,7 +2327,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2768,10 +2767,11 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>结构体嵌套#上一节中讨论的person结构相对简单，只包含了3个数据成员: name、age和email, 如果面对的是更为复杂的结构，将所有数据成员并排似乎不是个高效的方法。那能否使用结构体嵌套，一层层管理数据呢?
-结构体嵌套定义#顾名思义，结构体嵌套就是“结构体套结构体”，某个结构体的成员也是一个结构体变量，这样就可以按层次结构合理组织数据，举例如下：
-type student record  score record  math integer,  english integer  end record,  info record  height,weight decimal(10,2)  end record end record student是个外层结构，内部包含着学生的数据，结构体student内又定义了两个结构体变量score (成绩)和info (基本情况),结构体中的成员应当是占据内存空间的变量实体，因此，score和info是student结构的数据成员，结构体scorestruct和infostruct只是两个类型名，不占据实在的内存地址空间。将上述代码如下改写似乎更好理解一点:
-type score record  math integer,  english integer end record type info record  height,weight decimal(10,2) end record type student record  score score,  info info end record 在结构体内部申明的结构体类型是不可见的，只能通过外部结构体调用。
+    <p>结构体嵌套#上一节中讨论的person结构相对简单，只包含了3个数据成员: name、age和email, 如果面对的是更为复杂的结构，将所有数据成员并排似乎不是个高效的方法。那能否使用结构体嵌套，一层层管理数据呢?
+结构体嵌套定义#顾名思义，结构体嵌套就是“结构体套结构体”，某个结构体的成员也是一个结构体变量，这样就可以按层次结构合理组织数据，举例如下：
+type student record score record math integer, english integer end record, info record height,weight decimal(10,2) end record end record student是个外层结构，内部包含着学生的数据，结构体student内又定义了两个结构体变量score (成绩)和info (基本情况),结构体中的成员应当是占据内存空间的变量实体，因此，score和info是student结构的数据成员，结构体scorestruct和infostruct只是两个类型名，不占据实在的内存地址空间。将上述代码如下改写似乎更好理解一点:
+type score record math integer, english integer end record type info record height,weight decimal(10,2) end record type student record score score, info info end record 在结构体内部申明的结构体类型是不可见的，只能通过外部结构体调用。
+type student record score record math integer, english integer end record, info record height,weight decimal(10,2) end record end record define zhangsan student 例如以上代码，你只能使用zhangsan.
         <a href="/docs/BDL/2.medium/13.struct/3.nesting-record/">...</a>
       
     </p>
@@ -2794,7 +2794,7 @@ type score record  math integer,  english integer end record type info record  h
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3131,7 +3131,7 @@ type score record  math integer,  english integer end record type info record  h
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

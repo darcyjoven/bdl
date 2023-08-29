@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/database/" />
-
 <title>database | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/database/index.xml" title="BDL教程" />
@@ -2328,7 +2327,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2768,17 +2767,17 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
+    <p>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
 本章所有内容都是基于ORACLE DB，但大部门内容应该是通用的。
 数据库已经配置的连接可以在文件$FGLPROFILE中看见，这里配置好的数据库都是可以在BDL中使用的。
-连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
+连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
 database就是连接数据库的语句，ds就是要连接的数据库。ds为TIPTOP中一个特殊的数据库，此数据保存了所有表的表结构，和同义词表的数据。
- 同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
- database ds1即可切换到ds1数据库中。
-main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
+同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
+database ds1即可切换到ds1数据库中。
+main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
 这两者在连接数据库时是有区别main end main 会自动连接到 main之外的databse ds数据库。 而function main() end function只会用到databse ds的表结构，而不会自动连接到数据库。
- 使用表结构的方法在下一节将会讲到
- 除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。
+使用表结构的方法在下一节将会讲到
+除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。
     </p>
   </article>
   
@@ -2799,7 +2798,7 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3136,7 +3135,7 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

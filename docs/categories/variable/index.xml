@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/categories/variable/</link>
     <description>Recent content in variable on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 18 Jul 2023 09:23:44 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/variable/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.变量</title>
@@ -12,10 +13,12 @@
       <pubDate>Tue, 18 Jul 2023 09:23:44 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/</guid>
-      <description>变量#变量定义#变量定义，变量申明，都是同一个意思的两种翻译方法。
+      <description>变量#变量定义#变量定义，变量申明，都是同一个意思的两种翻译方法。
 在定义变量的时候，需要给这个变量-一个名字。有了名字之后才能使用这个变量。回顾曾经编写的BDL语言代码，可以发现这些代码中，凡是用双引号括起来的部分，都是字符串。 那些没有用引号括起来的单词，一部分是C语言提供的关键字，比如integer，string等， 还有一部分是BDL语言提供的符号，如=、+、-、()、{}等，这些单词和符号就是BDL语言的核心部分，编译器生来就认识它们。 另外没有使用双引号括起来的单词，如define a integer,其中的integer是关键字，a就是非BDL语言的关键字，对于编译器来说，它是不认识的。 要让编译器知道这个单词是什么意思，所以有了定义(define)。
 对于变量来说，变量的定义会使得编译器在变量符号表中新增一条记录。 这样编译器在后面如果读入了一个变量名，通过查询符号表，就知道是否声明过了。
- 一行可以定义多个变量  define a,b,c integer  一样也可以拆成两行  define a,  b,  c integer  每行也可以只定义一个变量  define a integer define b integer define c integer  变量定义的顺序可以打乱  define b integer define a integer define c integer  不同类型可以定义在同一个define中，但必须指定每个不同类型变量的数据类型  define a,  b integer  c varchar(10) 定义变量的意义#BDL为什么要规定要先定义变量呢？ 为什么要指定变量的名字和对应的数据类型呢？</description>
+一行可以定义多个变量 define a,b,c integer 一样也可以拆成两行 define a, b, c integer 每行也可以只定义一个变量 define a integer define b integer define c integer 变量定义的顺序可以打乱 define b integer define a integer define c integer 不同类型可以定义在同一个define中，但必须指定每个不同类型变量的数据类型 define a, b integer c varchar(10) 定义变量的意义#BDL为什么要规定要先定义变量呢？ 为什么要指定变量的名字和对应的数据类型呢？
+建立变量符号表 通过声明变量，编译器可以建立变量符号表，如此一来，程序中用到了多少变量，每个变量的类型是什么，编译器非常清楚。如果使用了没有声明的变量，编译器在编译期间就可以发现，从而帮助程序员远离由于疏忽而将变量名写错的情况。下面演示了写错变量名后编译器编译时的提示信息。
+define a integer let a = 1 let b = a * 10 display b 编译提示变量未定义</description>
     </item>
     
     <item>
@@ -24,15 +27,17 @@
       <pubDate>Mon, 17 Jul 2023 15:59:44 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/6.variable/</guid>
-      <description>变量&amp;ndash;数据从哪里来，又到那里去#在计算机程序设计中，经常要用到变量。比如在屏幕中移动光标，需要存储光标的x，y坐标，每次移动光标，就需要对坐标修改，也就是x、y的值要改变;为了得到当前光标的坐标，就需要从x、y中得到当前的值。在程序设计中这些值都是通过变量来完成的。
-变量在内存中的表现形式#变量是指其值可以变化的量。在计算机中，指令代码、数据都存储于内存中。变量也需要存储在内存中。
+      <description>变量&amp;ndash;数据从哪里来，又到那里去#在计算机程序设计中，经常要用到变量。比如在屏幕中移动光标，需要存储光标的x，y坐标，每次移动光标，就需要对坐标修改，也就是x、y的值要改变;为了得到当前光标的坐标，就需要从x、y中得到当前的值。在程序设计中这些值都是通过变量来完成的。
+变量在内存中的表现形式#变量是指其值可以变化的量。在计算机中，指令代码、数据都存储于内存中。变量也需要存储在内存中。
 类比人类的思维过程，也很容易明白为什么需要内存空间存储变量:假设现在有3个数据，分别是a=3,b=4,c=5，需要读者去计算“a+b+c&amp;quot;的值。 读者首先回忆a的值是3，b的值是4,c的值是5，然后分别用3、4、5作为计算的数得到“3+4+5=12”。 这是一个很简单的过程，思考过程几乎不花费时间。如果计算的变量超过100个，估计大部分读者都记不住这么多数据的值，需要把这些数据及其对应的数值记录在纸上或其他地方，当需要用到某个数据的时候，再去查看其对应的值。计算机中变量的作用与它类似。
 在计算机中，每个变量都被分配了一块内存空间，在这些空间里存储的就是变量的值。 变量之所以可以变化，就是这个存储空间可以存储不同的数值。存储空间里的值变化，则变量对应的值也变化。 同一个时间，内存空间里只能保存一份值，新值冲掉了原来的旧值。 每个内存单元都有编号，这些是内存的地址。如图所示。
-编译器使用变量符号表#在源代码中，每个变量都有变量名。 实际上，编译后的目标代码里并没有变量名字，而是记录着变量在内存空间中的地址。 在BDL语言中，通过变量名就可以访问到变量的值，对变量名的访问，就是对变量值的访问。
+编译器使用变量符号表#在源代码中，每个变量都有变量名。 实际上，编译后的目标代码里并没有变量名字，而是记录着变量在内存空间中的地址。 在BDL语言中，通过变量名就可以访问到变量的值，对变量名的访问，就是对变量值的访问。
 在编译的过程中，编译器会建立-张变量符号表，该表记录的数据是:变量类型、变量名、变量地址等信息。
-变量及其使用#变量有不同的类型，如记录英文字母及标点符号，就需要字符类型(varchar) 的变量;记录整数需要整数类型integer的变量;记录实数有decimal类型的变量。这些变量都是数值类型，BDL语言还提供了其他类型的变量，详细讲解请参见后续章节的论述。
+变量及其使用#变量有不同的类型，如记录英文字母及标点符号，就需要字符类型(varchar) 的变量;记录整数需要整数类型integer的变量;记录实数有decimal类型的变量。这些变量都是数值类型，BDL语言还提供了其他类型的变量，详细讲解请参见后续章节的论述。
 通过上述的简单叙述，读者可以对变量有了一个大概的感性认识。再回过头来看看源代码中每行的意思。
-databse ds main  define a,b integer --定义a,b 为整型  define y integer --定义y为整型   let a = 1 --将变量a赋值为1，此时a的值为1  let b = 1 --将变量b赋值为1，此时b的值为1  let y = a + b --将a，b的值分别取出来，计算结果后，赋值给变量y  display sfmt(&amp;#34;\na+b=%1&amp;#34;,y) --将y的值打印出来 end main  define a,b integer  这是向编译器声明，以下程序将会用到两个整型变量，其名字为a和b。此时并不会进行真 正的内存分配动作，也就是此时并没有内存地址与变量名关联。</description>
+databse ds main define a,b integer --定义a,b 为整型 define y integer --定义y为整型 let a = 1 --将变量a赋值为1，此时a的值为1 let b = 1 --将变量b赋值为1，此时b的值为1 let y = a + b --将a，b的值分别取出来，计算结果后，赋值给变量y display sfmt(&amp;#34;\na+b=%1&amp;#34;,y) --将y的值打印出来 end main define a,b integer 这是向编译器声明，以下程序将会用到两个整型变量，其名字为a和b。此时并不会进行真 正的内存分配动作，也就是此时并没有内存地址与变量名关联。
+“define”是BDL语言提供的关键字，需要定义变量时必须使用。
+“integer”是BDL语言提供的关键字，是integer (整数)的缩写，表示为整数数据类型，简称整 型。 其后紧跟的是变量名称。变量名由程序员命名。变量名称也必须是字母开头，其后的部分可以是字母、数字、下划线的组合。 在同一行中可以声明多个变量，变量间用逗号分隔。</description>
     </item>
     
   </channel>

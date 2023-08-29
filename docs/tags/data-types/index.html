@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/data-types/" />
-
 <title>data types | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/data-types/index.xml" title="BDL教程" />
@@ -2328,7 +2327,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2768,15 +2767,15 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>数据类型#BDL语言规定，程序中使用的每一个数据，必须指定其数据类型。
+    <p>数据类型#BDL语言规定，程序中使用的每一个数据，必须指定其数据类型。
 BDL语言数据类型
-mermaid.initialize({"theme": "neutral"})graph TD;BDL语言数据类型--构造类型BDL语言数据类型--基本类型构造类型--数组构造类型--结构体基本类型--字符串类型基本类型--数值类型数值类型--整型数值类型--浮点型graph TD;整型--DATE整型--BINGINT整型--INTEGER整型--SMALLINT整型--TINYINT整型--BOOLEANgraph TD;浮点型--c["FLOAT[(p)]"]浮点型--d["SMALLFLOAT"]浮点型--e["DECIMAL[(p[,s])]"]浮点型--f["MONEY[(p[,s])]"]graph TD;字符串类型--a["CHAR[(n)]"]字符串类型--b["VARCHAR[(n[,r])]"]字符串类型--STRING字符串类型--BYTE字符串类型--TEXT 基本类型是最基础的简单数据类型，其值无法再分解为其它类型 构造数据类型：顾名思义，构造数据类型是根据已经定义的一个或读个数据类型用构造的方法来定义的。 构造数据类型有多个其它数据类型组合而成。 一个构造类型的值可以分解成若干个成员或元素。 其中每个成员要么是一个基本数据类型，要么又是一个构造类型。 再BDL语言中构造类型又以下几种：   数组类型：所有元素都是同一类型。即数组类型是统一数据类型元素的集合 结构类型：不同数据类型的组合  本节只介绍基本数据类型，其它数据类型再后续陆续介绍。
-整数类型#整数是日常生活和计算机中用得最频繁的数据类型，也比较容易理解。 整数从数学意义上来说就是从负无穷到正无穷之间的任意整型的数据，也就是任意自然数(如1、2、3、4、5)以及它们的负数或0。 如果用十进制表示一个自然数，十进制的位数越多，表示的整数也越大。 在计算机中用二进制表示数据，二进制的位数不能无限使用，所以在计算机中，整数有一定的大小限制，只能在一定的范围之内。 在以前内存“寸土寸金”的时代，哪怕是为了节约2个字节的内存，也是非常有必要的。
+graph TD;BDL语言数据类型-->构造类型BDL语言数据类型-->基本类型构造类型-->数组构造类型-->结构体基本类型-->字符串类型基本类型-->数值类型数值类型-->整型数值类型-->浮点型graph TD;整型-->DATE整型-->BINGINT整型-->INTEGER整型-->SMALLINT整型-->TINYINT整型-->BOOLEANgraph TD;浮点型-->c["FLOAT[(p)]"]浮点型-->d["SMALLFLOAT"]浮点型-->e["DECIMAL[(p[,s])]"]浮点型-->f["MONEY[(p[,s])]"]graph TD;字符串类型-->a["CHAR[(n)]"]字符串类型-->b["VARCHAR[(n[,r])]"]字符串类型-->STRING字符串类型-->BYTE字符串类型-->TEXT基本类型是最基础的简单数据类型，其值无法再分解为其它类型 构造数据类型：顾名思义，构造数据类型是根据已经定义的一个或读个数据类型用构造的方法来定义的。 构造数据类型有多个其它数据类型组合而成。 一个构造类型的值可以分解成若干个成员或元素。 其中每个成员要么是一个基本数据类型，要么又是一个构造类型。 再BDL语言中构造类型又以下几种： 数组类型：所有元素都是同一类型。即数组类型是统一数据类型元素的集合 结构类型：不同数据类型的组合 本节只介绍基本数据类型，其它数据类型再后续陆续介绍。
+整数类型#整数是日常生活和计算机中用得最频繁的数据类型，也比较容易理解。 整数从数学意义上来说就是从负无穷到正无穷之间的任意整型的数据，也就是任意自然数(如1、2、3、4、5)以及它们的负数或0。 如果用十进制表示一个自然数，十进制的位数越多，表示的整数也越大。 在计算机中用二进制表示数据，二进制的位数不能无限使用，所以在计算机中，整数有一定的大小限制，只能在一定的范围之内。 在以前内存“寸土寸金”的时代，哪怕是为了节约2个字节的内存，也是非常有必要的。
 所以BDL语言的整数类型，又分为BINGINT8，INTEGER4，SMALLINT2，TINYINT1。
 在BDL语言中，日期也是用整型标识的，DATE4,它和INTEGER4在内存中存储方式一致，并规定1899/12/31这一天为0，1900/01/01为1。
 除了这些比较大的整数还有一个1位的整型BOOLEAN，它只能保存1或者0。
 请验证以下代码的运行值，后续所有代码不需要的地方都不会在包括main函数：
-define a smallint let a = 32767 display a let a = a + 1 display a let a = a + 1 display a 整数的正负#浮点型#  FLOAT[(p)]8
+define a smallint let a = 32767 display a let a = a + 1 display a let a = a + 1 display a 整数的正负#浮点型#FLOAT[(p)]8
         <a href="/docs/BDL/1.basic/4.how_save_and_get_data/3.data-types/">...</a>
       
     </p>
@@ -2799,7 +2798,7 @@ define a smallint let a = 32767 display a let a = a + 1 display a let a = a + 1 
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3136,7 +3135,7 @@ define a smallint let a = 32767 display a let a = a + 1 display a let a = a + 1 
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

@@ -3,39 +3,38 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="逻辑运算符和逻辑表达式#逻辑运算符#关系表达式的输出结果为“真”和“假”，但关系表达式毕竟只能判断一次，实际问题常常遇到多个条件判断情况。 例如，“如果从济南到北京比上海近，并且明天不下雨，就去北京旅游”。 BDL语言遇到这种情况，就要使用逻辑运算符和逻辑表达式。
+<meta name="description" content="逻辑运算符和逻辑表达式#逻辑运算符#关系表达式的输出结果为“真”和“假”，但关系表达式毕竟只能判断一次，实际问题常常遇到多个条件判断情况。 例如，“如果从济南到北京比上海近，并且明天不下雨，就去北京旅游”。 BDL语言遇到这种情况，就要使用逻辑运算符和逻辑表达式。
 逻辑运算符
-   运算符 描述     not 如果右边表示大为true返回false，如果为flase，返回true   and 如果左边和右边表达式都为true,返回true,否则false   or 如果左边和右边表达式都为false,返回false,否则true    逻辑运算符#在计算机中，逻辑运算符可以理解为，``与 或 非`。
- 与（AND）  “表达式1 and 表达式2”，只有当两个条件都为 非0 时，运算结果为非0，否则结果为0。
+运算符 描述 not 如果右边表示大为true返回false，如果为flase，返回true and 如果左边和右边表达式都为true,返回true,否则false or 如果左边和右边表达式都为false,返回false,否则true 逻辑运算符#在计算机中，逻辑运算符可以理解为，``与 或 非`。
+与（AND） “表达式1 and 表达式2”，只有当两个条件都为 非0 时，运算结果为非0，否则结果为0。
 所有表达式是并且的关系，都成立时才认为成立，有任意一条不成立，就算不成立。
-或（or）  “表达式1 or 表达式2”，只有两个条件都为0时，运算结果才为0,否则为1。
+或（or） “表达式1 or 表达式2”，只有两个条件都为0时，运算结果才为0,否则为1。
 所有表达式是或且的关系，都不成立的时候才不成立，有任意一条成立，就算成立。
-非（not）  “not 表达式”，取反，当表达式为0时，结果为1，当表达式为1时，结果为0。
+非（not） “not 表达式”，取反，当表达式为0时，结果为1，当表达式为1时，结果为0。
 所修饰的表达式成立那么就不成立，不成立就成立。
-逻辑真值表#   A B not A not B A and B A or B     真 真 假 假 真 真   真 假 假 真 假 真   假 真 真 假 假 真   假 假 真 真 假 假    总结以下：与运算就是“有一个假，结果为假”，或运算是“有一个真，结果为真”，非运算时“假变真，真变假”。">
+逻辑真值表#A B not A not B A and B A or B 真 真 假 假 真 真 真 假 假 真 假 真 假 真 真 假 假 真 假 假 真 真 假 假 总结以下：与运算就是“有一个假，结果为假”，或运算是“有一个真，结果为真”，非运算时“假变真，真变假”。">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="3.逻辑运算符" />
-<meta property="og:description" content="逻辑运算符和逻辑表达式#逻辑运算符#关系表达式的输出结果为“真”和“假”，但关系表达式毕竟只能判断一次，实际问题常常遇到多个条件判断情况。 例如，“如果从济南到北京比上海近，并且明天不下雨，就去北京旅游”。 BDL语言遇到这种情况，就要使用逻辑运算符和逻辑表达式。
+<meta property="og:description" content="逻辑运算符和逻辑表达式#逻辑运算符#关系表达式的输出结果为“真”和“假”，但关系表达式毕竟只能判断一次，实际问题常常遇到多个条件判断情况。 例如，“如果从济南到北京比上海近，并且明天不下雨，就去北京旅游”。 BDL语言遇到这种情况，就要使用逻辑运算符和逻辑表达式。
 逻辑运算符
-   运算符 描述     not 如果右边表示大为true返回false，如果为flase，返回true   and 如果左边和右边表达式都为true,返回true,否则false   or 如果左边和右边表达式都为false,返回false,否则true    逻辑运算符#在计算机中，逻辑运算符可以理解为，``与 或 非`。
- 与（AND）  “表达式1 and 表达式2”，只有当两个条件都为 非0 时，运算结果为非0，否则结果为0。
+运算符 描述 not 如果右边表示大为true返回false，如果为flase，返回true and 如果左边和右边表达式都为true,返回true,否则false or 如果左边和右边表达式都为false,返回false,否则true 逻辑运算符#在计算机中，逻辑运算符可以理解为，``与 或 非`。
+与（AND） “表达式1 and 表达式2”，只有当两个条件都为 非0 时，运算结果为非0，否则结果为0。
 所有表达式是并且的关系，都成立时才认为成立，有任意一条不成立，就算不成立。
-或（or）  “表达式1 or 表达式2”，只有两个条件都为0时，运算结果才为0,否则为1。
+或（or） “表达式1 or 表达式2”，只有两个条件都为0时，运算结果才为0,否则为1。
 所有表达式是或且的关系，都不成立的时候才不成立，有任意一条成立，就算成立。
-非（not）  “not 表达式”，取反，当表达式为0时，结果为1，当表达式为1时，结果为0。
+非（not） “not 表达式”，取反，当表达式为0时，结果为1，当表达式为1时，结果为0。
 所修饰的表达式成立那么就不成立，不成立就成立。
-逻辑真值表#   A B not A not B A and B A or B     真 真 假 假 真 真   真 假 假 真 假 真   假 真 真 假 假 真   假 假 真 真 假 假    总结以下：与运算就是“有一个假，结果为假”，或运算是“有一个真，结果为真”，非运算时“假变真，真变假”。" />
+逻辑真值表#A B not A not B A and B A or B 真 真 假 假 真 真 真 假 假 真 假 真 假 真 真 假 假 真 假 假 真 真 假 假 总结以下：与运算就是“有一个假，结果为假”，或运算是“有一个真，结果为真”，非运算时“假变真，真变假”。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/3.logical-operator/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-19T15:36:30+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
-
 <title>3.逻辑运算符 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2184,7 +2183,7 @@ BDL语言遇到这种情况，就要使用逻辑运算符和逻辑表达式。</
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/1.basic/6.operators_and_expressions/3.logical-operator/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/6.operators_and_expressions/3.logical-operator/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2195,7 +2194,7 @@ BDL语言遇到这种情况，就要使用逻辑运算符和逻辑表达式。</
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

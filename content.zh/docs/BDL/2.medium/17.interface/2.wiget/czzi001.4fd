@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm gstVersion="22800" name="ManagedForm" uid="{b6b37894-0194-45e3-98a9-b0b75ee643fd}">
+  <AGSettings/>
+  <Record additionalTables="" joinLeft="" joinOperator="" joinRight="" name="Undefined" order="" uid="{24190bf3-cc93-415d-aed3-0c308814cfa1}" where=""/>
+  <Record additionalTables="" joinLeft="" joinOperator="" joinRight="" name="Record1" order="" uid="{0848b682-8361-4dbf-b918-1bdd1aa78528}" where="">
+    <RecordField colName="" fieldIdRef="1" name="Edit1" sqlTabName="" table_alias_name="" uid="{6dc9c874-156b-45e5-a6a2-4606a10d3ea3}"/>
+    <RecordField colName="" fieldIdRef="2" name="Edit2" sqlTabName="" table_alias_name="" uid="{36bcaba6-5a3b-4cf2-987f-6da91b6ad592}"/>
+  </Record>
+  <Form gridHeight="26" gridWidth="124" name="Form" text="Form">
+    <VBox gridHeight="13" gridWidth="122" name="VBox1" posX="0" posY="0">
+      <Folder gridHeight="5" gridWidth="122" name="Folder1" posX="0" posY="1">
+        <Page name="Page1" text="Page1">
+          <Grid gridHeight="3" gridWidth="42" name="Grid2" posX="2" posY="1">
+            <Label gridHeight="1" gridWidth="30" name="Label1" posX="2" posY="1" text="Label1"/>
+          </Grid>
+        </Page>
+        <Page name="Page2" text="Page2">
+          <Grid gridHeight="4" gridWidth="44" name="Grid1" posX="2" posY="0">
+            <Label gridHeight="1" gridWidth="32" name="Label2" posX="2" posY="1" text="Label2"/>
+          </Grid>
+        </Page>
+      </Folder>
+      <Table gridHeight="6" gridWidth="122" name="Table1" posX="0" posY="6" totalRows="5">
+        <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="1" gridHeight="1" gridWidth="8" name="Edit1" posX="0" posY="0" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="1" table_alias_name="" title="Edit1" widget="Edit"/>
+        <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="2" gridHeight="1" gridWidth="8" name="Edit2" posX="8" posY="0" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="2" table_alias_name="" title="Edit2" widget="Edit"/>
+      </Table>
+    </VBox>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewAzADYAYgBjAGEAYgBhADYALQA1AGEAMwBiAC0ANABjAGYAMgAtADkAOAA3AGYALQA2AGQAYQA5ADEAYgA2AGEAZAA1ADkAMgB9QCQAAAAAAABATYAAAAAAAAAAAAAAAAAAAQAAAEwAewAyADQAMQA5ADAAYgBmADMALQBjAGMAOQAzAC0ANAAxADUAZAAtAGEAZQBkADMALQAwAGMAMwAwADgAOAAxADQAYwBmAGEAMQB9QCQAAAAAAABAJAAAAAAAAAAAAAAAAAAAAQAAAEwAewAwADgANAA4AGIANgA4ADIALQA4ADMANgAxAC0ANABkAGIAZgAtAGIAOQAxADgALQAxAGIAZABkADEAYQBhADcAOAA1ADIAOAB9QD4AAAAAAABAPgAAAAAAAAAAAAAAAAAAAQAAAEwAewA2AGQAYwA5AGMAOAA3ADQALQAxADUANgBiAC0ANAA1AGUANQAtAGEANgBhADIALQA0ADYAMAA2AGEAMQAwAGQAMwBlAGEAMwB9QCQAAAAAAABAQoAAAAAAAAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>

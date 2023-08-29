@@ -3,41 +3,44 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
+<meta name="description" content="预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
 预编译指令在编译之后就不影响程序了，所以不会影响程序运行效能。
 预编译执行可以在程序任何位置写入。
-&amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;include。
+&amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;include。
 &amp;include并不是一个语法，而是一个预编译指令&ndash;在编译时就生效。
 &amp;include用法是，后续跟需要导入的源代码文件，当编译时，编译到&amp;include指令行数时，将后面文件原样导入到当前文件中。所以此指令不会影响到运行时效率。在编译后此指令依据不存在了。
 当然这样也有缺点，我们在debug调试的时候，无法通过step in进入到&amp;include中查看了，为排查错误带来了负向影响。
-&amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
-&amp;define MAX_TEST 12 &amp;define HW &#34;Hello world&#34;  MAIN  DEFINE i INTEGER  FOR i=1 TO MAX_TEST  DISPLAY HW  END FOR END MAIN 你甚至可以定义&amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
-&amp;define mian main mian  display &#34;123&#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
-&amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef">
+&amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
+&amp;define MAX_TEST 12 &amp;define HW &#34;Hello world&#34; MAIN DEFINE i INTEGER FOR i=1 TO MAX_TEST DISPLAY HW END FOR END MAIN 你甚至可以定义&amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
+&amp;define mian main mian display &#34;123&#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
+&amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef
+标记粘贴运算 ###在宏定义中使用##可以将两个标记合并。
+&amp;define disp(x) DISPLAY ok##x main define ok34 string let ok34 =&#34;ok is ok !">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="5.预编译" />
-<meta property="og:description" content="预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
+<meta property="og:description" content="预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
 预编译指令在编译之后就不影响程序了，所以不会影响程序运行效能。
 预编译执行可以在程序任何位置写入。
-&amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;include。
+&amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;include。
 &amp;include并不是一个语法，而是一个预编译指令&ndash;在编译时就生效。
 &amp;include用法是，后续跟需要导入的源代码文件，当编译时，编译到&amp;include指令行数时，将后面文件原样导入到当前文件中。所以此指令不会影响到运行时效率。在编译后此指令依据不存在了。
 当然这样也有缺点，我们在debug调试的时候，无法通过step in进入到&amp;include中查看了，为排查错误带来了负向影响。
-&amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
-&amp;define MAX_TEST 12 &amp;define HW &#34;Hello world&#34;  MAIN  DEFINE i INTEGER  FOR i=1 TO MAX_TEST  DISPLAY HW  END FOR END MAIN 你甚至可以定义&amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
-&amp;define mian main mian  display &#34;123&#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
-&amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef" />
+&amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
+&amp;define MAX_TEST 12 &amp;define HW &#34;Hello world&#34; MAIN DEFINE i INTEGER FOR i=1 TO MAX_TEST DISPLAY HW END FOR END MAIN 你甚至可以定义&amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
+&amp;define mian main mian display &#34;123&#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
+&amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef
+标记粘贴运算 ###在宏定义中使用##可以将两个标记合并。
+&amp;define disp(x) DISPLAY ok##x main define ok34 string let ok34 =&#34;ok is ok !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/5.preprocessor/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-28T20:52:53+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
-
 <title>5.预编译 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2158,7 +2161,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/16.module/5.preprocessor/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/16.module/5.preprocessor/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2169,7 +2172,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

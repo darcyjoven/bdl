@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/SQL/</link>
     <description>Recent content in SQL on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Thu, 24 Aug 2023 16:53:04 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/SQL/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3.插入更新删除</title>
@@ -12,12 +13,12 @@
       <pubDate>Thu, 24 Aug 2023 09:33:25 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/3.update-insert-delete/</guid>
-      <description>插入更新删除&amp;ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
+      <description>插入更新删除&amp;ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
 不要更新错了库！
- 本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
- 插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
-原生语句# 将要执行SQL语句放到字符串中  let l_sql = &amp;#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&amp;#39;mar-001&amp;#39;,&amp;#39;xxx&amp;#39;,&amp;#39;xxx&amp;#39;)&amp;#34; prepare SQL语句  prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句  execute demo_ins 检查SQL是否执行成功  在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
- define sqlca record  sqlcode integer, -- 报错代码 100 表示未找到 &amp;lt;0表示有错误  sqlerrm string, --错误消息数量  sqlerrp string,  sqlerrd array[6] integer,  -- 1.</description>
+本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
+插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
+原生语句#将要执行SQL语句放到字符串中 let l_sql = &amp;#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&amp;#39;mar-001&amp;#39;,&amp;#39;xxx&amp;#39;,&amp;#39;xxx&amp;#39;)&amp;#34; prepare SQL语句 prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句 execute demo_ins 检查SQL是否执行成功 在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
+define sqlca record sqlcode integer, -- 报错代码 100 表示未找到 &amp;lt;0表示有错误 sqlerrm string, --错误消息数量 sqlerrp string, sqlerrd array[6] integer, -- 1. 未使用 -- 2. 最后一个Serial或错误代码 -- 3. 最后一条语句处理的行数 -- 4. CPU使用时间 -- 5. SQL文件错误偏移量 -- 6.</description>
     </item>
     
     <item>
@@ -26,12 +27,12 @@
       <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</guid>
-      <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
+      <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
 这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
-FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
+FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
 现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
 让我们利用上一节的FETCH来完成上述需求。
-define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34;  -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql  open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].</description>
+define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34; -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt fetch absolute l_i ima_sel into l_ima[l_i].</description>
     </item>
     
   </channel>

@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/categories/sfmt/</link>
     <description>Recent content in sfmt on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 18 Jul 2023 11:25:43 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/sfmt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.display与sfmt函数</title>
@@ -12,9 +13,13 @@
       <pubDate>Tue, 18 Jul 2023 11:25:43 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/2.sfmt/</guid>
-      <description>display与sfmt函数#display函数已经接触过，是将后面的变量或者值显示到控制台的命令行中。
+      <description>display与sfmt函数#display函数已经接触过，是将后面的变量或者值显示到控制台的命令行中。
 请尝试下以下代码，看看运行的值有何区别
- define a integer  define b decimal(20,6)  define c varchar(20)  define d decimal(10,6)   let a = 1  let b = 1  let c = 1  let d = 1  display &amp;#34;&amp;#34;  display a  display b  display d  display c  let c = &amp;#34;1&amp;#34;  display c  let c = b  display c 运行后，会发现显示如下</description>
+define a integer define b decimal(20,6) define c varchar(20) define d decimal(10,6) let a = 1 let b = 1 let c = 1 let d = 1 display &amp;#34;&amp;#34; display a display b display d display c let c = &amp;#34;1&amp;#34; display c let c = b display c 运行后，会发现显示如下
+11.0000001.000000111.000000 是否很你想像中的不一样，我们没有输入空格，却打印了很多空格。
+隐式转换字符串 display会将任何变量转换为字符串，如果后面不是字符串会自动转化为字符串格式。
+这个转换时隐式的，隐式转化字符串会将数字剩余长度用空格补上。所以
+display adisplay bdisplay c 这两句将补上对于数量的空格: integer 最大表示2147483647，10位，1只有一位所以补上9个空格，因为integer正负数都有可能，还要补上一个符号位值，一共10个空格。</description>
     </item>
     
   </channel>

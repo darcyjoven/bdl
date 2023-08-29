@@ -4,26 +4,27 @@
     <title>第十三章 结构体 on BDL教程</title>
     <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/</link>
     <description>Recent content in 第十三章 结构体 on BDL教程</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.结构体</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/1.record/</link>
       <pubDate>Thu, 20 Jul 2023 19:25:42 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/1.record/</guid>
-      <description>结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
+      <description>结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
 收集的一张张名片大大方便了数据的管理，将这种理念借鉴到BDL语言程序设计中，是否有类似于名片的那么一种变量呢?
 有，答案就是“结构体变量”，这是一种复合变量，在进一步说明结构体变量前，先来看“结构体”的概念，结构体和结构体变量的关系类似与类型与普通变量的关系，结构体中说明了结构体变量的信息格式，而结构体变量是结构体的实例。
-结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
-define 变量 record  存储数据列表  end record 举例说明：
-define person record  name,age varchar(20),  email varchar(50)  end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
+结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
+define 变量 record 存储数据列表 end record 举例说明：
+define person record name,age varchar(20), email varchar(50) end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
 结构体定义规则：
- 每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型  访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
+每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型 访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
 在定义了一个结构体变量后，我们使用成员操作符号.来访问每个成员，例如person.name、person.age，分别表示person这个变量中储存的姓名年纪等信息。
 提示
 结构体成员，和我们之前使用的变量的方法都是使用.操作符号来访问/调用。他们的区别在于方法需要有()，而成员没有()。
-我们看一段示例代码：
- define zhangsan record  name varchar(20),  age integer,  email varchar(50)  end record   let zhangsan.name = &amp;#34;zhang san&amp;#34;  let zhangsan.</description>
+我们看一段示例代码：
+define zhangsan record name varchar(20), age integer, email varchar(50) end record let zhangsan.name = &amp;#34;zhang san&amp;#34; let zhangsan.age = 24 let zhangsan.email = &amp;#34;zhangsan@outlook.com&amp;#34; display sfmt(&amp;#34;\nname:%1&amp;#34;,zhangsan.name) display sfmt(&amp;#34;age:%1&amp;#34;,zhangsan.age) display sfmt(&amp;#34;email:%1&amp;#34;,zhangsan.email) 输出结果:</description>
     </item>
     
     <item>
@@ -32,15 +33,15 @@ define person record  name,age varchar(20),  email varchar(50)  end record 上�
       <pubDate>Thu, 20 Jul 2023 19:25:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/2.type/</guid>
-      <description>声明结构体类型#在上一章节，我们定义了两个相同的结构体变量。
- define zhangsan record  name varchar(20),  age integer,  email varchar(50)  end record  define lisi record  name varchar(20),  age integer,  email varchar(50)  end record 这两个变量成员以及每个成员的数据类型完全一样，除了成员的值其它内容都一样。
+      <description>声明结构体类型#在上一章节，我们定义了两个相同的结构体变量。
+define zhangsan record name varchar(20), age integer, email varchar(50) end record define lisi record name varchar(20), age integer, email varchar(50) end record 这两个变量成员以及每个成员的数据类型完全一样，除了成员的值其它内容都一样。
 现在成员数量少赋值一遍，还不算难，如果成员数量达到几十个的时候呢？
 如果后面我要增加一个成员，难道要先找到所有的结构体变量，一次增加吗？
 所以我们引用了一个新的功能&amp;mdash;结构体声明，关键字type，本章主要介绍它的使用方法。
-结构体如何声明#结构体声明的示例：
- type person record  name varchar(20),  age integer,  email varchar(50)  end record 看起来和结构体变量定义完全一样，只是将define换成了type。
+结构体如何声明#结构体声明的示例：
+type person record name varchar(20), age integer, email varchar(50) end record 看起来和结构体变量定义完全一样，只是将define换成了type。
 我们来看看如何使用：
- type person record  name varchar(20),  age integer,  email varchar(50)  end record  define zhangsan,lisi person  let zhangsan.</description>
+type person record name varchar(20), age integer, email varchar(50) end record define zhangsan,lisi person let zhangsan.name = &amp;#34;zhang san&amp;#34; let lisi.name = &amp;#34;li si&amp;#34; display zhangsan.</description>
     </item>
     
     <item>
@@ -49,10 +50,11 @@ define person record  name,age varchar(20),  email varchar(50)  end record 上�
       <pubDate>Thu, 20 Jul 2023 19:26:32 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/3.nesting-record/</guid>
-      <description>结构体嵌套#上一节中讨论的person结构相对简单，只包含了3个数据成员: name、age和email, 如果面对的是更为复杂的结构，将所有数据成员并排似乎不是个高效的方法。那能否使用结构体嵌套，一层层管理数据呢?
-结构体嵌套定义#顾名思义，结构体嵌套就是“结构体套结构体”，某个结构体的成员也是一个结构体变量，这样就可以按层次结构合理组织数据，举例如下：
-type student record  score record  math integer,  english integer  end record,  info record  height,weight decimal(10,2)  end record end record student是个外层结构，内部包含着学生的数据，结构体student内又定义了两个结构体变量score (成绩)和info (基本情况),结构体中的成员应当是占据内存空间的变量实体，因此，score和info是student结构的数据成员，结构体scorestruct和infostruct只是两个类型名，不占据实在的内存地址空间。将上述代码如下改写似乎更好理解一点:
-type score record  math integer,  english integer end record type info record  height,weight decimal(10,2) end record type student record  score score,  info info end record 在结构体内部申明的结构体类型是不可见的，只能通过外部结构体调用。</description>
+      <description>结构体嵌套#上一节中讨论的person结构相对简单，只包含了3个数据成员: name、age和email, 如果面对的是更为复杂的结构，将所有数据成员并排似乎不是个高效的方法。那能否使用结构体嵌套，一层层管理数据呢?
+结构体嵌套定义#顾名思义，结构体嵌套就是“结构体套结构体”，某个结构体的成员也是一个结构体变量，这样就可以按层次结构合理组织数据，举例如下：
+type student record score record math integer, english integer end record, info record height,weight decimal(10,2) end record end record student是个外层结构，内部包含着学生的数据，结构体student内又定义了两个结构体变量score (成绩)和info (基本情况),结构体中的成员应当是占据内存空间的变量实体，因此，score和info是student结构的数据成员，结构体scorestruct和infostruct只是两个类型名，不占据实在的内存地址空间。将上述代码如下改写似乎更好理解一点:
+type score record math integer, english integer end record type info record height,weight decimal(10,2) end record type student record score score, info info end record 在结构体内部申明的结构体类型是不可见的，只能通过外部结构体调用。
+type student record score record math integer, english integer end record, info record height,weight decimal(10,2) end record end record define zhangsan student 例如以上代码，你只能使用zhangsan.</description>
     </item>
     
     <item>
@@ -61,10 +63,10 @@ type score record  math integer,  english integer end record type info record  h
       <pubDate>Thu, 20 Jul 2023 19:27:18 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/4.record-in-array/</guid>
-      <description>结构体数组嵌套#在上一章节例子中，我们使用student类型定义了两个变量zhangsan,lisi。 但是我们需要的变量不止两个，例如，我需要一个班上50个学生，是不是场景很熟悉？没错，变量。
+      <description>结构体数组嵌套#在上一章节例子中，我们使用student类型定义了两个变量zhangsan,lisi。 但是我们需要的变量不止两个，例如，我需要一个班上50个学生，是不是场景很熟悉？没错，变量。
 我们使用变量嵌套结构体，示例：
-type student record  score record  math integer,  english integer  end record,  info record  height,weight decimal(10,2)  end record end record define students array[50] of student 数组中的结构体#入上面代码，结构体声明是一种自定义的数据类型，在数组
-结构体中的数组#</description>
+type student record score record math integer, english integer end record, info record height,weight decimal(10,2) end record end record define students array[50] of student 数组中的结构体#入上面代码，结构体声明是一种自定义的数据类型，在数组
+结构体中的数组#</description>
     </item>
     
     <item>

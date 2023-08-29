@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/program/" />
-
 <title>program | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/program/index.xml" title="BDL教程" />
@@ -2328,7 +2327,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2772,7 +2771,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>自己动手创建程序#就像小学生解决应用题一样，在答题之前，必须了解题目给的条件，然后明确题目的问题，最后才是解题。 开发软件也需要这样一个过程，必须先清楚用户的需求，根据需求来进行设计和开发，不遗漏需求，也不能有超过需求的功能。
+    <p>自己动手创建程序#就像小学生解决应用题一样，在答题之前，必须了解题目给的条件，然后明确题目的问题，最后才是解题。 开发软件也需要这样一个过程，必须先清楚用户的需求，根据需求来进行设计和开发，不遗漏需求，也不能有超过需求的功能。
 本章的目标就是创建一个可以执行的程序，并输出一句话：“Hello World”。如果读者看了这个要求就开始写代码，就烦了大忌。 这个需求起始很不明确，并没有规定如何输出这句话。 在实际的软件发开工作中，类似不明确的需求比比皆是，所以动手写代码前，一定要非常明确软件的需求。
 很多曾经有过语言学习经理的读者看见上面的需求后，第一印象，认为就是在控制台打印出这句话来，然后就开始思索如何设计程序了。 但假设用户需求是用人声读出这句话呢？发声也是一种输出！ 或者用户需求是在一个窗口界面输出这句话，甚至要求这句话的大小、样式、颜色符和某种规定，那么只在控制台打印“Hello World！”的程序是不符合要求的。 所以在开发软件前，用大量的时间进行实际需求的调研时非常有必要的。 否则，花费大量时间出来的程序可能没有任何价值。
 更明确的修去时：在控制台程序中，输出依据简单的文字：“Hello World！”。具体要求明确后就可以开始程序设计了。
@@ -2810,23 +2809,23 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
-什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
+    <p>结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
+什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
 算法的思维体现在生活的各个方面,比如我们要去北京旅游，会问一些问题:“用什么交通工具?”“在哪里中转?”“是否要去奥运现场?”等，这都包含着算法。
 可见，算法的步骤间有一定的逻辑顺序，按这些顺序执行步骤便可以解决问题，达到目的。这种逻辑顺序，在BDL语言中体现为控制结构。
-算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
+算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
 原则上，自然语言也可用于算法表示，但由于自然语言的多义性，不同的人对同-一个版本的描述可能有不同的理解，因此，一般不采用自然语言来描述算法，要求采用一种精确的、无歧义的机制。
 有两种广泛使用的算法表示方法，一是伪代码法，二是流程图法。
-算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
+算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
 使用伪代码表示算法无须遵守严格的语法规则，只要完整表达了意思，书写清晰，容易阅读和读懂即可。举例如下:
-用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作 上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
-算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
+用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
+算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
 现在通用的流程图符号画法采纳的是ANSI (美国国家标准化协会)的标准，如图所示。
-mermaid.initialize({"theme": "neutral"})flowchart LRid1(["起止框，表示程序起始和结束"])id2{"判断框"}id3[/"输入输出框，表示输入输出数据"/]id4["处理框，完成某些操作"]subgraph a["这是连接点，如果流程太长将用词截断"]id5((...))endid6--"程序执行方向"--id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
+flowchart LRid1(["起止框，表示程序起始和结束"])id2{"判断框"}id3[/"输入输出框，表示输入输出数据"/]id4["处理框，完成某些操作"]subgraph a["这是连接点，如果流程太长将用词截断"]id5((...))endid6--"程序执行方向"-->id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
 在描述基本结构时，本书尽量采用流程图方式。
 以上伪代码，用流程表示如下:
-flowchart TDa(["开始"])--b[/"用户输入"/]b--c{"判断是否是字符Y"}c--"YES"--d["C操作"]c--"NO"--e["B操作"]d--f(["结束"])e--f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
-flowchart TDa["
+flowchart TDa(["开始"])-->b[/"用户输入"/]b-->c{"判断是否是字符Y"}c--"YES"-->d["C操作"]c--"NO"-->e["B操作"]d-->f(["结束"])e-->f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
+flowchart TDa["语句1"] --> b["语句2"]b--> c["语句3"]flowchart TDa{"条件1"}-->b["语句1"]a-->c["语句2"]flowchart TDa{"
         <a href="/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/">...</a>
       
     </p>
@@ -2858,9 +2857,8 @@ flowchart TDa["
 
 
 
-    <p>编译运行-欣赏你的杰作#使用之前我们说的编译连接命令，开始编译连接。如果成功将不会有错误提示，如果失败请检查一些你的代码，可以对比上一篇中的代码。
+    <p>编译运行-欣赏你的杰作#使用之前我们说的编译连接命令，开始编译连接。如果成功将不会有错误提示，如果失败请检查一些你的代码，可以对比上一篇中的代码。
 在czz/4gl目录下输入exe2 czzi001,将会显示以下内容。
-
     </p>
   </article>
   
@@ -2891,7 +2889,7 @@ flowchart TDa["
 
 
 
-    <p>开始你的第一个程序# 使用你自己的编辑器，写一个输出&quot;Hello World&quot;的程序。  display &#34;Hello World&#34; 将你写的程序上传到服务器，并进行编译等一系列操作后，运行并测试是否能输出&quot;Hello World&quot;  
+    <p>开始你的第一个程序#使用你自己的编辑器，写一个输出&quot;Hello World&quot;的程序。 display &#34;Hello World&#34; 将你写的程序上传到服务器，并进行编译等一系列操作后，运行并测试是否能输出&quot;Hello World&quot; 
     </p>
   </article>
   
@@ -2912,7 +2910,7 @@ flowchart TDa["
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3249,7 +3247,7 @@ flowchart TDa["
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/type/" />
-
 <title>type | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.04cb02c478ee4ba3d05042666834bbdcccf8804268c88f67289b53b6f15400a4.js" integrity="sha256-BMsCxHjuS6PQUEJmaDS73Mz4gEJoyI9nKJtTtvFUAKQ=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/type/index.xml" title="BDL教程" />
@@ -2328,7 +2327,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2768,15 +2767,15 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>声明结构体类型#在上一章节，我们定义了两个相同的结构体变量。
- define zhangsan record  name varchar(20),  age integer,  email varchar(50)  end record  define lisi record  name varchar(20),  age integer,  email varchar(50)  end record 这两个变量成员以及每个成员的数据类型完全一样，除了成员的值其它内容都一样。
+    <p>声明结构体类型#在上一章节，我们定义了两个相同的结构体变量。
+define zhangsan record name varchar(20), age integer, email varchar(50) end record define lisi record name varchar(20), age integer, email varchar(50) end record 这两个变量成员以及每个成员的数据类型完全一样，除了成员的值其它内容都一样。
 现在成员数量少赋值一遍，还不算难，如果成员数量达到几十个的时候呢？
 如果后面我要增加一个成员，难道要先找到所有的结构体变量，一次增加吗？
 所以我们引用了一个新的功能&mdash;结构体声明，关键字type，本章主要介绍它的使用方法。
-结构体如何声明#结构体声明的示例：
- type person record  name varchar(20),  age integer,  email varchar(50)  end record 看起来和结构体变量定义完全一样，只是将define换成了type。
+结构体如何声明#结构体声明的示例：
+type person record name varchar(20), age integer, email varchar(50) end record 看起来和结构体变量定义完全一样，只是将define换成了type。
 我们来看看如何使用：
- type person record  name varchar(20),  age integer,  email varchar(50)  end record  define zhangsan,lisi person  let zhangsan.
+type person record name varchar(20), age integer, email varchar(50) end record define zhangsan,lisi person let zhangsan.name = &#34;zhang san&#34; let lisi.name = &#34;li si&#34; display zhangsan.
         <a href="/docs/BDL/2.medium/13.struct/2.type/">...</a>
       
     </p>
@@ -2799,7 +2798,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3136,7 +3135,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
