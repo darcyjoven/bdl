@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>container on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/container/</link>
+    <description>Recent content in container on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 Aug 2023 14:20:48 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.控件&amp;容器</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/2.wiget/</link>
+      <pubDate>Tue, 29 Aug 2023 14:20:48 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/2.wiget/</guid>
+      <description>控件&amp;amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
+ 使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
+ 新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
+一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
+当然拖拽也是有规律的，否则无法生成你想要的画面，甚至还会报错。
+在顶部菜单中不同名称的按钮，都是一个个控件和容器。
+ 控件：  GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
+ 容器：  容器是用来包裹控件，让控件已希望的方式展现出来的元素。
+容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
+不同容器清单说明如下：
+   名称 功能说明 可使用的下层容器物件     Grid 简易空白画布 ScrollGrid、Table、GroupBox   ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox   Table 以表格方式显示阵列资料 无   MFArray 以画布方式显示阵列资料 无   GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table    Grid#Floder#Group#HRec#ScrollGrid#Table#Tree#布局#控件#StaticLabel#Edit#Button#ButtonEdit#DateEdit#RadioGroup#CheckBox#FormFieldLabel#HLine#Canvas#ProgressBar#TextEdit#TimeEdit#StaticImage#FormFieldImage#Slider#SpinEdit#WebComponent#其它项目#TopMenus#Toolbars#Action Defaults#Screen Record#Style#Tab Index#Alignment#</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fglform on BDL教程</title>
+    <link>https://bdl.darcyjoven.com/tags/fglform/</link>
+    <description>Recent content in fglform on BDL教程</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 Aug 2023 15:02:51 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/fglform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3.画面档文件的编译</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/3.fglform/</link>
+      <pubDate>Tue, 29 Aug 2023 15:02:51 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/3.fglform/</guid>
+      <description>画面档文件的编译#4fd文件是我们的</description>
+    </item>
+    
+  </channel>
+</rss>

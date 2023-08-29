@@ -3,40 +3,41 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="类型转换#前面章节中大家已经廖家，整数和浮点数在计算机中表示方法不同，占据的内存空间大小也有所不同。
+<meta name="description" content="类型转换#前面章节中大家已经廖家，整数和浮点数在计算机中表示方法不同，占据的内存空间大小也有所不同。
 如果某下时候，需要将一个integer类型数据存储到decimal类型变量中。此时就需要进行转换。这种不同类型的数据进行转换就称作类型转换。
-自动转换#BDL中为了使编程简单，几乎所有数据类型都可以自动转换。 例如你可以写这种代码
-define a integer let a = &#34;12345.23&#34; 字符串将自动转为整数12345，同样，整数也会自动转为字符串。
-不过要注意之前我们说using的时候，数值类型转字符串会自动补空格。
-但是如果我们要是一个无法理解的内容，会如何自动转换呢？
-define a integer let a = &#34;你好&#34; 如果你在debug中查看会发现a的值会变为null，如果非法值转换，所有变量都会变为null，这将丢失之前变量的值!
-哪些情况会自动转换呢#赋值 无论是let还是returning都会自动转换为目的变量类型
-传参 参数部分后续会详细讲，sfmt(&quot;%1&quot;,1)这个函数中&quot;%1和1就叫做参数，1会自动转为字符串。
-SQL语句 select ima01 from ima_file where ima01 = 2234 SQL语句后续会详细讲，这里先知道有印象就好
-字符串拼接 字符串可以用两种方式凭借,和||，这两种方式都会自动转为字符串">
+自动转换#BDL中为了使编程简单，几乎所有数据类型都可以自动转换。 例如你可以写这种代码
+ define a integer  let a = &#34;12345.23&#34; 字符串将自动转为整数12345，同样，整数也会自动转为字符串。
+ 不过要注意之前我们说using的时候，数值类型转字符串会自动补空格。
+ 但是如果我们要是一个无法理解的内容，会如何自动转换呢？
+ define a integer  let a = &#34;你好&#34; 如果你在debug中查看会发现a的值会变为null，如果非法值转换，所有变量都会变为null，这将丢失之前变量的值!
+哪些情况会自动转换呢# 赋值  无论是let还是returning都会自动转换为目的变量类型
+传参  参数部分后续会详细讲，sfmt(&quot;%1&quot;,1)这个函数中&quot;%1和1就叫做参数，1会自动转为字符串。
+SQL语句  select ima01 from ima_file where ima01 = 2234 SQL语句后续会详细讲，这里先知道有印象就好
+字符串拼接  字符串可以用两种方式凭借,和||，这两种方式都会自动转为字符串">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="5.类型转换" />
-<meta property="og:description" content="类型转换#前面章节中大家已经廖家，整数和浮点数在计算机中表示方法不同，占据的内存空间大小也有所不同。
+<meta property="og:description" content="类型转换#前面章节中大家已经廖家，整数和浮点数在计算机中表示方法不同，占据的内存空间大小也有所不同。
 如果某下时候，需要将一个integer类型数据存储到decimal类型变量中。此时就需要进行转换。这种不同类型的数据进行转换就称作类型转换。
-自动转换#BDL中为了使编程简单，几乎所有数据类型都可以自动转换。 例如你可以写这种代码
-define a integer let a = &#34;12345.23&#34; 字符串将自动转为整数12345，同样，整数也会自动转为字符串。
-不过要注意之前我们说using的时候，数值类型转字符串会自动补空格。
-但是如果我们要是一个无法理解的内容，会如何自动转换呢？
-define a integer let a = &#34;你好&#34; 如果你在debug中查看会发现a的值会变为null，如果非法值转换，所有变量都会变为null，这将丢失之前变量的值!
-哪些情况会自动转换呢#赋值 无论是let还是returning都会自动转换为目的变量类型
-传参 参数部分后续会详细讲，sfmt(&quot;%1&quot;,1)这个函数中&quot;%1和1就叫做参数，1会自动转为字符串。
-SQL语句 select ima01 from ima_file where ima01 = 2234 SQL语句后续会详细讲，这里先知道有印象就好
-字符串拼接 字符串可以用两种方式凭借,和||，这两种方式都会自动转为字符串" />
+自动转换#BDL中为了使编程简单，几乎所有数据类型都可以自动转换。 例如你可以写这种代码
+ define a integer  let a = &#34;12345.23&#34; 字符串将自动转为整数12345，同样，整数也会自动转为字符串。
+ 不过要注意之前我们说using的时候，数值类型转字符串会自动补空格。
+ 但是如果我们要是一个无法理解的内容，会如何自动转换呢？
+ define a integer  let a = &#34;你好&#34; 如果你在debug中查看会发现a的值会变为null，如果非法值转换，所有变量都会变为null，这将丢失之前变量的值!
+哪些情况会自动转换呢# 赋值  无论是let还是returning都会自动转换为目的变量类型
+传参  参数部分后续会详细讲，sfmt(&quot;%1&quot;,1)这个函数中&quot;%1和1就叫做参数，1会自动转为字符串。
+SQL语句  select ima01 from ima_file where ima01 = 2234 SQL语句后续会详细讲，这里先知道有印象就好
+字符串拼接  字符串可以用两种方式凭借,和||，这两种方式都会自动转为字符串" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/5.type-conversion/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-19T16:14:00+08:00" />
-<meta property="article:modified_time" content="2023-08-28T21:31:30+08:00" />
+<meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
+
 <title>5.类型转换 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.bce4b9835716006b69c10228bd38d64ffda527f1a478bbbc4bed29f6ccc617fc.js" integrity="sha256-vOS5g1cWAGtpwQIovTjWT/2lJ/GkeLu8S&#43;0p9szGF/w=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.71c4ba36f57256321202ab23b10d8739d26ff99898b14b28457039d250f127cf.js" integrity="sha256-ccS6NvVyVjISAqsjsQ2HOdJv&#43;ZiYsUsoRXA50lDxJ88=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1549,6 +1550,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/6.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1569,6 +1583,123 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/1.interface-tree/" class="">1.前言--抽象界面</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/2.wiget/" class="">2.控件&amp;容器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/3.fglform/" class="">3.画面档文件的编译</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/6.display/" class="">6.DISPLAY</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/7.input/" class="">7.INPUT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/8.construct/" class="">8.CONSTRUCT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/9.practise/" class="">9.练习</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -1973,7 +2104,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/9e9ff3bb0497843529aa05e79bfb99e34b76c83b" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/7fd5abd5878a63e39873ca064b6aa4e234022033" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2023年8月28日</span>
     </a>
@@ -1982,7 +2113,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/6.operators_and_expressions/5.type-conversion/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/1.basic/6.operators_and_expressions/5.type-conversion/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -1993,7 +2124,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

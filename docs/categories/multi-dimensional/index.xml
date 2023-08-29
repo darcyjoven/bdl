@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/multi-dimensional/</link>
     <description>Recent content in multi-dimensional on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Thu, 20 Jul 2023 17:03:58 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/multi-dimensional/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.多维数组</title>
@@ -13,10 +12,10 @@
       <pubDate>Thu, 20 Jul 2023 17:03:58 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/4.multi-dimensional/</guid>
-      <description>更高维的数组#在了解二位数字定义、初始化和引用之后，不难将概念引申到三维，思维，甚至是更高维数组，本章讨论更高维数组的使用方式。
-高维数组的定义和元素访问#细心的读者不难发现，如果数组是N维，就需要N个下标来访问数组中的元素，同样，在声明高维数组时，除了和一-维、二维数组声明一样要指定元素类型和数组名外，还要指定每一维的大小，以帮助编译器确定到底要分配多大的内存块。
+      <description>更高维的数组#在了解二位数字定义、初始化和引用之后，不难将概念引申到三维，思维，甚至是更高维数组，本章讨论更高维数组的使用方式。
+高维数组的定义和元素访问#细心的读者不难发现，如果数组是N维，就需要N个下标来访问数组中的元素，同样，在声明高维数组时，除了和一-维、二维数组声明一样要指定元素类型和数组名外，还要指定每一维的大小，以帮助编译器确定到底要分配多大的内存块。
 举例来说，要声明一个int型3维数组sz,大小为345,代码如下:
-define sz array[3,4,5] of integer 多维数组在内存中如何排列元素#维度决定了数组中元素的组织方式及访问元素所用的下标个数，但本质上讲，所有的数组在内存中都是一维线性的，所有元素都是连续排列的，中间没有间隔。
+ define sz array[3,4,5] of integer 多维数组在内存中如何排列元素#维度决定了数组中元素的组织方式及访问元素所用的下标个数，但本质上讲，所有的数组在内存中都是一维线性的，所有元素都是连续排列的，中间没有间隔。
 以二维数组为例，内存中是先放第一行的元素，再放第二行的元素。下面给出了大小为3*4的二维数组A的排列顺序：
 A[1,1]-&amp;gt;A[1,2]-&amp;gt;A[1,3]-&amp;gt;A[1,4]-&amp;gt; A[2,1]-&amp;gt;A[2,2]-&amp;gt;A[2,3]-&amp;gt;A[2,4]-&amp;gt; A[3,1]-&amp;gt;A[3,2]-&amp;gt;A[3,3]-&amp;gt;A[3,4] 多维数组的存储方式与此类似，可以将下标看成是-一个计数器，像计数的万位、千位、百位、十位和个位一样，右边的下标(靠后的下标)是低位，每一位都在上下界间变化，变化的范围是1到声明时指定的下标值，当某一低位计数器超出范围时(达到声明时指定的下标值)，左边下标加1，同时该低位计数器及其右边的更低位计算器置1 (回到下界)。这样，最左边一维下标变化是最慢的，最右一维 下标变化最快。
 下面给出2*3*2的三维数组B中元素在内存中的排列顺序:

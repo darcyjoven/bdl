@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/1.wirte/</link>
     <description>Recent content in 1.wirte on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Mon, 17 Jul 2023 13:19:56 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/1.wirte/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.自己动手创建程序</title>
@@ -13,7 +12,7 @@
       <pubDate>Mon, 17 Jul 2023 13:19:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/2.first_code/1.wirte-program-by-youself/</guid>
-      <description>自己动手创建程序#就像小学生解决应用题一样，在答题之前，必须了解题目给的条件，然后明确题目的问题，最后才是解题。 开发软件也需要这样一个过程，必须先清楚用户的需求，根据需求来进行设计和开发，不遗漏需求，也不能有超过需求的功能。
+      <description>自己动手创建程序#就像小学生解决应用题一样，在答题之前，必须了解题目给的条件，然后明确题目的问题，最后才是解题。 开发软件也需要这样一个过程，必须先清楚用户的需求，根据需求来进行设计和开发，不遗漏需求，也不能有超过需求的功能。
 本章的目标就是创建一个可以执行的程序，并输出一句话：“Hello World”。如果读者看了这个要求就开始写代码，就烦了大忌。 这个需求起始很不明确，并没有规定如何输出这句话。 在实际的软件发开工作中，类似不明确的需求比比皆是，所以动手写代码前，一定要非常明确软件的需求。
 很多曾经有过语言学习经理的读者看见上面的需求后，第一印象，认为就是在控制台打印出这句话来，然后就开始思索如何设计程序了。 但假设用户需求是用人声读出这句话呢？发声也是一种输出！ 或者用户需求是在一个窗口界面输出这句话，甚至要求这句话的大小、样式、颜色符和某种规定，那么只在控制台打印“Hello World！”的程序是不符合要求的。 所以在开发软件前，用大量的时间进行实际需求的调研时非常有必要的。 否则，花费大量时间出来的程序可能没有任何价值。
 更明确的修去时：在控制台程序中，输出依据简单的文字：“Hello World！”。具体要求明确后就可以开始程序设计了。

@@ -3,44 +3,45 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
+<meta name="description" content="函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
 函数的开始就是函数调用，结束就是函数最后一行运行结束，或者运行到return处。
 调用
-call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip; graph LRa0([&#34;开始&#34;])--&gt;a[&#34;调用&#34;]a--&gt;b[&#34;执行语句&#34;]b--&gt;c[&#34;end funtion/return&#34;]c--&gt;d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
+ call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip;  mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})graph LRa0([&#34;开始&#34;])--a[&#34;调用&#34;]a--b[&#34;执行语句&#34;]b--c[&#34;end funtion/return&#34;]c--d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
 输入的是变量，输出的是变量。处理的也是变量。
 如果程序中一直增加功能，那么变量的数量会一直增加，如果不停增加下去，内存迟早有用完的一天。
 但实际上一个规划良好的程序并不会将内存全部占用。
 这是因为，在BDL中变量不是一直加载到内存中，有些变量用到的时候才会分配内存，不用的时候，内存会释放掉。
 那么变量在定义时就会分配内存，那么什么时候释放其内存呢？
 变量所在的作用域，所有语句执行完成时释放内存，在BDL中最小的作用域是函数。
-所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
-定义在main函数之前的函数，在main执行结束后才能释放内存。
-函数中定义的变量 graph LRa[&#34;函数调用&#34;]--&gt;b[[&#34;分配内存&#34;]]b--&gt;c((&#34;...&#34;))c--&gt;d[&#34;end funtion/return&#34;]d--&gt;z[[&#34;释放内存&#34;]]">
+  所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
+  定义在main函数之前的函数，在main执行结束后才能释放内存。
+  函数中定义的变量 graph LRa[&#34;函数调用&#34;]--b[[&#34;分配内存&#34;]]b--c((&#34;...&#34;))c--d[&#34;end funtion/return&#34;]d--z[[&#34;释放内存&#34;]]">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="3.生命周期" />
-<meta property="og:description" content="函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
+<meta property="og:description" content="函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
 函数的开始就是函数调用，结束就是函数最后一行运行结束，或者运行到return处。
 调用
-call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip; graph LRa0([&#34;开始&#34;])--&gt;a[&#34;调用&#34;]a--&gt;b[&#34;执行语句&#34;]b--&gt;c[&#34;end funtion/return&#34;]c--&gt;d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
+ call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip;  mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})graph LRa0([&#34;开始&#34;])--a[&#34;调用&#34;]a--b[&#34;执行语句&#34;]b--c[&#34;end funtion/return&#34;]c--d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
 输入的是变量，输出的是变量。处理的也是变量。
 如果程序中一直增加功能，那么变量的数量会一直增加，如果不停增加下去，内存迟早有用完的一天。
 但实际上一个规划良好的程序并不会将内存全部占用。
 这是因为，在BDL中变量不是一直加载到内存中，有些变量用到的时候才会分配内存，不用的时候，内存会释放掉。
 那么变量在定义时就会分配内存，那么什么时候释放其内存呢？
 变量所在的作用域，所有语句执行完成时释放内存，在BDL中最小的作用域是函数。
-所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
-定义在main函数之前的函数，在main执行结束后才能释放内存。
-函数中定义的变量 graph LRa[&#34;函数调用&#34;]--&gt;b[[&#34;分配内存&#34;]]b--&gt;c((&#34;...&#34;))c--&gt;d[&#34;end funtion/return&#34;]d--&gt;z[[&#34;释放内存&#34;]]" />
+  所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
+  定义在main函数之前的函数，在main执行结束后才能释放内存。
+  函数中定义的变量 graph LRa[&#34;函数调用&#34;]--b[[&#34;分配内存&#34;]]b--c((&#34;...&#34;))c--d[&#34;end funtion/return&#34;]d--z[[&#34;释放内存&#34;]]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/3.life-cycle/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-28T13:54:57+08:00" />
-<meta property="article:modified_time" content="2023-08-28T21:31:30+08:00" />
+<meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
+
 <title>3.生命周期 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.bce4b9835716006b69c10228bd38d64ffda527f1a478bbbc4bed29f6ccc617fc.js" integrity="sha256-vOS5g1cWAGtpwQIovTjWT/2lJ/GkeLu8S&#43;0p9szGF/w=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.71c4ba36f57256321202ab23b10d8739d26ff99898b14b28457039d250f127cf.js" integrity="sha256-ccS6NvVyVjISAqsjsQ2HOdJv&#43;ZiYsUsoRXA50lDxJ88=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1553,6 +1554,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/6.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1573,6 +1587,123 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/1.interface-tree/" class="">1.前言--抽象界面</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/2.wiget/" class="">2.控件&amp;容器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/3.fglform/" class="">3.画面档文件的编译</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/6.display/" class="">6.DISPLAY</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/7.input/" class="">7.INPUT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/8.construct/" class="">8.CONSTRUCT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/9.practise/" class="">9.练习</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -1998,7 +2129,7 @@ graph LR
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/9e9ff3bb0497843529aa05e79bfb99e34b76c83b" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/7fd5abd5878a63e39873ca064b6aa4e234022033" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2023年8月28日</span>
     </a>
@@ -2007,7 +2138,7 @@ graph LR
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/15.function_plus/3.life-cycle/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/15.function_plus/3.life-cycle/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2018,7 +2149,7 @@ graph LR
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

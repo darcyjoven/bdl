@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/case/</link>
     <description>Recent content in case on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Wed, 19 Jul 2023 19:44:34 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/case/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.case--开关语句</title>
@@ -13,12 +12,12 @@
       <pubDate>Wed, 19 Jul 2023 19:44:34 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/4.case/</guid>
-      <description>case&amp;ndash;开关语句#用多分支if结构和if结构嵌套都可实现“多选1”,但带来的负面影响是程序的可读性差，面对一大堆的if和if else搅和在一起，很多读代码的人都会觉得头皮发麻，要耐心地去“脱壳&amp;quot;。 实际上，BDL语言还提供了另&amp;ndash;种更简洁的多分支结构，即case结构。
-一般形式#case机构一般形式为:
-case 表达式1 when 常量表达式1 语句1 when 常量表达式2 语句2 when 常量表达式3 语句3 ... default 语句4 end case 语句执行时，首先对case后的表达式进行计算，将计算的结果逐个与when后的常量表达式进行比较，当表达式的值与某个常量表达式的值相等时，即执行该when后的对应的代码段，如果表达式的值与所有when后的常量均不相同时，则执行default后的语句。
+      <description>case&amp;ndash;开关语句#用多分支if结构和if结构嵌套都可实现“多选1”,但带来的负面影响是程序的可读性差，面对一大堆的if和if else搅和在一起，很多读代码的人都会觉得头皮发麻，要耐心地去“脱壳&amp;quot;。 实际上，BDL语言还提供了另&amp;ndash;种更简洁的多分支结构，即case结构。
+一般形式#case机构一般形式为:
+case 表达式1  when 常量表达式1  语句1  when 常量表达式2  语句2  when 常量表达式3  语句3  ...  default  语句4 end case 语句执行时，首先对case后的表达式进行计算，将计算的结果逐个与when后的常量表达式进行比较，当表达式的值与某个常量表达式的值相等时，即执行该when后的对应的代码段，如果表达式的值与所有when后的常量均不相同时，则执行default后的语句。
 case 的算法流程如下：
-flowchart TDa[&#34;表达式计算&#34;]--&gt;b{&#34;常量表达式1&#34;}b--&#34;no&#34;--&gt;c{&#34;常量表达式2&#34;}c--&#34;no&#34;--&gt;d{&#34;常量表达式3&#34;}d--&#34;no&#34;--&gt;e{&#34;常量表达式n&#34;}e--&#34;no&#34;--&gt;f[&#34;defalut:语句m+1&#34;]b--&#34;yes&#34;--&gt;g[&#34;语句1&#34;]c--&#34;yes&#34;--&gt;h[&#34;语句2&#34;]d--&#34;yes&#34;--&gt;i[&#34;语句3&#34;]e--&#34;yes&#34;--&gt;j[&#34;语句m&#34;]来看一个具体的应用实例，由用户输入一个1到7之间的数字，程序自动输出对应星期几的英文形式，如输入1，程序输出Monday。如果用户输入的数字不在1到7之间，提示出错，如下:
-define index integer prompt &amp;#34;请输入一个1到7之间的整数：&amp;#34; for index display &amp;#34;&amp;#34; case index when 1 display &amp;#34;Monday&amp;#34; when 2 display &amp;#34;Tuesday&amp;#34; when 3 display &amp;#34;Wednesday&amp;#34; when 4 display &amp;#34;Thursday&amp;#34; when 5 display &amp;#34;Friday&amp;#34; when 6 display &amp;#34;Saturday&amp;#34; when 7 display &amp;#34;Sunday&amp;#34; default display &amp;#34;请检查输入是否正确&amp;#34; end case 代码解析</description>
+mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart TDa[&#34;表达式计算&#34;]--b{&#34;常量表达式1&#34;}b--&#34;no&#34;--c{&#34;常量表达式2&#34;}c--&#34;no&#34;--d{&#34;常量表达式3&#34;}d--&#34;no&#34;--e{&#34;常量表达式n&#34;}e--&#34;no&#34;--f[&#34;defalut:语句m+1&#34;]b--&#34;yes&#34;--g[&#34;语句1&#34;]c--&#34;yes&#34;--h[&#34;语句2&#34;]d--&#34;yes&#34;--i[&#34;语句3&#34;]e--&#34;yes&#34;--j[&#34;语句m&#34;]来看一个具体的应用实例，由用户输入一个1到7之间的数字，程序自动输出对应星期几的英文形式，如输入1，程序输出Monday。如果用户输入的数字不在1到7之间，提示出错，如下:
+ define index integer  prompt &amp;#34;请输入一个1到7之间的整数：&amp;#34; for index  display &amp;#34;&amp;#34;  case index  when 1  display &amp;#34;Monday&amp;#34;  when 2  display &amp;#34;Tuesday&amp;#34;  when 3  display &amp;#34;Wednesday&amp;#34;  when 4  display &amp;#34;Thursday&amp;#34;  when 5  display &amp;#34;Friday&amp;#34;  when 6  display &amp;#34;Saturday&amp;#34;  when 7  display &amp;#34;Sunday&amp;#34;  default  display &amp;#34;请检查输入是否正确&amp;#34;  end case 代码解析</description>
     </item>
     
   </channel>

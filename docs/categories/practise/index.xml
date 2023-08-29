@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/practise/</link>
     <description>Recent content in practise on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Sun, 27 Aug 2023 15:45:02 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/practise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>5.练习</title>
@@ -13,8 +12,8 @@
       <pubDate>Thu, 20 Jul 2023 17:49:58 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/5.practice/</guid>
-      <description>练习#定义一个字符串数组，并输出每个字符串字符对应ASCII的值#字符串数组的值分别为&amp;quot;A&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;d&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;F&amp;quot;,&amp;quot;G&amp;quot;
-写出下列代码输出结果#define i,j integer define a array[4] of integer let a[1]=1 let a[2]=2 let a[3]=3 let a[4] =4 for i = 1 to 4 for k = 1 to i let a[i] = a[j] - a[i] end for end for for i = 1 to 4 display sfmt(&amp;#34;%1&amp;#34;,a[i]) end for </description>
+      <description>练习#定义一个字符串数组，并输出每个字符串字符对应ASCII的值#字符串数组的值分别为&amp;quot;A&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;d&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;F&amp;quot;,&amp;quot;G&amp;quot;
+写出下列代码输出结果# define i,j integer  define a array[4] of integer  let a[1]=1 let a[2]=2 let a[3]=3 let a[4] =4  for i = 1 to 4  for k = 1 to i  let a[i] = a[j] - a[i]  end for  end for  for i = 1 to 4  display sfmt(&amp;#34;%1&amp;#34;,a[i])  end for </description>
     </item>
     
     <item>
@@ -23,8 +22,9 @@
       <pubDate>Thu, 20 Jul 2023 13:39:23 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/10.function/5.practice/</guid>
-      <description>联系#自定义一个函数，计算你的存款利率。#例如输入10000块钱，定期存款3个月，那么3个月后你拥有多少钱？
-假设月利息3.1%</description>
+      <description>联系#自定义一个函数，计算你的存款利率。#例如输入10000块钱，定期存款3个月，那么3个月后你拥有多少钱？
+ 假设月利息3.1%
+ </description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Sun, 27 Aug 2023 15:45:02 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</guid>
-      <description>练习#创建学生资料表student#字段 数据类型 字段说明 name varchar(20) 姓名 grade varchar(4) 年级 course varchar(40) 课程名称 score number(5) 得分 输入学生资料信息，插入到数据库#如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入 姓名 年级 课程名称 得分 查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98</description>
+      <description>练习#创建学生资料表student#   字段 数据类型 字段说明     name varchar(20) 姓名   grade varchar(4) 年级   course varchar(40) 课程名称   score number(5) 得分    输入学生资料信息，插入到数据库# 如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入     姓名 年级 课程名称 得分    查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99 查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98 </description>
     </item>
     
   </channel>

@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/if/</link>
     <description>Recent content in if on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Wed, 19 Jul 2023 19:08:57 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/if/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.if语句--简单条件判断</title>
@@ -13,12 +12,12 @@
       <pubDate>Wed, 19 Jul 2023 19:08:57 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/1.judgment-statement-if/</guid>
-      <description>if语句&amp;ndash;简单条件判断#生活中充满了选择，在BDL语言编程中同样如此。 最简单的条件判断语句是if语句，其基本格式为：
-if 判断表达式 then语句1语句2...end if 判断表达式#判断表达式可以是简单的逻辑语句(逻辑表达式或关系表达式)，可以是多个逻辑语句的“与”、“或”、“非”组合，也可以是一般表达式，甚至还可以是一个变量或常量。
+      <description>if语句&amp;ndash;简单条件判断#生活中充满了选择，在BDL语言编程中同样如此。 最简单的条件判断语句是if语句，其基本格式为：
+if 判断表达式 then语句1语句2...end if 判断表达式#判断表达式可以是简单的逻辑语句(逻辑表达式或关系表达式)，可以是多个逻辑语句的“与”、“或”、“非”组合，也可以是一般表达式，甚至还可以是一个变量或常量。
 执行到if结构时，该表达式的值被首先计算，当判断表达式的值不为0 (真) 时，if then后花括号中的结构体代码被执行，否则，跳过if end if中的代码。
 做个形象的比方，在街上购物的时候，看到某件商品，常常会这样想:如果不高于50块，就买下了，否则，就继续逛街。用if结构可表述为:
 if 商品价格&amp;lt;50 then买下它end if 看一下下列代码:
-define price integer prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price if price &amp;lt; 50 then display &amp;#34;\n好，买好了&amp;#34; end if 当输入的金额小于50时，控制台输出的结果为
+ define price integer  prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price  if price &amp;lt; 50 then  display &amp;#34;\n好，买好了&amp;#34;  end if 当输入的金额小于50时，控制台输出的结果为
 好，买好了 否则为空。</description>
     </item>
     

@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/cycle/</link>
     <description>Recent content in cycle on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Mon, 28 Aug 2023 13:54:57 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/cycle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3.生命周期</title>
@@ -13,19 +12,19 @@
       <pubDate>Mon, 28 Aug 2023 13:54:57 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/3.life-cycle/</guid>
-      <description>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
+      <description>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
 函数的开始就是函数调用，结束就是函数最后一行运行结束，或者运行到return处。
 调用
-call add() returning &amp;hellip; display add() let a = add() call minus(10,add()) &amp;hellip; graph LRa0([&#34;开始&#34;])--&gt;a[&#34;调用&#34;]a--&gt;b[&#34;执行语句&#34;]b--&gt;c[&#34;end funtion/return&#34;]c--&gt;d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
+ call add() returning &amp;hellip; display add() let a = add() call minus(10,add()) &amp;hellip;  mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})graph LRa0([&#34;开始&#34;])--a[&#34;调用&#34;]a--b[&#34;执行语句&#34;]b--c[&#34;end funtion/return&#34;]c--d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
 输入的是变量，输出的是变量。处理的也是变量。
 如果程序中一直增加功能，那么变量的数量会一直增加，如果不停增加下去，内存迟早有用完的一天。
 但实际上一个规划良好的程序并不会将内存全部占用。
 这是因为，在BDL中变量不是一直加载到内存中，有些变量用到的时候才会分配内存，不用的时候，内存会释放掉。
 那么变量在定义时就会分配内存，那么什么时候释放其内存呢？
 变量所在的作用域，所有语句执行完成时释放内存，在BDL中最小的作用域是函数。
-所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
-定义在main函数之前的函数，在main执行结束后才能释放内存。
-函数中定义的变量 graph LRa[&#34;函数调用&#34;]--&gt;b[[&#34;分配内存&#34;]]b--&gt;c((&#34;...&#34;))c--&gt;d[&#34;end funtion/return&#34;]d--&gt;z[[&#34;释放内存&#34;]]</description>
+  所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
+  定义在main函数之前的函数，在main执行结束后才能释放内存。
+  函数中定义的变量 graph LRa[&#34;函数调用&#34;]--b[[&#34;分配内存&#34;]]b--c((&#34;...&#34;))c--d[&#34;end funtion/return&#34;]d--z[[&#34;释放内存&#34;]]</description>
     </item>
     
     <item>
@@ -34,11 +33,11 @@ call add() returning &amp;hellip; display add() let a = add() call minus(10,add(
       <pubDate>Thu, 20 Jul 2023 08:53:09 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/3.cycle-in-cycle/</guid>
-      <description>循环嵌套#循环结构也支持嵌套，如果把简单的循环内容为“一遍又一遍”，那循环嵌套便可称为“一层又一层，一遍又一遍”。
+      <description>循环嵌套#循环结构也支持嵌套，如果把简单的循环内容为“一遍又一遍”，那循环嵌套便可称为“一层又一层，一遍又一遍”。
 可以用始终来打比方，走一个代表执行一次循环，那么一小时里，分针又要走60个格，而分针每走一格，秒针也要走60格。
 如此，秒针的走动可以看成是内存循环，而分针的走动可看成是外层循环。
-嵌套示例#已for循环结构举例，限制想在屏幕上输出4*9个星号，这可以利用双重循环来做：
-define i,j integer define s string display &amp;#34;&amp;#34; for i = 1 to 4 let s = &amp;#34;&amp;#34; for j = 1 to 9 let s = s, &amp;#34;* &amp;#34; end for display s end for 输出结果为：
+嵌套示例#已for循环结构举例，限制想在屏幕上输出4*9个星号，这可以利用双重循环来做：
+ define i,j integer  define s string  display &amp;#34;&amp;#34;  for i = 1 to 4  let s = &amp;#34;&amp;#34;  for j = 1 to 9  let s = s, &amp;#34;* &amp;#34;  end for  display s  end for 输出结果为：
 * * * * * * * * ** * * * * * * * ** * * * * * * * ** * * * * * * * * 代码解析</description>
     </item>
     

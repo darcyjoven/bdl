@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="语句类型#前文已经介绍过，BDL中有4中类型的语句，分别是表达式语句、流程控制语句、函数调用语句和符和语句。
-flowchart LRa[&#34;BDL语言&#34;]b1[&#34;表达式语句&#34;]b2[&#34;函数调用语句&#34;]b3[&#34;复合语句&#34;]b4[&#34;流程控制语句&#34;]c1[&#34;运算符表达式语句&#34;]c2[&#34;赋值语句&#34;]c3[&#34;结构化语句&#34;]c4[&#34;非结构化语句&#34;]d1[&#34;条件语句&#34;]d2[&#34;循环语句&#34;]d3[&#34;限定转向语句&#34;]d4[&#34;非限定转向语句&#34;]e1[&#34;if语句&#34;]e2[&#34;case语句&#34;]e3[&#34;while语句&#34;]e4[&#34;for语句&#34;]e5[&#34;break语句&#34;]e6[&#34;continue语句&#34;]e7[&#34;return语句&#34;]e8[&#34;goto语句&#34;]a--&gt;b1a--&gt;b2a--&gt;b3a--&gt;b4b1--&gt;c1b1--&gt;c2b4--&gt;c3b4--&gt;c4c3--&gt;d1c3--&gt;d2c4--&gt;d3c4--&gt;d4d1--&gt;e1d1--&gt;e2d2--&gt;e3d2--&gt;e4d3--&gt;e5d3--&gt;e6d3--&gt;e7d4--&gt;e8表达式语句#在上一章，我们已经介绍了表达式的概念，通俗说，“有表达式组成的语句叫做表达式语句”。
+<meta name="description" content="语句类型#前文已经介绍过，BDL中有4中类型的语句，分别是表达式语句、流程控制语句、函数调用语句和符和语句。
+mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart LRa[&#34;BDL语言&#34;]b1[&#34;表达式语句&#34;]b2[&#34;函数调用语句&#34;]b3[&#34;复合语句&#34;]b4[&#34;流程控制语句&#34;]c1[&#34;运算符表达式语句&#34;]c2[&#34;赋值语句&#34;]c3[&#34;结构化语句&#34;]c4[&#34;非结构化语句&#34;]d1[&#34;条件语句&#34;]d2[&#34;循环语句&#34;]d3[&#34;限定转向语句&#34;]d4[&#34;非限定转向语句&#34;]e1[&#34;if语句&#34;]e2[&#34;case语句&#34;]e3[&#34;while语句&#34;]e4[&#34;for语句&#34;]e5[&#34;break语句&#34;]e6[&#34;continue语句&#34;]e7[&#34;return语句&#34;]e8[&#34;goto语句&#34;]a--b1a--b2a--b3a--b4b1--c1b1--c2b4--c3b4--c4c3--d1c3--d2c4--d3c4--d4d1--e1d1--e2d2--e3d2--e4d3--e5d3--e6d3--e7d4--e8表达式语句#在上一章，我们已经介绍了表达式的概念，通俗说，“有表达式组成的语句叫做表达式语句”。
 表达式语句只有一种赋值表达式，在BDL中不允许计算一个值而不使用。
 下属语句都是赋值语句：
-let x = 3 let x = x &#43; 1 let y = 1 &gt; 2 函数调用语句#以下语句都是函数调用语句。">
+ let x = 3  let x = x &#43; 1  let y = 1 &gt; 2 函数调用语句#以下语句都是函数调用语句。">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="1.语句类型" />
-<meta property="og:description" content="语句类型#前文已经介绍过，BDL中有4中类型的语句，分别是表达式语句、流程控制语句、函数调用语句和符和语句。
-flowchart LRa[&#34;BDL语言&#34;]b1[&#34;表达式语句&#34;]b2[&#34;函数调用语句&#34;]b3[&#34;复合语句&#34;]b4[&#34;流程控制语句&#34;]c1[&#34;运算符表达式语句&#34;]c2[&#34;赋值语句&#34;]c3[&#34;结构化语句&#34;]c4[&#34;非结构化语句&#34;]d1[&#34;条件语句&#34;]d2[&#34;循环语句&#34;]d3[&#34;限定转向语句&#34;]d4[&#34;非限定转向语句&#34;]e1[&#34;if语句&#34;]e2[&#34;case语句&#34;]e3[&#34;while语句&#34;]e4[&#34;for语句&#34;]e5[&#34;break语句&#34;]e6[&#34;continue语句&#34;]e7[&#34;return语句&#34;]e8[&#34;goto语句&#34;]a--&gt;b1a--&gt;b2a--&gt;b3a--&gt;b4b1--&gt;c1b1--&gt;c2b4--&gt;c3b4--&gt;c4c3--&gt;d1c3--&gt;d2c4--&gt;d3c4--&gt;d4d1--&gt;e1d1--&gt;e2d2--&gt;e3d2--&gt;e4d3--&gt;e5d3--&gt;e6d3--&gt;e7d4--&gt;e8表达式语句#在上一章，我们已经介绍了表达式的概念，通俗说，“有表达式组成的语句叫做表达式语句”。
+<meta property="og:description" content="语句类型#前文已经介绍过，BDL中有4中类型的语句，分别是表达式语句、流程控制语句、函数调用语句和符和语句。
+mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart LRa[&#34;BDL语言&#34;]b1[&#34;表达式语句&#34;]b2[&#34;函数调用语句&#34;]b3[&#34;复合语句&#34;]b4[&#34;流程控制语句&#34;]c1[&#34;运算符表达式语句&#34;]c2[&#34;赋值语句&#34;]c3[&#34;结构化语句&#34;]c4[&#34;非结构化语句&#34;]d1[&#34;条件语句&#34;]d2[&#34;循环语句&#34;]d3[&#34;限定转向语句&#34;]d4[&#34;非限定转向语句&#34;]e1[&#34;if语句&#34;]e2[&#34;case语句&#34;]e3[&#34;while语句&#34;]e4[&#34;for语句&#34;]e5[&#34;break语句&#34;]e6[&#34;continue语句&#34;]e7[&#34;return语句&#34;]e8[&#34;goto语句&#34;]a--b1a--b2a--b3a--b4b1--c1b1--c2b4--c3b4--c4c3--d1c3--d2c4--d3c4--d4d1--e1d1--e2d2--e3d2--e4d3--e5d3--e6d3--e7d4--e8表达式语句#在上一章，我们已经介绍了表达式的概念，通俗说，“有表达式组成的语句叫做表达式语句”。
 表达式语句只有一种赋值表达式，在BDL中不允许计算一个值而不使用。
 下属语句都是赋值语句：
-let x = 3 let x = x &#43; 1 let y = 1 &gt; 2 函数调用语句#以下语句都是函数调用语句。" />
+ let x = 3  let x = x &#43; 1  let y = 1 &gt; 2 函数调用语句#以下语句都是函数调用语句。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/1.statement-type/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-19T18:01:22+08:00" />
-<meta property="article:modified_time" content="2023-08-28T21:31:30+08:00" />
+<meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
+
 <title>1.语句类型 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.bce4b9835716006b69c10228bd38d64ffda527f1a478bbbc4bed29f6ccc617fc.js" integrity="sha256-vOS5g1cWAGtpwQIovTjWT/2lJ/GkeLu8S&#43;0p9szGF/w=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.71c4ba36f57256321202ab23b10d8739d26ff99898b14b28457039d250f127cf.js" integrity="sha256-ccS6NvVyVjISAqsjsQ2HOdJv&#43;ZiYsUsoRXA50lDxJ88=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1537,6 +1538,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/6.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1557,6 +1571,123 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/1.interface-tree/" class="">1.前言--抽象界面</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/2.wiget/" class="">2.控件&amp;容器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/3.fglform/" class="">3.画面档文件的编译</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/6.display/" class="">6.DISPLAY</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/7.input/" class="">7.INPUT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/8.construct/" class="">8.CONSTRUCT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/9.practise/" class="">9.练习</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -2022,7 +2153,7 @@ let y = sfmt(&#34;today is %1&#34;,today)
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/9e9ff3bb0497843529aa05e79bfb99e34b76c83b" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/7fd5abd5878a63e39873ca064b6aa4e234022033" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2023年8月28日</span>
     </a>
@@ -2031,7 +2162,7 @@ let y = sfmt(&#34;today is %1&#34;,today)
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/7.atoml_statement/1.statement-type/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/1.basic/7.atoml_statement/1.statement-type/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2042,7 +2173,7 @@ let y = sfmt(&#34;today is %1&#34;,today)
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

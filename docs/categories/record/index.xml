@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/record/</link>
     <description>Recent content in record on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Thu, 20 Jul 2023 19:25:42 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/record/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.结构体</title>
@@ -13,19 +12,19 @@
       <pubDate>Thu, 20 Jul 2023 19:25:42 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/1.record/</guid>
-      <description>结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
+      <description>结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
 收集的一张张名片大大方便了数据的管理，将这种理念借鉴到BDL语言程序设计中，是否有类似于名片的那么一种变量呢?
 有，答案就是“结构体变量”，这是一种复合变量，在进一步说明结构体变量前，先来看“结构体”的概念，结构体和结构体变量的关系类似与类型与普通变量的关系，结构体中说明了结构体变量的信息格式，而结构体变量是结构体的实例。
-结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
-define 变量 record 存储数据列表 end record 举例说明：
-define person record name,age varchar(20), email varchar(50) end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
+结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
+define 变量 record  存储数据列表  end record 举例说明：
+define person record  name,age varchar(20),  email varchar(50)  end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
 结构体定义规则：
-每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型 访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
+ 每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型  访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
 在定义了一个结构体变量后，我们使用成员操作符号.来访问每个成员，例如person.name、person.age，分别表示person这个变量中储存的姓名年纪等信息。
 提示
 结构体成员，和我们之前使用的变量的方法都是使用.操作符号来访问/调用。他们的区别在于方法需要有()，而成员没有()。
-我们看一段示例代码：
-define zhangsan record name varchar(20), age integer, email varchar(50) end record let zhangsan.name = &amp;#34;zhang san&amp;#34; let zhangsan.age = 24 let zhangsan.email = &amp;#34;zhangsan@outlook.com&amp;#34; display sfmt(&amp;#34;\nname:%1&amp;#34;,zhangsan.name) display sfmt(&amp;#34;age:%1&amp;#34;,zhangsan.age) display sfmt(&amp;#34;email:%1&amp;#34;,zhangsan.email) 输出结果:</description>
+我们看一段示例代码：
+ define zhangsan record  name varchar(20),  age integer,  email varchar(50)  end record   let zhangsan.name = &amp;#34;zhang san&amp;#34;  let zhangsan.</description>
     </item>
     
   </channel>

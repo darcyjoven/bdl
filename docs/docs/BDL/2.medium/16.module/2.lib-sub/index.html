@@ -3,42 +3,39 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
+<meta name="description" content="lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
 但是我们来看下一下p_zz.4gl的源码中调用了多少次 lib 函数(lib 函数一般以cl开始，有误差，但误差不大)，$AZZ/4gl目录下。
 cd $AZZ/4gl grep -c &#34;cl&#34; p_zz.4gl ... 265 调用了 265 次 lib 函数，如果按照上一节的办法，我们要找到这 265 个 lib 函数对应的文件，链接后并编译。
 这实在太不方便了，所以 BDL 在链接时其实还隐藏了一个功能。
 不需要额外的命令和源代码，我们依然使用czzi004.4gl和s_czzi004.4gl进行示例。
 我们先删除之前生成的文件，防止影响本次结果。
-cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r 编译 czzi004.4gl和s_czzi004.4gl，和之前一样
-单独链接 s_czzi004.42m
-fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004 一样可以运行，看起来并没有减少步骤。
-但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.42x文件，那么之后不管哪个作业调用多少个 lib 函数，那么我们只要在编译这个新作业后，将lib.42x这个文件和主程序链接以下即可。
-只要当lib目录下哪个文件修改了，才需要重新连接lib.42x文件。
-这一步tiptop gp已经替我们做好了，$LIB/42m目录下有一个lib.42x文件。">
+cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r   编译 czzi004.4gl和s_czzi004.4gl，和之前一样
+  单独链接 s_czzi004.42m
+  fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m  fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004  一样可以运行，看起来并没有减少步骤。
+但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="2.lib和sub函数" />
-<meta property="og:description" content="lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
+<meta property="og:description" content="lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
 但是我们来看下一下p_zz.4gl的源码中调用了多少次 lib 函数(lib 函数一般以cl开始，有误差，但误差不大)，$AZZ/4gl目录下。
 cd $AZZ/4gl grep -c &#34;cl&#34; p_zz.4gl ... 265 调用了 265 次 lib 函数，如果按照上一节的办法，我们要找到这 265 个 lib 函数对应的文件，链接后并编译。
 这实在太不方便了，所以 BDL 在链接时其实还隐藏了一个功能。
 不需要额外的命令和源代码，我们依然使用czzi004.4gl和s_czzi004.4gl进行示例。
 我们先删除之前生成的文件，防止影响本次结果。
-cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r 编译 czzi004.4gl和s_czzi004.4gl，和之前一样
-单独链接 s_czzi004.42m
-fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004 一样可以运行，看起来并没有减少步骤。
-但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.42x文件，那么之后不管哪个作业调用多少个 lib 函数，那么我们只要在编译这个新作业后，将lib.42x这个文件和主程序链接以下即可。
-只要当lib目录下哪个文件修改了，才需要重新连接lib.42x文件。
-这一步tiptop gp已经替我们做好了，$LIB/42m目录下有一个lib.42x文件。" />
+cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r   编译 czzi004.4gl和s_czzi004.4gl，和之前一样
+  单独链接 s_czzi004.42m
+  fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m  fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004  一样可以运行，看起来并没有减少步骤。
+但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/2.lib-sub/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-28T16:00:05+08:00" />
-<meta property="article:modified_time" content="2023-08-28T21:31:30+08:00" />
+<meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
+
 <title>2.lib和sub函数 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.bce4b9835716006b69c10228bd38d64ffda527f1a478bbbc4bed29f6ccc617fc.js" integrity="sha256-vOS5g1cWAGtpwQIovTjWT/2lJ/GkeLu8S&#43;0p9szGF/w=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.71c4ba36f57256321202ab23b10d8739d26ff99898b14b28457039d250f127cf.js" integrity="sha256-ccS6NvVyVjISAqsjsQ2HOdJv&#43;ZiYsUsoRXA50lDxJ88=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1551,6 +1548,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/6.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1571,6 +1581,123 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/1.interface-tree/" class="">1.前言--抽象界面</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/2.wiget/" class="">2.控件&amp;容器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/3.fglform/" class="">3.画面档文件的编译</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/6.display/" class="">6.DISPLAY</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/7.input/" class="">7.INPUT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/8.construct/" class="">8.CONSTRUCT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/9.practise/" class="">9.练习</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -1905,6 +2032,7 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#42x-文件">42x 文件</a></li>
         <li><a href="#lib-和-sub-函数-1">lib 和 sub 函数</a></li>
+        <li><a href="#libsub函数新增流程">lib、sub函数新增流程</a></li>
       </ul>
     </li>
   </ul>
@@ -2008,7 +2136,12 @@ https://github.com/alex-shpak/hugo-book
 
 </blockquote>
 
-</article>
+<h2 id="libsub函数新增流程">
+  lib、sub函数新增流程
+  <a class="anchor" href="#libsub%e5%87%bd%e6%95%b0%e6%96%b0%e5%a2%9e%e6%b5%81%e7%a8%8b">#</a>
+</h2>
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile&gt;&lt;diagram id=\&quot;4Cfzrlh4ryToqalkVrY9\&quot; name=\&quot;Page-1\&quot;&gt;&lt;mxGraphModel dx=\&quot;1161\&quot; dy=\&quot;792\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;1\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;3300\&quot; pageHeight=\&quot;4681\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;&lt;root&gt;&lt;mxCell id=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;16\&quot; style=\&quot;edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;2\&quot; target=\&quot;8\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;2\&quot; value=\&quot;开始\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;470\&quot; y=\&quot;60\&quot; width=\&quot;100\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;48\&quot; style=\&quot;edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;4\&quot; target=\&quot;43\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;4\&quot; value=\&quot;修改函数代码\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;710\&quot; y=\&quot;360\&quot; width=\&quot;130\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;8\&quot; value=\&quot;新增函数\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;rounded=1;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;445\&quot; y=\&quot;170\&quot; width=\&quot;150\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;9\&quot; value=\&quot;修改函数\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;rounded=1;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;445\&quot; y=\&quot;340\&quot; width=\&quot;150\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;29\&quot; style=\&quot;edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;10\&quot; target=\&quot;4\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;10\&quot; value=\&quot;新增函数文件\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;710\&quot; y=\&quot;190\&quot; width=\&quot;130\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;11\&quot; value=\&quot;删除函数\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;rounded=1;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;445\&quot; y=\&quot;640\&quot; width=\&quot;150\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;14\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;8\&quot; target=\&quot;10\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;600\&quot; y=\&quot;170\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;700\&quot; y=\&quot;170\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;15\&quot; value=\&quot;是\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;14\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;17\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;8\&quot; target=\&quot;9\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;330\&quot; y=\&quot;280\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;430\&quot; y=\&quot;280\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;18\&quot; value=\&quot;否\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;17\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;19\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;9\&quot; target=\&quot;4\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;620\&quot; y=\&quot;320\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;720\&quot; y=\&quot;320\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;20\&quot; value=\&quot;是\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;19\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;21\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;9\&quot; target=\&quot;11\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;220\&quot; y=\&quot;470\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;320\&quot; y=\&quot;470\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;22\&quot; value=\&quot;否\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;21\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;51\&quot; style=\&quot;edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;23\&quot; target=\&quot;32\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;23\&quot; value=\&quot;修改p_link中lib的资料\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;710\&quot; y=\&quot;660\&quot; width=\&quot;130\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;24\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;11\&quot; target=\&quot;23\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;250\&quot; y=\&quot;490\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;350\&quot; y=\&quot;490\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;Array as=\&quot;points\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;25\&quot; value=\&quot;是\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;24\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;28\&quot; value=\&quot;结束\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;rounded=1;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;470\&quot; y=\&quot;1069\&quot; width=\&quot;100\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;50\&quot; style=\&quot;edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;31\&quot; target=\&quot;33\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;31\&quot; value=\&quot;链接用到函数的主程序\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;455\&quot; y=\&quot;800\&quot; width=\&quot;130\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;49\&quot; style=\&quot;edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;32\&quot; target=\&quot;31\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;32\&quot; value=\&quot;r.l2 lib\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;709\&quot; y=\&quot;800\&quot; width=\&quot;130\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;33\&quot; value=\&quot;运行测试成功否\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;rounded=1;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;445\&quot; y=\&quot;920\&quot; width=\&quot;150\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;34\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;33\&quot; target=\&quot;28\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;630\&quot; y=\&quot;900\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;730\&quot; y=\&quot;900\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;35\&quot; value=\&quot;是\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;34\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;36\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;33\&quot; target=\&quot;4\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;290\&quot; y=\&quot;780\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;780\&quot; y=\&quot;330\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;Array as=\&quot;points\&quot;&gt;&lt;mxPoint x=\&quot;940\&quot; y=\&quot;970\&quot;/&gt;&lt;mxPoint x=\&quot;940\&quot; y=\&quot;330\&quot;/&gt;&lt;mxPoint x=\&quot;775\&quot; y=\&quot;330\&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;37\&quot; value=\&quot;否\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;36\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;43\&quot; value=\&quot;p_link是否已有资料\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;rounded=1;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;700\&quot; y=\&quot;480\&quot; width=\&quot;150\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;44\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;43\&quot; target=\&quot;32\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;790\&quot; y=\&quot;600\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;890\&quot; y=\&quot;600\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;Array as=\&quot;points\&quot;&gt;&lt;mxPoint x=\&quot;880\&quot; y=\&quot;530\&quot;/&gt;&lt;mxPoint x=\&quot;880\&quot; y=\&quot;800\&quot;/&gt;&lt;mxPoint x=\&quot;880\&quot; y=\&quot;830\&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;45\&quot; value=\&quot;是\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;44\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;46\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;43\&quot; target=\&quot;23\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint x=\&quot;640\&quot; y=\&quot;590\&quot; as=\&quot;sourcePoint\&quot;/&gt;&lt;mxPoint x=\&quot;740\&quot; y=\&quot;590\&quot; as=\&quot;targetPoint\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;47\&quot; value=\&quot;否\&quot; style=\&quot;edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;strokeColor=default;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;\&quot; connectable=\&quot;0\&quot; vertex=\&quot;1\&quot; parent=\&quot;46\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script></article>
  
       
 
@@ -2017,7 +2150,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/9e9ff3bb0497843529aa05e79bfb99e34b76c83b" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/7fd5abd5878a63e39873ca064b6aa4e234022033" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2023年8月28日</span>
     </a>
@@ -2026,7 +2159,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/16.module/2.lib-sub/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/16.module/2.lib-sub/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2037,7 +2170,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -2066,6 +2199,7 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#42x-文件">42x 文件</a></li>
         <li><a href="#lib-和-sub-函数-1">lib 和 sub 函数</a></li>
+        <li><a href="#libsub函数新增流程">lib、sub函数新增流程</a></li>
       </ul>
     </li>
   </ul>

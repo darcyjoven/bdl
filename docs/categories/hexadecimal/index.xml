@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/hexadecimal/</link>
     <description>Recent content in hexadecimal on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Mon, 17 Jul 2023 18:48:00 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/hexadecimal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.二进制、八进制、十六进制</title>
@@ -13,10 +12,10 @@
       <pubDate>Mon, 17 Jul 2023 18:48:00 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/1.binary-octal-hexadecimal/</guid>
-      <description>二进制、八进制、十六进制#二进制、八进制和十六进制是计算机中常用的进制形式。N进制的算法就是逢N进1。
-二进制 二进制数使用0和1两个数码来表示的书，如111110112表示二进制。它的基数是2，进位规则是“逢二进一”。
-八进制 八进制是用0~7 8个数码来表示的数，如1678,进为规则是“逢八进一”。
-十六进制 十六进制是用0~9和A~F 16个字符表示，如1AE16,它的基数是16,进为规则为“逢16进1”。</description>
+      <description>二进制、八进制、十六进制#二进制、八进制和十六进制是计算机中常用的进制形式。N进制的算法就是逢N进1。
+ 二进制  二进制数使用0和1两个数码来表示的书，如111110112表示二进制。它的基数是2，进位规则是“逢二进一”。
+八进制  八进制是用0~7 8个数码来表示的数，如1678,进为规则是“逢八进一”。
+十六进制  十六进制是用0~9和A~F 16个字符表示，如1AE16,它的基数是16,进为规则为“逢16进1”。</description>
     </item>
     
   </channel>

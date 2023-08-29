@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/type-conversion/</link>
     <description>Recent content in type conversion on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Wed, 19 Jul 2023 16:14:00 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/type-conversion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>5.类型转换</title>
@@ -13,17 +12,17 @@
       <pubDate>Wed, 19 Jul 2023 16:14:00 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/5.type-conversion/</guid>
-      <description>类型转换#前面章节中大家已经廖家，整数和浮点数在计算机中表示方法不同，占据的内存空间大小也有所不同。
+      <description>类型转换#前面章节中大家已经廖家，整数和浮点数在计算机中表示方法不同，占据的内存空间大小也有所不同。
 如果某下时候，需要将一个integer类型数据存储到decimal类型变量中。此时就需要进行转换。这种不同类型的数据进行转换就称作类型转换。
-自动转换#BDL中为了使编程简单，几乎所有数据类型都可以自动转换。 例如你可以写这种代码
-define a integer let a = &amp;#34;12345.23&amp;#34; 字符串将自动转为整数12345，同样，整数也会自动转为字符串。
-不过要注意之前我们说using的时候，数值类型转字符串会自动补空格。
-但是如果我们要是一个无法理解的内容，会如何自动转换呢？
-define a integer let a = &amp;#34;你好&amp;#34; 如果你在debug中查看会发现a的值会变为null，如果非法值转换，所有变量都会变为null，这将丢失之前变量的值!
-哪些情况会自动转换呢#赋值 无论是let还是returning都会自动转换为目的变量类型
-传参 参数部分后续会详细讲，sfmt(&amp;quot;%1&amp;quot;,1)这个函数中&amp;quot;%1和1就叫做参数，1会自动转为字符串。
-SQL语句 select ima01 from ima_file where ima01 = 2234 SQL语句后续会详细讲，这里先知道有印象就好
-字符串拼接 字符串可以用两种方式凭借,和||，这两种方式都会自动转为字符串</description>
+自动转换#BDL中为了使编程简单，几乎所有数据类型都可以自动转换。 例如你可以写这种代码
+ define a integer  let a = &amp;#34;12345.23&amp;#34; 字符串将自动转为整数12345，同样，整数也会自动转为字符串。
+ 不过要注意之前我们说using的时候，数值类型转字符串会自动补空格。
+ 但是如果我们要是一个无法理解的内容，会如何自动转换呢？
+ define a integer  let a = &amp;#34;你好&amp;#34; 如果你在debug中查看会发现a的值会变为null，如果非法值转换，所有变量都会变为null，这将丢失之前变量的值!
+哪些情况会自动转换呢# 赋值  无论是let还是returning都会自动转换为目的变量类型
+传参  参数部分后续会详细讲，sfmt(&amp;quot;%1&amp;quot;,1)这个函数中&amp;quot;%1和1就叫做参数，1会自动转为字符串。
+SQL语句  select ima01 from ima_file where ima01 = 2234 SQL语句后续会详细讲，这里先知道有印象就好
+字符串拼接  字符串可以用两种方式凭借,和||，这两种方式都会自动转为字符串</description>
     </item>
     
   </channel>

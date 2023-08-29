@@ -3,44 +3,45 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
+<meta name="description" content="结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
 收集的一张张名片大大方便了数据的管理，将这种理念借鉴到BDL语言程序设计中，是否有类似于名片的那么一种变量呢?
 有，答案就是“结构体变量”，这是一种复合变量，在进一步说明结构体变量前，先来看“结构体”的概念，结构体和结构体变量的关系类似与类型与普通变量的关系，结构体中说明了结构体变量的信息格式，而结构体变量是结构体的实例。
-结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
-define 变量 record 存储数据列表 end record 举例说明：
-define person record name,age varchar(20), email varchar(50) end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
+结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
+define 变量 record  存储数据列表  end record 举例说明：
+define person record  name,age varchar(20),  email varchar(50)  end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
 结构体定义规则：
-每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型 访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
+ 每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型  访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
 在定义了一个结构体变量后，我们使用成员操作符号.来访问每个成员，例如person.name、person.age，分别表示person这个变量中储存的姓名年纪等信息。
 提示
 结构体成员，和我们之前使用的变量的方法都是使用.操作符号来访问/调用。他们的区别在于方法需要有()，而成员没有()。
-我们看一段示例代码：
-define zhangsan record name varchar(20), age integer, email varchar(50) end record let zhangsan.name = &#34;zhang san&#34; let zhangsan.age = 24 let zhangsan.email = &#34;zhangsan@outlook.com&#34; display sfmt(&#34;\nname:%1&#34;,zhangsan.name) display sfmt(&#34;age:%1&#34;,zhangsan.age) display sfmt(&#34;email:%1&#34;,zhangsan.email) 输出结果:">
+我们看一段示例代码：
+ define zhangsan record  name varchar(20),  age integer,  email varchar(50)  end record   let zhangsan.name = &#34;zhang san&#34;  let zhangsan.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="1.结构体" />
-<meta property="og:description" content="结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
+<meta property="og:description" content="结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
 收集的一张张名片大大方便了数据的管理，将这种理念借鉴到BDL语言程序设计中，是否有类似于名片的那么一种变量呢?
 有，答案就是“结构体变量”，这是一种复合变量，在进一步说明结构体变量前，先来看“结构体”的概念，结构体和结构体变量的关系类似与类型与普通变量的关系，结构体中说明了结构体变量的信息格式，而结构体变量是结构体的实例。
-结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
-define 变量 record 存储数据列表 end record 举例说明：
-define person record name,age varchar(20), email varchar(50) end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
+结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
+define 变量 record  存储数据列表  end record 举例说明：
+define person record  name,age varchar(20),  email varchar(50)  end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
 结构体定义规则：
-每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型 访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
+ 每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型  访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
 在定义了一个结构体变量后，我们使用成员操作符号.来访问每个成员，例如person.name、person.age，分别表示person这个变量中储存的姓名年纪等信息。
 提示
 结构体成员，和我们之前使用的变量的方法都是使用.操作符号来访问/调用。他们的区别在于方法需要有()，而成员没有()。
-我们看一段示例代码：
-define zhangsan record name varchar(20), age integer, email varchar(50) end record let zhangsan.name = &#34;zhang san&#34; let zhangsan.age = 24 let zhangsan.email = &#34;zhangsan@outlook.com&#34; display sfmt(&#34;\nname:%1&#34;,zhangsan.name) display sfmt(&#34;age:%1&#34;,zhangsan.age) display sfmt(&#34;email:%1&#34;,zhangsan.email) 输出结果:" />
+我们看一段示例代码：
+ define zhangsan record  name varchar(20),  age integer,  email varchar(50)  end record   let zhangsan.name = &#34;zhang san&#34;  let zhangsan." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/1.record/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-20T19:25:42+08:00" />
-<meta property="article:modified_time" content="2023-08-28T21:31:30+08:00" />
+<meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
+
 <title>1.结构体 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.bce4b9835716006b69c10228bd38d64ffda527f1a478bbbc4bed29f6ccc617fc.js" integrity="sha256-vOS5g1cWAGtpwQIovTjWT/2lJ/GkeLu8S&#43;0p9szGF/w=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.71c4ba36f57256321202ab23b10d8739d26ff99898b14b28457039d250f127cf.js" integrity="sha256-ccS6NvVyVjISAqsjsQ2HOdJv&#43;ZiYsUsoRXA50lDxJ88=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1553,6 +1554,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/16.module/6.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1573,6 +1587,123 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/1.interface-tree/" class="">1.前言--抽象界面</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/2.wiget/" class="">2.控件&amp;容器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/3.fglform/" class="">3.画面档文件的编译</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/6.display/" class="">6.DISPLAY</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/7.input/" class="">7.INPUT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/8.construct/" class="">8.CONSTRUCT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/17.interface/9.practise/" class="">9.练习</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -2038,7 +2169,7 @@ email:zhangsan@outlook.com
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/9e9ff3bb0497843529aa05e79bfb99e34b76c83b" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/7fd5abd5878a63e39873ca064b6aa4e234022033" title='最后修改者 darcy | 2023年8月28日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2023年8月28日</span>
     </a>
@@ -2047,7 +2178,7 @@ email:zhangsan@outlook.com
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/13.struct/1.record/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/13.struct/1.record/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2058,7 +2189,7 @@ email:zhangsan@outlook.com
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

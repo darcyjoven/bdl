@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/operation-priority/</link>
     <description>Recent content in operation priority on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Wed, 19 Jul 2023 16:34:55 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/operation-priority/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>6.运算符优先级</title>
@@ -13,9 +12,9 @@
       <pubDate>Wed, 19 Jul 2023 16:34:55 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/6.operation-priority/</guid>
-      <description>运算符优先级#BDL中运算符具有不同优先级和结合性。
+      <description>运算符优先级#BDL中运算符具有不同优先级和结合性。
 在表达式中，各运算量参与运算的先后顺序不仅要遵守运算符优先级别的规定，还要受运算符集合的制约，以便确定自左向右进行运算还是自右向左预算。
-优先级、结合性汇总#优先级 运算符 结合性 说明 用法 13 units 左 间隔转换 (12) units day 12 ** 左 幂 x**5 12 mod 左 求余数 x mod 2 11 * 左 乘法 x*y 11 / 左 除法 x/y 10 + 左 加法 x+y 10 - 左 减法 x-y 9 || 左 连接符 &amp;ldquo;ab&amp;rdquo; 8 like 右 字符串比较 mystring like &amp;ldquo;A%&amp;rdquo; 8 matches 右 字符串比较 mystring matches &amp;ldquo;A*&amp;rdquo; 7 in() 左 清单比较 var IN(&amp;lsquo;CA&amp;rsquo;,&amp;lsquo;NY&amp;rsquo;) 6 &amp;lt; 左 小于 a&amp;lt;10 6 &amp;lt;= 左 小于等于 a&amp;lt;=10 6 &amp;gt; 左 大于 a&amp;gt;10 6 &amp;gt;= 左 大于等于 a&amp;gt;=10 6 == 左 等于 a==10 6 &amp;lt;&amp;gt; or !</description>
+优先级、结合性汇总#   优先级 运算符 结合性 说明 用法     13 units 左 间隔转换 (12) units day   12 ** 左 幂 x**5   12 mod 左 求余数 x mod 2   11 * 左 乘法 x*y   11 / 左 除法 x/y   10 + 左 加法 x+y   10 - 左 减法 x-y   9 || 左 连接符 &amp;ldquo;ab&amp;rdquo;   8 like 右 字符串比较 mystring like &amp;ldquo;A%&amp;rdquo;   8 matches 右 字符串比较 mystring matches &amp;ldquo;A*&amp;rdquo;   7 in() 左 清单比较 var IN(&amp;lsquo;CA&amp;rsquo;,&amp;lsquo;NY&amp;rsquo;)   6 &amp;lt; 左 小于 a&amp;lt;10   6 &amp;lt;= 左 小于等于 a&amp;lt;=10   6 &amp;gt; 左 大于 a&amp;gt;10   6 &amp;gt;= 左 大于等于 a&amp;gt;=10   6 == 左 等于 a==10   6 &amp;lt;&amp;gt; or !</description>
     </item>
     
   </channel>

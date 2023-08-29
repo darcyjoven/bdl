@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/categories/record-array/</link>
     <description>Recent content in record array on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Thu, 20 Jul 2023 19:27:18 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/record-array/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.结构体数组嵌套</title>
@@ -13,10 +12,10 @@
       <pubDate>Thu, 20 Jul 2023 19:27:18 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/13.struct/4.record-in-array/</guid>
-      <description>结构体数组嵌套#在上一章节例子中，我们使用student类型定义了两个变量zhangsan,lisi。 但是我们需要的变量不止两个，例如，我需要一个班上50个学生，是不是场景很熟悉？没错，变量。
+      <description>结构体数组嵌套#在上一章节例子中，我们使用student类型定义了两个变量zhangsan,lisi。 但是我们需要的变量不止两个，例如，我需要一个班上50个学生，是不是场景很熟悉？没错，变量。
 我们使用变量嵌套结构体，示例：
-type student record score record math integer, english integer end record, info record height,weight decimal(10,2) end record end record define students array[50] of student 数组中的结构体#入上面代码，结构体声明是一种自定义的数据类型，在数组
-结构体中的数组#</description>
+type student record  score record  math integer,  english integer  end record,  info record  height,weight decimal(10,2)  end record end record define students array[50] of student 数组中的结构体#入上面代码，结构体声明是一种自定义的数据类型，在数组
+结构体中的数组#</description>
     </item>
     
   </channel>
