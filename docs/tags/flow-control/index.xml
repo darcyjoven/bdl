@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/flow-control/</link>
     <description>Recent content in flow control on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Thu, 20 Jul 2023 09:08:04 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/flow-control/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.流程转向控制语句</title>
@@ -13,17 +12,15 @@
       <pubDate>Thu, 20 Jul 2023 09:08:04 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/4.cycle-and-flow-control/</guid>
-      <description>流程转向控制语句#之前我们了解到BDL中除了判断语句，循环语句，还有大量的流程转向控制语句。
+      <description>流程转向控制语句#之前我们了解到BDL中除了判断语句，循环语句，还有大量的流程转向控制语句。
 他们是continue、exit、goto语句，本章节会一一讲述。
-exit&amp;ndash;跳出循环#如果把重复结构视为一层壳，那么exit的作用可说是“破壳而出”，当流程执行到循环结构中的break语句时，循环结构提前结束，程序转而执行循环结构之后的那条语句，用流程图来表示，如图所示。
-flowchart TDa{&#34;?&#34;}--&gt;b{&#34;exit?&#34;}b--&#34;no&#34;--&gt;d[&#34;语句&#34;]b--&#34;yes&#34;--&gt;c[&#34;...&#34;]d--&gt;a图中，如果在循环体内部执行了exit语句，程序流程会直接从循环结构中跳出，转而执行循环结构后面的语句，这类似于电路中的“短路”。
+exit&amp;ndash;跳出循环#如果把重复结构视为一层壳，那么exit的作用可说是“破壳而出”，当流程执行到循环结构中的break语句时，循环结构提前结束，程序转而执行循环结构之后的那条语句，用流程图来表示，如图所示。
+mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart TDa{&#34;?&#34;}--b{&#34;exit?&#34;}b--&#34;no&#34;--d[&#34;语句&#34;]b--&#34;yes&#34;--c[&#34;...&#34;]d--a图中，如果在循环体内部执行了exit语句，程序流程会直接从循环结构中跳出，转而执行循环结构后面的语句，这类似于电路中的“短路”。
 前面讲过，“如非故意为之，不要让循环成为死循环”，那这“故意为之”是怎么回事?如何“从死循环中跳出”，可用break语句实现，见示例代码：
-define i integer display &amp;#34;\n&amp;#34; while 1 display &amp;#34;Hello&amp;#34; let i = i + 1 if i &amp;gt; 5 then exit while end if end while 尝试编译运行，你会发现，while 1看起来是个死循环，但是我们再循环结构中，增加了一个可以exit的机会。
+ define i integer  display &amp;#34;\n&amp;#34;  while 1  display &amp;#34;Hello&amp;#34;  let i = i + 1  if i &amp;gt; 5 then  exit while  end if  end while 尝试编译运行，你会发现，while 1看起来是个死循环，但是我们再循环结构中，增加了一个可以exit的机会。
 i每次循环都会+1，当i大于5时，就会运行到exit，退出循环。
-注意 当循环有多层时，exit只能剥一层“壳”，向外跳出一层。continue&amp;ndash;重来一次#exit语句时结果整个循环结构，而continue语句结束的只是当前一次循环，形象的说时“再来一次”，流程图如下：
-flowchart TDa{&#34;?&#34;}--&gt;b{&#34;continue?&#34;}b--&#34;yes&#34;--&gt;ab--&#34;no&#34;--&gt;c[&#34;语句&#34;]c--&gt;a比较和之前exit，很容易发现两者的不同，continue短路只是本次循环后的内容，不会跳出循环结构，所以，continue语句被称为循环继续语句。
-以下代码演示了continue语句的用法：
-define i integer display &amp;#34;&amp;#34; for i = 0 to 20 if i mod 3 !</description>
+注意 当循环有多层时，exit只能剥一层“壳”，向外跳出一层。continue&amp;ndash;重来一次#exit语句时结果整个循环结构，而continue语句结束的只是当前一次循环，形象的说时“再来一次”，流程图如下：
+flowchart TDa{&#34;?&#34;}--b{&#34;continue?&#34;}b--&#34;</description>
     </item>
     
   </channel>

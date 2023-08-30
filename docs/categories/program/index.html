@@ -9,12 +9,13 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/categories/program/" />
+
 <title>program | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/categories/program/index.xml" title="BDL教程" />
@@ -2327,7 +2328,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>2</span>
+          <span>3</span>
         </li>
       
         <li class="flex justify-between">
@@ -2771,7 +2772,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>自己动手创建程序#就像小学生解决应用题一样，在答题之前，必须了解题目给的条件，然后明确题目的问题，最后才是解题。 开发软件也需要这样一个过程，必须先清楚用户的需求，根据需求来进行设计和开发，不遗漏需求，也不能有超过需求的功能。
+    <p>自己动手创建程序#就像小学生解决应用题一样，在答题之前，必须了解题目给的条件，然后明确题目的问题，最后才是解题。 开发软件也需要这样一个过程，必须先清楚用户的需求，根据需求来进行设计和开发，不遗漏需求，也不能有超过需求的功能。
 本章的目标就是创建一个可以执行的程序，并输出一句话：“Hello World”。如果读者看了这个要求就开始写代码，就烦了大忌。 这个需求起始很不明确，并没有规定如何输出这句话。 在实际的软件发开工作中，类似不明确的需求比比皆是，所以动手写代码前，一定要非常明确软件的需求。
 很多曾经有过语言学习经理的读者看见上面的需求后，第一印象，认为就是在控制台打印出这句话来，然后就开始思索如何设计程序了。 但假设用户需求是用人声读出这句话呢？发声也是一种输出！ 或者用户需求是在一个窗口界面输出这句话，甚至要求这句话的大小、样式、颜色符和某种规定，那么只在控制台打印“Hello World！”的程序是不符合要求的。 所以在开发软件前，用大量的时间进行实际需求的调研时非常有必要的。 否则，花费大量时间出来的程序可能没有任何价值。
 更明确的修去时：在控制台程序中，输出依据简单的文字：“Hello World！”。具体要求明确后就可以开始程序设计了。
@@ -2809,23 +2810,23 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
-什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
+    <p>结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
+什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
 算法的思维体现在生活的各个方面,比如我们要去北京旅游，会问一些问题:“用什么交通工具?”“在哪里中转?”“是否要去奥运现场?”等，这都包含着算法。
 可见，算法的步骤间有一定的逻辑顺序，按这些顺序执行步骤便可以解决问题，达到目的。这种逻辑顺序，在BDL语言中体现为控制结构。
-算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
+算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
 原则上，自然语言也可用于算法表示，但由于自然语言的多义性，不同的人对同-一个版本的描述可能有不同的理解，因此，一般不采用自然语言来描述算法，要求采用一种精确的、无歧义的机制。
 有两种广泛使用的算法表示方法，一是伪代码法，二是流程图法。
-算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
+算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
 使用伪代码表示算法无须遵守严格的语法规则，只要完整表达了意思，书写清晰，容易阅读和读懂即可。举例如下:
-用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
-算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
+用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作 上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
+算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
 现在通用的流程图符号画法采纳的是ANSI (美国国家标准化协会)的标准，如图所示。
-flowchart LRid1(["起止框，表示程序起始和结束"])id2{"判断框"}id3[/"输入输出框，表示输入输出数据"/]id4["处理框，完成某些操作"]subgraph a["这是连接点，如果流程太长将用词截断"]id5((...))endid6--"程序执行方向"-->id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
+mermaid.initialize({"theme": "neutral"})flowchart LRid1(["起止框，表示程序起始和结束"])id2{"判断框"}id3[/"输入输出框，表示输入输出数据"/]id4["处理框，完成某些操作"]subgraph a["这是连接点，如果流程太长将用词截断"]id5((...))endid6--"程序执行方向"--id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
 在描述基本结构时，本书尽量采用流程图方式。
 以上伪代码，用流程表示如下:
-flowchart TDa(["开始"])-->b[/"用户输入"/]b-->c{"判断是否是字符Y"}c--"YES"-->d["C操作"]c--"NO"-->e["B操作"]d-->f(["结束"])e-->f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
-flowchart TDa["语句1"] --> b["语句2"]b--> c["语句3"]flowchart TDa{"条件1"}-->b["语句1"]a-->c["语句2"]flowchart TDa{"
+flowchart TDa(["开始"])--b[/"用户输入"/]b--c{"判断是否是字符Y"}c--"YES"--d["C操作"]c--"NO"--e["B操作"]d--f(["结束"])e--f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
+flowchart TDa["
         <a href="/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/">...</a>
       
     </p>
@@ -2857,8 +2858,9 @@ flowchart TDa["语句1"] --> b["语句2"]b--> c["语句3"]flowchart TDa{"条
 
 
 
-    <p>编译运行-欣赏你的杰作#使用之前我们说的编译连接命令，开始编译连接。如果成功将不会有错误提示，如果失败请检查一些你的代码，可以对比上一篇中的代码。
+    <p>编译运行-欣赏你的杰作#使用之前我们说的编译连接命令，开始编译连接。如果成功将不会有错误提示，如果失败请检查一些你的代码，可以对比上一篇中的代码。
 在czz/4gl目录下输入exe2 czzi001,将会显示以下内容。
+
     </p>
   </article>
   
@@ -2888,28 +2890,28 @@ flowchart TDa["语句1"] --> b["语句2"]b--> c["语句3"]flowchart TDa{"条
 
 
 
-    <p>程序开发生命周期#在windows 下，利用记事本这个软件，输入并编辑文件可以保存一个.txt后缀名的文件。类似的还有.xlsx。它们都可以通过记事本或者excle这类的软件打开，但本身是无法运行或者展现内容的。
+    <p>程序开发生命周期#在windows 下，利用记事本这个软件，输入并编辑文件可以保存一个.txt后缀名的文件。类似的还有.xlsx。它们都可以通过记事本或者excle这类的软件打开，但本身是无法运行或者展现内容的。
 那么你有没有想过如何产生一个.exe可执行文件呢。
 聪明的你一定知道了。 是的，通过编写某种语言的源代码，编译成功通过后，在经过链接，成功后就可以产生一个可执行的文件。这就是所谓的程序。
-编写BDL源代码#关于环境的说明
+编写BDL源代码#关于环境的说明
 如果你是使用鼎捷系列软件，那么你需要新建一个程序代码，如何建立本书不会介绍。
 如果你要学习，可以见TIPTOP相关书籍，本书只介绍代码部分。
 由于t100与tiptop gp编译和链接代码也不同，所以本书以tiptop gp命令为主，如果你使用不同的系统，请自行替换为你系统的代码。
 例如：tiptop gp 使用r.l2 连接，t100使用r.l 连接。
 为什么不以底层fgllink写呢，因为license原因，有的环境可能不允许使用这类命令，所以不再赘述。
-编辑BDL源代码#编辑BDL源代码就是做如下工作：
-逐个输入字符，如汉字、英文、标点符号或者其它可以用键盘输入的字符 通过插入、删除、移动、复制、粘贴等方法修改已经输入的字符 将输入修改完毕的所有字符保存到硬盘上 一篇由汉字、英文、标点符号或者其它可以用键盘输入的字符的内容被称作文本。 能够进行文字编辑的软件被称作编辑器。
+编辑BDL源代码#编辑BDL源代码就是做如下工作：
+ 逐个输入字符，如汉字、英文、标点符号或者其它可以用键盘输入的字符 通过插入、删除、移动、复制、粘贴等方法修改已经输入的字符 将输入修改完毕的所有字符保存到硬盘上  一篇由汉字、英文、标点符号或者其它可以用键盘输入的字符的内容被称作文本。 能够进行文字编辑的软件被称作编辑器。
 通俗的将，源代码就是程序员输入编写的符和BDL语言语法规则的文本。 如下片段就是一段源代码:
-main display smft(&#34;Hello World!&#34;) end main 扩展名用.4gl标识其为一个BDL源代码文件。源代码文件简称源文件。
+main  display smft(&#34;Hello World!&#34;) end main 扩展名用.4gl标识其为一个BDL源代码文件。源代码文件简称源文件。
 编辑器的功能很大程度上能够帮助程序员提高工作效率。只要能输入文字的文本编辑软件都可以作为源代码编辑器。 如记事本软件、字处理软件Word、vs code等。但是专业程序员一般采用专业源代码编辑器，如业界鼎鼎有名的编辑工具由VI/VIM、Emacs/XEmacs等。 一个好的源代码编辑器、要求具备关键字着色功能（可以使用不同颜色标识diamagnetic的不同部分）、优秀的代码跳转功能、代码自动不全功能等。
-编译BDL源代码#编译时BDL源代码翻译成用二进制指令标识的目标文件。 这里的目标文件与机器语言还有一段距离，并不是真正的机器语言，所以不能被计算机直接运行。
+编译BDL源代码#编译时BDL源代码翻译成用二进制指令标识的目标文件。 这里的目标文件与机器语言还有一段距离，并不是真正的机器语言，所以不能被计算机直接运行。
 编译过程由编译系统程序完成。编译程序简称为编译器。编译程序运行后，自动对源程序进行句法和语法检查，当发现错误是，就将错误的类型和所在位置显示出来，帮助修改程序中的错误。 用户可以继续利用编辑器对源程序进行修改。修改后，重新编译，直到编译通过为止。
-连接目标文件#多个源代码文件经过编译后产生了多个目标文件，此时还没有将其组合装备为一个可以运行的整体，因此计算机还是不能执行。
+连接目标文件#多个源代码文件经过编译后产生了多个目标文件，此时还没有将其组合装备为一个可以运行的整体，因此计算机还是不能执行。
 连接过程是用连接程序将目标文件、第三方目标文件、BDL语言提供的运行时的一些函数装配为一个完成的可执行的目标程序。连接程序检查连接器。
-编译连接过程示例#有时候为了叙述方便，将编译和连接两个步骤，统一用编译一个词语代替，读者应该清除实际经历了两步。
-当源代码没有报错是，编译连接过程如下： 当编译时，不会产生目标文件，如下： 现在你可能还看不懂提示信息的含义，不用担心，后面章节会慢慢了解到。现在你只要关注如果源代码错误，会出现什么情况即可。
-有时候编译通过了，但连接不一定通过。如下： 运行程序#BDL程序部署在服务器，在服务器端运行，需要本地电脑开启GDC客户端，并确定端口正确。
-运行的命令为exe2 czzi001,czzi001为程序编号。
+编译连接过程示例#有时候为了叙述方便，将编译和连接两个步骤，统一用编译一个词语代替，读者应该清除实际经历了两步。
+  当源代码没有报错是，编译连接过程如下：   当编译时，不会产生目标文件，如下：    现在你可能还看不懂提示信息的含义，不用担心，后面章节会慢慢了解到。现在你只要关注如果源代码错误，会出现什么情况即可。
+        <a href="/docs/BDL/1.basic/1.before_all/4.program-life-cycle/">...</a>
+      
     </p>
   </article>
   
@@ -2940,7 +2942,7 @@ main display smft(&#34;Hello World!&#34;) end main 扩展名用.4gl标识其为�
 
 
 
-    <p>开始你的第一个程序#使用你自己的编辑器，写一个输出&quot;Hello World&quot;的程序。 display &#34;Hello World&#34; 将你写的程序上传到服务器，并进行编译等一系列操作后，运行并测试是否能输出&quot;Hello World&quot; 
+    <p>开始你的第一个程序# 使用你自己的编辑器，写一个输出&quot;Hello World&quot;的程序。  display &#34;Hello World&#34; 将你写的程序上传到服务器，并进行编译等一系列操作后，运行并测试是否能输出&quot;Hello World&quot;  
     </p>
   </article>
   
@@ -2961,7 +2963,7 @@ main display smft(&#34;Hello World!&#34;) end main 扩展名用.4gl标识其为�
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3298,7 +3300,7 @@ main display smft(&#34;Hello World!&#34;) end main 扩展名用.4gl标识其为�
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>2</span>
+          <span>3</span>
         </li>
       
         <li class="flex justify-between">

@@ -4,26 +4,23 @@
     <title>第十七章 用户界面 on BDL教程</title>
     <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/</link>
     <description>Recent content in 第十七章 用户界面 on BDL教程</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.前言--抽象界面</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/1.interface-tree/</link>
       <pubDate>Tue, 29 Aug 2023 08:53:19 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/1.interface-tree/</guid>
-      <description>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
+      <description>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
 XML是一种标记语言，它并不是编程语言。
 你如果了解HTML，那么你就可以轻松理解XML。XML是一种要求严格的HTML，但他们实际并不存在包含不包含关系。
 在百度首页，按下F12，你能看到如下界面，这就是HTML语言。XML也遵循着类似的结构风格。
-XML 语法#XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
-XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
-名词介绍#&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt; &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt; &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt; &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以上 XML 代码中，
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; 是 XML 的申明
-任何一个 &amp;lt;...&amp;gt;到它的&amp;lt;.../&amp;gt;被称作元素，元素也被称为节点，是同一个意思
-以下是一个元素 &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt; &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt; &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt; &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以下也是一个元素 &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; 元素中可以包含元素
-&amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;中Tove是元素to的值
-&amp;lt;note name=&amp;quot;n1&amp;quot; &amp;gt;中name=&amp;quot;n1&amp;quot;被称作属性，name是属性名，n1是属性值</description>
+XML 语法# XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
+ XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
+名词介绍#&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt;  &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;  &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;  &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;  &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以上 XML 代码中，
+  &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; 是 XML 的申明
+  任何一个 &amp;lt;...&amp;gt;到它的&amp;lt;.../&amp;gt;被称作元素，元素也被称为节点，是同一个意思
+ 以下是一个元素   &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt;  &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;  &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;  &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;  &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!</description>
     </item>
     
     <item>
@@ -32,23 +29,17 @@ XML的语法非常简单，它由标签组成，标签分为开始标签和结�
       <pubDate>Tue, 29 Aug 2023 14:20:48 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/2.wiget/</guid>
-      <description>控件&amp;amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
-使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
-新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
-一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
+      <description>控件&amp;amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
+ 使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
+ 新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
+一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
 当然拖拽也是有规律的，否则无法生成你想要的画面，甚至还会报错。
-在顶部菜单中不同名称的按钮，都是一个个控件和容器。
-控件： GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
-容器： 容器是用来包裹控件，让控件已希望的方式展现出来的元素。
-容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
-不同容器清单说明如下：
-名称 功能说明 可使用的下层容器物件 Grid 简易空白画布 ScrollGrid、Table、GroupBox ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox Table 以表格方式显示阵列资料 无 MFArray 以画布方式显示阵列资料 无 GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。
-Grid 只能处理非阵列资料。Grid 不可以被安排在其他Grid容器之内。
-studio
-画面预览
-Floder#当摆放元件空间不足时（或是需要滚动画面，操作上较麻烦时），即可使用切页的功能，以资料夹的形式将资料性质相近的栏位，切分在同样的page当中。
-制作时可在页签位置以鼠标右键新增、删除页面。
-编译时若该页签内没有任何元件，则编译会失败，且系统会显示有空白页签存在。 页签上显示字符串仍需在属性视窗指定。</description>
+在顶部菜单中不同名称的按钮，都是一个个控件和容器。
+ 控件：  GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
+ 容器：  容器是用来包裹控件，让控件已希望的方式展现出来的元素。
+容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
+不同容器清单说明如下：
+   名称 功能说明 可使用的下层容器物件     Grid 简易空白画布 ScrollGrid、Table、GroupBox   ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox   Table 以表格方式显示阵列资料 无   MFArray 以画布方式显示阵列资料 无   GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table    Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。</description>
     </item>
     
     <item>
@@ -57,7 +48,14 @@ Floder#当摆放元件空间不足时（或是需要滚动画面，操作上�
       <pubDate>Tue, 29 Aug 2023 15:02:51 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/3.fglform/</guid>
-      <description>画面档文件的编译#4fd文件是我们的</description>
+      <description>画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
+4fd 对应代码的文件的4gl
+42f对应代码文件的42m
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
+以上4fd文件，转为per描述如下：
+SCHEMA formonly  LAYOUT (text=%&amp;#34;Form&amp;#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&amp;#34;Page1&amp;#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&amp;#34;Page2&amp;#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&amp;#34;Label1&amp;#34;; Label label2:Label2, text=%&amp;#34;Label2&amp;#34;; Edit edit1=formonly.</description>
     </item>
     
     <item>
@@ -66,7 +64,13 @@ Floder#当摆放元件空间不足时（或是需要滚动画面，操作上�
       <pubDate>Tue, 29 Aug 2023 15:43:05 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/4.window-form/</guid>
-      <description>Window &amp;amp; Form#</description>
+      <description>Window &amp;amp; Form#在上一章节介绍如何编辑画面，但 WINDOWS 与 FORM 本身是无法执行的，它必须透过 Program 去启动它，以下介绍在程序中启动及显示 WINDOWS &amp;amp; FORM 的指令。
+本节用到画面档时czzi001.4fd，你也可以自己创建一个喜欢的样式。
+WINDOW#OPEN &amp;amp; CLOSE#database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main  open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34;  sleep 10  close window czz_w end main 如果你直接运行发现，并没有打开作业，请通过 debug 调试模式重新运行一下查看。
+注意
+BDL 中如果没有指定使用操作画面语句块，那么直接打开画面是看不见的。
+运行一下代码：
+database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main  open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34;  call cl_ui_init() -- 这lib函数为初始化画面，如果不调用会出现一个空窗口。  menu &amp;#34;&amp;#34;  on action test  message &amp;#34;test&amp;#34;  on action untest  message &amp;#34;untest&amp;#34;  on action close  exit menu  end menu  close window czz_w end main MENU 就是一个画面操作语句块，后面会讲到，它的功能就是生成一些按钮，tiptop gp 将这些按钮放置到了右侧。</description>
     </item>
     
     <item>
@@ -75,7 +79,7 @@ Floder#当摆放元件空间不足时（或是需要滚动画面，操作上�
       <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
-      <description>Menu#</description>
+      <description>Menu#</description>
     </item>
     
     <item>
@@ -84,7 +88,7 @@ Floder#当摆放元件空间不足时（或是需要滚动画面，操作上�
       <pubDate>Tue, 29 Aug 2023 15:45:32 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/6.display/</guid>
-      <description>DISPLAY#</description>
+      <description>DISPLAY#</description>
     </item>
     
     <item>
@@ -93,7 +97,7 @@ Floder#当摆放元件空间不足时（或是需要滚动画面，操作上�
       <pubDate>Tue, 29 Aug 2023 15:45:38 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/7.input/</guid>
-      <description>INPUT#</description>
+      <description>INPUT#</description>
     </item>
     
     <item>
@@ -102,7 +106,7 @@ Floder#当摆放元件空间不足时（或是需要滚动画面，操作上�
       <pubDate>Tue, 29 Aug 2023 15:45:47 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/8.construct/</guid>
-      <description>CONSTRUCT#</description>
+      <description>CONSTRUCT#</description>
     </item>
     
     <item>
@@ -111,8 +115,8 @@ Floder#当摆放元件空间不足时（或是需要滚动画面，操作上�
       <pubDate>Tue, 29 Aug 2023 15:46:01 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/9.practise/</guid>
-      <description>练习#学生成绩录入作业#功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入 进阶#请将上述资料建立合适的表，并保存到数据库
-利用表格显示学生成绩#可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择 </description>
+      <description>练习#学生成绩录入作业# 功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入  进阶#请将上述资料建立合适的表，并保存到数据库
+利用表格显示学生成绩# 可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择  </description>
     </item>
     
   </channel>

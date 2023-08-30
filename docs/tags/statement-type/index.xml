@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/statement-type/</link>
     <description>Recent content in statement type on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Wed, 19 Jul 2023 18:01:22 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/statement-type/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.语句类型</title>
@@ -13,11 +12,11 @@
       <pubDate>Wed, 19 Jul 2023 18:01:22 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/1.statement-type/</guid>
-      <description>语句类型#前文已经介绍过，BDL中有4中类型的语句，分别是表达式语句、流程控制语句、函数调用语句和符和语句。
-flowchart LRa[&#34;BDL语言&#34;]b1[&#34;表达式语句&#34;]b2[&#34;函数调用语句&#34;]b3[&#34;复合语句&#34;]b4[&#34;流程控制语句&#34;]c1[&#34;运算符表达式语句&#34;]c2[&#34;赋值语句&#34;]c3[&#34;结构化语句&#34;]c4[&#34;非结构化语句&#34;]d1[&#34;条件语句&#34;]d2[&#34;循环语句&#34;]d3[&#34;限定转向语句&#34;]d4[&#34;非限定转向语句&#34;]e1[&#34;if语句&#34;]e2[&#34;case语句&#34;]e3[&#34;while语句&#34;]e4[&#34;for语句&#34;]e5[&#34;break语句&#34;]e6[&#34;continue语句&#34;]e7[&#34;return语句&#34;]e8[&#34;goto语句&#34;]a--&gt;b1a--&gt;b2a--&gt;b3a--&gt;b4b1--&gt;c1b1--&gt;c2b4--&gt;c3b4--&gt;c4c3--&gt;d1c3--&gt;d2c4--&gt;d3c4--&gt;d4d1--&gt;e1d1--&gt;e2d2--&gt;e3d2--&gt;e4d3--&gt;e5d3--&gt;e6d3--&gt;e7d4--&gt;e8表达式语句#在上一章，我们已经介绍了表达式的概念，通俗说，“有表达式组成的语句叫做表达式语句”。
+      <description>语句类型#前文已经介绍过，BDL中有4中类型的语句，分别是表达式语句、流程控制语句、函数调用语句和符和语句。
+mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart LRa[&#34;BDL语言&#34;]b1[&#34;表达式语句&#34;]b2[&#34;函数调用语句&#34;]b3[&#34;复合语句&#34;]b4[&#34;流程控制语句&#34;]c1[&#34;运算符表达式语句&#34;]c2[&#34;赋值语句&#34;]c3[&#34;结构化语句&#34;]c4[&#34;非结构化语句&#34;]d1[&#34;条件语句&#34;]d2[&#34;循环语句&#34;]d3[&#34;限定转向语句&#34;]d4[&#34;非限定转向语句&#34;]e1[&#34;if语句&#34;]e2[&#34;case语句&#34;]e3[&#34;while语句&#34;]e4[&#34;for语句&#34;]e5[&#34;break语句&#34;]e6[&#34;continue语句&#34;]e7[&#34;return语句&#34;]e8[&#34;goto语句&#34;]a--b1a--b2a--b3a--b4b1--c1b1--c2b4--c3b4--c4c3--d1c3--d2c4--d3c4--d4d1--e1d1--e2d2--e3d2--e4d3--e5d3--e6d3--e7d4--e8表达式语句#在上一章，我们已经介绍了表达式的概念，通俗说，“有表达式组成的语句叫做表达式语句”。
 表达式语句只有一种赋值表达式，在BDL中不允许计算一个值而不使用。
 下属语句都是赋值语句：
-let x = 3 let x = x + 1 let y = 1 &amp;gt; 2 函数调用语句#以下语句都是函数调用语句。</description>
+ let x = 3  let x = x + 1  let y = 1 &amp;gt; 2 函数调用语句#以下语句都是函数调用语句。</description>
     </item>
     
   </channel>

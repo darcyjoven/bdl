@@ -3,52 +3,41 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="控件&amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
-使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
-新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
-一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
+<meta name="description" content="控件&amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
+ 使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
+ 新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
+一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
 当然拖拽也是有规律的，否则无法生成你想要的画面，甚至还会报错。
-在顶部菜单中不同名称的按钮，都是一个个控件和容器。
-控件： GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
-容器： 容器是用来包裹控件，让控件已希望的方式展现出来的元素。
-容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
-不同容器清单说明如下：
-名称 功能说明 可使用的下层容器物件 Grid 简易空白画布 ScrollGrid、Table、GroupBox ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox Table 以表格方式显示阵列资料 无 MFArray 以画布方式显示阵列资料 无 GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。
-Grid 只能处理非阵列资料。Grid 不可以被安排在其他Grid容器之内。
-studio
-画面预览
-Floder#当摆放元件空间不足时（或是需要滚动画面，操作上较麻烦时），即可使用切页的功能，以资料夹的形式将资料性质相近的栏位，切分在同样的page当中。
-制作时可在页签位置以鼠标右键新增、删除页面。
-编译时若该页签内没有任何元件，则编译会失败，且系统会显示有空白页签存在。 页签上显示字符串仍需在属性视窗指定。">
+在顶部菜单中不同名称的按钮，都是一个个控件和容器。
+ 控件：  GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
+ 容器：  容器是用来包裹控件，让控件已希望的方式展现出来的元素。
+容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
+不同容器清单说明如下：
+   名称 功能说明 可使用的下层容器物件     Grid 简易空白画布 ScrollGrid、Table、GroupBox   ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox   Table 以表格方式显示阵列资料 无   MFArray 以画布方式显示阵列资料 无   GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table    Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="2.控件&amp;容器" />
-<meta property="og:description" content="控件&amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
-使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
-新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
-一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
+<meta property="og:description" content="控件&amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
+ 使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
+ 新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
+一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
 当然拖拽也是有规律的，否则无法生成你想要的画面，甚至还会报错。
-在顶部菜单中不同名称的按钮，都是一个个控件和容器。
-控件： GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
-容器： 容器是用来包裹控件，让控件已希望的方式展现出来的元素。
-容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
-不同容器清单说明如下：
-名称 功能说明 可使用的下层容器物件 Grid 简易空白画布 ScrollGrid、Table、GroupBox ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox Table 以表格方式显示阵列资料 无 MFArray 以画布方式显示阵列资料 无 GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。
-Grid 只能处理非阵列资料。Grid 不可以被安排在其他Grid容器之内。
-studio
-画面预览
-Floder#当摆放元件空间不足时（或是需要滚动画面，操作上较麻烦时），即可使用切页的功能，以资料夹的形式将资料性质相近的栏位，切分在同样的page当中。
-制作时可在页签位置以鼠标右键新增、删除页面。
-编译时若该页签内没有任何元件，则编译会失败，且系统会显示有空白页签存在。 页签上显示字符串仍需在属性视窗指定。" />
+在顶部菜单中不同名称的按钮，都是一个个控件和容器。
+ 控件：  GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
+ 容器：  容器是用来包裹控件，让控件已希望的方式展现出来的元素。
+容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
+不同容器清单说明如下：
+   名称 功能说明 可使用的下层容器物件     Grid 简易空白画布 ScrollGrid、Table、GroupBox   ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox   Table 以表格方式显示阵列资料 无   MFArray 以画布方式显示阵列资料 无   GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table    Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/2.wiget/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-29T14:20:48+08:00" />
-<meta property="article:modified_time" content="2023-08-29T15:51:11+08:00" />
+<meta property="article:modified_time" content="2023-08-29T21:29:35+08:00" />
+
 <title>2.控件&amp;容器 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2060,7 +2049,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#布局">布局</a></li>
         <li><a href="#控件">控件</a>
           <ul>
-            <li><a href="#staticlabel">StaticLabel</a></li>
+            <li><a href="#label">Label</a></li>
             <li><a href="#edit">Edit</a></li>
             <li><a href="#button">Button</a></li>
             <li><a href="#buttonedit">ButtonEdit</a></li>
@@ -2068,14 +2057,12 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#dateedit">DateEdit</a></li>
             <li><a href="#radiogroup">RadioGroup</a></li>
             <li><a href="#checkbox">CheckBox</a></li>
-            <li><a href="#formfieldlabel">FormFieldLabel</a></li>
             <li><a href="#hline">HLine</a></li>
             <li><a href="#canvas">Canvas</a></li>
             <li><a href="#progressbar">ProgressBar</a></li>
             <li><a href="#textedit">TextEdit</a></li>
             <li><a href="#timeedit">TimeEdit</a></li>
-            <li><a href="#staticimage">StaticImage</a></li>
-            <li><a href="#formfieldimage">FormFieldImage</a></li>
+            <li><a href="#image">Image</a></li>
             <li><a href="#slider">Slider</a></li>
             <li><a href="#spinedit">SpinEdit</a></li>
             <li><a href="#webcomponent">WebComponent</a></li>
@@ -2092,6 +2079,11 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#tab-index">Tab Index</a></li>
         <li><a href="#alignment">Alignment</a></li>
+      </ul>
+    </li>
+    <li><a href="#练习">练习</a>
+      <ul>
+        <li><a href="#将每个不同的控件都拖住到4fd文件中试一试">将每个不同的控件都拖住到4fd文件中试一试</a></li>
       </ul>
     </li>
   </ul>
@@ -2198,7 +2190,7 @@ https://github.com/alex-shpak/hugo-book
 <p>
   <img src="images/image-8.png" alt="Grid" /></p>
 <p>可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。</p>
-<p>Grid 只能处理<code>非阵列资料</code>。Grid 不可以被安排在其他Grid容器之内。</p>
+<p>Grid 只能处理<code>非阵列资料</code>。Grid 不可以被安排在其他 Grid 容器之内。</p>
 <div class="book-columns flex flex-wrap">
 
   <div class="flex-even markdown-inner">
@@ -2223,7 +2215,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>
   <img src="images/image-15.png" alt="Floder" /></p>
-<p>当摆放元件空间不足时（或是需要滚动画面，操作上较麻烦时），即可使用切页的功能，以资料夹的形式将资料性质相近的栏位，切分在同样的page当中。</p>
+<p>当摆放元件空间不足时（或是需要滚动画面，操作上较麻烦时），即可使用切页的功能，以资料夹的形式将资料性质相近的栏位，切分在同样的 page 当中。</p>
 <p>制作时可在页签位置以鼠标右键新增、删除页面。</p>
 <p>编译时若该页签内没有任何元件，则编译会失败，且系统会显示有空白页签存在。
 页签上显示字符串仍需在属性视窗指定。</p>
@@ -2251,11 +2243,11 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>
   <img src="images/image-23.png" alt="Group" /></p>
-<p>相关栏位可用Group 包覆，以让相近性质的栏位可以明确的群聚于同处。</p>
+<p>相关栏位可用 Group 包覆，以让相近性质的栏位可以明确的群聚于同处。</p>
 <p>编写时须注意：</p>
 <ul>
-<li>若不需要Group 名称，则可以不要设定<code>textGroup</code>、<code>Text</code>属性。</li>
-<li>若要分组但不要框线，请改用Grid。</li>
+<li>若不需要 Group 名称，则可以不要设定<code>textGroup</code>、<code>Text</code>属性。</li>
+<li>若要分组但不要框线，请改用 Grid。</li>
 </ul>
 <div class="book-columns flex flex-wrap">
 
@@ -2281,7 +2273,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>
   <img src="images/image-20.png" alt="HRec" /></p>
-<p>HRec 用spacer 来保留画面一定的空格符数。当元件在容器中时，若不使用HRec，则在预览时会发现想要保留的空格符，实际上并没有被保留。点选HRec 里面的元件或是spacer 时，可以在元件的左右加入spacer（Spacer left and Spacer right）。</p>
+<p>HRec 用 spacer 来保留画面一定的空格符数。当元件在容器中时，若不使用 HRec，则在预览时会发现想要保留的空格符，实际上并没有被保留。点选 HRec 里面的元件或是 spacer 时，可以在元件的左右加入 spacer（Spacer left and Spacer right）。</p>
 <div class="book-columns flex flex-wrap">
 
   <div class="flex-even markdown-inner">
@@ -2306,7 +2298,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>
   <img src="images/image-9.png" alt="ScrollGrid" /></p>
-<p>在Genero Studio 中，此容器与Grid 相同，均作为处理<code>非阵列资料</code>用。与Grid 容器的差异仅在可使用滚动轴，可以滚动画面。不能用于显示阵列资料。
+<p>在 Genero Studio 中，此容器与 Grid 相同，均作为处理<code>非阵列资料</code>用。与 Grid 容器的差异仅在可使用滚动轴，可以滚动画面。不能用于显示阵列资料。
 <div class="book-columns flex flex-wrap">
 
   <div class="flex-even markdown-inner">
@@ -2331,14 +2323,14 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>
   <img src="images/image-12.png" alt="Table" /></p>
-<p>使用TABLE即是以表格方式显示阵列资料，此方式有许多的优点，这些优点都是系统提供的，不需要额外再撰写程序码即可使用；</p>
+<p>使用 TABLE 即是以表格方式显示阵列资料，此方式有许多的优点，这些优点都是系统提供的，不需要额外再撰写程序码即可使用；</p>
 <p>包含：动态排序、栏位隐藏、显示或移动等。
-在设计时期改变Table 高度时，会自动增减资料的行数。
-在Table 物件上按鼠标右键，在弹出式选单可以新增或移除栏位。</p>
+在设计时期改变 Table 高度时，会自动增减资料的行数。
+在 Table 物件上按鼠标右键，在弹出式选单可以新增或移除栏位。</p>
 <p>另外可以直接以鼠标拖曳改变栏位的顺序。</p>
 <p>编写时须注意：</p>
 <ul>
-<li>使用TABLE 物件时，资料（Record）一定是横列，没有直垂直排列。</li>
+<li>使用 TABLE 物件时，资料（Record）一定是横列，没有直垂直排列。</li>
 <li>编写时须到各栏位的属性中进行形态、对应数据库等资料的设定或变更。</li>
 </ul>
 <div class="book-columns flex flex-wrap">
@@ -2365,7 +2357,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>
   <img src="images/image-24.png" alt="Tree" /></p>
-<p>Tree 树状图预览时和Table是一样的，当有资料的资料，树状图是有层级结构的。</p>
+<p>Tree 树状图预览时和 Table 是一样的，当有资料的资料，树状图是有层级结构的。</p>
 <p>当节点展开时，可以展开上下级结构。</p>
 <div class="book-columns flex flex-wrap">
 
@@ -2410,14 +2402,14 @@ https://github.com/alex-shpak/hugo-book
 
 </div>
 
-<p>在设计视窗中，以多选物件的方式，选取两个以上的物件后，工具列上的<code>Layout 排列工具项</code>（Create Layout）即会被enable，直接选取工具列中的<code>垂直排列</code>功能<code>Vertical</code>或<code>水平排列</code>功能（Horizontal），出现红色外框时，即完成排列方式指定。</p>
+<p>在设计视窗中，以多选物件的方式，选取两个以上的物件后，工具列上的<code>Layout 排列工具项</code>（Create Layout）即会被 enable，直接选取工具列中的<code>垂直排列</code>功能<code>Vertical</code>或<code>水平排列</code>功能（Horizontal），出现红色外框时，即完成排列方式指定。</p>
 <p>
   <img src="images/image-29.png" alt="RBreak Layout" /></p>
 <p>若设定完成后发现设定错误，必须取消原先设定后才能在设定新的排列方式。此时点选该红色外框，上方<code>取消排列</code>(Break Layout)即可进行取消作业。</p>
 <p>功能说明：</p>
-<p><img src="images/image-30.png" /> <code>垂直排列</code>功能Vertical Layout</p>
-<p><img src="images/image-31.png" /> <code>水平排列</code>功能Horizontal Layout</p>
-<p><img src="images/image-32.png" /> <code>取消排列</code>功能Break Layout</p>
+<p><img src="images/image-30.png" /> <code>垂直排列</code>功能 Vertical Layout</p>
+<p><img src="images/image-31.png" /> <code>水平排列</code>功能 Horizontal Layout</p>
+<p><img src="images/image-32.png" /> <code>取消排列</code>功能 Break Layout</p>
 <h2 id="控件">
   控件
   <a class="anchor" href="#%e6%8e%a7%e4%bb%b6">#</a>
@@ -2428,14 +2420,56 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-5.png" alt="Wiget" /></p>
 <p>但若仅需要进行元件项目代换时，也可以透过属性页处提供的功能，直接进行转换。</p>
 <p>以下分项目说明各种元件的差异。</p>
-<h3 id="staticlabel">
-  StaticLabel
-  <a class="anchor" href="#staticlabel">#</a>
+<h3 id="label">
+  Label
+  <a class="anchor" href="#label">#</a>
 </h3>
-<p>
-  <img src="images/image-59.png" alt="Alt text" />
+<p>定义一显示值用的栏位，可区分为下列三类。</p>
+<ul>
+<li>StaticLabel
 
-  <img src="images/image-60.png" alt="Alt text" /></p>
+  <img src="images/image-59.png" alt="StaticLabel" />
+
+  <img src="images/image-60.png" alt="StaticLabel" /></li>
+</ul>
+<p>静态文字标签，可设定宽度、
+前景色等。</p>
+<ul>
+<li>Text
+
+  <img src="images/image-73.png" alt="Text" /></li>
+</ul>
+<p>StaticLabel 可以和 Text 相互转换。Text 字符数自动决定大小的基本静态文字标签。无法自行设定宽度。</p>
+<ul>
+<li>FormFieldLabel</li>
+</ul>
+<p>
+  <img src="images/image-49.png" alt="FormFieldLabel" />
+
+  <img src="images/image-50.png" alt="FormFieldLabel" /></p>
+<p>动态标签元件，属于 FormField 物件，可设定与资料栏位的关联。</p>
+<p>常用属性：</p>
+<ul>
+<li>textGroup -&gt; text：显示说明字符串。
+<blockquote class="book-hint info">
+  <p><strong>附注说明</strong></p>
+<ul>
+<li>TIPTOP GP 可支援动态画面多语言转换的功能，因此定有转换规则，符合下列规则的画面元件始能进行语系转换：
+<ol>
+<li>输入栏位左侧说明依同名元件方式转换</li>
+<li>TABLE 每栏栏位标题可转换</li>
+<li>各别元件有元件 ID 足供识别可转换（含 page、groupbox、static label 等）</li>
+</ol>
+</li>
+</ul>
+<p>其余不符合上列规则者均无法于 TIPTOP GP 系统中完成多语言元件转换。</p>
+<ul>
+<li>TIPTOP GP 在设计 static label 时，要求其栏位名称必需以<code>dummy</code>为启始，以资识别为 static label。</li>
+</ul>
+
+</blockquote>
+</li>
+</ul>
 <h3 id="edit">
   Edit
   <a class="anchor" href="#edit">#</a>
@@ -2444,13 +2478,13 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-33.png" alt="Edit" />
 
   <img src="images/image-34.png" alt="Edit" /></p>
-<p>定义一个编辑栏位。属于FormField 物件，可设定与资料栏位的关联。</p>
+<p>定义一个编辑栏位。属于 FormField 物件，可设定与资料栏位的关联。</p>
 <p>常用属性：</p>
 <ul>
 <li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
 <li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
-<li>constraints -&gt; notNull：不可在此栏位输入NULL 值或空字符串。</li>
-<li>constraints -&gt; required：不可在此栏位输入NULL 值、空字符串或纯空格符。</li>
+<li>constraints -&gt; notNull：不可在此栏位输入 NULL 值或空字符串。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
 <li>appearance -&gt; case：令输入字符串自动转换大/小写。</li>
 <li>appearance -&gt; scroll：卷动，若数据库栏宽大于画面预留栏宽时有效，当设定此属性时可藉卷动方式输入。</li>
 </ul>
@@ -2459,9 +2493,18 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#button">#</a>
 </h3>
 <p>
-  <img src="images/image-57.png" alt="Alt text" />
+  <img src="images/image-57.png" alt="Button" />
 
-  <img src="images/image-58.png" alt="Alt text" /></p>
+  <img src="images/image-58.png" alt="Button" /></p>
+<p>定义一个按钮以触发某一 4GL 中已写定的 ON ACTION 段。</p>
+<p>建议除了特别的 ACTION 有需要在 Layout 内布置按键外，一般作业可不必布置，令其出现在 Ring Menu 处即可。</p>
+<p>常用属性：</p>
+<ul>
+<li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
+<li>Image Group -&gt; image：设定出现在 BUTTON 上的图片，其来源可参照 ACTION DEFAULT 段说
+明。</li>
+<li>textGroup -&gt; text：显示在 BUTTON 上面的说明字符串。</li>
+</ul>
 <h3 id="buttonedit">
   ButtonEdit
   <a class="anchor" href="#buttonedit">#</a>
@@ -2470,15 +2513,15 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-37.png" alt="ButtonEdit" />
 
   <img src="images/image-38.png" alt="Alt text" /></p>
-<p>定义一个编辑栏位的元件，可透过右侧按钮以触发某一事件。通常用在串连与此栏位输入时有关的动作，例如查询合法可用资料等。此元件为FormField 物件，可设定与数据库中资料表的栏位相关联，将data 属性设为TABLE_COLUMN 时可额外设定tableName 及columnName 这两个属性。</p>
+<p>定义一个编辑栏位的元件，可透过右侧按钮以触发某一事件。通常用在串连与此栏位输入时有关的动作，例如查询合法可用资料等。此元件为 FormField 物件，可设定与数据库中资料表的栏位相关联，将 data 属性设为 TABLE_COLUMN 时可额外设定 tableName 及 columnName 这两个属性。</p>
 <p>常用属性：</p>
 <ul>
-<li>action：设定当按下按纽时要触发4GL 中何组ON ACTION 段、此处定义其action-id。</li>
+<li>action：设定当按下按纽时要触发 4GL 中何组 ON ACTION 段、此处定义其 action-id。</li>
 <li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
-<li>Image Group -&gt; image：设定出现在BUTTON 上的图片，其来源可参照ACTION DEFAULT 段说明。</li>
+<li>Image Group -&gt; image：设定出现在 BUTTON 上的图片，其来源可参照 ACTION DEFAULT 段说明。</li>
 <li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
-<li>constraints -&gt; notNull：不可在此栏位输入NULL 值或空字符串。</li>
-<li>constraints -&gt; required：不可在此栏位输入NULL 值、空字符串或纯空格符。</li>
+<li>constraints -&gt; notNull：不可在此栏位输入 NULL 值或空字符串。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
 <li>appearance -&gt; case：令输入字符串自动转换大/小写。</li>
 <li>appearance -&gt; scroll：卷动，若数据库栏宽大于画面预留栏宽时有效，当设定此属性时可藉卷动方式输入。</li>
 </ul>
@@ -2490,9 +2533,9 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-41.png" alt="Alt text" />
 
   <img src="images/image-42.png" alt="Alt text" /></p>
-<p>定义一个可利用下拉功能选值的编辑栏位，若输入资料只有几种值可供选择时，建议采用RadioGroup 方式来限缩使用者可输入的内容（参阅RadioGroup）。属于FormField物件，可设定与资料栏位的关联。</p>
+<p>定义一个可利用下拉功能选值的编辑栏位，若输入资料只有几种值可供选择时，建议采用 RadioGroup 方式来限缩使用者可输入的内容（参阅 RadioGroup）。属于 FormField 物件，可设定与资料栏位的关联。</p>
 <p>选项对话视窗:</p>
-<p>可管理ComboBox 的选项，也可以按字母顺序排列选项的Text。</p>
+<p>可管理 ComboBox 的选项，也可以按字母顺序排列选项的 Text。</p>
 <p>
   <img src="images/image-43.png" alt="Alt text" /></p>
 <p>常用属性：</p>
@@ -2500,10 +2543,10 @@ https://github.com/alex-shpak/hugo-book
 <li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
 <li>items：定义可选择的选项，用对话视窗设定。</li>
 <li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
-<li>constraints -&gt; notNull：不可在此栏位输入NULL 值或空字符串，可抑制NULL 选项出现。</li>
-<li>constraints -&gt; required：不可在此栏位输入NULL 值、空字符串或纯空格符。</li>
-<li>queryEditable：当设定此属性后，若为CONSTRUCT 模式下即可开放USER 自行输入。</li>
-<li>case 令输入字符串自动转换大/小写。</li>
+<li>constraints -&gt; notNull：不可在此栏位输入 NULL 值或空字符串，可抑制 NULL 选项出现。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
+<li>queryEditable：当设定此属性后，若为 CONSTRUCT 模式下即可开放 USER 自行输入。</li>
+<li>case  令输入字符串自动转换大/小写。</li>
 </ul>
 <h3 id="dateedit">
   DateEdit
@@ -2513,12 +2556,12 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-39.png" alt="Alt text" />
 
   <img src="images/image-40.png" alt="Alt text" /></p>
-<p>定义一个日期编辑，按右侧钮可带出Client 端万年历选择视窗。日期显示格式由主机端DBDATE 环境变量控制。属于FormField 物件，可设定与资料栏位的关联。</p>
+<p>定义一个日期编辑，按右侧钮可带出 Client 端万年历选择视窗。日期显示格式由主机端 DBDATE 环境变量控制。属于 FormField 物件，可设定与资料栏位的关联。</p>
 <p>常用属性：</p>
 <ul>
 <li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
 <li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
-<li>constraints -&gt; required：不可在此栏位输入NULL 值、空字符串或纯空格符。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
 </ul>
 <h3 id="radiogroup">
   RadioGroup
@@ -2528,7 +2571,7 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-44.png" alt="Alt text" />
 
   <img src="images/image-45.png" alt="Alt text" /></p>
-<p>定义一个可用选择方式输入资料的输入栏位，此种选择方式会将选项清单展示在画面上（ComboBox 不会展开显示，可参照ComboBox 说明），故若需要采用此输入形态，要注意画面空间是否足够。</p>
+<p>定义一个可用选择方式输入资料的输入栏位，此种选择方式会将选项清单展示在画面上（ComboBox 不会展开显示，可参照 ComboBox 说明），故若需要采用此输入形态，要注意画面空间是否足够。</p>
 <p>
   <img src="images/image-46.png" alt="Alt text" /></p>
 <p>常用属性：</p>
@@ -2536,13 +2579,13 @@ https://github.com/alex-shpak/hugo-book
 <li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
 <li>items：定义可选择的选项，依范例方式设定。【必要属性】</li>
 <li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
-<li>constraints -&gt; notNull：不可在此栏位输入NULL 值或空字符串。</li>
-<li>constraints -&gt; required：不可在此栏位输入NULL 值、空字符串或纯空格符。</li>
+<li>constraints -&gt; notNull：不可在此栏位输入 NULL 值或空字符串。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
 <li>orientation：可定义选项排列方式为垂直排列（vertical）或水平排列（horizontal）。</li>
 </ul>
 <blockquote class="book-hint info">
   <p><strong>注意</strong></p>
-<p>使用ComboBox 可动态定义items，而RadioGroup 不可动态定义items。</p>
+<p>使用 ComboBox 可动态定义 items，而 RadioGroup 不可动态定义 items。</p>
 
 </blockquote>
 
@@ -2551,33 +2594,48 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#checkbox">#</a>
 </h3>
 <p>
-  <img src="images/image-47.png" alt="Alt text" />
+  <img src="images/image-47.png" alt="CheckBox" />
 
-  <img src="images/image-48.png" alt="Alt text" /></p>
-<h3 id="formfieldlabel">
-  FormFieldLabel
-  <a class="anchor" href="#formfieldlabel">#</a>
-</h3>
-<p>
-  <img src="images/image-49.png" alt="Alt text" />
-
-  <img src="images/image-50.png" alt="Alt text" /></p>
+  <img src="images/image-48.png" alt="CheckBox" /></p>
+<p>当栏位选项只有两种选择时（如：是或否，0 或 1，100 或 200 等），就可以采用此种输入型态执行输入。属于 FormField 物件，可以设定与资料栏位相关联。</p>
+<p>常用属性：</p>
+<ul>
+<li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
+<li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
+<li>constraints -&gt; notNull：不可在此栏位输入 NULL 值或空字符串，可抑制 NULL 选项出现。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
+<li>textGroup -&gt; text：显示在选取格后面的说明字符串。</li>
+<li>valueChecked：选取核取后传入 4GL 的值，可为数字、字符、字符串。【必要属性】</li>
+<li>valueUnchecked：选取取消后传入 4GL 的值，可为数字、字符、字符串。【必要属性】</li>
+</ul>
 <h3 id="hline">
   HLine
   <a class="anchor" href="#hline">#</a>
 </h3>
 <p>
-  <img src="images/image-52.png" alt="Alt text" />
+  <img src="images/image-52.png" alt="HLine" />
 
-  <img src="images/image-51.png" alt="Alt text" /></p>
+  <img src="images/image-51.png" alt="HLine" /></p>
+<p>水平分隔线</p>
 <h3 id="canvas">
   Canvas
   <a class="anchor" href="#canvas">#</a>
 </h3>
 <p>
-  <img src="images/image-53.png" alt="Alt text" />
+  <img src="images/image-53.png" alt="Canvas" />
 
-  <img src="images/image-54.png" alt="Alt text" /></p>
+  <img src="images/image-54.png" alt="Canvas" /></p>
+<p>定义一个绘图的区块以供 4GL 程序绘制图形用。</p>
+<p>常用属性：</p>
+<ul>
+<li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
+</ul>
+<blockquote class="book-hint ">
+  <p><strong>说明</strong></p>
+<p>Genero BDL 可支援简易的绘图模式，但需藉由建立物件 om.DomNode 的方式来建立，此部份可参阅 Genero BDL 在线说明文件。</p>
+
+</blockquote>
+
 <h3 id="progressbar">
   ProgressBar
   <a class="anchor" href="#progressbar">#</a>
@@ -2586,6 +2644,18 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-55.png" alt="Alt text" />
 
   <img src="images/image-56.png" alt="Alt text" /></p>
+<p>定义一水平方向的进度显示表。</p>
+<p>常用属性：</p>
+<ul>
+<li>valueMin：定义控制数值的最小值。</li>
+<li>valueMax：定义控制数值的最大值。</li>
+</ul>
+<blockquote class="book-hint info">
+  <p><strong>注意</strong></p>
+<p>TIPTOP GP 中有已定义完整的 Progress Bar 处理函式，可直接呼叫使用，使用者不需自行定义 Progress Bar。</p>
+
+</blockquote>
+
 <h3 id="textedit">
   TextEdit
   <a class="anchor" href="#textedit">#</a>
@@ -2594,66 +2664,111 @@ https://github.com/alex-shpak/hugo-book
   <img src="images/image-35.png" alt="TextEdit" />
 
   <img src="images/image-36.png" alt="TextEdit" /></p>
-<p>定义可编辑多行的栏位，输入长度当超过画面预留长度时，会自动出现卷轴。属于FormField 物件，可设定与资料栏位的关联。</p>
+<p>定义可编辑多行的栏位，输入长度当超过画面预留长度时，会自动出现卷轴。属于 FormField 物件，可设定与资料栏位的关联。</p>
 <p>常用属性：</p>
 <ul>
 <li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
 <li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
-<li>constraints -&gt; notNull：不可在此栏位输入NULL 值或空字符串。</li>
-<li>constraints -&gt; required：不可在此栏位输入NULL 值、空字符串或纯空格符。</li>
+<li>constraints -&gt; notNull：不可在此栏位输入 NULL 值或空字符串。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
 <li>appearance -&gt; case：令输入字符串自动转换大/小写。</li>
-<li>scrollBars：可设定卷轴出现的位置，有NONE、VERTICAL、HORIZONTAL、BOTH 等。</li>
-<li>wantTabs：当设定此属性时，允许在输入框中输入TAB 键。</li>
-<li>WantNoReturns：当设定此属性时，不允许在输入框中输入ENTER 键。</li>
+<li>scrollBars：可设定卷轴出现的位置，有 NONE、VERTICAL、HORIZONTAL、BOTH 等。</li>
+<li>wantTabs：当设定此属性时，允许在输入框中输入 TAB 键。</li>
+<li>WantNoReturns：当设定此属性时，不允许在输入框中输入 ENTER 键。</li>
 </ul>
 <h3 id="timeedit">
   TimeEdit
   <a class="anchor" href="#timeedit">#</a>
 </h3>
 <p>
-  <img src="images/image-61.png" alt="Alt text" />
+  <img src="images/image-61.png" alt="TimeEdit" />
 
-  <img src="images/image-62.png" alt="Alt text" /></p>
-<h3 id="staticimage">
-  StaticImage
-  <a class="anchor" href="#staticimage">#</a>
+  <img src="images/image-62.png" alt="TimeEdit" /></p>
+<p>定义一个时间编辑栏位。属于 FormField 物件，可设定与资料栏位的关联。</p>
+<p>常用属性：</p>
+<ul>
+<li>commentGroup -&gt; comment：设定说明内容，当鼠标移过时会以符动视窗方式显示内容。</li>
+<li>constraints -&gt; noEntry：设定此属性后即无法进入此栏位编辑资料。</li>
+<li>constraints -&gt; required：不可在此栏位输入 NULL 值、空字符串或纯空格符。</li>
+</ul>
+<h3 id="image">
+  Image
+  <a class="anchor" href="#image">#</a>
 </h3>
-<p>
-  <img src="images/image-63.png" alt="Alt text" />
+<p>定义一个可显示图档的区域。</p>
+<p>Image 分为下列两种 Widget：</p>
+<ul>
+<li>StaticImage
 
-  <img src="images/image-64.png" alt="Alt text" /></p>
-<h3 id="formfieldimage">
-  FormFieldImage
-  <a class="anchor" href="#formfieldimage">#</a>
-</h3>
-<p>
-  <img src="images/image-65.png" alt="Alt text" />
+  <img src="images/image-63.png" alt="StaticImage" />
 
-  <img src="images/image-66.png" alt="Alt text" /></p>
+  <img src="images/image-64.png" alt="StaticImage" /></li>
+</ul>
+<p>显示静态图档。</p>
+<ul>
+<li>FormFieldImage
+
+  <img src="images/image-65.png" alt="FormFieldImage" />
+
+  <img src="images/image-66.png" alt="FormFieldImage" /></li>
+</ul>
+<p>显示动态图档</p>
+<p>常用属性：</p>
+<ul>
+<li>autoScale：自动依画面上现行留存框格为准，调整（等比例缩放）显示在画面上的图片大小。</li>
+<li>geometry  Width 或 Height：不以画框的方式指定大小，而直接以画素指定的方式定宽或高。</li>
+<li>stretch：定义是否要出现卷轴，有 none、x、y、both 四种可选择。
+<blockquote class="book-hint info">
+  <p><strong>说明</strong></p>
+<ul>
+<li>
+<p>IMAGE 有区分动态或静态模式，以上范例为动态模式，影像图片在 CLEAR FORM 时会一并清除，如同一般栏位设定。若图片属于 logo 类与资料无关、不会常常切换的话，建议可改用静态图片的作法。</p>
+</li>
+<li>
+<p>静态的以『Image Group -&gt; image』属性以指定图片档来源。静态图片不会因 CLEAR FORM 被清除。</p>
+</li>
+</ul>
+
+</blockquote>
+</li>
+</ul>
 <h3 id="slider">
   Slider
   <a class="anchor" href="#slider">#</a>
 </h3>
 <p>
-  <img src="images/image-67.png" alt="Alt text" />
+  <img src="images/image-67.png" alt="Slider" />
 
-  <img src="images/image-68.png" alt="Alt text" /></p>
+  <img src="images/image-68.png" alt="Slider" /></p>
+<p>定义一个水平或垂直刻度的拖动条栏位。属于 FormField 物件，可设定与资料栏位的关联。显示的位置必须在有效范围内（在下限与上限之中）。</p>
+<p>常用属性：</p>
+<ul>
+<li>valueMin：定义控制数值的最小值。</li>
+<li>valueMax：定义控制数值的最大值。</li>
+<li>step：刻度的间距。</li>
+</ul>
 <h3 id="spinedit">
   SpinEdit
   <a class="anchor" href="#spinedit">#</a>
 </h3>
 <p>
-  <img src="images/image-69.png" alt="Alt text" />
+  <img src="images/image-69.png" alt="SpinEdit" />
 
-  <img src="images/image-70.png" alt="Alt text" /></p>
+  <img src="images/image-70.png" alt="SpinEdit" /></p>
+<p>定义一个旋转编辑栏位。属于 FormField 物件，可设定与资料栏位的关联。上下图示的按钮可以增加/减少数值，也可以直接在栏位中输入数值。</p>
+<p>常用属性：</p>
+<ul>
+<li>step：增加/减少数值的间距。</li>
+</ul>
 <h3 id="webcomponent">
   WebComponent
   <a class="anchor" href="#webcomponent">#</a>
 </h3>
 <p>
-  <img src="images/image-72.png" alt="Alt text" />
+  <img src="images/image-72.png" alt="WebComponent" />
 
-  <img src="images/image-71.png" alt="Alt text" /></p>
+  <img src="images/image-71.png" alt="WebComponent" /></p>
+<p>WebComponent是一个可代码控制的可重用控件，并无示例，这里不展开讲。</p>
 <h2 id="其它项目">
   其它项目
   <a class="anchor" href="#%e5%85%b6%e5%ae%83%e9%a1%b9%e7%9b%ae">#</a>
@@ -2662,29 +2777,142 @@ https://github.com/alex-shpak/hugo-book
   TopMenus
   <a class="anchor" href="#topmenus">#</a>
 </h3>
+<p>TM 页签对应到fgl 中PER 档的TOMMENU Section。主要功能在将Action 依功能别群聚为一组一组，设定显示在画面上方Menu Bar，让使用者利用Pull-Down Menu 点选即可执行Action。</p>
+<p>
+  <img src="images/image-74.png" alt="TopMenus" /></p>
+<blockquote class="book-hint ">
+  <p><strong>注意</strong></p>
+<p>在TIPTOP GP 系统中亦有使用TM 功能，但已依TIPTOP GP 特性进行设定，并
+未将资料定义于4FD 档内，而是将资料另外储存于<code>$TOPCONFIG/4tm</code>下。</p>
+<p>你在运行作业时，也能看到当前作业使用到的TopMenu文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&lt;topprod:/u1/topprod/tiptop/azz/4gl&gt; exe p_zz
+</span></span><span style="display:flex;"><span>Execute program:p_zz
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Guard-1234<span style="color:#f92672">]</span>Check successfully.
+</span></span><span style="display:flex;"><span>&lt;topprod:/u1/topprod/tiptop/azz/4gl&gt;
+</span></span><span style="display:flex;"><span>SESSIONID:             <span style="color:#ae81ff">288299771</span>  PLANT:FOREWIN  DBNAME:forewin
+</span></span><span style="display:flex;"><span>INFO: Your Plant <span style="color:#f92672">(</span>FOREWIN<span style="color:#f92672">)</span> is setting in GMT+8 time zone.
+</span></span><span style="display:flex;"><span>No idle control
+</span></span><span style="display:flex;"><span>INFO: 4st <span style="color:#66d9ef">for</span> Interface Level <span style="color:#f92672">=</span> /u1/topprod/tiptop/config/4st/tiptop.4st
+</span></span><span style="display:flex;"><span>INFO: 4ad <span style="color:#66d9ef">for</span> Interface Level <span style="color:#f92672">=</span> /u1/topprod/tiptop/config/4ad/2/tiptop.4ad
+</span></span><span style="display:flex;"><span>INFO: 4ad <span style="color:#66d9ef">for</span> Form Level <span style="color:#f92672">=</span> /u1/topprod/tiptop/config/4ad/2/azz/p_zz.4ad
+</span></span><span style="display:flex;"><span>INFO: 4tm <span style="color:#66d9ef">for</span> Interface Level <span style="color:#f92672">=</span> /u1/topprod/tiptop/config/4tm/topmenu_i.4tm
+</span></span><span style="display:flex;"><span>INFO: 4tb <span style="color:#66d9ef">for</span> Interface Level <span style="color:#f92672">=</span> /u1/topprod/tiptop/config/4tb/toolbar_i.4tb
+</span></span><span style="display:flex;"><span>g_ui_setting : std
+</span></span><span style="display:flex;"><span>INFO: Locale feature use   0.05225 seconds.
+</span></span></code></pre></div>
+</blockquote>
+
 <h3 id="toolbars">
   Toolbars
   <a class="anchor" href="#toolbars">#</a>
 </h3>
+<p>对应至原PER 格式的TOOLBAR Section，主要功能在定义将常用的Action 显示在画面上方TOOLBAR 处。</p>
+<p>
+  <img src="images/image-75.png" alt="Toolbars" /></p>
 <h3 id="action-defaults">
   Action Defaults
   <a class="anchor" href="#action-defaults">#</a>
 </h3>
+<p>AD 页签对应到原PER 档的ACTION DEFAULTS 区段，主要功能是定义功能按键（Action）的属性，包含显示在画面档上的文字、快速键（1.31 以上版本允许设定至多三组）、显示图片、弹出式说明（Hint、Comments）等属性，须搭配4GL 程序才会有作用。</p>
+<h4 id="4ad档">
+  <code>.4ad</code>档
+  <a class="anchor" href="#4ad%e6%a1%a3">#</a>
+</h4>
+<p>在某些特殊原因下，可照规则编写一XML 格式档案（例如下面范例：act.4ad）。</p>
+<p>而在4GL 程序中以呼叫（CALL）ui.Interface.loadActionDefaults(&ldquo;4ad-filename&rdquo;) ，传入参数是4ad 档档名，附档名可不写；产生的结果也与在PER 档编辑ACTION DEFAULTS 段或在4FD 编写TM 功效一致。</p>
+<p><em>范例：act.4ad</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;ActionDefaultList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;ActionDefault</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;add&#34;</span> <span style="color:#a6e22e">text=</span><span style="color:#e6db74">&#34;Append&#34;</span> <span style="color:#a6e22e">acceleratorName=</span><span style="color:#e6db74">&#34;CONTROL-V&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;ActionDefault</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;del&#34;</span> <span style="color:#a6e22e">text=</span><span style="color:#e6db74">&#34;Delete&#34;</span> <span style="color:#a6e22e">acceleratorName=</span><span style="color:#e6db74">&#34;SHIFT-F2&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;ActionDefault</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;zoom&#34;</span> <span style="color:#a6e22e">text=</span><span style="color:#e6db74">&#34;Zoom&#34;</span> <span style="color:#a6e22e">comment=</span><span style="color:#e6db74">&#34;Open zoom window&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;ActionDefault</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;quit&#34;</span> <span style="color:#a6e22e">text=</span><span style="color:#e6db74">&#34;Quit&#34;</span> <span style="color:#a6e22e">acceleratorName=</span><span style="color:#e6db74">&#34;SHIFT-F5&#34;</span> <span style="color:#a6e22e">image=</span><span style="color:#e6db74">&#34;quit&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/ActionDefaultList&gt;</span>
+</span></span></code></pre></div><p><em>4GL 引入范例：act.4gl</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE ls_flow_pic STRING
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">CALL</span> ui.Interface.loadActionDefaults(<span style="color:#e6db74">&#34;act&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">OPEN</span> WINDOW act_w <span style="color:#66d9ef">WITH</span> FORM <span style="color:#e6db74">&#34;/u1/topprod/tiptop/demo/edit&#34;</span>
+</span></span><span style="display:flex;"><span>    MENU <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">ON</span> ACTION <span style="color:#66d9ef">add</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">CALL</span> act_a()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">ON</span> ACTION del
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">：</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">ON</span> ACTION zoom
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">：</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">ON</span> ACTION quit
+</span></span><span style="display:flex;"><span>        EXIT Program
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> MENU
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">：</span>
+</span></span></code></pre></div><p>编译之后可以得到的画面与前一页相同。</p>
+<blockquote class="book-hint info">
+  <p><strong>注意</strong></p>
+<p>如TIPTOP GP 系统即未采用在PER 档编写ACTION DEFAULT 段的方法，原因是若编写在PER 档中，则于遭遇不同语系时，就需准备多组不同的PER 档案，如此则会增加程序开发的困难。故采用4ad 分离的方式以降低开发系统中会发生的错误情形。</p>
+
+</blockquote>
+
 <h3 id="screen-record">
   Screen Record
   <a class="anchor" href="#screen-record">#</a>
 </h3>
+<p>在4fd文件新增的可输入控件，在Records中都会生成对应屏幕变量组。</p>
+<p>
+  <img src="images/image-78.png" alt="Alt text" /></p>
+<p>一个屏幕变量集合（Screen Record）可以包含来自不同资料表格的资料行，甚至是formonly 的栏位，若该屏幕记录恰完全属于同一个表格（table），则可以使用<code>table_id.*</code>来定义。</p>
+<p>
+  <img src="images/image-79.png" alt="Alt text" /></p>
+<p>每个Table 元件都会自动建立Default Screen Record，所有的变更都会自动反应到Default Screen Record。</p>
+<p>可以对Table 建立不同栏位顺序的额外的ScreenRecord。</p>
+<blockquote class="book-hint info">
+  <p><strong>注意</strong></p>
+<ul>
+<li>使用Table 时虽然会自行建立SR 变量，但是却会以tbXX﹝即table 的名称﹞直接命名，和TIPTOP GP 对荧幕变量组命名规则不合，需要自行手动至属性页签处进行变更。</li>
+<li>栏位不可被重复定义，重复定义在编译时会产生编译错误。</li>
+</ul>
+
+</blockquote>
+
 <h3 id="style">
   Style
   <a class="anchor" href="#style">#</a>
 </h3>
+<p>
+  <img src="images/image-76.png" alt="Style" /></p>
+<p>在一个4fd的Form属性中有一个可以styleFile，它可以引入一个<code>4st</code>文件，这个文件可以影响4fd文件最后的样式。</p>
+<p>
+  <img src="images/image-77.png" alt="4st" /></p>
+<p>studio可以新建4st文件，<code>tiptop gp</code>有默认的<code>4st</code>文件，一般不去修改。</p>
 <h2 id="tab-index">
   Tab Index
   <a class="anchor" href="#tab-index">#</a>
 </h2>
+<p>定义画面上元件的输入顺序（按Tab 键可以跳到下一个元件）。可以在Edit Menu 中的Tab Index 或是如下图中的小图示上按鼠标左键执行。</p>
+<p>
+  <img src="images/image-80.png" alt="Tab Index" /></p>
+<p>更改顺序方式：</p>
+<ul>
+<li>双击鼠标左键将顺序数字重设为1。</li>
+<li>在任一数字上按鼠标左键将从目前的数字顺序往下排。</li>
+<li>结束目前的设定按ESC 键。</li>
+<li>再按一次ESC 键离开Tab index 设定（数字会消失）。
+更改顺序也可以透过直接更改元件的tabindex 属性的数值，但必须在离开Tab Index设定顺序的状态下。</li>
+</ul>
 <h2 id="alignment">
   Alignment
   <a class="anchor" href="#alignment">#</a>
+</h2>
+<p>
+  <img src="images/image-81.png" alt="Alignment" />
+
+  <img src="images/image-82.png" alt="Alignment" /></p>
+<p>在图示列或是在选单中Alignment 的功能。</p>
+<p>只有在同一个容器（container）内的元件（widgets）可以进行对齐功能。也可以同时选取多个元件修改它们的PosX/PosY 属性以达到对齐的功能。这些属性对上层容器物件来说是相对位置，而不是绝对位置。</p>
+<h1 id="练习">
+  练习
+  <a class="anchor" href="#%e7%bb%83%e4%b9%a0">#</a>
+</h1>
+<h2 id="将每个不同的控件都拖住到4fd文件中试一试">
+  将每个不同的控件都拖住到4fd文件中试一试
+  <a class="anchor" href="#%e5%b0%86%e6%af%8f%e4%b8%aa%e4%b8%8d%e5%90%8c%e7%9a%84%e6%8e%a7%e4%bb%b6%e9%83%bd%e6%8b%96%e4%bd%8f%e5%88%b04fd%e6%96%87%e4%bb%b6%e4%b8%ad%e8%af%95%e4%b8%80%e8%af%95">#</a>
 </h2>
 </article>
  
@@ -2695,7 +2923,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/3ec44711e731ab3b0115249ec33bd29bbf38971f" title='最后修改者 darcy | 2023年8月29日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/fa4626d48821b8a817f6b55b8b95f45e7cbc5dce" title='最后修改者 darcy | 2023年8月29日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2023年8月29日</span>
     </a>
@@ -2704,7 +2932,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/17.interface/2.wiget/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/17.interface/2.wiget/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2715,7 +2943,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -2756,7 +2984,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#布局">布局</a></li>
         <li><a href="#控件">控件</a>
           <ul>
-            <li><a href="#staticlabel">StaticLabel</a></li>
+            <li><a href="#label">Label</a></li>
             <li><a href="#edit">Edit</a></li>
             <li><a href="#button">Button</a></li>
             <li><a href="#buttonedit">ButtonEdit</a></li>
@@ -2764,14 +2992,12 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#dateedit">DateEdit</a></li>
             <li><a href="#radiogroup">RadioGroup</a></li>
             <li><a href="#checkbox">CheckBox</a></li>
-            <li><a href="#formfieldlabel">FormFieldLabel</a></li>
             <li><a href="#hline">HLine</a></li>
             <li><a href="#canvas">Canvas</a></li>
             <li><a href="#progressbar">ProgressBar</a></li>
             <li><a href="#textedit">TextEdit</a></li>
             <li><a href="#timeedit">TimeEdit</a></li>
-            <li><a href="#staticimage">StaticImage</a></li>
-            <li><a href="#formfieldimage">FormFieldImage</a></li>
+            <li><a href="#image">Image</a></li>
             <li><a href="#slider">Slider</a></li>
             <li><a href="#spinedit">SpinEdit</a></li>
             <li><a href="#webcomponent">WebComponent</a></li>
@@ -2788,6 +3014,11 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#tab-index">Tab Index</a></li>
         <li><a href="#alignment">Alignment</a></li>
+      </ul>
+    </li>
+    <li><a href="#练习">练习</a>
+      <ul>
+        <li><a href="#将每个不同的控件都拖住到4fd文件中试一试">将每个不同的控件都拖住到4fd文件中试一试</a></li>
       </ul>
     </li>
   </ul>

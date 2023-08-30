@@ -9,12 +9,13 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/cycle/" />
+
 <title>cycle | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/cycle/index.xml" title="BDL教程" />
@@ -2327,7 +2328,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>2</span>
+          <span>3</span>
         </li>
       
         <li class="flex justify-between">
@@ -2767,19 +2768,19 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
+    <p>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
 函数的开始就是函数调用，结束就是函数最后一行运行结束，或者运行到return处。
 调用
-call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip; graph LRa0(["开始"])-->a["调用"]a-->b["执行语句"]b-->c["end funtion/return"]c-->d(["结束"])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
+ call add() returning &hellip; display add() let a = add() call minus(10,add()) &hellip;  mermaid.initialize({"theme": "neutral"})graph LRa0(["开始"])--a["调用"]a--b["执行语句"]b--c["end funtion/return"]c--d(["结束"])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
 输入的是变量，输出的是变量。处理的也是变量。
 如果程序中一直增加功能，那么变量的数量会一直增加，如果不停增加下去，内存迟早有用完的一天。
 但实际上一个规划良好的程序并不会将内存全部占用。
 这是因为，在BDL中变量不是一直加载到内存中，有些变量用到的时候才会分配内存，不用的时候，内存会释放掉。
 那么变量在定义时就会分配内存，那么什么时候释放其内存呢？
 变量所在的作用域，所有语句执行完成时释放内存，在BDL中最小的作用域是函数。
-所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
-定义在main函数之前的函数，在main执行结束后才能释放内存。
-函数中定义的变量 graph LRa["函数调用"]-->b[["分配内存"]]b-->c(("..."))c-->d["end funtion/return"]d-->z[["释放内存"]]
+  所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
+  定义在main函数之前的函数，在main执行结束后才能释放内存。
+  函数中定义的变量 graph LRa["函数调用"]--b[["分配内存"]]b--c(("..."))c--d["end funtion/return"]d--z[["释放内存"]]
     </p>
   </article>
   
@@ -2809,11 +2810,11 @@ call add() returning &hellip; display add() let a = add() call minus(10,add()) &
 
 
 
-    <p>循环嵌套#循环结构也支持嵌套，如果把简单的循环内容为“一遍又一遍”，那循环嵌套便可称为“一层又一层，一遍又一遍”。
+    <p>循环嵌套#循环结构也支持嵌套，如果把简单的循环内容为“一遍又一遍”，那循环嵌套便可称为“一层又一层，一遍又一遍”。
 可以用始终来打比方，走一个代表执行一次循环，那么一小时里，分针又要走60个格，而分针每走一格，秒针也要走60格。
 如此，秒针的走动可以看成是内存循环，而分针的走动可看成是外层循环。
-嵌套示例#已for循环结构举例，限制想在屏幕上输出4*9个星号，这可以利用双重循环来做：
-define i,j integer define s string display &#34;&#34; for i = 1 to 4 let s = &#34;&#34; for j = 1 to 9 let s = s, &#34;* &#34; end for display s end for 输出结果为：
+嵌套示例#已for循环结构举例，限制想在屏幕上输出4*9个星号，这可以利用双重循环来做：
+ define i,j integer  define s string  display &#34;&#34;  for i = 1 to 4  let s = &#34;&#34;  for j = 1 to 9  let s = s, &#34;* &#34;  end for  display s  end for 输出结果为：
 * * * * * * * * ** * * * * * * * ** * * * * * * * ** * * * * * * * * 代码解析
         <a href="/docs/BDL/1.basic/9.over_and_over_again/3.cycle-in-cycle/">...</a>
       
@@ -2837,7 +2838,7 @@ define i,j integer define s string display &#34;&#34; for i = 1 to 4 let s = &#3
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3174,7 +3175,7 @@ define i,j integer define s string display &#34;&#34; for i = 1 to 4 let s = &#3
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>2</span>
+          <span>3</span>
         </li>
       
         <li class="flex justify-between">

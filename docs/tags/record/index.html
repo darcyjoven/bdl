@@ -9,12 +9,13 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/record/" />
+
 <title>record | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/record/index.xml" title="BDL教程" />
@@ -2327,7 +2328,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>2</span>
+          <span>3</span>
         </li>
       
         <li class="flex justify-between">
@@ -2767,19 +2768,19 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
+    <p>结构体#仍以人为例来介绍，要管理姓名、单位、E-mail地址、 联系电话等信息，现实生活中，很多人采用名片的形式，将这些信息印在一张卡片上。
 收集的一张张名片大大方便了数据的管理，将这种理念借鉴到BDL语言程序设计中，是否有类似于名片的那么一种变量呢?
 有，答案就是“结构体变量”，这是一种复合变量，在进一步说明结构体变量前，先来看“结构体”的概念，结构体和结构体变量的关系类似与类型与普通变量的关系，结构体中说明了结构体变量的信息格式，而结构体变量是结构体的实例。
-结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
-define 变量 record 存储数据列表 end record 举例说明：
-define person record name,age varchar(20), email varchar(50) end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
+结构体的定义#只有先完成结构体的定义，才能声明并使用结构体变量，正如，只有确定了名片，上要印什么内容，才能开始印刷名片。结构体的定义即是为了说明结构体变量要存储什么信息的过程。
+define 变量 record  存储数据列表  end record 举例说明：
+define person record  name,age varchar(20),  email varchar(50)  end record 上面我们定义了一个变量person，这个变量没有实际的累计，既不是字符串也不是数字。而其内有有另外类似变量的定义name、age和email。
 结构体定义规则：
-每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型 访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
+ 每个成员名称符合标识符规则 在同一个结构体中名称不得重复 每个成员定义后要加,号，最后一个成员不能加, 与下一个成员类型一致，可以省略类型  访问结构体成员#习惯上我们将诸如字符串name、age和email在结构体变量内部这些变量称作数据成员（简称成员），有的时候也称作元素、属性。
 在定义了一个结构体变量后，我们使用成员操作符号.来访问每个成员，例如person.name、person.age，分别表示person这个变量中储存的姓名年纪等信息。
 提示
 结构体成员，和我们之前使用的变量的方法都是使用.操作符号来访问/调用。他们的区别在于方法需要有()，而成员没有()。
-我们看一段示例代码：
-define zhangsan record name varchar(20), age integer, email varchar(50) end record let zhangsan.name = &#34;zhang san&#34; let zhangsan.age = 24 let zhangsan.email = &#34;zhangsan@outlook.com&#34; display sfmt(&#34;\nname:%1&#34;,zhangsan.name) display sfmt(&#34;age:%1&#34;,zhangsan.age) display sfmt(&#34;email:%1&#34;,zhangsan.email) 输出结果:
+我们看一段示例代码：
+ define zhangsan record  name varchar(20),  age integer,  email varchar(50)  end record   let zhangsan.name = &#34;zhang san&#34;  let zhangsan.
         <a href="/docs/BDL/2.medium/13.struct/1.record/">...</a>
       
     </p>
@@ -2802,7 +2803,7 @@ define zhangsan record name varchar(20), age integer, email varchar(50) end reco
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3139,7 +3140,7 @@ define zhangsan record name varchar(20), age integer, email varchar(50) end reco
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>2</span>
+          <span>3</span>
         </li>
       
         <li class="flex justify-between">

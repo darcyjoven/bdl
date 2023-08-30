@@ -3,52 +3,53 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
-什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
+<meta name="description" content="结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
+什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
 算法的思维体现在生活的各个方面,比如我们要去北京旅游，会问一些问题:“用什么交通工具?”“在哪里中转?”“是否要去奥运现场?”等，这都包含着算法。
 可见，算法的步骤间有一定的逻辑顺序，按这些顺序执行步骤便可以解决问题，达到目的。这种逻辑顺序，在BDL语言中体现为控制结构。
-算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
+算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
 原则上，自然语言也可用于算法表示，但由于自然语言的多义性，不同的人对同-一个版本的描述可能有不同的理解，因此，一般不采用自然语言来描述算法，要求采用一种精确的、无歧义的机制。
 有两种广泛使用的算法表示方法，一是伪代码法，二是流程图法。
-算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
+算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
 使用伪代码表示算法无须遵守严格的语法规则，只要完整表达了意思，书写清晰，容易阅读和读懂即可。举例如下:
-用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
-算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
+用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作 上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
+算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
 现在通用的流程图符号画法采纳的是ANSI (美国国家标准化协会)的标准，如图所示。
-flowchart LRid1([&#34;起止框，表示程序起始和结束&#34;])id2{&#34;判断框&#34;}id3[/&#34;输入输出框，表示输入输出数据&#34;/]id4[&#34;处理框，完成某些操作&#34;]subgraph a[&#34;这是连接点，如果流程太长将用词截断&#34;]id5((...))endid6--&#34;程序执行方向&#34;--&gt;id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
+mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart LRid1([&#34;起止框，表示程序起始和结束&#34;])id2{&#34;判断框&#34;}id3[/&#34;输入输出框，表示输入输出数据&#34;/]id4[&#34;处理框，完成某些操作&#34;]subgraph a[&#34;这是连接点，如果流程太长将用词截断&#34;]id5((...))endid6--&#34;程序执行方向&#34;--id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
 在描述基本结构时，本书尽量采用流程图方式。
 以上伪代码，用流程表示如下:
-flowchart TDa([&#34;开始&#34;])--&gt;b[/&#34;用户输入&#34;/]b--&gt;c{&#34;判断是否是字符Y&#34;}c--&#34;YES&#34;--&gt;d[&#34;C操作&#34;]c--&#34;NO&#34;--&gt;e[&#34;B操作&#34;]d--&gt;f([&#34;结束&#34;])e--&gt;f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
-flowchart TDa[&#34;语句1&#34;] --&gt; b[&#34;语句2&#34;]b--&gt; c[&#34;语句3&#34;]flowchart TDa{&#34;条件1&#34;}--&gt;b[&#34;语句1&#34;]a--&gt;c[&#34;语句2&#34;]flowchart TDa{&#34;">
+flowchart TDa([&#34;开始&#34;])--b[/&#34;用户输入&#34;/]b--c{&#34;判断是否是字符Y&#34;}c--&#34;YES&#34;--d[&#34;C操作&#34;]c--&#34;NO&#34;--e[&#34;B操作&#34;]d--f([&#34;结束&#34;])e--f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
+flowchart TDa[&#34;">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="2.结构化设计程序" />
-<meta property="og:description" content="结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
-什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
+<meta property="og:description" content="结构化设计程序#结构化程序设计的思想是:把一个需要解决的复杂问题分解成若干模块来处理，每个模块解决一个小问题，这种分而治之的方法大大降低了程序设计的难度。结构化程序设计的核心问题是算法和控制结构。
+什么是算法#所谓算法，指的是解决问题时的一系列方法和步骤。
 算法的思维体现在生活的各个方面,比如我们要去北京旅游，会问一些问题:“用什么交通工具?”“在哪里中转?”“是否要去奥运现场?”等，这都包含着算法。
 可见，算法的步骤间有一定的逻辑顺序，按这些顺序执行步骤便可以解决问题，达到目的。这种逻辑顺序，在BDL语言中体现为控制结构。
-算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
+算法的表示#抛开厚厚的教科书，不去谈哪些深奥无比的属性。 本章节讨论与算法使用最为相关的问题:算法如何表示。
 原则上，自然语言也可用于算法表示，但由于自然语言的多义性，不同的人对同-一个版本的描述可能有不同的理解，因此，一般不采用自然语言来描述算法，要求采用一种精确的、无歧义的机制。
 有两种广泛使用的算法表示方法，一是伪代码法，二是流程图法。
-算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
+算法的伪代码表示#伪代码是对自然语言表示的改进，给自然语言加上了形式化的框架，以一种简单、容易理解的方式描述算法的逻辑过程。用伪代码表示的算法无二义性，易于理解。
 使用伪代码表示算法无须遵守严格的语法规则，只要完整表达了意思，书写清晰，容易阅读和读懂即可。举例如下:
-用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
-算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
+用户输入：如果（用户输入的字符是Y）执行B操作否则执行C操作 上述代码便采用了伪代码表示方式，完成一种简单的分支选择结构
+算法的流程图表示#流程图法是种有效、直观的算法表示方法，利用不同的框代表不同的操作，利用有向线段表示算法的执行方向。
 现在通用的流程图符号画法采纳的是ANSI (美国国家标准化协会)的标准，如图所示。
-flowchart LRid1([&#34;起止框，表示程序起始和结束&#34;])id2{&#34;判断框&#34;}id3[/&#34;输入输出框，表示输入输出数据&#34;/]id4[&#34;处理框，完成某些操作&#34;]subgraph a[&#34;这是连接点，如果流程太长将用词截断&#34;]id5((...))endid6--&#34;程序执行方向&#34;--&gt;id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
+mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart LRid1([&#34;起止框，表示程序起始和结束&#34;])id2{&#34;判断框&#34;}id3[/&#34;输入输出框，表示输入输出数据&#34;/]id4[&#34;处理框，完成某些操作&#34;]subgraph a[&#34;这是连接点，如果流程太长将用词截断&#34;]id5((...))endid6--&#34;程序执行方向&#34;--id7将前面的伪代码表示转换为流程图表示，如图所示。 和伪代码方式相比，流程图方式采用了图形化的方式，更为直观，可以很清晰地反映控制结构的运作过程。
 在描述基本结构时，本书尽量采用流程图方式。
 以上伪代码，用流程表示如下:
-flowchart TDa([&#34;开始&#34;])--&gt;b[/&#34;用户输入&#34;/]b--&gt;c{&#34;判断是否是字符Y&#34;}c--&#34;YES&#34;--&gt;d[&#34;C操作&#34;]c--&#34;NO&#34;--&gt;e[&#34;B操作&#34;]d--&gt;f([&#34;结束&#34;])e--&gt;f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
-flowchart TDa[&#34;语句1&#34;] --&gt; b[&#34;语句2&#34;]b--&gt; c[&#34;语句3&#34;]flowchart TDa{&#34;条件1&#34;}--&gt;b[&#34;语句1&#34;]a--&gt;c[&#34;语句2&#34;]flowchart TDa{&#34;" />
+flowchart TDa([&#34;开始&#34;])--b[/&#34;用户输入&#34;/]b--c{&#34;判断是否是字符Y&#34;}c--&#34;YES&#34;--d[&#34;C操作&#34;]c--&#34;NO&#34;--e[&#34;B操作&#34;]d--f([&#34;结束&#34;])e--f三种控制结构#结构化程序设计提供了3种控制结构，分别是顺序结构、分支结构和循环结构，早在1966年，Bohm和Jacopini的研究证明，用此3种基本结构可以构成任意复杂的算法。 3种基本控制结构如图所示。
+flowchart TDa[&#34;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-19T18:34:31+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
+
 <title>2.结构化设计程序 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2226,7 +2227,7 @@ flowchart TD
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/1.basic/7.atoml_statement/2.structured-design-program/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2237,7 +2238,7 @@ flowchart TD
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

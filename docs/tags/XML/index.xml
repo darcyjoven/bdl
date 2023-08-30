@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/XML/</link>
     <description>Recent content in XML on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Tue, 29 Aug 2023 08:53:19 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/XML/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.前言--抽象界面</title>
@@ -13,18 +12,16 @@
       <pubDate>Tue, 29 Aug 2023 08:53:19 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/1.interface-tree/</guid>
-      <description>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
+      <description>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
 XML是一种标记语言，它并不是编程语言。
 你如果了解HTML，那么你就可以轻松理解XML。XML是一种要求严格的HTML，但他们实际并不存在包含不包含关系。
 在百度首页，按下F12，你能看到如下界面，这就是HTML语言。XML也遵循着类似的结构风格。
-XML 语法#XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
-XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
-名词介绍#&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt; &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt; &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt; &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以上 XML 代码中，
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; 是 XML 的申明
-任何一个 &amp;lt;...&amp;gt;到它的&amp;lt;.../&amp;gt;被称作元素，元素也被称为节点，是同一个意思
-以下是一个元素 &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt; &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt; &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt; &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以下也是一个元素 &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; 元素中可以包含元素
-&amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;中Tove是元素to的值
-&amp;lt;note name=&amp;quot;n1&amp;quot; &amp;gt;中name=&amp;quot;n1&amp;quot;被称作属性，name是属性名，n1是属性值</description>
+XML 语法# XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
+ XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
+名词介绍#&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt;  &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;  &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;  &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;  &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以上 XML 代码中，
+  &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; 是 XML 的申明
+  任何一个 &amp;lt;...&amp;gt;到它的&amp;lt;.../&amp;gt;被称作元素，元素也被称为节点，是同一个意思
+ 以下是一个元素   &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt;  &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;  &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;  &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;  &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!</description>
     </item>
     
   </channel>

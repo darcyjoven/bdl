@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/practise/</link>
     <description>Recent content in practise on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Tue, 29 Aug 2023 15:46:01 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/practise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.练习</title>
@@ -13,9 +12,9 @@
       <pubDate>Mon, 28 Aug 2023 14:21:21 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/4.practise/</guid>
-      <description>练习#生成一个长度为100的整数数组，并输出数组中可以被5整除的个数#长度100的整数数组，每个元素都为随机数，大于0且小于1000的整数 提示
+      <description>练习#生成一个长度为100的整数数组，并输出数组中可以被5整除的个数# 长度100的整数数组，每个元素都为随机数，大于0且小于1000的整数  提示
 util.Math.rand(100)可以获取小于等于100的随机整数。
-import util main display util.Math.rand(100) end main 生成随机数功能写为一个函数，且接受两个参数，生成数组的长度和随机数最大整数 生成一个长度为50的整数数组，并从小到大排序，排序后输出到屏幕#随机数生成请参考上一题 </description>
+import util main  display util.Math.rand(100) end main 生成随机数功能写为一个函数，且接受两个参数，生成数组的长度和随机数最大整数  生成一个长度为50的整数数组，并从小到大排序，排序后输出到屏幕# 随机数生成请参考上一题  </description>
     </item>
     
     <item>
@@ -24,8 +23,8 @@ import util main display util.Math.rand(100) end main 生成随机数功能写�
       <pubDate>Thu, 20 Jul 2023 17:49:58 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/5.practice/</guid>
-      <description>练习#定义一个字符串数组，并输出每个字符串字符对应ASCII的值#字符串数组的值分别为&amp;quot;A&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;d&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;F&amp;quot;,&amp;quot;G&amp;quot;
-写出下列代码输出结果#define i,j integer define a array[4] of integer let a[1]=1 let a[2]=2 let a[3]=3 let a[4] =4 for i = 1 to 4 for k = 1 to i let a[i] = a[j] - a[i] end for end for for i = 1 to 4 display sfmt(&amp;#34;%1&amp;#34;,a[i]) end for </description>
+      <description>练习#定义一个字符串数组，并输出每个字符串字符对应ASCII的值#字符串数组的值分别为&amp;quot;A&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;d&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;F&amp;quot;,&amp;quot;G&amp;quot;
+写出下列代码输出结果# define i,j integer  define a array[4] of integer  let a[1]=1 let a[2]=2 let a[3]=3 let a[4] =4  for i = 1 to 4  for k = 1 to i  let a[i] = a[j] - a[i]  end for  end for  for i = 1 to 4  display sfmt(&amp;#34;%1&amp;#34;,a[i])  end for </description>
     </item>
     
     <item>
@@ -34,8 +33,9 @@ import util main display util.Math.rand(100) end main 生成随机数功能写�
       <pubDate>Thu, 20 Jul 2023 13:39:23 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/10.function/5.practice/</guid>
-      <description>联系#自定义一个函数，计算你的存款利率。#例如输入10000块钱，定期存款3个月，那么3个月后你拥有多少钱？
-假设月利息3.1%</description>
+      <description>联系#自定义一个函数，计算你的存款利率。#例如输入10000块钱，定期存款3个月，那么3个月后你拥有多少钱？
+ 假设月利息3.1%
+ </description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@ import util main display util.Math.rand(100) end main 生成随机数功能写�
       <pubDate>Tue, 29 Aug 2023 08:13:19 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/6.practise/</guid>
-      <description>练习#使用cl_null()、cl_replace_str()、cl_digcut()、cl_get_env()#p_findfunc作业可以查询tiptop gp中常用sub、lib函数 请注意以上函数需要的参数和返回值数量 新增一个lib函数cl_get_runtime_line()#无参数 以下方式返回一个字符串，czz_czzi001.4gl为当前运行的文件名称，7为代码运行的当前行 file:czz_czzi001.4gl line:7 可以使用__FILE__ __LINE__ 两个宏定义标记 </description>
+      <description>练习#使用cl_null()、cl_replace_str()、cl_digcut()、cl_get_env()# p_findfunc作业可以查询tiptop gp中常用sub、lib函数 请注意以上函数需要的参数和返回值数量  新增一个lib函数cl_get_runtime_line()# 无参数 以下方式返回一个字符串，czz_czzi001.4gl为当前运行的文件名称，7为代码运行的当前行  file:czz_czzi001.4gl line:7 可以使用__FILE__ __LINE__ 两个宏定义标记  </description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@ import util main display util.Math.rand(100) end main 生成随机数功能写�
       <pubDate>Sun, 27 Aug 2023 15:45:02 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</guid>
-      <description>练习#创建学生资料表student#字段 数据类型 字段说明 name varchar(20) 姓名 grade varchar(4) 年级 course varchar(40) 课程名称 score number(5) 得分 输入学生资料信息，插入到数据库#如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入 姓名 年级 课程名称 得分 查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98</description>
+      <description>练习#创建学生资料表student#   字段 数据类型 字段说明     name varchar(20) 姓名   grade varchar(4) 年级   course varchar(40) 课程名称   score number(5) 得分    输入学生资料信息，插入到数据库# 如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入     姓名 年级 课程名称 得分    查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99 查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98 </description>
     </item>
     
     <item>
@@ -62,8 +62,8 @@ import util main display util.Math.rand(100) end main 生成随机数功能写�
       <pubDate>Tue, 29 Aug 2023 15:46:01 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/9.practise/</guid>
-      <description>练习#学生成绩录入作业#功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入 进阶#请将上述资料建立合适的表，并保存到数据库
-利用表格显示学生成绩#可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择 </description>
+      <description>练习#学生成绩录入作业# 功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入  进阶#请将上述资料建立合适的表，并保存到数据库
+利用表格显示学生成绩# 可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择  </description>
     </item>
     
   </channel>

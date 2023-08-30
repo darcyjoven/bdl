@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="变量#变量定义#变量定义，变量申明，都是同一个意思的两种翻译方法。
+<meta name="description" content="变量#变量定义#变量定义，变量申明，都是同一个意思的两种翻译方法。
 在定义变量的时候，需要给这个变量-一个名字。有了名字之后才能使用这个变量。回顾曾经编写的BDL语言代码，可以发现这些代码中，凡是用双引号括起来的部分，都是字符串。 那些没有用引号括起来的单词，一部分是C语言提供的关键字，比如integer，string等， 还有一部分是BDL语言提供的符号，如=、&#43;、-、()、{}等，这些单词和符号就是BDL语言的核心部分，编译器生来就认识它们。 另外没有使用双引号括起来的单词，如define a integer,其中的integer是关键字，a就是非BDL语言的关键字，对于编译器来说，它是不认识的。 要让编译器知道这个单词是什么意思，所以有了定义(define)。
 对于变量来说，变量的定义会使得编译器在变量符号表中新增一条记录。 这样编译器在后面如果读入了一个变量名，通过查询符号表，就知道是否声明过了。
-一行可以定义多个变量 define a,b,c integer 一样也可以拆成两行 define a, b, c integer 每行也可以只定义一个变量 define a integer define b integer define c integer 变量定义的顺序可以打乱 define b integer define a integer define c integer 不同类型可以定义在同一个define中，但必须指定每个不同类型变量的数据类型 define a, b integer c varchar(10) 定义变量的意义#BDL为什么要规定要先定义变量呢？ 为什么要指定变量的名字和对应的数据类型呢？
-建立变量符号表 通过声明变量，编译器可以建立变量符号表，如此一来，程序中用到了多少变量，每个变量的类型是什么，编译器非常清楚。如果使用了没有声明的变量，编译器在编译期间就可以发现，从而帮助程序员远离由于疏忽而将变量名写错的情况。下面演示了写错变量名后编译器编译时的提示信息。
-define a integer let a = 1 let b = a * 10 display b 编译提示变量未定义">
+ 一行可以定义多个变量  define a,b,c integer  一样也可以拆成两行  define a,  b,  c integer  每行也可以只定义一个变量  define a integer define b integer define c integer  变量定义的顺序可以打乱  define b integer define a integer define c integer  不同类型可以定义在同一个define中，但必须指定每个不同类型变量的数据类型  define a,  b integer  c varchar(10) 定义变量的意义#BDL为什么要规定要先定义变量呢？ 为什么要指定变量的名字和对应的数据类型呢？">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="4.变量" />
-<meta property="og:description" content="变量#变量定义#变量定义，变量申明，都是同一个意思的两种翻译方法。
+<meta property="og:description" content="变量#变量定义#变量定义，变量申明，都是同一个意思的两种翻译方法。
 在定义变量的时候，需要给这个变量-一个名字。有了名字之后才能使用这个变量。回顾曾经编写的BDL语言代码，可以发现这些代码中，凡是用双引号括起来的部分，都是字符串。 那些没有用引号括起来的单词，一部分是C语言提供的关键字，比如integer，string等， 还有一部分是BDL语言提供的符号，如=、&#43;、-、()、{}等，这些单词和符号就是BDL语言的核心部分，编译器生来就认识它们。 另外没有使用双引号括起来的单词，如define a integer,其中的integer是关键字，a就是非BDL语言的关键字，对于编译器来说，它是不认识的。 要让编译器知道这个单词是什么意思，所以有了定义(define)。
 对于变量来说，变量的定义会使得编译器在变量符号表中新增一条记录。 这样编译器在后面如果读入了一个变量名，通过查询符号表，就知道是否声明过了。
-一行可以定义多个变量 define a,b,c integer 一样也可以拆成两行 define a, b, c integer 每行也可以只定义一个变量 define a integer define b integer define c integer 变量定义的顺序可以打乱 define b integer define a integer define c integer 不同类型可以定义在同一个define中，但必须指定每个不同类型变量的数据类型 define a, b integer c varchar(10) 定义变量的意义#BDL为什么要规定要先定义变量呢？ 为什么要指定变量的名字和对应的数据类型呢？
-建立变量符号表 通过声明变量，编译器可以建立变量符号表，如此一来，程序中用到了多少变量，每个变量的类型是什么，编译器非常清楚。如果使用了没有声明的变量，编译器在编译期间就可以发现，从而帮助程序员远离由于疏忽而将变量名写错的情况。下面演示了写错变量名后编译器编译时的提示信息。
-define a integer let a = 1 let b = a * 10 display b 编译提示变量未定义" />
+ 一行可以定义多个变量  define a,b,c integer  一样也可以拆成两行  define a,  b,  c integer  每行也可以只定义一个变量  define a integer define b integer define c integer  变量定义的顺序可以打乱  define b integer define a integer define c integer  不同类型可以定义在同一个define中，但必须指定每个不同类型变量的数据类型  define a,  b integer  c varchar(10) 定义变量的意义#BDL为什么要规定要先定义变量呢？ 为什么要指定变量的名字和对应的数据类型呢？" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-18T09:23:44+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
+
 <title>4.变量 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2240,7 +2237,7 @@ display x 通过变量x， 得到了变量x的值了。</p>
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/1.basic/4.how_save_and_get_data/4.variable/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2251,7 +2248,7 @@ display x 通过变量x， 得到了变量x的值了。</p>
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

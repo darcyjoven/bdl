@@ -5,7 +5,6 @@
     <link>https://bdl.darcyjoven.com/tags/statement/</link>
     <description>Recent content in statement on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
     <lastBuildDate>Mon, 17 Jul 2023 16:49:56 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/statement/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>8.语句</title>
@@ -13,8 +12,8 @@
       <pubDate>Mon, 17 Jul 2023 16:49:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/8.statement/</guid>
-      <description>语句构成程序#BDL语言有以下5中类型语句。
-表达式语句。 BDL语言中，操作者或动作可成为表达式。 例如以下示例都是表达式语句： define a integerdisplay &amp;#34;hello world&amp;#34; BDL还有很多中流程控制语句。 如if-else，for循环语句，while循环语句，continue，结束本次循环语句，break跳出循环语句，switch多路分支语句，goto专项语句，return返回语句。 学习到画面规格后，还将设计到input输入语句，display显示语句（这里display与现在的display不同），dialog交互等画面控制语句。 函数调用构成的函数调用语句 符和语句，将以上语句写在同一行的语句 BDL语言中最小的程序单元是语句。 另外在源代码中有一些是指示编译器如何编译的预处理器指示命令，如&amp;amp;ifdef &amp;amp;endif &amp;amp;include等。 BDL语言源代码，就是由语句和这些指示命令构成的。</description>
+      <description>语句构成程序#BDL语言有以下5中类型语句。
+ 表达式语句。 BDL语言中，操作者或动作可成为表达式。 例如以下示例都是表达式语句：  define a integerdisplay &amp;#34;hello world&amp;#34; BDL还有很多中流程控制语句。 如if-else，for循环语句，while循环语句，continue，结束本次循环语句，break跳出循环语句，switch多路分支语句，goto专项语句，return返回语句。 学习到画面规格后，还将设计到input输入语句，display显示语句（这里display与现在的display不同），dialog交互等画面控制语句。 函数调用构成的函数调用语句 符和语句，将以上语句写在同一行的语句  BDL语言中最小的程序单元是语句。 另外在源代码中有一些是指示编译器如何编译的预处理器指示命令，如&amp;amp;ifdef &amp;amp;endif &amp;amp;include等。 BDL语言源代码，就是由语句和这些指示命令构成的。</description>
     </item>
     
   </channel>

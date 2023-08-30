@@ -3,20 +3,35 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="画面档文件的编译#4fd文件是我们的">
+<meta name="description" content="画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
+4fd 对应代码的文件的4gl
+42f对应代码文件的42m
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
+以上4fd文件，转为per描述如下：
+SCHEMA formonly  LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="3.画面档文件的编译" />
-<meta property="og:description" content="画面档文件的编译#4fd文件是我们的" />
+<meta property="og:description" content="画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
+4fd 对应代码的文件的4gl
+42f对应代码文件的42m
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
+以上4fd文件，转为per描述如下：
+SCHEMA formonly  LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/3.fglform/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-29T15:02:51+08:00" />
 <meta property="article:modified_time" content="2023-08-29T15:51:11+08:00" />
+
 <title>3.画面档文件的编译 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b2eaab18a970f2cd0ad70950d6d94bdbc6119282ad1fe9167e055d75826499d5.js" integrity="sha256-suqrGKlw8s0K1wlQ1tlL28YRkoKtH&#43;kWfgVddYJkmdU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -2012,7 +2027,19 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#画面档文件的编译">画面档文件的编译</a></li>
+    <li><a href="#画面档文件的编译">画面档文件的编译</a>
+      <ul>
+        <li><a href="#per文件">per文件</a></li>
+        <li><a href="#编译为42f">编译为42f</a></li>
+        <li><a href="#4fd-与-per-转换">4fd 与 per 转换</a>
+          <ul>
+            <li><a href="#4fd----per">4fd &ndash;&gt; per</a></li>
+            <li><a href="#per----4fd">per &ndash;&gt; 4fd</a></li>
+          </ul>
+        </li>
+        <li><a href="#tiptop-gp-的画面档编译方式">tiptop gp 的画面档编译方式</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -2029,7 +2056,115 @@ https://github.com/alex-shpak/hugo-book
   画面档文件的编译
   <a class="anchor" href="#%e7%94%bb%e9%9d%a2%e6%a1%a3%e6%96%87%e4%bb%b6%e7%9a%84%e7%bc%96%e8%af%91">#</a>
 </h1>
-<p><code>4fd</code>文件是我们的</p>
+<p><code>4fd</code>文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。</p>
+<p>在BDL中我们最终能使用的画面档文件是<code>42f</code>，从<code>4fd</code>到<code>42f</code>还需要经历一个编译的过程。</p>
+<p><code>4fd</code> 对应代码的文件的<code>4gl</code></p>
+<p><code>42f</code>对应代码文件的<code>42m</code></p>
+<h2 id="per文件">
+  per文件
+  <a class="anchor" href="#per%e6%96%87%e4%bb%b6">#</a>
+</h2>
+<p>在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。</p>
+<p><code>per</code>就是BDL之前的画面档文件，和<code>4fd</code>不同，<code>per</code>文件是纯代码编写。</p>
+<p>
+  <img src="images/image.png" alt="4fd" /></p>
+<p>以上<code>4fd</code>文件，转为<code>per</code>描述如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SCHEMA formonly
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LAYOUT <span style="color:#f92672">(</span>text<span style="color:#f92672">=</span>%<span style="color:#e6db74">&#34;Form&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>VBox VBox1
+</span></span><span style="display:flex;"><span>Folder Folder1
+</span></span><span style="display:flex;"><span>Page Page1<span style="color:#f92672">(</span>text<span style="color:#f92672">=</span>%<span style="color:#e6db74">&#34;Page1&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Grid Grid2
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">[</span>label1                        <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>END -- Grid2
+</span></span><span style="display:flex;"><span>END -- Page1
+</span></span><span style="display:flex;"><span>Page Page2<span style="color:#f92672">(</span>text<span style="color:#f92672">=</span>%<span style="color:#e6db74">&#34;Page2&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Grid Grid1
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">[</span>label2                          <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>END -- Grid1-
+</span></span><span style="display:flex;"><span>END -- Page2
+</span></span><span style="display:flex;"><span>END -- Folder1
+</span></span><span style="display:flex;"><span>Table Table1
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>edit1   |edit2   <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>edit1   |edit2   <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>edit1   |edit2   <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>edit1   |edit2   <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>edit1   |edit2   <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>END -- Table1
+</span></span><span style="display:flex;"><span>END -- VBox1
+</span></span><span style="display:flex;"><span>END -- Form
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ATTRIBUTES
+</span></span><span style="display:flex;"><span>Label label1:Label1, text<span style="color:#f92672">=</span>%<span style="color:#e6db74">&#34;Label1&#34;</span>;
+</span></span><span style="display:flex;"><span>Label label2:Label2, text<span style="color:#f92672">=</span>%<span style="color:#e6db74">&#34;Label2&#34;</span>;
+</span></span><span style="display:flex;"><span>Edit edit1<span style="color:#f92672">=</span>formonly.Edit1, tabIndex<span style="color:#f92672">=</span>1, title<span style="color:#f92672">=</span>%<span style="color:#e6db74">&#34;Edit1&#34;</span>;
+</span></span><span style="display:flex;"><span>Edit edit2<span style="color:#f92672">=</span>formonly.Edit2, tabIndex<span style="color:#f92672">=</span>2, title<span style="color:#f92672">=</span>%<span style="color:#e6db74">&#34;Edit2&#34;</span>;
+</span></span><span style="display:flex;"><span>END -- ATTRIBUTES
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>INSTRUCTIONS
+</span></span><span style="display:flex;"><span>SCREEN RECORD Record1<span style="color:#f92672">(</span>formonly.Edit1,formonly.Edit2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>END -- INSTRUCTIONS
+</span></span></code></pre></div><p>可以看到<code>per</code>文件时相当复杂的，甚至会用空格的个数来控制栏位的大小。</p>
+<p>虽然限制<code>per</code>文件已经被<code>4fd</code>文件替代了，但是<code>per</code>依然可以使用，实际上这两种格式文件可以任意转化。</p>
+<p>但是并不是等价的，<code>per</code>文件的信息比<code>4fd</code>少。</p>
+<h2 id="编译为42f">
+  编译为42f
+  <a class="anchor" href="#%e7%bc%96%e8%af%91%e4%b8%ba42f">#</a>
+</h2>
+<p><code>per</code>，<code>4fd</code>文件都是可以编译为<code>42f</code>文件的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># per</span>
+</span></span><span style="display:flex;"><span>fglform czzi001
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4fd</span>
+</span></span><span style="display:flex;"><span>gsform czzi001
+</span></span></code></pre></div><p>虽然命令不同，但都能生成42f文件</p>
+<h2 id="4fd-与-per-转换">
+  4fd 与 per 转换
+  <a class="anchor" href="#4fd-%e4%b8%8e-per-%e8%bd%ac%e6%8d%a2">#</a>
+</h2>
+<h3 id="4fd----per">
+  4fd &ndash;&gt; per
+  <a class="anchor" href="#4fd----per">#</a>
+</h3>
+<p><code>4fd</code> 无法直接转为 <code>per</code>，但是<code>per</code>是编译为<code>42f</code>的中间产物，一般编译时都删除<code>per</code>文件，我们可以不删除，保留它。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gsform -keep czzi001
+</span></span></code></pre></div><h3 id="per----4fd">
+  per &ndash;&gt; 4fd
+  <a class="anchor" href="#per----4fd">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gsform -import czzi001
+</span></span></code></pre></div><h2 id="tiptop-gp-的画面档编译方式">
+  tiptop gp 的画面档编译方式
+  <a class="anchor" href="#tiptop-gp-%e7%9a%84%e7%94%bb%e9%9d%a2%e6%a1%a3%e7%bc%96%e8%af%91%e6%96%b9%e5%bc%8f">#</a>
+</h2>
+<p>同<code>r.c2</code>，<code>r.l2 </code>一样，tiptop gp也封装了一些更方便的画面档编译命令。</p>
+<ul>
+<li>r.f2</li>
+</ul>
+<p>一键编译画面档文件(不区分per和<code>4fd</code>)，在<code>per</code>文件或者<code>4fd</code>文件的目录下运行即可，可以编译为<code>42f</code>，并将文件放在对应的目录下。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>r.f2 czzi001
+</span></span></code></pre></div><ul>
+<li>r.gf</li>
+</ul>
+<p>任意目录下都可以运行，可以预览编译好的画面档文件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>r.gf czzi001 <span style="color:#ae81ff">2</span> p
+</span></span></code></pre></div><p>
+  <img src="images/image-1.png" alt="r.gf" /></p>
+<ul>
+<li><code>2</code>参数 为语言别 ，2 为简体中文 1 为英文 0 为繁体中文</li>
+<li><code>p</code>参数 为客制否  p 为标准模组 c 为客制模组</li>
+</ul>
 </article>
  
       
@@ -2048,7 +2183,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/17.interface/3.fglform/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/17.interface/3.fglform/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2059,7 +2194,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -2084,7 +2219,19 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#画面档文件的编译">画面档文件的编译</a></li>
+    <li><a href="#画面档文件的编译">画面档文件的编译</a>
+      <ul>
+        <li><a href="#per文件">per文件</a></li>
+        <li><a href="#编译为42f">编译为42f</a></li>
+        <li><a href="#4fd-与-per-转换">4fd 与 per 转换</a>
+          <ul>
+            <li><a href="#4fd----per">4fd &ndash;&gt; per</a></li>
+            <li><a href="#per----4fd">per &ndash;&gt; 4fd</a></li>
+          </ul>
+        </li>
+        <li><a href="#tiptop-gp-的画面档编译方式">tiptop gp 的画面档编译方式</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

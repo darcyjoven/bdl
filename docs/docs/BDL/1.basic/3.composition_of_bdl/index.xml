@@ -4,18 +4,18 @@
     <title>第三章 最简单bdl程序的组成 on BDL教程</title>
     <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/</link>
     <description>Recent content in 第三章 最简单bdl程序的组成 on BDL教程</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.BDL程序全貌</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/1.BDL-look/</link>
       <pubDate>Mon, 17 Jul 2023 14:50:50 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/1.BDL-look/</guid>
-      <description>BDL程序全貌#database ds main display sfmt(&amp;#34;hello world&amp;#34;) end main 代码很短，只有几行就建立一个可运行的程序。 代码虽小，但五脏俱全，纵观整个代码，可以总结如下特点：
-代码有单词、符号、空白组成。 单次以英语单次为主有的单词是纯正的英语单词，如main、display、end、database；有的不是如sfmt。代码中的标点符号并不是随意输入的。 每个符号在编程中都有特定函数。 单词于单词之间用空白分割，空白可以是空格，也可以是tab制表符。个数没有限制
-BDL源码是从上往下阅读，也就是源码的先后顺序是由讲究的。 行与行之前可以有空白行，数量也没有显示。 有的行顶格书写，有的却向后退了几个空格，这种后退，成为“缩进”。如何缩进也是有讲究的。
-并没有专门的标识标识文件从哪里开始，也没标识文件从哪里结束。从第一个字符开始，文件就开始了，到最后一个字符结束，文件就结束了。</description>
+      <description>BDL程序全貌#database ds main  display sfmt(&amp;#34;hello world&amp;#34;) end main 代码很短，只有几行就建立一个可运行的程序。 代码虽小，但五脏俱全，纵观整个代码，可以总结如下特点：
+  代码有单词、符号、空白组成。 单次以英语单次为主有的单词是纯正的英语单词，如main、display、end、database；有的不是如sfmt。代码中的标点符号并不是随意输入的。 每个符号在编程中都有特定函数。 单词于单词之间用空白分割，空白可以是空格，也可以是tab制表符。个数没有限制
+  BDL源码是从上往下阅读，也就是源码的先后顺序是由讲究的。 行与行之前可以有空白行，数量也没有显示。 有的行顶格书写，有的却向后退了几个空格，这种后退，成为“缩进”。如何缩进也是有讲究的。
+  并没有专门的标识标识文件从哪里开始，也没标识文件从哪里结束。从第一个字符开始，文件就开始了，到最后一个字符结束，文件就结束了。
+  </description>
     </item>
     
     <item>
@@ -24,8 +24,8 @@ BDL源码是从上往下阅读，也就是源码的先后顺序是由讲究的�
       <pubDate>Mon, 17 Jul 2023 15:01:24 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/2.annotation/</guid>
-      <description>注释&amp;ndash;为何有必要在代码里留下程序员的解释#database ds --连接数据库 main # 入口函数 display sfmt(&amp;#34;hello world&amp;#34;) {打印} end main 以上代码中出现最多的是“&amp;ndash;”，“#”和“{}”后面或中间包含中文，这些就是注释。 注释是用来帮助程序员阅读源代码和理解源代码的。 编译器在编译时候，会把注释提出掉然后再进行编译，当前编译器是不会修改源文件，这些都是再内容中完成。 由于对于注释部分忽略不粗理，就如同没有这些字符一样，所以注释不会增加编译后的文件长度，对程序运行不起任何作用。对于注释，有以下几点说明。
-BDL的注释 有“&amp;ndash;”，“#”行注释，和“{}”包裹起来的块注释对。 编译器将行注释后的任何文件，和块注释包裹起来的任何文件都不予处理。 例如 {这些都是注释}--这些都是注释#这个有 空格 注释可以放在任何地方。通常，把注释放在要描述的代码上方，比较合适。对比比较短的代码，也可以放在后面。 注释和代码一定要同步更新。 代码修改而注释不做改变，这样的事情再实际开发中经常看见，而这一的情况可能带来严重后果。 注释内部不能再出现注释 {{这是不允许的}} 适量和恰当的注释是良好的编程风格的重要体现。 注释可以用来概括程序的算法、标识遍历和函数的意义，或者解释一段代码的意图。 但是再代码中混杂过多的注释会使得程序更难以理解，反而影响代码阅读。 </description>
+      <description>注释&amp;ndash;为何有必要在代码里留下程序员的解释#database ds --连接数据库 main # 入口函数  display sfmt(&amp;#34;hello world&amp;#34;) {打印} end main 以上代码中出现最多的是“&amp;ndash;”，“#”和“{}”后面或中间包含中文，这些就是注释。 注释是用来帮助程序员阅读源代码和理解源代码的。 编译器在编译时候，会把注释提出掉然后再进行编译，当前编译器是不会修改源文件，这些都是再内容中完成。 由于对于注释部分忽略不粗理，就如同没有这些字符一样，所以注释不会增加编译后的文件长度，对程序运行不起任何作用。对于注释，有以下几点说明。
+ BDL的注释 有“&amp;ndash;”，“#”行注释，和“{}”包裹起来的块注释对。 编译器将行注释后的任何文件，和块注释包裹起来的任何文件都不予处理。 例如  {这些都是注释}--这些都是注释#这个有 空格 注释可以放在任何地方。通常，把注释放在要描述的代码上方，比较合适。对比比较短的代码，也可以放在后面。 注释和代码一定要同步更新。 代码修改而注释不做改变，这样的事情再实际开发中经常看见，而这一的情况可能带来严重后果。 注释内部不能再出现注释  {{这是不允许的}} 适量和恰当的注释是良好的编程风格的重要体现。 注释可以用来概括程序的算法、标识遍历和函数的意义，或者解释一段代码的意图。 但是再代码中混杂过多的注释会使得程序更难以理解，反而影响代码阅读。  </description>
     </item>
     
     <item>
@@ -34,16 +34,16 @@ BDL的注释 有“&amp;ndash;”，“#”行注释，和“{}”包裹起来�
       <pubDate>Mon, 17 Jul 2023 15:12:04 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/3.main-function/</guid>
-      <description>main函数&amp;ndash;从哪里开始，到哪里结束#先看以下代码
-main display sfmt(&amp;#34;hello world&amp;#34;) end main 代码解析 main ...end main这一段是在定义BDL程序的主函数。函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。每一个BDL程序必须有且仅有一个main函 数，它是由程序员提供的。
+      <description>main函数&amp;ndash;从哪里开始，到哪里结束#先看以下代码
+main  display sfmt(&amp;#34;hello world&amp;#34;) end main 代码解析 main ...end main这一段是在定义BDL程序的主函数。函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。每一个BDL程序必须有且仅有一个main函 数，它是由程序员提供的。
 请读者思考一个问题:操作系统是如何开始运行调用一个程序的? 这个问题的意思是操作系统怎么知道一个程序的入口点在哪里?所谓入口点，就是程序的第一条指令。 操作系统调入程序二进制代码到内存后，从哪条指令开始运行程序呢?
 一种办法是从文件第一行开始，一行一行往下执行，直到文件结束。 很多语言就是采用这种方式。 比如QBASIC语言。 这种方法的好处显而易见，人类是怎么阅读的，计算机就是怎么执行的。 但是缺点也很多，当有两个源文件的时候，从哪个文件开始呢? 另一种办法是和运行程序的启动者协商一个规定的入口名字，从这个名字开始进入。这种方法就是BDL语言采用的方法。
 main函数就是BDL程序的入口点。无论整个工程有多少个C源文件，必须编写且只能编写一个main函数。程序就是从main的第一条语句开始执行，然后在main函数中，顺序执行其他语句，在这些语句中，调用其他函数，从而使整个程序运行起来。 main函数结束了，整个程序也就结束了。 由此可见，写BDL程序，就是写main函数。
-简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
-对于BDL语言，定义函数的语法规则如下：
+ 简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
+ 对于BDL语言，定义函数的语法规则如下：
 function 函数名称(参数1，参数2)函数体return 返回值end function 对比上面的语法规则可以看出，在main这一行中，main是函数名称。 函数可以是BDL语言系统提供的系统函数，也可以是用户自己编写的函数。 用户自己编写的函数，函数名字可以自行决定。
 例如：
-funtion add(x,y) define x,y integer return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。 类 似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
+funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。 类 似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
 每个参数都有一个数据类型。本例中的参数的数据类型是integer（整数）。 在function ... end funtion之间的的代码就是add函数实现的功能，被称做函数体。 在函数体里能做哪些事情，也是有规定的。在函数一章里再详细说明。</description>
     </item>
     
@@ -53,13 +53,13 @@ funtion add(x,y) define x,y integer return x+y end function 看以上代码，ad
       <pubDate>Mon, 17 Jul 2023 15:30:22 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/4.call-function/</guid>
-      <description>函数调用#看如下代码
+      <description>函数调用#看如下代码
 display sfmt(&amp;#34;\nhello world&amp;#34;) 这一行我们调用了，一个sfmt的函数，小括号中内的双引号括起来的文字是sfmt函数的参数。 该函数的功能就是把小括号的文字变为字符串，而display的功能就是将一个字符串功能打印出来。如果双引号内容改变，打印在控制台的内容也会改变。
 说明
-“\n”在这里有特殊的含义，读者可以发现“\n”并没有在屏幕中打印出来。 “\n”中的“\”是转义字符，表示其后面紧跟的字符有专门的意思。“\n” 表示将光标移到第二行第一格。也就是回车换行的意思。请读者注意函数定义和函数调用有如下的不同之处。
-简单地说，所谓函数定义就是程序员编写程序代码，去实现函数的功能。 请读者注意，定义好的函数不-定会被调用。 比如BDL语言提供的大批库函数都已经实现，但是程序员编写程序并不会用到库函数中的每一个函数，只是从中挑选有用的库函数来使用。
-函数调用就是调用已经编写好的函数，这些已经编写好的函数，可以是程序员自己编写的，叫做自定义函数;有的是BDL语言系统提供的函数，叫做库函数;有的是第三方提供的函数，叫做第三方库函数。BDL语言系统向程序员提供了非常丰富的库函数，以方便程序员使用。
-本例中，sfmt函数被主函数main调用。sfmt函数的定义读者是看不见的，当然也看不见sfmt函数的代码，也就不清楚sfmt函数是如何实现的。</description>
+“\n”在这里有特殊的含义，读者可以发现“\n”并没有在屏幕中打印出来。 “\n”中的“\”是转义字符，表示其后面紧跟的字符有专门的意思。“\n” 表示将光标移到第二行第一格。也就是回车换行的意思。请读者注意函数定义和函数调用有如下的不同之处。
+  简单地说，所谓函数定义就是程序员编写程序代码，去实现函数的功能。 请读者注意，定义好的函数不-定会被调用。 比如BDL语言提供的大批库函数都已经实现，但是程序员编写程序并不会用到库函数中的每一个函数，只是从中挑选有用的库函数来使用。
+  函数调用就是调用已经编写好的函数，这些已经编写好的函数，可以是程序员自己编写的，叫做自定义函数;有的是BDL语言系统提供的函数，叫做库函数;有的是第三方提供的函数，叫做第三方库函数。BDL语言系统向程序员提供了非常丰富的库函数，以方便程序员使用。
+  本例中，sfmt函数被主函数main调用。sfmt函数的定义读者是看不见的，当然也看不见sfmt函数的代码，也就不清楚sfmt函数是如何实现的。</description>
     </item>
     
     <item>
@@ -68,10 +68,10 @@ display sfmt(&amp;#34;\nhello world&amp;#34;) 这一行我们调用了，一个s
       <pubDate>Mon, 17 Jul 2023 15:49:10 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/5.count-1&#43;1/</guid>
-      <description>计算1+1&amp;ndash;小有作为#以下代码实现了计算1+1的值。
-databse ds main define a,b integer --定义a,b 为整型 define y integer --定义y为整型 let a = 1 --将变量a赋值为1，此时a的值为1 let b = 1 --将变量b赋值为1，此时b的值为1 let y = a + b --将a，b的值分别取出来，计算结果后，赋值给变量y display sfmt(&amp;#34;\na+b=%1&amp;#34;,y) --将y的值打印出来 end main 编译运行后，程序结果如下a+b=2
+      <description>计算1+1&amp;ndash;小有作为#以下代码实现了计算1+1的值。
+databse ds main  define a,b integer --定义a,b 为整型  define y integer --定义y为整型   let a = 1 --将变量a赋值为1，此时a的值为1  let b = 1 --将变量b赋值为1，此时b的值为1  let y = a + b --将a，b的值分别取出来，计算结果后，赋值给变量y  display sfmt(&amp;#34;\na+b=%1&amp;#34;,y) --将y的值打印出来 end main 编译运行后，程序结果如下a+b=2
 代码解析
-和之前代码一样，包含了database ds，同样也只有一个main函数。这是BDL语言规定，必须编写main函数。 define a,b integer定义a，b两个整形变量 define y integer定义y整形变量 空行用于分隔变量声明部分和接下来的函数实现部分。主要是逻辑分隔，利于程序员阅读代码，对编译器来说并无意义。 let a=1 给变量a赋值1，此时a的值为1,lei是BDL的规定，赋值时必须使用。 let b=1 给变量b赋值1，此时b的值为1 let y = a + b 将a，b的值分别取出来，计算结果后，赋值给变量y display sfmt(&amp;quot;\na+b=%1&amp;quot;,y),将y的值打印出来。这个sfmt和以前代码中的用法不同，简单说明下，更详细的解释参见后续章节。 双引号中的“\n”，时回车换行。 “a+b=”原样输出。 “%1”中的%是格式化的起始字符，只在sfmt函数中这样用，意思是将y在这个位置显示出来。所以最后的输出是： a+b=2 </description>
+ 和之前代码一样，包含了database ds，同样也只有一个main函数。这是BDL语言规定，必须编写main函数。 define a,b integer定义a，b两个整形变量 define y integer定义y整形变量 空行用于分隔变量声明部分和接下来的函数实现部分。主要是逻辑分隔，利于程序员阅读代码，对编译器来说并无意义。 let a=1 给变量a赋值1，此时a的值为1,lei是BDL的规定，赋值时必须使用。 let b=1 给变量b赋值1，此时b的值为1 let y = a + b 将a，b的值分别取出来，计算结果后，赋值给变量y display sfmt(&amp;quot;\na+b=%1&amp;quot;,y),将y的值打印出来。这个sfmt和以前代码中的用法不同，简单说明下，更详细的解释参见后续章节。 双引号中的“\n”，时回车换行。 “a+b=”原样输出。 “%1”中的%是格式化的起始字符，只在sfmt函数中这样用，意思是将y在这个位置显示出来。所以最后的输出是：  a+b=2 </description>
     </item>
     
     <item>
@@ -80,17 +80,15 @@ databse ds main define a,b integer --定义a,b 为整型 define y integer --定�
       <pubDate>Mon, 17 Jul 2023 15:59:44 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/6.variable/</guid>
-      <description>变量&amp;ndash;数据从哪里来，又到那里去#在计算机程序设计中，经常要用到变量。比如在屏幕中移动光标，需要存储光标的x，y坐标，每次移动光标，就需要对坐标修改，也就是x、y的值要改变;为了得到当前光标的坐标，就需要从x、y中得到当前的值。在程序设计中这些值都是通过变量来完成的。
-变量在内存中的表现形式#变量是指其值可以变化的量。在计算机中，指令代码、数据都存储于内存中。变量也需要存储在内存中。
+      <description>变量&amp;ndash;数据从哪里来，又到那里去#在计算机程序设计中，经常要用到变量。比如在屏幕中移动光标，需要存储光标的x，y坐标，每次移动光标，就需要对坐标修改，也就是x、y的值要改变;为了得到当前光标的坐标，就需要从x、y中得到当前的值。在程序设计中这些值都是通过变量来完成的。
+变量在内存中的表现形式#变量是指其值可以变化的量。在计算机中，指令代码、数据都存储于内存中。变量也需要存储在内存中。
 类比人类的思维过程，也很容易明白为什么需要内存空间存储变量:假设现在有3个数据，分别是a=3,b=4,c=5，需要读者去计算“a+b+c&amp;quot;的值。 读者首先回忆a的值是3，b的值是4,c的值是5，然后分别用3、4、5作为计算的数得到“3+4+5=12”。 这是一个很简单的过程，思考过程几乎不花费时间。如果计算的变量超过100个，估计大部分读者都记不住这么多数据的值，需要把这些数据及其对应的数值记录在纸上或其他地方，当需要用到某个数据的时候，再去查看其对应的值。计算机中变量的作用与它类似。
 在计算机中，每个变量都被分配了一块内存空间，在这些空间里存储的就是变量的值。 变量之所以可以变化，就是这个存储空间可以存储不同的数值。存储空间里的值变化，则变量对应的值也变化。 同一个时间，内存空间里只能保存一份值，新值冲掉了原来的旧值。 每个内存单元都有编号，这些是内存的地址。如图所示。
-编译器使用变量符号表#在源代码中，每个变量都有变量名。 实际上，编译后的目标代码里并没有变量名字，而是记录着变量在内存空间中的地址。 在BDL语言中，通过变量名就可以访问到变量的值，对变量名的访问，就是对变量值的访问。
+编译器使用变量符号表#在源代码中，每个变量都有变量名。 实际上，编译后的目标代码里并没有变量名字，而是记录着变量在内存空间中的地址。 在BDL语言中，通过变量名就可以访问到变量的值，对变量名的访问，就是对变量值的访问。
 在编译的过程中，编译器会建立-张变量符号表，该表记录的数据是:变量类型、变量名、变量地址等信息。
-变量及其使用#变量有不同的类型，如记录英文字母及标点符号，就需要字符类型(varchar) 的变量;记录整数需要整数类型integer的变量;记录实数有decimal类型的变量。这些变量都是数值类型，BDL语言还提供了其他类型的变量，详细讲解请参见后续章节的论述。
+变量及其使用#变量有不同的类型，如记录英文字母及标点符号，就需要字符类型(varchar) 的变量;记录整数需要整数类型integer的变量;记录实数有decimal类型的变量。这些变量都是数值类型，BDL语言还提供了其他类型的变量，详细讲解请参见后续章节的论述。
 通过上述的简单叙述，读者可以对变量有了一个大概的感性认识。再回过头来看看源代码中每行的意思。
-databse ds main define a,b integer --定义a,b 为整型 define y integer --定义y为整型 let a = 1 --将变量a赋值为1，此时a的值为1 let b = 1 --将变量b赋值为1，此时b的值为1 let y = a + b --将a，b的值分别取出来，计算结果后，赋值给变量y display sfmt(&amp;#34;\na+b=%1&amp;#34;,y) --将y的值打印出来 end main define a,b integer 这是向编译器声明，以下程序将会用到两个整型变量，其名字为a和b。此时并不会进行真 正的内存分配动作，也就是此时并没有内存地址与变量名关联。
-“define”是BDL语言提供的关键字，需要定义变量时必须使用。
-“integer”是BDL语言提供的关键字，是integer (整数)的缩写，表示为整数数据类型，简称整 型。 其后紧跟的是变量名称。变量名由程序员命名。变量名称也必须是字母开头，其后的部分可以是字母、数字、下划线的组合。 在同一行中可以声明多个变量，变量间用逗号分隔。</description>
+databse ds main  define a,b integer --定义a,b 为整型  define y integer --定义y为整型   let a = 1 --将变量a赋值为1，此时a的值为1  let b = 1 --将变量b赋值为1，此时b的值为1  let y = a + b --将a，b的值分别取出来，计算结果后，赋值给变量y  display sfmt(&amp;#34;\na+b=%1&amp;#34;,y) --将y的值打印出来 end main  define a,b integer  这是向编译器声明，以下程序将会用到两个整型变量，其名字为a和b。此时并不会进行真 正的内存分配动作，也就是此时并没有内存地址与变量名关联。</description>
     </item>
     
     <item>
@@ -99,12 +97,11 @@ databse ds main define a,b integer --定义a,b 为整型 define y integer --定�
       <pubDate>Mon, 17 Jul 2023 16:20:12 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/7.create-a-function/</guid>
-      <description>设计一个BDL函数#用BDL语言库函数和第三方提供的函数组装程序是程序设计的&amp;ndash;条捷径和重要方法。但是，一个C程序不可能只由一个main函数组成，不能在main函数中实现所有的功能。编写程序，更多的时候需要程序员自己动手创建新的函数。
-在main函数中计算3个整数的平均数#先看以下代码
-databse ds main define a,b,c,y integer --定义abc为整型 let a = 1 --赋值 let b = 2 --赋值 let c = 3 --赋值 let y = (a+b+c)/3 --进行数字计算 display sfmt(&amp;#34;\n the average is %1&amp;#34;,y) end main 编译后运行，程序输出为
+      <description>设计一个BDL函数#用BDL语言库函数和第三方提供的函数组装程序是程序设计的&amp;ndash;条捷径和重要方法。但是，一个C程序不可能只由一个main函数组成，不能在main函数中实现所有的功能。编写程序，更多的时候需要程序员自己动手创建新的函数。
+在main函数中计算3个整数的平均数#先看以下代码
+databse ds main  define a,b,c,y integer --定义abc为整型  let a = 1 --赋值  let b = 2 --赋值  let c = 3 --赋值  let y = (a+b+c)/3 --进行数字计算  display sfmt(&amp;#34;\n the average is %1&amp;#34;,y) end main 编译后运行，程序输出为
 the average is 2 代码解析
-main 不再赘述 define a,b,c,y integer 定义变量为整形， let ...= 1,2,3 变量赋初始值 let y = (a+b+c)/3 向编译器声明变量y为整型变量。计算a+b+c的值得到6，再整除3，得到2。 然后将2赋值给y。 “()&amp;ldquo;在这里同数学里的四则运算中的小括号“()”一样，表示需要优先运算。 “/”相当于四则运算中的除法运算。
-display sfmt(&amp;quot;\n the average is %1&amp;rdquo;,y) 在控制台中打印处y的值 这段代码计算1、2、3三个整数的平均值，最后正确打印出结果来。</description>
+ main 不再赘述 define a,b,c,y integer 定义变量为整形， let ...= 1,2,3 变量赋初始值 let y = (a+b+c)/3  向编译器声明变量y为整型变量。计算a+b+c的值得到6，再整除3，得到2。 然后将2赋值给y。 “()&amp;ldquo;在这里同数学里的四则运算中的小括号“()”一样，表示需要优先运算。 “/”相当于四则运算中的除法运算。</description>
     </item>
     
     <item>
@@ -113,8 +110,8 @@ display sfmt(&amp;quot;\n the average is %1&amp;rdquo;,y) 在控制台中打印�
       <pubDate>Mon, 17 Jul 2023 16:49:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/8.statement/</guid>
-      <description>语句构成程序#BDL语言有以下5中类型语句。
-表达式语句。 BDL语言中，操作者或动作可成为表达式。 例如以下示例都是表达式语句： define a integerdisplay &amp;#34;hello world&amp;#34; BDL还有很多中流程控制语句。 如if-else，for循环语句，while循环语句，continue，结束本次循环语句，break跳出循环语句，switch多路分支语句，goto专项语句，return返回语句。 学习到画面规格后，还将设计到input输入语句，display显示语句（这里display与现在的display不同），dialog交互等画面控制语句。 函数调用构成的函数调用语句 符和语句，将以上语句写在同一行的语句 BDL语言中最小的程序单元是语句。 另外在源代码中有一些是指示编译器如何编译的预处理器指示命令，如&amp;amp;ifdef &amp;amp;endif &amp;amp;include等。 BDL语言源代码，就是由语句和这些指示命令构成的。</description>
+      <description>语句构成程序#BDL语言有以下5中类型语句。
+ 表达式语句。 BDL语言中，操作者或动作可成为表达式。 例如以下示例都是表达式语句：  define a integerdisplay &amp;#34;hello world&amp;#34; BDL还有很多中流程控制语句。 如if-else，for循环语句，while循环语句，continue，结束本次循环语句，break跳出循环语句，switch多路分支语句，goto专项语句，return返回语句。 学习到画面规格后，还将设计到input输入语句，display显示语句（这里display与现在的display不同），dialog交互等画面控制语句。 函数调用构成的函数调用语句 符和语句，将以上语句写在同一行的语句  BDL语言中最小的程序单元是语句。 另外在源代码中有一些是指示编译器如何编译的预处理器指示命令，如&amp;amp;ifdef &amp;amp;endif &amp;amp;include等。 BDL语言源代码，就是由语句和这些指示命令构成的。</description>
     </item>
     
     <item>
@@ -123,7 +120,7 @@ display sfmt(&amp;quot;\n the average is %1&amp;rdquo;,y) 在控制台中打印�
       <pubDate>Mon, 17 Jul 2023 16:58:11 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/9.code-style/</guid>
-      <description>代码风格&amp;ndash;向优秀程序员看齐#所谓代码风格，是编写代码时对代码的排版布局、如何命名代码中的变量名称、函数名称等。 一个优秀的程序员，除了代码质量高、错误少之外，另一个非常重要的标准就是代码风格。
+      <description>代码风格&amp;ndash;向优秀程序员看齐#所谓代码风格，是编写代码时对代码的排版布局、如何命名代码中的变量名称、函数名称等。 一个优秀的程序员，除了代码质量高、错误少之外，另一个非常重要的标准就是代码风格。
 在很多时候，代码风格比程序的效率更加重要，代码风格的好坏可以直接看出一个程序员编程 的素质。
 优秀的代码风格如同一身得体的打扮，能够给人以良好的印象。
 初学程序设计，首先必须建立良好的编程习惯，这其中就包括代码风格。
@@ -138,7 +135,7 @@ display sfmt(&amp;quot;\n the average is %1&amp;rdquo;,y) 在控制台中打印�
       <pubDate>Mon, 17 Jul 2023 17:01:03 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/10.practice/</guid>
-      <description>练习#自定义一个函数，实现两个整数求和#找出以下代码的错误#database ds main() define a,b integer define y integer let a = 10 let b= 20 let y = add(a,b) display sfmt(&amp;#34;\n the average is %1&amp;#34;,y) end main function add(a,b) define a,b integer a+b end function </description>
+      <description>练习#自定义一个函数，实现两个整数求和#找出以下代码的错误#database ds  main()  define a,b integer  define y integer  let a = 10 let b= 20  let y = add(a,b)  display sfmt(&amp;#34;\n the average is %1&amp;#34;,y) end main  function add(a,b)  define a,b integer  a+b end function </description>
     </item>
     
   </channel>
