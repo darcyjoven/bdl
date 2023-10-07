@@ -7,12 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 29 Aug 2023 15:44:56 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/menu/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>4.Menu</title>
+      <title>4.MENU</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</link>
       <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
-      <description>Menu#</description>
+      <description>MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
+MENU 命令#MENU语法类似下面这样:
+MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [comment]  [ HELP help-number ]   COMMAND KEY ( key-name )  option [comment]  [ HELP help-number ]   ON ACTION action-name   ON IDLE idle-seconds  END MENU 说明：
+ 在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&amp;rsquo;default&amp;rsquo;。  属性包括:</description>
     </item>
     
   </channel>

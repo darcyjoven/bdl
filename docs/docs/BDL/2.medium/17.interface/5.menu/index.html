@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Menu#">
+<meta name="description" content="MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
+MENU 命令#MENU语法类似下面这样:
+MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [comment]  [ HELP help-number ]   COMMAND KEY ( key-name )  option [comment]  [ HELP help-number ]   ON ACTION action-name   ON IDLE idle-seconds  END MENU 说明：
+ 在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&rsquo;default&rsquo;。  属性包括:">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="4.Menu" />
-<meta property="og:description" content="Menu#" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="4.MENU" />
+<meta property="og:description" content="MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
+MENU 命令#MENU语法类似下面这样:
+MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [comment]  [ HELP help-number ]   COMMAND KEY ( key-name )  option [comment]  [ HELP help-number ]   ON ACTION action-name   ON IDLE idle-seconds  END MENU 说明：
+ 在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&rsquo;default&rsquo;。  属性包括:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-29T15:44:56+08:00" />
 <meta property="article:modified_time" content="2023-08-29T15:51:11+08:00" />
 
-<title>4.Menu | BDL教程</title>
+<title>4.MENU | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b24e189651e53ff572c3effe3eb96328e27b66169bcc966009733734b50c6245.js" integrity="sha256-sk4YllHlP/Vyw&#43;/&#43;PrljKOJ7ZhabzJZgCXM3NLUMYkU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1616,7 +1622,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="active">4.MENU</a>
   
 
         </li>
@@ -1629,7 +1635,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="active">4.Menu</a>
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
   
 
         </li>
@@ -1997,7 +2003,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>4.Menu</strong>
+  <strong>4.MENU</strong>
 
   <label for="toc-control">
     
@@ -2013,7 +2019,17 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#menu">Menu</a></li>
+    <li><a href="#menu">MENU</a>
+      <ul>
+        <li><a href="#menu-命令">MENU 命令</a></li>
+        <li><a href="#menu-option">MENU-OPTION</a></li>
+        <li><a href="#message">MESSAGE</a>
+          <ul>
+            <li><a href="#attribute">attribute</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -2027,10 +2043,196 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="menu">
-  Menu
+  MENU
   <a class="anchor" href="#menu">#</a>
 </h1>
-</article>
+<p>Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。</p>
+<h2 id="menu-命令">
+  MENU 命令
+  <a class="anchor" href="#menu-%e5%91%bd%e4%bb%a4">#</a>
+</h2>
+<p><code>MENU</code>语法类似下面这样:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MENU <span style="color:#f92672">[</span>title<span style="color:#f92672">]</span> ATTRIBUTE <span style="color:#f92672">(</span> control-attributes <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    BEFORE MENU
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    COMMAND option <span style="color:#f92672">[</span>comment<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">[</span> HELP help-number <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    COMMAND KEY <span style="color:#f92672">(</span> key-name <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        option <span style="color:#f92672">[</span>comment<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">[</span> HELP help-number <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ON ACTION action-name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ON IDLE idle-seconds
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>END MENU
+</span></span></code></pre></div><p><strong>说明：</strong></p>
+<ol>
+<li>在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&rsquo;default&rsquo;。</li>
+</ol>
+<p>属性包括:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">STYLE = string</td>
+<td style="text-align:left">定义 menu 型态，值可以为&rsquo;default&rsquo;， &lsquo;dialog&rsquo; or &lsquo;popup&rsquo;</td>
+</tr>
+<tr>
+<td style="text-align:left">COMMENT = string</td>
+<td style="text-align:left">定义 menu show 出来的讯息</td>
+</tr>
+<tr>
+<td style="text-align:left">IMAGE = string</td>
+<td style="text-align:left">定义选单中的图示</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>
+<p>BEFORE MENU 可以不写，若有一些特别的控管如隐藏某些menu 功能或参数控管是否进入某menu 功能时， 可在BEFORE MENU 来下一些menu-statemenu 来控管menu 部份。</p>
+</li>
+<li>
+<p>功能表仅为让使用者选择要执行的功能用，其他功能则不在此指令支援的范围中，例如：支援完整的TABLE 或SCROLLGRID 显示（使用时，若存在超过荧幕可一次显示的资料量，则只能显示前几笔，卷轴是无效的）等。</p>
+</li>
+</ol>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>main
+</span></span><span style="display:flex;"><span>    define ls_flow_pic string
+</span></span><span style="display:flex;"><span>    open window act_w with form <span style="color:#e6db74">&#34;czz/42f/czzi001&#34;</span>
+</span></span><span style="display:flex;"><span>        attribute<span style="color:#f92672">(</span>style <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tiptop.4st&#34;</span> <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    menu <span style="color:#e6db74">&#34;before menu test&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        before menu
+</span></span><span style="display:flex;"><span>            hide option <span style="color:#e6db74">&#34;del&#34;</span> <span style="color:#75715e">#隐藏del 功能</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">#show option &#34;del&#34; #显示del 功能</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#：</span>
+</span></span><span style="display:flex;"><span>        on action add
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        on action del
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        on action quit
+</span></span><span style="display:flex;"><span>            exit menu
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        on action modi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    end menu
+</span></span><span style="display:flex;"><span>    close form a1
+</span></span><span style="display:flex;"><span>    close window act_w
+</span></span><span style="display:flex;"><span>end main
+</span></span></code></pre></div><p>
+  <img src="images/image.png" alt="czzi001" /></p>
+<h2 id="menu-option">
+  MENU-OPTION
+  <a class="anchor" href="#menu-option">#</a>
+</h2>
+<p>在MENU中你可以定义多种的MENU-OPTION，每个MENU-OPTION 代表一个功能。</p>
+<p>当触发到这个option，就会运行option后的功能。</p>
+<ol>
+<li>
+<p>COMMAND option：定义MENU 功能名称及定义进入某功能快速键，透过COMMAND 指令清楚掌握USER ACTION。</p>
+</li>
+<li>
+<p>COMMAND key：定义MENU 功能快速键，且不须show 在menu 上</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>database ds
+</span></span><span style="display:flex;"><span>main
+</span></span><span style="display:flex;"><span>    open window act_w with form <span style="color:#e6db74">&#34;czz/42f/czzi001&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    menu <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        command <span style="color:#e6db74">&#34;a.add&#34;</span> <span style="color:#75715e">#menu 功能名称&#34;a.新增&#34;，a 为快速键</span>
+</span></span><span style="display:flex;"><span>            message <span style="color:#e6db74">&#34;a.add&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        command <span style="color:#e6db74">&#34;u.modi&#34;</span>
+</span></span><span style="display:flex;"><span>            message <span style="color:#e6db74">&#34;u.modi&#34;</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        command <span style="color:#e6db74">&#34;q.qry&#34;</span>
+</span></span><span style="display:flex;"><span>            message <span style="color:#e6db74">&#34;q.qry&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        command key <span style="color:#f92672">(</span>control-a<span style="color:#f92672">)</span> <span style="color:#75715e"># control-a 为快速键且</span>
+</span></span><span style="display:flex;"><span>            message <span style="color:#e6db74">&#34;control-a&#34;</span> <span style="color:#75715e">#此功能不show menu 上</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        command <span style="color:#e6db74">&#34;exit&#34;</span>
+</span></span><span style="display:flex;"><span>            close window act_w
+</span></span><span style="display:flex;"><span>            exit program
+</span></span><span style="display:flex;"><span>    end menu
+</span></span><span style="display:flex;"><span>end main
+</span></span></code></pre></div><p>
+  <img src="images/image-1.png" alt="Alt text" /></p>
+<ol start="3">
+<li>ON ACTION：跟COMMAND 指令功能一样，不同是COMMAND 可以重复定义COMMAND KEY，执行时以最后定义为主，但是ON ACTION 不能重复定义，compiler 会产生错误，两者定义名称时都不分大小写</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>database ds
+</span></span><span style="display:flex;"><span>main
+</span></span><span style="display:flex;"><span>    open window act_w with form <span style="color:#e6db74">&#34;czz/42f/czzi001&#34;</span>
+</span></span><span style="display:flex;"><span>    menu <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        on action add
+</span></span><span style="display:flex;"><span>            message <span style="color:#e6db74">&#34;act_a&#34;</span>
+</span></span><span style="display:flex;"><span>        on action modi
+</span></span><span style="display:flex;"><span>            message <span style="color:#e6db74">&#34;modi&#34;</span>
+</span></span><span style="display:flex;"><span>        on action quit
+</span></span><span style="display:flex;"><span>            exit program
+</span></span><span style="display:flex;"><span>    end menu
+</span></span><span style="display:flex;"><span>    close window act_w
+</span></span><span style="display:flex;"><span>end main
+</span></span></code></pre></div><p>
+  <img src="images/image-2.png" alt="Alt text" /></p>
+<ol start="4">
+<li>ON IDLE：在menu 中主要来控管停留在menu 段的时间是否闲置太久，透过ON IDLE 指令时间一到，可执行系统指定的IDLE 处理程序（如执行强制中断程序或 显示违规警示等），以减少可执行权（license）被占用或系统资料被锁定等相关问题。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>database ds
+</span></span><span style="display:flex;"><span>main
+</span></span><span style="display:flex;"><span>    define l_chr varchar<span style="color:#f92672">(</span>4<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    open window act_w with form <span style="color:#e6db74">&#34;czz/42f/czzi001&#34;</span>
+</span></span><span style="display:flex;"><span>    menu <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        on action add
+</span></span><span style="display:flex;"><span>            call act_a<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>        on idle <span style="color:#ae81ff">3</span> <span style="color:#75715e">#闲置时间超过3 秒处理流程</span>
+</span></span><span style="display:flex;"><span>            prompt <span style="color:#e6db74">&#34;idle 3 second，exit menu?(y/n) &#34;</span> <span style="color:#66d9ef">for</span> l_chr
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> l_chr<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;y&#39;</span> or l_chr<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>                close window act_w
+</span></span><span style="display:flex;"><span>                exit program
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span> menu
+</span></span><span style="display:flex;"><span>            end <span style="color:#66d9ef">if</span>
+</span></span><span style="display:flex;"><span>    end menu
+</span></span><span style="display:flex;"><span>end main
+</span></span></code></pre></div><p>
+  <img src="images/image-3.png" alt="Alt text" /></p>
+<h2 id="message">
+  MESSAGE
+  <a class="anchor" href="#message">#</a>
+</h2>
+<p>在这一节中，你应该能看到很多地方调用了<code>message</code>语句，它的功能就是将后面的字符串显示在屏幕上，并且不会影响程序的执行。</p>
+<p>
+  <img src="images/image-4.png" alt="Alt text" /></p>
+<p><code>message</code>不像<code>on action </code>这类语法要以来<code>menu</code>块语句中。
+它并不依赖于上下文，但使用也有一个前提，必须打开一个画面文件。
+它像是一个<code>display</code>命令的GUI版本。</p>
+<h3 id="attribute">
+  attribute
+  <a class="anchor" href="#attribute">#</a>
+</h3>
+<p>message除了默认样式还支持一些字体颜色的设置。
+如下：</p>
+<pre><code>{ BLACK | BLUE | CYAN | GREEN
+| MAGENTA | RED | WHITE | YELLOW
+| BOLD | DIM | INVISIBLE | NORMAL
+| REVERSE | BLINK | UNDERLINE
+| STYLE = &quot;style-name&quot;
+}
+</code></pre>
+<p>具体用法如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>message <span style="color:#e6db74">&#34;i&#39;m red blod&#34;</span> ATTRIBUTE <span style="color:#f92672">(</span>RED BOLD<span style="color:#f92672">)</span>
+</span></span></code></pre></div></article>
  
       
 
@@ -2084,7 +2286,17 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#menu">Menu</a></li>
+    <li><a href="#menu">MENU</a>
+      <ul>
+        <li><a href="#menu-命令">MENU 命令</a></li>
+        <li><a href="#menu-option">MENU-OPTION</a></li>
+        <li><a href="#message">MESSAGE</a>
+          <ul>
+            <li><a href="#attribute">attribute</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

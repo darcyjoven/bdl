@@ -273,7 +273,8 @@ Widget 项目如下图所示，每个项目均可以鼠标拖拉至画面上的�
 前景色等。
 
 - Text
-  ![Text](images/image-73.png)
+
+![Text](images/image-73.png)
 
 StaticLabel 可以和 Text 相互转换。Text 字符数自动决定大小的基本静态文字标签。无法自行设定宽度。
 

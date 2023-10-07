@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm gstVersion="22800" name="ManagedForm" uid="{06ccc8cb-0000-4000-acce-b71da5960c39}">
+  <AGSettings/>
+  <Record additionalTables="" joinLeft="" joinOperator="" joinRight="" name="Undefined" order="" uid="{cf4185cd-0391-4b30-aab7-2cfdd73c7b29}" where="">
+    <RecordField colName="" fieldIdRef="1" name="FFLabel1" sqlTabName="" table_alias_name="" uid="{4ccce06e-1697-48d3-b7e7-cefd65976166}"/>
+    <RecordField colName="" fieldIdRef="2" name="DateEdit1" sqlTabName="" sqlType="DATE" table_alias_name="" uid="{57cb8455-cf28-4647-a082-46f0a4a0c440}"/>
+    <RecordField colName="" fieldIdRef="3" name="CheckBox1" sqlTabName="" table_alias_name="" uid="{0ebdce11-ce62-4741-aec1-29f40c8fb9ba}"/>
+    <RecordField colName="" fieldIdRef="4" name="Edit1" sqlTabName="" table_alias_name="" uid="{8be1fcfe-b576-4f08-b8c7-2bacff792f84}"/>
+    <RecordField colName="" fieldIdRef="5" name="ComboBox1" sqlTabName="" table_alias_name="" uid="{f28e644f-c496-4760-8cc5-cd5663261c26}"/>
+  </Record>
+  <Form gridHeight="13" gridWidth="35" lstrtext="true" name="czzi001" text="Form">
+    <VBox gridHeight="13" gridWidth="35" name="vbox1" posX="0" posY="0">
+      <Folder gridHeight="11" gridWidth="35" name="folder1" posX="0" posY="1">
+        <Page lstrtext="true" name="page1" text="Page1">
+          <Grid gridHeight="9" gridWidth="33" name="grid2" posX="0" posY="0">
+            <Label gridHeight="1" gridWidth="30" lstrtext="true" name="label1" posX="2" posY="1" text="Label1"/>
+            <FFLabel aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="1" gridHeight="1" gridWidth="30" name="FFLabel1" posX="2" posY="2" rowCount="" sqlTabName="" stepX="" stepY="" table_alias_name="" title="FFLabel1" widget="FFLabel"/>
+            <ComboBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="5" gridHeight="1" gridWidth="30" items="Text, Text" name="ComboBox1" posX="2" posY="3" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="4" table_alias_name="" title="ComboBox1" widget="ComboBox">
+              <Item lstrtext="false" name="Item1" text="Text"/>
+              <Item lstrtext="false" name="Item2" text="Text"/>
+            </ComboBox>
+            <DateEdit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="2" gridHeight="1" gridWidth="30" name="DateEdit1" posX="2" posY="4" rowCount="" sqlTabName="" sqlType="DATE" stepX="" stepY="" tabIndex="1" table_alias_name="" title="DateEdit1" widget="DateEdit"/>
+            <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="4" gridHeight="1" gridWidth="29" name="Edit1" posX="2" posY="5" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="3" table_alias_name="" title="Edit1" widget="Edit"/>
+            <CheckBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="3" gridHeight="1" gridWidth="29" name="CheckBox1" posX="2" posY="6" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="2" table_alias_name="" text="CheckBox1" title="CheckBox1" widget="CheckBox"/>
+          </Grid>
+        </Page>
+        <Page lstrtext="true" name="page2" text="Page2">
+          <Grid gridHeight="4" gridWidth="35" name="grid1" posX="0" posY="0">
+            <Label gridHeight="1" gridWidth="32" lstrtext="true" name="label2" posX="2" posY="1" text="Label2"/>
+          </Grid>
+        </Page>
+      </Folder>
+    </VBox>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewA4AGIAZQAxAGYAYwBmAGUALQBiADUANwA2AC0ANABmADAAOAAtAGIAOABjADcALQAyAGIAYQBjAGYAZgA3ADkAMgBmADgANAB9QCQAAAAAAABAWcAAAAAAAAAAAAAAAAAAAQAAAEwAewA0AGMAYwBjAGUAMAA2AGUALQAxADYAOQA3AC0ANAA4AGQAMwAtAGIANwBlADcALQBjAGUAZgBkADYANQA5ADcANgAxADYANgB9QCQAAAAAAABAQoAAAAAAAAAAAAAAAAAAAQAAAEwAewBmADIAOABlADYANAA0AGYALQBjADQAOQA2AC0ANAA3ADYAMAAtADgAYwBjADUALQBjAGQANQA2ADYAMwAyADYAMQBjADIANgB9QCQAAAAAAABAX0AAAAAAAAAAAAAAAAAAAQAAAEwAewA1ADcAYwBiADgANAA1ADUALQBjAGYAMgA4AC0ANAA2ADQANwAtAGEAMAA4ADIALQA0ADYAZgAwAGEANABhADAAYwA0ADQAMAB9QCQAAAAAAABATYAAAAAAAAAAAAAAAAAAAQAAAEwAewBjAGYANAAxADgANQBjAGQALQAwADMAOQAxAC0ANABiADMAMAAtAGEAYQBiADcALQAyAGMAZgBkAGQANwAzAGMANwBiADIAOQB9wHNAAAAAAADAZMAAAAAAAD9gYk3S8an8AQAAAEwAewAwAGUAYgBkAGMAZQAxADEALQBjAGUANgAyAC0ANAA3ADQAMQAtAGEAZQBjADEALQAyADkAZgA0ADAAYwA4AGYAYgA5AGIAYQB9QCQAAAAAAABAVEAAAAAAAAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>

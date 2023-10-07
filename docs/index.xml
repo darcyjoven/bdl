@@ -297,7 +297,7 @@ BDL语言中有多种多样的输出方式，大部分是封装好的函数，�
       <pubDate>Mon, 17 Jul 2023 10:32:54 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/1.before_all/1.why-dbl/</guid>
-      <description>为什么学习（使用）BDL语言#开发迅速#BDL配套的开发工具和GUI都是打包好，所以开发周期非常的端，也不需要考虑过多的事情。
+      <description>为什么学习（使用）BDL语言#开发迅速#BDL配套的开发工具和GUI都是打包好，所以开发周期非常的短，也不需要考虑过多的事情。
 程序易读性高#如果你使用过SQL查询语言，或者对数据库有一定了解，甚至对excel使用比较熟练，你会发现BDL的处理方式与它们非常相似。
 不得不使用#你的公司使用了BDL语言的产品，现在要修改或者增加功能，不得不去读，写BDL程序。</description>
     </item>
@@ -574,8 +574,8 @@ database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使�
       <pubDate>Mon, 17 Jul 2023 10:46:50 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/1.before_all/2.how-learn-dbl/</guid>
-      <description>如何学好BDL语言#无论出于什么目的，一旦下定绝心学习BDL语言，就要端正子项，因为听过BDL用的少，和其它语言差异太多，所以觉得学不好，或者随便学学，是不可取的。只要你掌握一些方法，克服畏惧心理，不轻言放弃，是完全可以学好的。
-多动手多求人#所有的问题都可以通过字节编写代码观察结果解决。凡是可以通过编写代码观察到结果的问题，都不应该成为一个问题。不会的，也不要太固执，多问问有经验的人。
+      <description>如何学好BDL语言#无论出于什么目的，一旦下定绝心学习BDL语言，就要端正自信，因为听过BDL用的少，和其它语言差异太多，所以觉得学不好，或者随便学学，是不可取的。只要你掌握一些方法，克服畏惧心理，不轻言放弃，是完全可以学好的。
+多动手多求人#所有的问题都可以通过自己编写代码观察结果解决。凡是可以通过编写代码观察到结果的问题，都不应该成为一个问题。不会的，也不要太固执，多问问有经验的人。
 多学习优秀代码#BDL相当灵活，即使写的代码不优秀，也可以编译后达到你的运行目标，但是有的代码可以使用更少的代码实现相同功能，或者代码更加具有复用价值。我相信你很容就能找到不错的BDL代码。
 多以人类的思考方法来类比计算机#计算机需要什么数据、如何获取这些数据、得到后如何存放、如何处理、处理后如何表现等，对这些问题要多问写为什么，一旦理解了计算机处理这些问题的过程，编程就是一件异常轻松的事情了。
 多了解可以直接使用的功能#如果你在使用tiptop gp t100，会有相当多的功能都已经做好成为函数，等待你的调用。请多了解有哪些函数可以使用。</description>
@@ -819,17 +819,31 @@ funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，
       <pubDate>Mon, 17 Jul 2023 10:58:17 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/1.before_all/3.what-is-language/</guid>
-      <description>语言概述#提到语言这个词，人们自然想到的是英语、汉语这样的自然语言，因为语言是任何人交互交流信息不可缺少的工具。而今天，计算机变不了我们生活每一个角落，除了任何人之前的交互交流之外，我们必须和计算机交流。用什么样的方式和计算机做最直接的交流呢？人们自然想到的是最古老也同时也是最方便的方式-语言。
-什么是语言#类必人类的语言，汉语言、英语言、法语言等，可以总结出语言有如下特点。
- 语言是用来交流沟通的 语言有独特的语法规则  什么是机器语言#计算机时一个忠实的仆人，时刻等候着主人的命令。 如何才能使计算机听话呢？ 当然时用计算机听得懂的语言去命令它了。 计算的大脑或者说心脏就是CPU，它控制着计算机的运作。 每种CPU都有自己的指令系统。 这个指令系统就是该CPU的机器语言。 机器语言是一组有0和1系列组成的指令码，这些指令码是由CPU制作厂商规定出来的，然后发不出来请程序员遵守。如下是某CPU指定系统的两条zhiling
-1000000 加1001000 减 要让计算机完成相应的任何，就得用这样的语言去命令它。这样的命令不是一条两条，二十上百条。 由于不同型号计算机的指令系统即机器语言是不相同的，按着一种计算机的机器指令编制的程序，不能再另一种计算机商执行。
-用机器语言编写程序，编程人员首先要数据所用计算机的全部指令代码和代码的含义。 在编写程序时，程序员得自己处理每条指令和每一数据存储分配得输入和输出，还得记住编程过程中每步所使用得工作单元处理处在何种状态，这是一件十分繁琐得工作，编写程序花费得时间往往时实际运行时间得几十倍或者几百倍。而且，编出得程序全是0和1得指令代码，直观性差，还容易出错。
-什么是汇编语言#在用机器语言编程得实践中，一批顽强而聪明得先行者发明了汇编语言&amp;ndash;一门人类可以比较轻松掌握得编程语言。只是这门语言计算机并不人事，人类还不能这门语言命令计算机做事情。
-所以有一类专门得程序，既人事机器语言，又认识汇编语言，而且还很聪明，知道怎么把汇编语言翻译成机器语言。于是，人类和机器又有了一种新的交流方式，而且任何可以轻松地编写程序了。
+      <description>语言概述#提到语言这个词，人们自然想到的是英语、汉语这样的自然语言，因为语言是任何人交互交流信息不可缺少的工具。而今天，计算机遍布了我们生活每一个角落，除了任何人之前的交互交流之外，我们必须和计算机交流。 用什么样的方式和计算机做最直接的交流呢？ 人们自然想到的是最古老也同时也是最方便的方式&amp;ndash;语言。
+什么是语言#类比人类的语言，汉语言、英语言、法语言等，可以总结出语言有如下特点。
+ 语言是用来交流沟通的 语言有独特的语法规则  什么是机器语言#计算机是一个忠实的仆人，时刻等候着主人的命令。 如何才能使计算机听话呢？ 当然是用计算机听得懂的语言去命令它了。 计算的大脑或者说心脏就是CPU，它控制着计算机的运作。 每种CPU都有自己的指令系统。 这个指令系统就是该CPU的机器语言。 机器语言是一组有0和1系列组成的指令码，这些指令码是由CPU制作厂商规定出来的，然后发布出来请程序员遵守。如下是某CPU指定系统的两条指令：
+1000000 加1001000 减 要让计算机完成相应的任务，就得用这样的语言去命令它。这样的命令不是一条两条，而是二十上百条。 由于不同型号计算机的指令系统即机器语言是不相同的，按照一种计算机的机器指令编制的程序，不能在另一种计算机上执行。
+用机器语言编写程序，编程人员首先要熟悉所用计算机的全部指令代码和代码的含义。
+在编写程序时，程序员得自己处理每条指令和每一数据存储分配得输入和输出，还得记住编程过程中每步所使用得工作单元处理处在何种状态，这是一件十分繁琐得工作，编写程序花费得时间往往是实际运行时间的几十倍或者几百倍。
+而且，编出得程序全是0和1得指令代码，直观性差，还容易出错。
+什么是汇编语言#在用机器语言编程得实践中，一批顽强而聪明得先行者发明了汇编语言&amp;ndash;一门人类可以比较轻松掌握得编程语言。 只是这门语言计算机并不认识，人类还不能使用这门语言命令计算机做事情。
+所以有一类专门的程序，既认识机器语言，又认识汇编语言，而且还很聪明，知道怎么把汇编语言翻译成机器语言。于是，人类和机器又有了一种新的交流方式，而且任何可以轻松地编写程序了。
  上文提到过，不同CPU有不同指令系统，从而有不同机器语言与其对应。所以程序员用汇编语言编写程序，都要记住实在什么CPU商编写的。程序员不仅要考虑程序涉及思路，还要熟记计算机得内部结构这种编程得劳动强度依然很大。
  面向过程得语言#汇编语言和机器语言都是面向机器得，机器不同，语言也不同。 既然有伴把汇编语言翻译成机器语言，难道就不能把其它更人性化得语言翻译成机器语言？ 1954年，Fortran语言出现了，其后续出现了其它类似语言。这批语言是程序员摆脱了计算机硬件得桎梏，把主要精力放在了程序涉及商，不在关注底层得计算机硬件。 这类语言被成为高级语言。同样得高级语言要被计算机执行，也需要由一个翻译程序将其翻译成机器语言，也就是编译程序。
 这类高级语言解决问题得方法是分析出问题所需要得步骤，把程序看作是数据被加工的过程。 基于这类方法涉及的语言成为面向过程语言。C语言就是一种面向过程的程序设计语言。
 什么是BDL语言#BDL语言相对于C语言，抽象程序更高，更少的代码可以做更多的事情。 但同样的由于抽象程序高，占用资源也比较高，无法与C语言这样比较底层的语言更加灵活处理问题，为了解决这个问题，BDL中可以直接调用C语言程序。</description>
+    </item>
+    
+    <item>
+      <title>4.MENU</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</link>
+      <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
+      <description>MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
+MENU 命令#MENU语法类似下面这样:
+MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [comment]  [ HELP help-number ]   COMMAND KEY ( key-name )  option [comment]  [ HELP help-number ]   ON ACTION action-name   ON IDLE idle-seconds  END MENU 说明：
+ 在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&amp;rsquo;default&amp;rsquo;。  属性包括:</description>
     </item>
     
     <item>
@@ -1078,15 +1092,6 @@ main  display smft(&amp;#34;Hello World!&amp;#34;) end main 扩展名用.4gl标�
     </item>
     
     <item>
-      <title>4.Menu</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</link>
-      <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
-      
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
-      <description>Menu#</description>
-    </item>
-    
-    <item>
       <title>5.预编译</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/5.preprocessor/</link>
       <pubDate>Mon, 28 Aug 2023 20:52:53 +0800</pubDate>
@@ -1230,7 +1235,11 @@ databse ds main  define a,b integer --定义a,b 为整型  define y integer --�
       <pubDate>Tue, 29 Aug 2023 15:45:32 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/6.display/</guid>
-      <description>DISPLAY#</description>
+      <description>DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
+注意
+因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为表单,表格称为表格。这并不是通用的定义，仅为了在本教程中方便区分两种。
+ 表格 表单  DISPLAY 表单#4fd文件
+database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40),  DateEdit1 date,  Edit1 varchar(40),  CheckBox1 varchar(40)  end record  open window act_w with form &amp;#34;czz/42f/czzi001&amp;#34;   menu &amp;#39;&amp;#39;  on action quit  exit menu  on action setvalue  let sr.FFLabel1 = &amp;#39;FFLabel1 &amp;#39;  let sr.</description>
     </item>
     
     <item>
@@ -1285,7 +1294,17 @@ databse ds main  define a,b integer --定义a,b 为整型  define y integer --�
       <pubDate>Tue, 29 Aug 2023 15:45:38 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/7.input/</guid>
-      <description>INPUT#</description>
+      <description>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
+和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&amp;rsquo;Y&amp;rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
+和DISPLAY和语法一样，INPUT也有两种语法。
+INPUT 表单#INPUT p_employee.no FROM no
+INPUT BY NAME p_employee.no
+以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
+除了以上语法INPUT也支持块语法END INPUT。
+INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
+注意
+块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
+INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：</description>
     </item>
     
     <item>
@@ -1317,7 +1336,11 @@ the average is 2 代码解析
       <pubDate>Tue, 29 Aug 2023 15:45:47 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/8.construct/</guid>
-      <description>CONSTRUCT#</description>
+      <description>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
+CONSTRUCT运行时，会先清空输入字段的所有资料内容，然后根据录入的内容组成SQL查询条件。
+CONSTRUCT并不区分表单还是表格，因为表格也只能录入第一行资料。
+CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区别，所以放在一起讲
+ BY NAME ON  CONSTRUCT BY NAME variable ON column-list  [ ATTRIBUTES ( { display-attribute  | control-attribute }  [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [...] END CONSTRUCT ]  ON FROM  CONSTRUCT variable ON column-list FROM field-list  [ ATTRIBUTES ( { display-attribute  | control-attribute  } [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [.</description>
     </item>
     
     <item>

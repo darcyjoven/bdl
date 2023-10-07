@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm gstVersion="22800" name="ManagedForm" uid="{06ccc8cb-0000-4000-acce-b71da5960c39}">
+  <AGSettings/>
+  <Record additionalTables="" joinLeft="" joinOperator="" joinRight="" name="Record1" order="" uid="{91067543-760c-4f51-bb23-2bbf60fb2e32}" where="">
+    <RecordField colName="" fieldIdRef="1" name="Edit1" sqlTabName="" table_alias_name="" uid="{6e8506ea-0099-465d-a468-18313ff6b3f9}"/>
+    <RecordField colName="" fieldIdRef="2" name="Edit2" sqlTabName="" table_alias_name="" uid="{043d3ae6-862d-4317-a83f-3fa830044589}"/>
+    <RecordField colName="" fieldIdRef="3" name="Edit3" sqlTabName="" table_alias_name="" uid="{e257e012-4817-4922-b041-52ac3a9f5954}"/>
+    <RecordField colName="" fieldIdRef="4" name="Edit4" sqlTabName="" table_alias_name="" uid="{0ef9b269-0c8f-4344-ab94-f44161243564}"/>
+  </Record>
+  <Form gridHeight="13" gridWidth="37" lstrtext="true" name="czzi001" text="Form">
+    <VBox gridHeight="13" gridWidth="37" name="vbox1" posX="0" posY="0">
+      <Table gridHeight="11" gridWidth="37" name="Table1" posX="0" posY="1" totalRows="5">
+        <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="1" gridHeight="1" gridWidth="8" name="Edit1" posX="0" posY="0" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="1" table_alias_name="" title="Edit1" widget="Edit"/>
+        <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="2" gridHeight="1" gridWidth="8" name="Edit2" posX="8" posY="0" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="2" table_alias_name="" title="Edit2" widget="Edit"/>
+        <DateEdit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="3" gridHeight="1" gridWidth="8" name="Edit3" posX="16" posY="0" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="3" table_alias_name="" title="Edit3" widget="DateEdit"/>
+        <CheckBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" columnCount="" fieldId="4" gridHeight="1" gridWidth="8" name="Edit4" posX="24" posY="0" rowCount="" sqlTabName="" stepX="" stepY="" tabIndex="4" table_alias_name="" text="" title="Edit4" widget="CheckBox"/>
+      </Table>
+    </VBox>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewA2AGUAOAA1ADAANgBlAGEALQAwADAAOQA5AC0ANAA2ADUAZAAtAGEANAA2ADgALQAxADgAMwAxADMAZgBmADYAYgAzAGYAOQB9QCQAAAAAAABAQoAAAAAAAAAAAAAAAAAAAQAAAEwAewAwADQAMwBkADMAYQBlADYALQA4ADYAMgBkAC0ANAAzADEANwAtAGEAOAAzAGYALQAzAGYAYQA4ADMAMAAwADQANAA1ADgAOQB9QCQAAAAAAABATYAAAAAAAAAAAAAAAAAAAQAAAEwAewA5ADEAMAA2ADcANQA0ADMALQA3ADYAMABjAC0ANABmADUAMQAtAGIAYgAyADMALQAyAGIAYgBmADYAMABmAGIAMgBlADMAMgB9QCQAAAAAAABAJAAAAAAAAAAAAAAAAAAAAQAAAEwAewBlADIANQA3AGUAMAAxADIALQA0ADgAMQA3AC0ANAA5ADIAMgAtAGIAMAA0ADEALQA1ADIAYQBjADMAYQA5AGYANQA5ADUANAB9QCQAAAAAAABAVEAAAAAAAAAAAAAAAAAAAQAAAEwAewAwAGUAZgA5AGIAMgA2ADkALQAwAGMAOABmAC0ANAAzADQANAAtAGEAYgA5ADQALQBmADQANAAxADYAMQAyADQAMwA1ADYANAB9QCQAAAAAAABAWcAAAAAAAAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>

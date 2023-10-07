@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DISPLAY#">
+<meta name="description" content="DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
+注意
+因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为表单,表格称为表格。这并不是通用的定义，仅为了在本教程中方便区分两种。
+ 表格 表单  DISPLAY 表单#4fd文件
+database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40),  DateEdit1 date,  Edit1 varchar(40),  CheckBox1 varchar(40)  end record  open window act_w with form &#34;czz/42f/czzi001&#34;   menu &#39;&#39;  on action quit  exit menu  on action setvalue  let sr.FFLabel1 = &#39;FFLabel1 &#39;  let sr.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="6.DISPLAY" />
-<meta property="og:description" content="DISPLAY#" />
+<meta property="og:description" content="DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
+注意
+因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为表单,表格称为表格。这并不是通用的定义，仅为了在本教程中方便区分两种。
+ 表格 表单  DISPLAY 表单#4fd文件
+database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40),  DateEdit1 date,  Edit1 varchar(40),  CheckBox1 varchar(40)  end record  open window act_w with form &#34;czz/42f/czzi001&#34;   menu &#39;&#39;  on action quit  exit menu  on action setvalue  let sr.FFLabel1 = &#39;FFLabel1 &#39;  let sr." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/6.display/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-29T15:45:32+08:00" />
@@ -17,7 +25,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b24e189651e53ff572c3effe3eb96328e27b66169bcc966009733734b50c6245.js" integrity="sha256-sk4YllHlP/Vyw&#43;/&#43;PrljKOJ7ZhabzJZgCXM3NLUMYkU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1616,7 +1624,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.MENU</a>
   
 
         </li>
@@ -1629,7 +1637,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.Menu</a>
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
   
 
         </li>
@@ -2013,7 +2021,18 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#display">DISPLAY</a></li>
+    <li><a href="#display">DISPLAY</a>
+      <ul>
+        <li><a href="#display-表单">DISPLAY 表单</a></li>
+        <li><a href="#display-表格">DISPLAY 表格</a>
+          <ul>
+            <li><a href="#触发语句">触发语句</a></li>
+            <li><a href="#退出display">退出display</a></li>
+            <li><a href="#attributes">ATTRIBUTES</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -2030,7 +2049,203 @@ https://github.com/alex-shpak/hugo-book
   DISPLAY
   <a class="anchor" href="#display">#</a>
 </h1>
-</article>
+<p>在之前终端执行程序时，我们一直使用<code>DISPLAY</code>讲字符串显示到终端。
+在程序升级到GUI版本后，我们不需要再回去看终端了，<code>DISPLAY</code>有了新的用法。</p>
+<blockquote class="book-hint info">
+  <p><strong>注意</strong></p>
+<p>因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为<code>表单</code>,表格称为<code>表格</code>。这并不是通用的定义，仅为了在本教程中方便区分两种。</p>
+<ul>
+<li>表格</li>
+<li>表单</li>
+</ul>
+
+</blockquote>
+
+<h2 id="display-表单">
+  DISPLAY 表单
+  <a class="anchor" href="#display-%e8%a1%a8%e5%8d%95">#</a>
+</h2>
+<p>
+  <img src="images/image.png" alt="4fd" /></p>
+<p>
+      
+  <a href="./attach/czzi001.4fd">4fd文件</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>database ds
+</span></span><span style="display:flex;"><span>main
+</span></span><span style="display:flex;"><span>    define sr record
+</span></span><span style="display:flex;"><span>        FFLabel1 varchar<span style="color:#f92672">(</span>40<span style="color:#f92672">)</span>,
+</span></span><span style="display:flex;"><span>        ComboBox1 varchar<span style="color:#f92672">(</span>40<span style="color:#f92672">)</span>,
+</span></span><span style="display:flex;"><span>        DateEdit1 date,
+</span></span><span style="display:flex;"><span>        Edit1 varchar<span style="color:#f92672">(</span>40<span style="color:#f92672">)</span>,
+</span></span><span style="display:flex;"><span>        CheckBox1 varchar<span style="color:#f92672">(</span>40<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    end record
+</span></span><span style="display:flex;"><span>    open window act_w with form <span style="color:#e6db74">&#34;czz/42f/czzi001&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    menu <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>        on action quit
+</span></span><span style="display:flex;"><span>            exit menu
+</span></span><span style="display:flex;"><span>        on action setvalue
+</span></span><span style="display:flex;"><span>            let sr.FFLabel1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;FFLabel1 &#39;</span>
+</span></span><span style="display:flex;"><span>            let sr.ComboBox1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Item2&#39;</span>
+</span></span><span style="display:flex;"><span>            let sr.DateEdit1 <span style="color:#f92672">=</span> today
+</span></span><span style="display:flex;"><span>            let sr.Edit1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Edit1&#39;</span>
+</span></span><span style="display:flex;"><span>            let sr.CheckBox1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+</span></span><span style="display:flex;"><span>        on action dispall
+</span></span><span style="display:flex;"><span>            display by name sr.*
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        on action displayedit
+</span></span><span style="display:flex;"><span>            display sr.DateEdit1 to DateEdit1
+</span></span><span style="display:flex;"><span>            display <span style="color:#e6db74">&#34;OK&#34;</span> to Edit1 ATTRIBUTE <span style="color:#f92672">(</span>BOLD<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        on action displaycombo
+</span></span><span style="display:flex;"><span>            display by name sr.ComboBox1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        on action clear
+</span></span><span style="display:flex;"><span>            clear form
+</span></span><span style="display:flex;"><span>    end menu
+</span></span><span style="display:flex;"><span>    close window act_w
+</span></span><span style="display:flex;"><span>end main
+</span></span></code></pre></div><p>运行尝试一下每个按钮功能
+
+  <img src="images/image-1.png" alt="Alt text" /></p>
+<p>在上述代码中，我们可以看到<code>display</code>显示到<code>GUI</code>表单中有两种用法。</p>
+<ol>
+<li>
+<p><code>display to</code></p>
+<p>display 值1,值2,&hellip;  to 控件名1,控件名2,&hellip;</p>
+</li>
+</ol>
+<p>能将任何值直接显示到指定的控件上</p>
+<ol start="2">
+<li>
+<p><code>display by name</code></p>
+<p>display by name 值1,值2,&hellip;
+display by name 结构体变量.*</p>
+</li>
+</ol>
+<p>这种方式并没有指定控件名，所以你的变量名必须和控件名一样，否则不会显示。</p>
+<p>如果你的变量是结构体，那么<code>成员名</code>必须和控件名一样。且如果结构体所有变量都要显示到控件上，那么可以简写为<code>结构体变量.*</code>。</p>
+<h2 id="display-表格">
+  DISPLAY 表格
+  <a class="anchor" href="#display-%e8%a1%a8%e6%a0%bc">#</a>
+</h2>
+<p>
+  <img src="images/image-2.png" alt="table" /></p>
+<p>
+      
+  <a href="attach/czzi000.4fd">4fd文件</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">database</span> ds
+</span></span><span style="display:flex;"><span>main
+</span></span><span style="display:flex;"><span>    define list <span style="color:#66d9ef">dynamic</span> array <span style="color:#66d9ef">of</span> record
+</span></span><span style="display:flex;"><span>        Edit1 varchar(<span style="color:#ae81ff">40</span>),
+</span></span><span style="display:flex;"><span>        Edit2 varchar(<span style="color:#ae81ff">40</span>),
+</span></span><span style="display:flex;"><span>        Edit3 date,
+</span></span><span style="display:flex;"><span>        Edit4 varchar(<span style="color:#ae81ff">40</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> record
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">open</span> window act_w <span style="color:#66d9ef">with</span> form <span style="color:#e6db74">&#34;czz/42f/czzi001&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">1</span>].Edit1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;row1.edit1&#39;</span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">1</span>].Edit2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;row1.edit2&#39;</span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">1</span>].Edit3 <span style="color:#f92672">=</span> today
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">1</span>].Edit4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">2</span>].Edit1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;row2.edit1&#39;</span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">2</span>].Edit2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;row2.edit2&#39;</span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">2</span>].Edit3 <span style="color:#f92672">=</span> today
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">2</span>].Edit4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">3</span>].Edit1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;row3.edit1&#39;</span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">3</span>].Edit2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;row3.edit2&#39;</span>
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">3</span>].Edit3 <span style="color:#f92672">=</span> today
+</span></span><span style="display:flex;"><span>    let list[<span style="color:#ae81ff">3</span>].Edit4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    display array list <span style="color:#66d9ef">to</span> Record1.<span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">before</span> display
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">on</span> action quit
+</span></span><span style="display:flex;"><span>            exit display
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">on</span> action clear
+</span></span><span style="display:flex;"><span>            clear form
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">on</span> action edit1
+</span></span><span style="display:flex;"><span>            let list[<span style="color:#ae81ff">1</span>].Edit1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;edit1&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">on</span> action edit2
+</span></span><span style="display:flex;"><span>            let list[<span style="color:#ae81ff">1</span>].Edit1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;edit2&#39;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> display
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">close</span> window act_w
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> main
+</span></span></code></pre></div><p>
+  <img src="images/image-3.png" alt="DISPLAY ARRAY" /></p>
+<p><code>display array</code>是一个语法块，除了将一个数字显示到表格上，还可以生成按钮功能。</p>
+<p><code>display array</code>中的变量必须是一个结构体数组，且结构体数组成员的变量的<code>名称</code>、<code>顺序</code>必须要和4fd中的<code>screen record一致</code>。当然变量的类型也需要一样，但是有些类型可以自动转换。</p>
+<h3 id="触发语句">
+  触发语句
+  <a class="anchor" href="#%e8%a7%a6%e5%8f%91%e8%af%ad%e5%8f%a5">#</a>
+</h3>
+<p><code>display array</code> 还支持大部分的<code>MENU</code>功能，上面代码中就使用了 <code>on action </code>功能。在有表格的场景，<code>display array</code>一般代替<code>menu</code>。</p>
+<ul>
+<li>BEFORE DISPLAY 运行一次</li>
+<li>AFTER DISPLAY 运行一次</li>
+<li>BEFORE ROW 到新的一行时触发</li>
+<li>AFTER ROW 离开当前行触发</li>
+<li>ON IDLE idle-seconds 超时触发</li>
+<li>ON ACTION action-name 按钮触发</li>
+<li>ON FILL BUFFER 缓存化学</li>
+<li>ON APPEND 插入时触发</li>
+<li>ON INSERT 新增时触发</li>
+<li>ON UPDATE 更新时触发</li>
+<li>ON DELETE 删除时触发</li>
+<li>ON EXPAND 树状图展开触发</li>
+<li>ON COLLAPSE 树状图关闭触发</li>
+<li>ON DRAG_START ( dnd-object ) 拖拽时才可用</li>
+<li>ON DRAG_FINISH ( dnd-object ) 拖拽时才可用</li>
+<li>ON DRAG_ENTER ( dnd-object ) 拖拽时才可用</li>
+<li>ON DRAG_OVER ( dnd-object ) 拖拽时才可用</li>
+<li>ON DROP ( dnd-object ) 拖拽时才可用</li>
+<li>ON KEY ( key-name [,&hellip;] )</li>
+</ul>
+<p>
+  <img src="images/image-4.png" alt="DISPLAY" /></p>
+<p>看起来可用的语法有很多个，单实际上，很简单，你需要的时候拿来用即可。
+可以把<code>DISPLAY ARRAY</code>看为一个转盘路，这些触发性的语法，是在转盘路之中的红灯，你遇到红灯需要花费时间将这些触发语法下面的语句运行完成，再继续上路。</p>
+<h3 id="退出display">
+  退出display
+  <a class="anchor" href="#%e9%80%80%e5%87%badisplay">#</a>
+</h3>
+<p><code>DISPLAY ARRAY</code>就是进入转盘路的开始，而<code>exit display</code>和<code>accept display</code>就是退出转盘路的出口。
+在上面程序中除了自己定义的按钮还额外多了一个<code>OK</code>和一个<code>Cancel</code>按钮，这两个按钮分别对应就是这两种退出方式。</p>
+<ul>
+<li>OK 确认 自动运行 accept display  内置的变量int_flag赋值为0</li>
+<li>Cancel 取消 自动运行 exit display  内置的变量int_flag赋值为1
+<blockquote class="book-hint info">
+  <p><strong>注意</strong></p>
+<p>OK、Cancel还分别对应了<code>ON ACTION accept</code>和<code>ON ACTION Cancel</code>。如果你要写上着两个<code>action</code>,<code>exit display</code>和<code>accept display</code>就不会自动运行了，你可以自己写上或者运行其它逻辑也可以。</p>
+
+</blockquote>
+</li>
+</ul>
+<h3 id="attributes">
+  ATTRIBUTES
+  <a class="anchor" href="#attributes">#</a>
+</h3>
+<p>和基础<code>DISPLAY</code>、<code>DISPLAY TO</code> 语法一样，<code>DISPLAY ARRAY</code>一样支持<code>ATTRIBUTES</code>属性。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>DISPLAY ARRAY g_ima <span style="color:#66d9ef">to</span> s_ima.<span style="color:#f92672">*</span> ATTRIBUTES(BLOD)
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> DISPLAY
+</span></span></code></pre></div><p>除了字体样式，在<code>DISPLAY ARRAY</code>中还支持更多配置参数</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">{</span> ACCEPT [ <span style="color:#f92672">=</span> boolean ]  <span style="color:#75715e">-- 确认按钮
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">|</span> CANCEL [ <span style="color:#f92672">=</span> boolean ]  <span style="color:#75715e">-- 取消按钮
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">|</span> KEEP <span style="color:#66d9ef">CURRENT</span> <span style="color:#66d9ef">ROW</span> [ <span style="color:#f92672">=</span> boolean ] <span style="color:#75715e">-- 焦点不在表格时，还突出显示当前行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">|</span> HELP <span style="color:#f92672">=</span> help<span style="color:#f92672">-</span>number 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">COUNT</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">row</span><span style="color:#f92672">-</span><span style="color:#66d9ef">count</span> <span style="color:#75715e">-- 使用定长数组时，需要指定显示行数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">|</span> UNBUFFERED [ <span style="color:#f92672">=</span> boolean ] <span style="color:#75715e">-- 修改变量自动显示到画面，而无需再次DISPLAY
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">}</span>
+</span></span></code></pre></div></article>
  
       
 
@@ -2084,7 +2299,18 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#display">DISPLAY</a></li>
+    <li><a href="#display">DISPLAY</a>
+      <ul>
+        <li><a href="#display-表单">DISPLAY 表单</a></li>
+        <li><a href="#display-表格">DISPLAY 表格</a>
+          <ul>
+            <li><a href="#触发语句">触发语句</a></li>
+            <li><a href="#退出display">退出display</a></li>
+            <li><a href="#attributes">ATTRIBUTES</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

@@ -49,7 +49,17 @@ define birth date define name varchar(6) define sex varchar(1) prompt &amp;#34;�
       <pubDate>Tue, 29 Aug 2023 15:45:38 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/7.input/</guid>
-      <description>INPUT#</description>
+      <description>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
+和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&amp;rsquo;Y&amp;rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
+和DISPLAY和语法一样，INPUT也有两种语法。
+INPUT 表单#INPUT p_employee.no FROM no
+INPUT BY NAME p_employee.no
+以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
+除了以上语法INPUT也支持块语法END INPUT。
+INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
+注意
+块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
+INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：</description>
     </item>
     
   </channel>

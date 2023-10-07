@@ -267,6 +267,18 @@ funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，
     </item>
     
     <item>
+      <title>4.MENU</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</link>
+      <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
+      <description>MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
+MENU 命令#MENU语法类似下面这样:
+MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [comment]  [ HELP help-number ]   COMMAND KEY ( key-name )  option [comment]  [ HELP help-number ]   ON ACTION action-name   ON IDLE idle-seconds  END MENU 说明：
+ 在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&amp;rsquo;default&amp;rsquo;。  属性包括:</description>
+    </item>
+    
+    <item>
       <title>4.Window&amp;Form</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/4.window-form/</link>
       <pubDate>Tue, 29 Aug 2023 15:43:05 +0800</pubDate>
@@ -311,15 +323,6 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
     </item>
     
     <item>
-      <title>4.Menu</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</link>
-      <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
-      
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
-      <description>Menu#</description>
-    </item>
-    
-    <item>
       <title>5.预编译</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/5.preprocessor/</link>
       <pubDate>Mon, 28 Aug 2023 20:52:53 +0800</pubDate>
@@ -358,7 +361,11 @@ define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer de
       <pubDate>Tue, 29 Aug 2023 15:45:32 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/6.display/</guid>
-      <description>DISPLAY#</description>
+      <description>DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
+注意
+因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为表单,表格称为表格。这并不是通用的定义，仅为了在本教程中方便区分两种。
+ 表格 表单  DISPLAY 表单#4fd文件
+database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40),  DateEdit1 date,  Edit1 varchar(40),  CheckBox1 varchar(40)  end record  open window act_w with form &amp;#34;czz/42f/czzi001&amp;#34;   menu &amp;#39;&amp;#39;  on action quit  exit menu  on action setvalue  let sr.FFLabel1 = &amp;#39;FFLabel1 &amp;#39;  let sr.</description>
     </item>
     
     <item>
@@ -376,7 +383,17 @@ define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer de
       <pubDate>Tue, 29 Aug 2023 15:45:38 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/7.input/</guid>
-      <description>INPUT#</description>
+      <description>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
+和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&amp;rsquo;Y&amp;rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
+和DISPLAY和语法一样，INPUT也有两种语法。
+INPUT 表单#INPUT p_employee.no FROM no
+INPUT BY NAME p_employee.no
+以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
+除了以上语法INPUT也支持块语法END INPUT。
+INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
+注意
+块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
+INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：</description>
     </item>
     
     <item>
@@ -385,7 +402,11 @@ define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer de
       <pubDate>Tue, 29 Aug 2023 15:45:47 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/8.construct/</guid>
-      <description>CONSTRUCT#</description>
+      <description>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
+CONSTRUCT运行时，会先清空输入字段的所有资料内容，然后根据录入的内容组成SQL查询条件。
+CONSTRUCT并不区分表单还是表格，因为表格也只能录入第一行资料。
+CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区别，所以放在一起讲
+ BY NAME ON  CONSTRUCT BY NAME variable ON column-list  [ ATTRIBUTES ( { display-attribute  | control-attribute }  [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [...] END CONSTRUCT ]  ON FROM  CONSTRUCT variable ON column-list FROM field-list  [ ATTRIBUTES ( { display-attribute  | control-attribute  } [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [.</description>
     </item>
     
     <item>

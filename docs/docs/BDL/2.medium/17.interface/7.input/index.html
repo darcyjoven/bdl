@@ -3,10 +3,30 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="INPUT#">
+<meta name="description" content="INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
+和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&rsquo;Y&rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
+和DISPLAY和语法一样，INPUT也有两种语法。
+INPUT 表单#INPUT p_employee.no FROM no
+INPUT BY NAME p_employee.no
+以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
+除了以上语法INPUT也支持块语法END INPUT。
+INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
+注意
+块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
+INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="7.INPUT" />
-<meta property="og:description" content="INPUT#" />
+<meta property="og:description" content="INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
+和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&rsquo;Y&rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
+和DISPLAY和语法一样，INPUT也有两种语法。
+INPUT 表单#INPUT p_employee.no FROM no
+INPUT BY NAME p_employee.no
+以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
+除了以上语法INPUT也支持块语法END INPUT。
+INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
+注意
+块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
+INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/7.input/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-29T15:45:38+08:00" />
@@ -17,7 +37,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.56c10522bfeb864275c852e275068146a930745df1445a8ac3f3fd1fd72da1e8.js" integrity="sha256-VsEFIr/rhkJ1yFLidQaBRqkwdF3xRFqKw/P9H9ctoeg=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.b24e189651e53ff572c3effe3eb96328e27b66169bcc966009733734b50c6245.js" integrity="sha256-sk4YllHlP/Vyw&#43;/&#43;PrljKOJ7ZhabzJZgCXM3NLUMYkU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1616,7 +1636,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
+    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.MENU</a>
   
 
         </li>
@@ -1629,7 +1649,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/17.interface/5.menu/" class="">4.Menu</a>
+    <a href="/docs/BDL/2.medium/17.interface/4.window-form/" class="">4.Window&amp;Form</a>
   
 
         </li>
@@ -2013,7 +2033,22 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#input">INPUT</a></li>
+    <li><a href="#input">INPUT</a>
+      <ul>
+        <li><a href="#input-表单">INPUT 表单</a>
+          <ul>
+            <li><a href="#input额外支持语法">INPUT额外支持语法</a></li>
+          </ul>
+        </li>
+        <li><a href="#input-表格">INPUT 表格</a>
+          <ul>
+            <li><a href="#attribute">ATTRIBUTE</a></li>
+            <li><a href="#额外支持的控制语法">额外支持的控制语法</a></li>
+            <li><a href="#额外其它语句">额外其它语句</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -2030,6 +2065,151 @@ https://github.com/alex-shpak/hugo-book
   INPUT
   <a class="anchor" href="#input">#</a>
 </h1>
+<p>INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。</p>
+<p>和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&rsquo;Y&rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。</p>
+<p>和DISPLAY和语法一样，INPUT也有两种语法。</p>
+<h2 id="input-表单">
+  INPUT 表单
+  <a class="anchor" href="#input-%e8%a1%a8%e5%8d%95">#</a>
+</h2>
+<p><code>INPUT p_employee.no FROM no</code></p>
+<p><code>INPUT BY NAME p_employee.no</code></p>
+<p>以上两种语法和<code>DISPLAY</code>一致，<code>INPUT BY NAME</code>语法中，结构体的成员名称必须和画面中控件名称相同。</p>
+<p>除了以上语法<code>INPUT</code>也支持块语法<code>END INPUT</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INPUT</span> <span style="color:#66d9ef">variable</span><span style="color:#f92672">-</span>list <span style="color:#66d9ef">FROM</span> field<span style="color:#f92672">-</span>list
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INPUT</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INPUT</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">BEFORE</span> FIELD field<span style="color:#f92672">-</span>list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AFTER</span> FIELD field<span style="color:#f92672">-</span>list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> CHANGE field<span style="color:#f92672">-</span>list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> ACTION action<span style="color:#f92672">-</span>name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> IDLE idle<span style="color:#f92672">-</span>seconds
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> <span style="color:#66d9ef">INPUT</span>
+</span></span></code></pre></div><p>因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。</p>
+<blockquote class="book-hint info">
+  <p><strong>注意</strong></p>
+<p>块语法中所有内容都是可选的，如果任何语句都没有，那么和不写<code>END INPUT</code>是一样的。</p>
+
+</blockquote>
+
+<h3 id="input额外支持语法">
+  INPUT额外支持语法
+  <a class="anchor" href="#input%e9%a2%9d%e5%a4%96%e6%94%af%e6%8c%81%e8%af%ad%e6%b3%95">#</a>
+</h3>
+<p><code>DISPLAY</code> 中所有语法<code>INPUT</code>都支持，除了之前讲过的语法，还支持以下语法：</p>
+<ul>
+<li>BEFORE FIELD field_name</li>
+</ul>
+<p><code>BEFORE FIELD ima01</code>在焦点到ima01字段之前会运行到此处</p>
+<ul>
+<li>AFTER FIELD field_name</li>
+</ul>
+<p><code>AFTER FIELD ima01</code>在焦点要离开ima01字段之前会运行</p>
+<ul>
+<li>ON CHANGE field_name</li>
+</ul>
+<p><code>ON CHANGE ima01</code>在焦点要离开ima01字段前，如果字段被修改过会运行</p>
+<ul>
+<li>NEXT FIELD field_name</li>
+</ul>
+<p><code>NEXT FIELD ima01</code> 焦点调到指定字段处，这个语法是独立运行的，需要在控制语法后运行</p>
+<h2 id="input-表格">
+  INPUT 表格
+  <a class="anchor" href="#input-%e8%a1%a8%e6%a0%bc">#</a>
+</h2>
+<p>INPUT 同样有<code>INPUT ARRAY</code>语法，可以显示并输入表格格式控件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INPUT</span> ARRAY array [ <span style="color:#66d9ef">WITHOUT</span> <span style="color:#66d9ef">DEFAULTS</span> ] <span style="color:#66d9ef">FROM</span> screen<span style="color:#f92672">-</span>array.<span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>                    [ HELP help<span style="color:#f92672">-</span>number ]
+</span></span><span style="display:flex;"><span>                    [ ATTRIBUTE ( <span style="color:#960050;background-color:#1e0010">{</span>display<span style="color:#f92672">-</span>attribute <span style="color:#f92672">|</span> control<span style="color:#f92672">-</span>attribute <span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>                    [,...] ) ]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INPUT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INPUT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">DELETE</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">BEFORE</span> FIELD field<span style="color:#f92672">-</span>list
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AFTER</span> FIELD field<span style="color:#f92672">-</span>list
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">ROW</span> CHANGE
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> CHANGE field<span style="color:#f92672">-</span>list
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> IDLE idle<span style="color:#f92672">-</span>seconds
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> ACTION action<span style="color:#f92672">-</span>name
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INSERT</span>
+</span></span><span style="display:flex;"><span>    CANCEL <span style="color:#66d9ef">INSERT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INSERT</span>
+</span></span><span style="display:flex;"><span>    CANCEL <span style="color:#66d9ef">INSERT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">DELETE</span>
+</span></span><span style="display:flex;"><span>    CANCEL <span style="color:#66d9ef">DELETE</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> <span style="color:#66d9ef">INPUT</span>
+</span></span></code></pre></div><h3 id="attribute">
+  ATTRIBUTE
+  <a class="anchor" href="#attribute">#</a>
+</h3>
+<p>ATTRIBUTE 除了<code>DISPLAY</code>中的语法，额外还支持以下语法：</p>
+<ul>
+<li>APPEND ROW [ =bool]</li>
+</ul>
+<p>是否需要中间插入资料</p>
+<ul>
+<li>DELETE ROW [ =bool]</li>
+</ul>
+<p>是否允许删除行</p>
+<ul>
+<li>INSERT ROW [ =bool]</li>
+</ul>
+<p>是否运行新增一笔资料</p>
+<ul>
+<li>MAXCOUNT = row-count</li>
+</ul>
+<p>可以录入的最大行</p>
+<h3 id="额外支持的控制语法">
+  额外支持的控制语法
+  <a class="anchor" href="#%e9%a2%9d%e5%a4%96%e6%94%af%e6%8c%81%e7%9a%84%e6%8e%a7%e5%88%b6%e8%af%ad%e6%b3%95">#</a>
+</h3>
+<p><code>INPUT ARRAY</code>支持<code>INPUT</code>的所有控制语法，<code>INPUT ARRAY</code>还支持以下控制语法：</p>
+<ul>
+<li>AFTER DELETE</li>
+</ul>
+<p>删除之后运行</p>
+<ul>
+<li>BEFORE ROW</li>
+</ul>
+<p>焦点在任意行之前运行</p>
+<ul>
+<li>AFTER ROW</li>
+</ul>
+<p>焦点离开任意行之后运行</p>
+<ul>
+<li>BEFORE INSERT</li>
+</ul>
+<p>插入资料之前运行</p>
+<ul>
+<li>AFTER INSERT</li>
+</ul>
+<p>资料插入之后运行</p>
+<ul>
+<li>BEFORE DELETE</li>
+</ul>
+<p>删除资料之前运行</p>
+<h3 id="额外其它语句">
+  额外其它语句
+  <a class="anchor" href="#%e9%a2%9d%e5%a4%96%e5%85%b6%e5%ae%83%e8%af%ad%e5%8f%a5">#</a>
+</h3>
+<p>以下语句不是控制语句，可以用在控制语句后。</p>
+<ul>
+<li>CANCEL DELETE</li>
+</ul>
+<p>取消删除</p>
+<ul>
+<li>CANCEL INSERT</li>
+</ul>
+<p>取消插入</p>
 </article>
  
       
@@ -2084,7 +2264,22 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#input">INPUT</a></li>
+    <li><a href="#input">INPUT</a>
+      <ul>
+        <li><a href="#input-表单">INPUT 表单</a>
+          <ul>
+            <li><a href="#input额外支持语法">INPUT额外支持语法</a></li>
+          </ul>
+        </li>
+        <li><a href="#input-表格">INPUT 表格</a>
+          <ul>
+            <li><a href="#attribute">ATTRIBUTE</a></li>
+            <li><a href="#额外支持的控制语法">额外支持的控制语法</a></li>
+            <li><a href="#额外其它语句">额外其它语句</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

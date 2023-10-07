@@ -12,7 +12,11 @@
       <pubDate>Tue, 29 Aug 2023 15:45:32 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/6.display/</guid>
-      <description>DISPLAY#</description>
+      <description>DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
+注意
+因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为表单,表格称为表格。这并不是通用的定义，仅为了在本教程中方便区分两种。
+ 表格 表单  DISPLAY 表单#4fd文件
+database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40),  DateEdit1 date,  Edit1 varchar(40),  CheckBox1 varchar(40)  end record  open window act_w with form &amp;#34;czz/42f/czzi001&amp;#34;   menu &amp;#39;&amp;#39;  on action quit  exit menu  on action setvalue  let sr.FFLabel1 = &amp;#39;FFLabel1 &amp;#39;  let sr.</description>
     </item>
     
   </channel>
