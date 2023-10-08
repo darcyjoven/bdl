@@ -15,7 +15,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.b24e189651e53ff572c3effe3eb96328e27b66169bcc966009733734b50c6245.js" integrity="sha256-sk4YllHlP/Vyw&#43;/&#43;PrljKOJ7ZhabzJZgCXM3NLUMYkU=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.4e2c8a85fefbf17816190ba2d3a241032d958c5cde83c69fa31f316af104643f.js" integrity="sha256-TiyKhf778XgWGQui06JBAy2VjFzeg8afox8xavEEZD8=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/categories/1+1/index.xml" title="BDL教程" />
@@ -1942,6 +1942,24 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/TIPS/" class="">BDL宝典</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
   </ul>
 
 
@@ -2773,7 +2791,7 @@ https://github.com/alex-shpak/hugo-book
     <p>计算1+1&ndash;小有作为#以下代码实现了计算1+1的值。
 databse ds main  define a,b integer --定义a,b 为整型  define y integer --定义y为整型   let a = 1 --将变量a赋值为1，此时a的值为1  let b = 1 --将变量b赋值为1，此时b的值为1  let y = a + b --将a，b的值分别取出来，计算结果后，赋值给变量y  display sfmt(&#34;\na+b=%1&#34;,y) --将y的值打印出来 end main 编译运行后，程序结果如下a+b=2
 代码解析
- 和之前代码一样，包含了database ds，同样也只有一个main函数。这是BDL语言规定，必须编写main函数。 define a,b integer定义a，b两个整形变量 define y integer定义y整形变量 空行用于分隔变量声明部分和接下来的函数实现部分。主要是逻辑分隔，利于程序员阅读代码，对编译器来说并无意义。 let a=1 给变量a赋值1，此时a的值为1,lei是BDL的规定，赋值时必须使用。 let b=1 给变量b赋值1，此时b的值为1 let y = a + b 将a，b的值分别取出来，计算结果后，赋值给变量y display sfmt(&quot;\na+b=%1&quot;,y),将y的值打印出来。这个sfmt和以前代码中的用法不同，简单说明下，更详细的解释参见后续章节。 双引号中的“\n”，时回车换行。 “a+b=”原样输出。 “%1”中的%是格式化的起始字符，只在sfmt函数中这样用，意思是将y在这个位置显示出来。所以最后的输出是：  a+b=2 
+ 和之前代码一样，包含了database ds，同样也只有一个main函数。这是BDL语言规定，必须编写main函数。 define a,b integer定义a，b两个整形变量 define y integer定义y整形变量 空行用于分隔变量声明部分和接下来的函数实现部分。主要是逻辑分隔，利于程序员阅读代码，对编译器来说并无意义。 let a=1 给变量a赋值1，此时a的值为1,let是BDL的规定，赋值时必须使用。 let b=1 给变量b赋值1，此时b的值为1 let y = a + b 将a，b的值分别取出来，计算结果后，赋值给变量y display sfmt(&quot;\na+b=%1&quot;,y),将y的值打印出来。这个sfmt和以前代码中的用法不同，简单说明下，更详细的解释参见后续章节。 双引号中的“\n”，时回车换行。 “a+b=”原样输出。 “%1”中的%是格式化的起始字符，只在sfmt函数中这样用，意思是将y在这个位置显示出来。所以最后的输出是：  a+b=2 
     </p>
   </article>
   
