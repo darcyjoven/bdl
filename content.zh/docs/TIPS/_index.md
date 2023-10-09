@@ -25,126 +25,142 @@ title: "BDL宝典"
 
 ## 关键字
 
-```
-ACCEPT
-ACTION
-AND
-ARRAY
-BEFORE
-BEGIN WORK
-BIGINT
-BLOB
-BOOLEAN
-BREAKPOINT
-BYTE
-CALL
-CANCEL
-CASE
-CHAR
-CLEAR
-CLIPPED
-CLOB
-CLOSE
-COLUMN
-COMMAND
-COMMIT WORK
-CONNECT
-CONSTANT
-CONSTRUCT
-CONTINUE
-CURRENT
-CURRENT WINDOW
-DATABASE
-DATE
-DATETIME
-DECIMAL
-DEFINE
-DIALOG
-DISPLAY
-DISPLAY ARRAY
-DISPLAY BY NAME
-DYNAMIC
-END
-ERROR
-EXIT
-FALSE
-FLOAT
-FOREACH
-FOR
-FUNCTION
-GLOBAL
-GOTO
-IF
-IMPORT
-INPUT
-INT_FLAG
-INTEGER
-IS NULL
-LET
-LIKE
-LINENO
-LOCATE
-MATCHES
-MENU
-MESSAGE
-MOD
-MONEY
-NEXT FIELD
-NULL
-ON
-OPEN
-OPTIONS
-OR
-PRINT
-PROGRAM
-PROMPT
-QUIT_FLAG
-RECORD
-RELEASE SAVEPOINT
-REPORT
-RETURN
-ROLLBACK WORK
-RUN
-SAVEPOINT
-SCHEMA
-SCROLL
-SET CONNECTION
-SKIP
-SLEEP
-SMALLFLOAT
-SMALLINT
-SPACES
-SQLCA
-STATUS
-STEP
-STRING
-STYLE
-TEXT
-THRU
-TIME
-TINYINT
-TODAY
-TRUE
-TRY
-TYPE
-UNBUFFERED
-UNITS
-USING
-VALIDATE
-VARCHAR
-WHENEVER
-WHILE
+### 普通关键字
+
+- `AND` `且`关系运算
+
+```SQL
+-- 关系运算符
+-- 关系表达式 AND 关系表达式
+    1 = 1 AND "" is NULL
 ```
 
-### 普通关键字
+- BREAKPOINT
+```sql
+    -- 断点
+```
+- CALL
+- CLIPPED
+- CLOSE
+- COLUMN
+- CONNECT
+- CONSTANT
+- CONTINUE
+- CURRENT WINDOW
+- DATABASE
+- DEFINE
+- DISPLAY
+- EXIT
+- GOTO
+- IMPORT
+- IS NULL
+- IS NOT NULL
+- LET
+- LIKE
+- LOCATE
+- MATCHES
+- MOD
+- OPEN
+- OPTIONS
+- OR
+- RETURN
+- RETURNING
+- RUN
+- SCHEMA
+- SET CONNECTION
+- SLEEP
+- SPACES
+- THRU
+- TYPE
+- UNITS
+- USING
+- VALIDATE
+- WHENEVER
 
 ### 块级关键字（含有 end 结尾）
 
-### 预定义变量（已经定义的变量）
+- CASE
+- FOREACH
+- FOR
+- FUNCTION
+- GLOBAL
+- IF
+- LINENO
+- MAIN
+- TRY
+- WHILE
+
+### 内置变量（已经定义的变量）
+
+- CURRENT
+- FALSE
+- INT_FLAG
+- QUIT_FLAG
+- SQLCA
+- STATUS
+- TODAY
+- TRUE
 
 ### 数据类型
 
-### 复杂类型
+- ARRAY
+
+```sql
+    -- 定义数组
+    define a array[10] of integer
+    define b dynamic array of record
+        name string,
+        age integer
+    end record
+```
+
+- BIGINT
+- BOOLEAN
+- BYTE
+- CHAR
+- DATE
+- DATETIME
+- DECIMAL
+- FLOAT
+- INTEGER
+- MONEY
+- RECORD
+- SMALLFLOAT
+- SMALLINT
+- STRING
+- TEXT
+- TINYINT
+- VARCHAR
+
+### 画面流程控制
+
+- ACCEPT
+- ACTION
+- BEFORE
+- CANCEL
+- CLEAR
+- COMMAND
+- CONSTRUCT
+- DIALOG
+- DISPLAY ARRAY
+- DISPLAY BY NAME
+- DISPLAY TO
+- ERROR
+- INPUT
+- MENU
+- MESSAGE
+- NEXT FIELD
+- ON
+- PRINT
+- PROGRAM
+- PROMPT
+- REPORT
+- SCROLL
+- SKIP
+
+### SQL 关键字
+
+- BEGIN WORK
 
 ## 开发流程
 
@@ -159,6 +175,7 @@ WHILE
 ### 字符串操作
 
 #### 获取字符串长度
+
 ```sql
     define a string
     define b varchar(100)
@@ -315,7 +332,7 @@ WHILE
     for b= 1 to 10
         let a[b] = b * 10
     end for
-    
+
     -- 在末尾增加一个元素
     call a.appendElement()
 
@@ -332,7 +349,6 @@ WHILE
     -- 数组中间插入一个元素
     call a.insertElement(8)
 ```
-
 
 #### 循环和数组
 
