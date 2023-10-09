@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="BDL 宝典#程序组成#4gl&ndash;&gt;42m&ndash;&gt;42r 4fd&ndash;&gt;per&ndash;&gt;42f
-代码组成#   组成部分 说明     关键字 由代码规定的单词，每个都有特殊作用   符号 由代码规定，在不同地方可能有不同含义   标识符 由用户定义，用于标识变量名、常量名、函数名和由type定义的自定义数据类型   字面值(字面常量) 1.2、100 是数字的字面值，&ldquo;hello&rdquo;、&ldquo;world&quot;是字符串的字面值   注释 注释为说明性的文字，不参与编译   分隔符号 空格、换行、分号、tab 都为分割符号    关键字#ACCEPTACTIONANDARRAYBEFOREBEGIN WORKBIGINTBLOBBOOLEANBREAKPOINTBYTECALLCANCELCASECHARCLEARCLIPPEDCLOBCLOSECOLUMNCOMMANDCOMMIT WORKCONNECTCONSTANTCONSTRUCTCONTINUECURRENTCURRENT WINDOWDATABASEDATEDATETIMEDECIMALDEFINEDIALOGDISPLAYDISPLAY ARRAYDISPLAY BY NAMEDYNAMICENDERROREXITFALSEFLOATFOREACHFORFUNCTIONGLOBALGOTOIFIMPORTINPUTINT_FLAGINTEGERIS NULLLETLIKELINENOLOCATEMATCHESMENUMESSAGEMODMONEYNEXT FIELDNULLONOPENOPTIONSORPRINTPROGRAMPROMPTQUIT_FLAGRECORDRELEASE SAVEPOINTREPORTRETURNROLLBACK WORKRUNSAVEPOINTSCHEMASCROLLSET CONNECTIONSKIPSLEEPSMALLFLOATSMALLINTSPACESSQLCASTATUSSTEPSTRINGSTYLETEXTTHRUTIMETINYINTTODAYTRUETRYTYPEUNBUFFEREDUNITSUSINGVALIDATEVARCHARWHENEVERWHILE 普通关键字#块级关键字（含有 end 结尾）#预定义变量（已经定义的变量）#数据类型#复杂类型#开发流程#普通开发流程#CR 报表#接口#常用代码#字符串操作# 拼接字符串   define a varchar(100)  define b integer  define c string  -- a 初始值为&#34;&#34;  -- 将多个字符串拼接到一起  let a = &#34;hello&#34;,&#34;world&#34;,&#34;!">
+代码组成#   组成部分 说明     关键字 由代码规定的单词，每个都有特殊作用   符号 由代码规定，在不同地方可能有不同含义   标识符 由用户定义，用于标识变量名、常量名、函数名和由type定义的自定义数据类型   字面值(字面常量) 1.2、100 是数字的字面值，&ldquo;hello&rdquo;、&ldquo;world&quot;是字符串的字面值   注释 注释为说明性的文字，不参与编译   分隔符号 空格、换行、分号、tab 都为分割符号    关键字#ACCEPTACTIONANDARRAYBEFOREBEGIN WORKBIGINTBLOBBOOLEANBREAKPOINTBYTECALLCANCELCASECHARCLEARCLIPPEDCLOBCLOSECOLUMNCOMMANDCOMMIT WORKCONNECTCONSTANTCONSTRUCTCONTINUECURRENTCURRENT WINDOWDATABASEDATEDATETIMEDECIMALDEFINEDIALOGDISPLAYDISPLAY ARRAYDISPLAY BY NAMEDYNAMICENDERROREXITFALSEFLOATFOREACHFORFUNCTIONGLOBALGOTOIFIMPORTINPUTINT_FLAGINTEGERIS NULLLETLIKELINENOLOCATEMATCHESMENUMESSAGEMODMONEYNEXT FIELDNULLONOPENOPTIONSORPRINTPROGRAMPROMPTQUIT_FLAGRECORDRELEASE SAVEPOINTREPORTRETURNROLLBACK WORKRUNSAVEPOINTSCHEMASCROLLSET CONNECTIONSKIPSLEEPSMALLFLOATSMALLINTSPACESSQLCASTATUSSTEPSTRINGSTYLETEXTTHRUTIMETINYINTTODAYTRUETRYTYPEUNBUFFEREDUNITSUSINGVALIDATEVARCHARWHENEVERWHILE 普通关键字#块级关键字（含有 end 结尾）#预定义变量（已经定义的变量）#数据类型#复杂类型#开发流程#普通开发流程#CR 报表#接口#常用代码#字符串操作#获取字符串长度# define a string  define b varchar(100)  let a = &#34;hello world!">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="BDL宝典" />
 <meta property="og:description" content="" />
@@ -16,7 +16,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.affd066f492acf63fa29478e54069f3a58766d0785e0a4375ee37b90d5e4c681.js" integrity="sha256-r/0Gb0kqz2P6KUeOVAafOlh2bQeF4KQ3XuN7kNXkxoE=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.a630ab8053247f666c897e24a6db7cd1d798c20095f3e37be6cd92f2a9705672.js" integrity="sha256-pjCrgFMkf2ZsiX4kptt80deYwgCV8&#43;N75s2S8qlwVnI=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/docs/TIPS/index.xml" title="BDL教程" />
@@ -2288,9 +2288,24 @@ WHILE
   字符串操作
   <a class="anchor" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%93%8d%e4%bd%9c">#</a>
 </h3>
-<ul>
-<li>拼接字符串</li>
-</ul>
+<h4 id="获取字符串长度">
+  获取字符串长度
+  <a class="anchor" href="#%e8%8e%b7%e5%8f%96%e5%ad%97%e7%ac%a6%e4%b8%b2%e9%95%bf%e5%ba%a6">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a string
+</span></span><span style="display:flex;"><span>    define b varchar(<span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    let a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world!&#34;</span>
+</span></span><span style="display:flex;"><span>    let b <span style="color:#f92672">=</span> a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 使用内置函数,接受一个string类型,如果是varchar/char会转化为string,返回字符串长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    display <span style="color:#66d9ef">length</span>(b)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- string 类型还可以直接使用下面方法,没有参数,返回字符串长度.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    display a.getLength()
+</span></span></code></pre></div><h4 id="拼接字符串">
+  拼接字符串
+  <a class="anchor" href="#%e6%8b%bc%e6%8e%a5%e5%ad%97%e7%ac%a6%e4%b8%b2">#</a>
+</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a varchar(<span style="color:#ae81ff">100</span>)
 </span></span><span style="display:flex;"><span>    define b integer
 </span></span><span style="display:flex;"><span>    define <span style="color:#66d9ef">c</span> string
@@ -2314,9 +2329,10 @@ WHILE
 </span></span><span style="display:flex;"><span>    let <span style="color:#66d9ef">c</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">c</span>.append(<span style="color:#e6db74">&#34;hello&#34;</span>)
 </span></span><span style="display:flex;"><span>    let <span style="color:#66d9ef">c</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">c</span>.append(<span style="color:#e6db74">&#34;world!&#34;</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- c的结果为&#34;hello world!&#34;
-</span></span></span></code></pre></div><ul>
-<li>获取子字符串</li>
-</ul>
+</span></span></span></code></pre></div><h4 id="获取子字符串">
+  获取子字符串
+  <a class="anchor" href="#%e8%8e%b7%e5%8f%96%e5%ad%90%e5%ad%97%e7%ac%a6%e4%b8%b2">#</a>
+</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a string
 </span></span><span style="display:flex;"><span>    define b varchar(<span style="color:#ae81ff">100</span>)
 </span></span><span style="display:flex;"><span>    let a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world!&#34;</span>
@@ -2331,9 +2347,10 @@ WHILE
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- varchar/char类型获取字串，用中括号截取，第一个数字位开始位置，第二个数字位字串长度
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    let b <span style="color:#f92672">=</span> b[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- b的结果为&#34;ello&#34;
-</span></span></span></code></pre></div><ul>
-<li>获取单个字符</li>
-</ul>
+</span></span></span></code></pre></div><h4 id="获取单个字符">
+  获取单个字符
+  <a class="anchor" href="#%e8%8e%b7%e5%8f%96%e5%8d%95%e4%b8%aa%e5%ad%97%e7%ac%a6">#</a>
+</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a varchar(<span style="color:#ae81ff">100</span>)
 </span></span><span style="display:flex;"><span>    define b string
 </span></span><span style="display:flex;"><span>    let a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world!&#34;</span>
@@ -2348,21 +2365,113 @@ WHILE
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">-- 方法接受一个参数，即要取得字符串位置
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    display b.getCharAt(<span style="color:#ae81ff">5</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 以上结果为&#34;o&#34;
-</span></span></span></code></pre></div><ul>
-<li>替换字符</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
-</span></span></code></pre></div><ul>
-<li>判断是否含有字串</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"></code></pre></div><ul>
-<li>string其它方法</li>
-</ul>
-<h3 id="数组操作">
+</span></span></span></code></pre></div><h4 id="替换字符">
+  替换字符
+  <a class="anchor" href="#%e6%9b%bf%e6%8d%a2%e5%ad%97%e7%ac%a6">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a string
+</span></span><span style="display:flex;"><span>    let a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world! darcy&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 替换字符串并没有一个方法，但`tiptop gp`有lib函数可以调用。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">-- 函数接受三个参数，第一个参数为要替换得基础字符串，第二个参数为要替换的旧字符串，第三个参数为要替换得新字符串
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    let a <span style="color:#f92672">=</span> cl_replace_str(a,<span style="color:#e6db74">&#34;darcy&#34;</span>,<span style="color:#e6db74">&#34;joven&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- a的结果为&#34;hello world! joven&#34;
+</span></span></span></code></pre></div><h4 id="判断是否含有字串">
+  判断是否含有字串
+  <a class="anchor" href="#%e5%88%a4%e6%96%ad%e6%98%af%e5%90%a6%e5%90%ab%e6%9c%89%e5%ad%97%e4%b8%b2">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a string
+</span></span><span style="display:flex;"><span>    let a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world! darcy&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 判断字串,只有string可以使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">-- 该方法接受两个参数,第一个为要判断得子串,第二个为从第几位开始判断
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">-- 返回得结果是这个子串在原字符串中的位置，如果没有返回-1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    display a.getIndexOf(<span style="color:#e6db74">&#34;darcy&#34;</span>,<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 结果为14
+</span></span></span></code></pre></div><h4 id="string-其它方法">
+  string 其它方法
+  <a class="anchor" href="#string-%e5%85%b6%e5%ae%83%e6%96%b9%e6%b3%95">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a string
+</span></span><span style="display:flex;"><span>    let a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world! darcy &#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 字母转为大写
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    let a <span style="color:#f92672">=</span> a.toUpperCase()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 字母转为小写
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    let a <span style="color:#f92672">=</span> a.toLowerCase()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 去掉最左空格
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    let a <span style="color:#f92672">=</span> a.trimLeft()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 去掉最右空格
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    let a <span style="color:#f92672">=</span> a.trimRight()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 去掉全部空格
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    let a <span style="color:#f92672">=</span> a.<span style="color:#66d9ef">trim</span>()
+</span></span></code></pre></div><h3 id="数组操作">
   数组操作
   <a class="anchor" href="#%e6%95%b0%e7%bb%84%e6%93%8d%e4%bd%9c">#</a>
 </h3>
-</article>
+<h4 id="数组定义">
+  数组定义
+  <a class="anchor" href="#%e6%95%b0%e7%bb%84%e5%ae%9a%e4%b9%89">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#75715e">-- define 变量名 dynamic array of 数据类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">-- define 变量名 array[数组长度] of 数据类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    define a <span style="color:#66d9ef">dynamic</span> array <span style="color:#66d9ef">of</span> integer
+</span></span><span style="display:flex;"><span>    define b array[<span style="color:#ae81ff">10</span>] <span style="color:#66d9ef">of</span> integer
+</span></span></code></pre></div><h4 id="取指定位置数组">
+  取指定位置数组
+  <a class="anchor" href="#%e5%8f%96%e6%8c%87%e5%ae%9a%e4%bd%8d%e7%bd%ae%e6%95%b0%e7%bb%84">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a <span style="color:#66d9ef">dynamic</span> array <span style="color:#66d9ef">of</span> integer
+</span></span><span style="display:flex;"><span>    define b integer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    let a[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>    let a[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>    let a[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        let a[b] <span style="color:#f92672">=</span> b <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">for</span>
+</span></span></code></pre></div><h4 id="数组方法">
+  数组方法
+  <a class="anchor" href="#%e6%95%b0%e7%bb%84%e6%96%b9%e6%b3%95">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a <span style="color:#66d9ef">dynamic</span> array <span style="color:#66d9ef">of</span> integer
+</span></span><span style="display:flex;"><span>    define b integer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> b<span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        let a[b] <span style="color:#f92672">=</span> b <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">for</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 在末尾增加一个元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">call</span> a.appendElement()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 清空数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">-- 定长数组,只清空值,变长数组长度变为0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">call</span> a.clear()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 删除指定位置元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">call</span> a.deleteElement(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 获得数组长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    display a.getLength()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 数组中间插入一个元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">call</span> a.insertElement(<span style="color:#ae81ff">8</span>)
+</span></span></code></pre></div><h4 id="循环和数组">
+  循环和数组
+  <a class="anchor" href="#%e5%be%aa%e7%8e%af%e5%92%8c%e6%95%b0%e7%bb%84">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a <span style="color:#66d9ef">dynamic</span> array <span style="color:#66d9ef">of</span> integer
+</span></span><span style="display:flex;"><span>    define i integer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 循环输入10个整数到数组中
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        prompt i,<span style="color:#e6db74">&#34;.请输入一个整数:&#34;</span> <span style="color:#66d9ef">for</span> a[i]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">for</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 显示数组中所有得值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">to</span> a.getLength()
+</span></span><span style="display:flex;"><span>        display a[i]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">for</span>
+</span></span></code></pre></div></article>
  
       
 
@@ -2371,7 +2480,7 @@ WHILE
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/e68b8181305413da2645bcaee51cd08addce3bbd" title='最后修改者 darcy | 2023年10月9日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/c1aacd9cc1dfab9eeaad8c47f102bf9ff79c14a7" title='最后修改者 darcy | 2023年10月9日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2023年10月9日</span>
     </a>

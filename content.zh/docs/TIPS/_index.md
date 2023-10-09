@@ -158,8 +158,21 @@ WHILE
 
 ### 字符串操作
 
-+ 拼接字符串
+#### 获取字符串长度
+```sql
+    define a string
+    define b varchar(100)
+    let a = "hello world!"
+    let b = a
 
+    -- 使用内置函数,接受一个string类型,如果是varchar/char会转化为string,返回字符串长度
+    display length(b)
+
+    -- string 类型还可以直接使用下面方法,没有参数,返回字符串长度.
+    display a.getLength()
+```
+
+#### 拼接字符串
 
 ```sql
     define a varchar(100)
@@ -187,7 +200,8 @@ WHILE
     -- c的结果为"hello world!"
 ```
 
-+ 获取子字符串
+#### 获取子字符串
+
 ```sql
     define a string
     define b varchar(100)
@@ -204,7 +218,8 @@ WHILE
     let b = b[2,4]
     -- b的结果为"ello"
 ```
-+ 获取单个字符
+
+#### 获取单个字符
 
 ```sql
     define a varchar(100)
@@ -224,18 +239,114 @@ WHILE
 
 ```
 
-+ 替换字符
+#### 替换字符
 
 ```sql
-    
+    define a string
+    let a = "hello world! darcy"
+    -- 替换字符串并没有一个方法，但`tiptop gp`有lib函数可以调用。
+    -- 函数接受三个参数，第一个参数为要替换得基础字符串，第二个参数为要替换的旧字符串，第三个参数为要替换得新字符串
+    let a = cl_replace_str(a,"darcy","joven")
+    -- a的结果为"hello world! joven"
 ```
 
-+ 判断是否含有字串
+#### 判断是否含有字串
 
 ```sql
+    define a string
+    let a = "hello world! darcy"
+
+    -- 判断字串,只有string可以使用
+    -- 该方法接受两个参数,第一个为要判断得子串,第二个为从第几位开始判断
+    -- 返回得结果是这个子串在原字符串中的位置，如果没有返回-1
+    display a.getIndexOf("darcy",1)
+    -- 结果为14
 ```
-+ string其它方法
 
+#### string 其它方法
 
+```sql
+    define a string
+    let a = "hello world! darcy "
+
+    -- 字母转为大写
+    let a = a.toUpperCase()
+    -- 字母转为小写
+    let a = a.toLowerCase()
+    -- 去掉最左空格
+    let a = a.trimLeft()
+    -- 去掉最右空格
+    let a = a.trimRight()
+    -- 去掉全部空格
+    let a = a.trim()
+```
 
 ### 数组操作
+
+#### 数组定义
+
+```sql
+    -- define 变量名 dynamic array of 数据类型
+    -- define 变量名 array[数组长度] of 数据类型
+    define a dynamic array of integer
+    define b array[10] of integer
+```
+
+#### 取指定位置数组
+
+```sql
+    define a dynamic array of integer
+    define b integer
+
+    let a[1] = 10
+    let a[2] = 20
+    let a[3] = 30
+    for b = 4 to 10
+        let a[b] = b * 10
+    end for
+```
+
+#### 数组方法
+
+```sql
+    define a dynamic array of integer
+    define b integer
+
+    for b= 1 to 10
+        let a[b] = b * 10
+    end for
+    
+    -- 在末尾增加一个元素
+    call a.appendElement()
+
+    -- 清空数组
+    -- 定长数组,只清空值,变长数组长度变为0
+    call a.clear()
+
+    -- 删除指定位置元素
+    call a.deleteElement(2)
+
+    -- 获得数组长度
+    display a.getLength()
+
+    -- 数组中间插入一个元素
+    call a.insertElement(8)
+```
+
+
+#### 循环和数组
+
+```sql
+    define a dynamic array of integer
+    define i integer
+
+    -- 循环输入10个整数到数组中
+    for i = 1 to 10
+        prompt i,".请输入一个整数:" for a[i]
+    end for
+
+    -- 显示数组中所有得值
+    for i = 1 to a.getLength()
+        display a[i]
+    end for
+```
