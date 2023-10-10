@@ -502,8 +502,7 @@ END MAIN
 
 ### 数据类型
 
-- ARRAY
-
+- ARRAY 数组
 ```sql
     -- 定义数组
     define a array[10] of integer
