@@ -512,73 +512,178 @@ END MAIN
     end record
 ```
 
-- BIGINT
+- BIGINT 整型
 ```sql
-    
+    -- -9,223,372,036,854,775,807 to +9,223,372,036,854,775,807
+MAIN
+  DEFINE i BIGINT
+  LET i = 9223372036854775600
+  DISPLAY i
+END MAIN
 ```
-- BOOLEAN
+
+- BOOLEAN 布尔(BOOL)类型，值要么是1要么是0
 ```sql
-    
+FUNCTION checkOrderStatus( cid )
+  DEFINE oid INT, b BOOLEAN
+  LET b = ( isValid(oid) AND isStored(oid) )
+  IF NOT b THEN
+    ERROR "The order is not ready."
+  END IF
+END FUNCTION
 ```
-- BYTE
+- BYTE 大文件二进制类型
 ```sql
-    
+--  2^31 bytes (~2.14 Gigabytes)
+MAIN
+    DEFINE b BYTE
+    DATABASE stock 
+    LOCATE b IN MEMORY
+    SELECT png_image INTO b FROM images WHERE image_id = 123
+    CALL b.writeFile("/tmp/image.png")
+END MAIN
 ```
-- CHAR
+- CHAR 定长字符串类型
 ```sql
-    
+MAIN
+    DEFINE c CHAR(10)
+    LET c = "abcdef"
+    DISPLAY "[", c ,"]"      -- displays [abcdef    ]
+    IF c == "abcdef" THEN    -- this is TRUE
+        DISPLAY "equals"
+    END IF
+END MAIN
 ```
-- DATE
+- DATE 日期类型
 ```sql
-    
+MAIN
+    DEFINE d DATE
+    LET d = TODAY
+    DISPLAY d, "  ", d+100
+END MAIN
 ```
-- DATETIME
+- DATETIME 时间类型
 ```sql
-    
+MAIN
+    DEFINE d1, d2 DATETIME YEAR TO MINUTE
+    LET d1 = CURRENT YEAR TO MINUTE 
+    LET d2 = "1998-01-23 12:34"
+    DISPLAY d1, d2
+END MAIN
 ```
-- DECIMAL
+- DECIMAL 十进制小数类型，固定小数位数
 ```sql
-    
+MAIN
+    DEFINE d1 DECIMAL(10,4)
+    DEFINE d2 DECIMAL(10,3)
+    LET d1 = 1234.4567
+    LET d2 = d1 / 3 -- Rounds decimals to 3 digits 
+    DISPLAY d1, d2
+END MAIN
 ```
-- FLOAT
+- ~~FLOAT~~ 浮点数，固定总长度
 ```sql
-    
+    define  e float
+    let e = 1.022
 ```
-- INTEGER
+- INTEGER 整数
 ```sql
-    
+    -- -2,147,483,647 to +2,147,483,647.
+MAIN
+  DEFINE i INTEGER
+  LET i = 1234567
+  DISPLAY i 
+END MAIN
 ```
-- MONEY
+- MONEY 含有币种符号的特殊decimal
 ```sql
-    
+MAIN
+    DEFINE d1 MONEY(10,4)
+    DEFINE d2 MONEY(10,3)
+    LET d1 = 1234.4567
+    LET d2 = d1 / 3 -- Rounds decimals to 3 digits 
+    DISPLAY d1, d2
+END MAIN
 ```
-- RECORD
-```sql
+- RECORD 结构退，不同类型变量作为子成员组成一个变量
+```sql 
+    -- 定义结构体变量
+    DEFINE rec RECORD
+                id INTEGER,
+                name VARCHAR(100),
+                birth DATE
+                END RECORD
+    LET rec.id = 50
+    LET rec.name = 'Scott'
+    LET rec.birth = TODAY
+    DISPLAY rec.*
+    -- 使用type 可以定义一个结构体类型，后续可以重复使用
+    TYPE rec RECORD
+            id INTEGER,
+            name VARCHAR(100),
+            birth DATE
+            END RECORD
+    DEFINE rec1 rec
+    DEFINE rec2 rec
+    LET rec1.name = "darcy"
+
+    -- 数组也可以是结构体类型
+    DEFINE recs array[10] of RECORD
+            id INTEGER,
+            name VARCHAR(100),
+            birth DATE
+            END RECORD
+    LET recs[1].name = "darcy"
     
+    -- 结构体数组配合type使用
+    TYPE rec RECORD
+            id INTEGER,
+            name VARCHAR(100),
+            birth DATE
+            END RECORD
+    DEFINE recs dynamic array of rec
+    LET recs[1].name = "darcy"
 ```
-- SMALLFLOAT
+- ~~SMALLFLOAT~~ 小位数浮点数
 ```sql
-    
+    define a SMALLFLOAT
 ```
-- SMALLINT
+- ~~SMALLINT~~ 小位数整数
 ```sql
-    
+    define a smallint
 ```
-- STRING
+- STRING 变长字符串
 ```sql
-    
+    define a string
+    let a = "darcy"
+    display a.subString(2,4)
 ```
-- TEXT
+- TEXT 大数据文本类型
 ```sql
-    
+-- 2^31 bytes (~2.14 Gigabytes),
+MAIN
+    DEFINE t TEXT
+    DATABASE stock 
+    LOCATE t IN FILE "/tmp/mytext.txt" 
+    SELECT doc_text INTO t FROM documents WHERE doc_id = 123
+    CALL t.writeFile("/tmp/document.txt")
+END MAI
 ```
-- TINYINT
+- ~~TINYINT~~ 非常小的整型
 ```sql
-    
+-- -128 to +127.
+define a tinyint
 ```
-- VARCHAR
+- VARCHAR 限长数组
 ```sql
-    
+MAIN
+    DEFINE vc VARCHAR(10)
+    LET vc = "abc  "         -- two trailing blanks
+    DISPLAY "[", vc ,"]"     -- displays [abc  ]
+    IF vc == "abc" THEN    -- this is TRUE
+        DISPLAY "equals"
+    END IF
+END MAIN 
 ```
 
 ### 画面流程控制

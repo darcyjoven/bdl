@@ -16,7 +16,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.ed521e2649d6639bfcbf46f933c3e797242aec36bc0d9f3290a7d0bca91108fb.js" integrity="sha256-7VIeJknWY5v8v0b5M8PnlyQq7Da8DZ8ykKfQvKkRCPs=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.97f7d4568ec5f8b825612cc749310ffdcf6d1cd526ead2af2efba54423902fb3.js" integrity="sha256-l/fUVo7F&#43;LglYSzHSTEP/c9tHNUm6tKvLvulRCOQL7M=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/docs/TIPS/index.xml" title="BDL教程" />
@@ -2623,73 +2623,177 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>        age integer
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> record
 </span></span></code></pre></div><ul>
-<li>BIGINT</li>
+<li>BIGINT 整型</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#75715e">-- -9,223,372,036,854,775,807 to +9,223,372,036,854,775,807
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>MAIN
+</span></span><span style="display:flex;"><span>  DEFINE i BIGINT
+</span></span><span style="display:flex;"><span>  LET i <span style="color:#f92672">=</span> <span style="color:#ae81ff">9223372036854775600</span>
+</span></span><span style="display:flex;"><span>  DISPLAY i
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>BOOLEAN</li>
+<li>BOOLEAN 布尔(BOOL)类型，值要么是1要么是0</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">FUNCTION</span> checkOrderStatus( cid )
+</span></span><span style="display:flex;"><span>  DEFINE oid INT, b BOOLEAN
+</span></span><span style="display:flex;"><span>  LET b <span style="color:#f92672">=</span> ( isValid(oid) <span style="color:#66d9ef">AND</span> isStored(oid) )
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> b <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>    ERROR <span style="color:#e6db74">&#34;The order is not ready.&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> <span style="color:#66d9ef">FUNCTION</span>
 </span></span></code></pre></div><ul>
-<li>BYTE</li>
+<li>BYTE 大文件二进制类型</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">--  2^31 bytes (~2.14 Gigabytes)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE b BYTE
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">DATABASE</span> stock 
+</span></span><span style="display:flex;"><span>    LOCATE b <span style="color:#66d9ef">IN</span> MEMORY
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> png_image <span style="color:#66d9ef">INTO</span> b <span style="color:#66d9ef">FROM</span> images <span style="color:#66d9ef">WHERE</span> image_id <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">CALL</span> b.writeFile(<span style="color:#e6db74">&#34;/tmp/image.png&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>CHAR</li>
+<li>CHAR 定长字符串类型</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE <span style="color:#66d9ef">c</span> CHAR(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>    LET <span style="color:#66d9ef">c</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdef&#34;</span>
+</span></span><span style="display:flex;"><span>    DISPLAY <span style="color:#e6db74">&#34;[&#34;</span>, <span style="color:#66d9ef">c</span> ,<span style="color:#e6db74">&#34;]&#34;</span>      <span style="color:#75715e">-- displays [abcdef    ]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">c</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;abcdef&#34;</span> <span style="color:#66d9ef">THEN</span>    <span style="color:#75715e">-- this is TRUE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        DISPLAY <span style="color:#e6db74">&#34;equals&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>DATE</li>
+<li>DATE 日期类型</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE d DATE
+</span></span><span style="display:flex;"><span>    LET d <span style="color:#f92672">=</span> TODAY
+</span></span><span style="display:flex;"><span>    DISPLAY d, <span style="color:#e6db74">&#34;  &#34;</span>, d<span style="color:#f92672">+</span><span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>DATETIME</li>
+<li>DATETIME 时间类型</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE d1, d2 DATETIME <span style="color:#66d9ef">YEAR</span> <span style="color:#66d9ef">TO</span> <span style="color:#66d9ef">MINUTE</span>
+</span></span><span style="display:flex;"><span>    LET d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">CURRENT</span> <span style="color:#66d9ef">YEAR</span> <span style="color:#66d9ef">TO</span> <span style="color:#66d9ef">MINUTE</span> 
+</span></span><span style="display:flex;"><span>    LET d2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1998-01-23 12:34&#34;</span>
+</span></span><span style="display:flex;"><span>    DISPLAY d1, d2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>DECIMAL</li>
+<li>DECIMAL 十进制小数类型，固定小数位数</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE d1 DECIMAL(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>    DEFINE d2 DECIMAL(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    LET d1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1234</span>.<span style="color:#ae81ff">4567</span>
+</span></span><span style="display:flex;"><span>    LET d2 <span style="color:#f92672">=</span> d1 <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e">-- Rounds decimals to 3 digits 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    DISPLAY d1, d2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>FLOAT</li>
+<li><del>FLOAT</del> 浮点数，固定总长度</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define  e float
+</span></span><span style="display:flex;"><span>    let e <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">022</span>
 </span></span></code></pre></div><ul>
-<li>INTEGER</li>
+<li>INTEGER 整数</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#75715e">-- -2,147,483,647 to +2,147,483,647.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>MAIN
+</span></span><span style="display:flex;"><span>  DEFINE i INTEGER
+</span></span><span style="display:flex;"><span>  LET i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1234567</span>
+</span></span><span style="display:flex;"><span>  DISPLAY i 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>MONEY</li>
+<li>MONEY 含有币种符号的特殊decimal</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE d1 MONEY(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>    DEFINE d2 MONEY(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    LET d1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1234</span>.<span style="color:#ae81ff">4567</span>
+</span></span><span style="display:flex;"><span>    LET d2 <span style="color:#f92672">=</span> d1 <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e">-- Rounds decimals to 3 digits 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    DISPLAY d1, d2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN
 </span></span></code></pre></div><ul>
-<li>RECORD</li>
+<li>RECORD 结构退，不同类型变量作为子成员组成一个变量</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#75715e">-- 定义结构体变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    DEFINE rec RECORD
+</span></span><span style="display:flex;"><span>                id INTEGER,
+</span></span><span style="display:flex;"><span>                name VARCHAR(<span style="color:#ae81ff">100</span>),
+</span></span><span style="display:flex;"><span>                birth DATE
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">END</span> RECORD
+</span></span><span style="display:flex;"><span>    LET rec.id <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span>    LET rec.name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Scott&#39;</span>
+</span></span><span style="display:flex;"><span>    LET rec.birth <span style="color:#f92672">=</span> TODAY
+</span></span><span style="display:flex;"><span>    DISPLAY rec.<span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 使用type 可以定义一个结构体类型，后续可以重复使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">TYPE</span> rec RECORD
+</span></span><span style="display:flex;"><span>            id INTEGER,
+</span></span><span style="display:flex;"><span>            name VARCHAR(<span style="color:#ae81ff">100</span>),
+</span></span><span style="display:flex;"><span>            birth DATE
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">END</span> RECORD
+</span></span><span style="display:flex;"><span>    DEFINE rec1 rec
+</span></span><span style="display:flex;"><span>    DEFINE rec2 rec
+</span></span><span style="display:flex;"><span>    LET rec1.name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;darcy&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 数组也可以是结构体类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    DEFINE recs array[<span style="color:#ae81ff">10</span>] <span style="color:#66d9ef">of</span> RECORD
+</span></span><span style="display:flex;"><span>            id INTEGER,
+</span></span><span style="display:flex;"><span>            name VARCHAR(<span style="color:#ae81ff">100</span>),
+</span></span><span style="display:flex;"><span>            birth DATE
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">END</span> RECORD
+</span></span><span style="display:flex;"><span>    LET recs[<span style="color:#ae81ff">1</span>].name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;darcy&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 结构体数组配合type使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">TYPE</span> rec RECORD
+</span></span><span style="display:flex;"><span>            id INTEGER,
+</span></span><span style="display:flex;"><span>            name VARCHAR(<span style="color:#ae81ff">100</span>),
+</span></span><span style="display:flex;"><span>            birth DATE
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">END</span> RECORD
+</span></span><span style="display:flex;"><span>    DEFINE recs <span style="color:#66d9ef">dynamic</span> array <span style="color:#66d9ef">of</span> rec
+</span></span><span style="display:flex;"><span>    LET recs[<span style="color:#ae81ff">1</span>].name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;darcy&#34;</span>
 </span></span></code></pre></div><ul>
-<li>SMALLFLOAT</li>
+<li><del>SMALLFLOAT</del> 小位数浮点数</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a SMALLFLOAT
 </span></span></code></pre></div><ul>
-<li>SMALLINT</li>
+<li><del>SMALLINT</del> 小位数整数</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a smallint
 </span></span></code></pre></div><ul>
-<li>STRING</li>
+<li>STRING 变长字符串</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    define a string
+</span></span><span style="display:flex;"><span>    let a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;darcy&#34;</span>
+</span></span><span style="display:flex;"><span>    display a.<span style="color:#66d9ef">subString</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>)
 </span></span></code></pre></div><ul>
-<li>TEXT</li>
+<li>TEXT 大数据文本类型</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 2^31 bytes (~2.14 Gigabytes),
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE t TEXT
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">DATABASE</span> stock 
+</span></span><span style="display:flex;"><span>    LOCATE t <span style="color:#66d9ef">IN</span> FILE <span style="color:#e6db74">&#34;/tmp/mytext.txt&#34;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> doc_text <span style="color:#66d9ef">INTO</span> t <span style="color:#66d9ef">FROM</span> documents <span style="color:#66d9ef">WHERE</span> doc_id <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">CALL</span> t.writeFile(<span style="color:#e6db74">&#34;/tmp/document.txt&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAI
 </span></span></code></pre></div><ul>
-<li>TINYINT</li>
+<li><del>TINYINT</del> 非常小的整型</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- -128 to +127.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>define a tinyint
 </span></span></code></pre></div><ul>
-<li>VARCHAR</li>
+<li>VARCHAR 限长数组</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>MAIN
+</span></span><span style="display:flex;"><span>    DEFINE vc VARCHAR(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>    LET vc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc  &#34;</span>         <span style="color:#75715e">-- two trailing blanks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    DISPLAY <span style="color:#e6db74">&#34;[&#34;</span>, vc ,<span style="color:#e6db74">&#34;]&#34;</span>     <span style="color:#75715e">-- displays [abc  ]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">IF</span> vc <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;abc&#34;</span> <span style="color:#66d9ef">THEN</span>    <span style="color:#75715e">-- this is TRUE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        DISPLAY <span style="color:#e6db74">&#34;equals&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> MAIN 
 </span></span></code></pre></div><h3 id="画面流程控制">
   画面流程控制
   <a class="anchor" href="#%e7%94%bb%e9%9d%a2%e6%b5%81%e7%a8%8b%e6%8e%a7%e5%88%b6">#</a>
@@ -2969,9 +3073,9 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/a5d4ebb5e79ea6f450d55eaecfad77d7c25f8c2d" title='最后修改者 darcy | 2023年10月10日' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcyjoven/bdl/commit/1bc725cfbd0733722d721a07300f8d273024bb3e" title='最后修改者 darcy | 2023年10月13日' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023年10月10日</span>
+      <span>2023年10月13日</span>
     </a>
   </div>
 
