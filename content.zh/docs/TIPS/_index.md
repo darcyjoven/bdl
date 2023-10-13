@@ -722,8 +722,8 @@ END MAIN
     let b = a
 
     -- 获取单个字符，一种方式是使用取子串方式，每次取长度为1的字串即可。
-    display a[3,1]
-    call b.subString(4,1) returning c
+    display a[3,3]
+    call b.subString(4,4) returning c
     -- 以上结果都是"l"
 
     -- 除了取字串，string 还有取字符的方法
@@ -772,7 +772,7 @@ END MAIN
     call a.trimLeft() returning a
     -- 去掉最右空格
     call a.trimRight() returning a
-    -- 去掉全部空格
+    -- 去掉左右两边空格
     call a.trim() returning a
 ```
 
