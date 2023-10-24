@@ -345,20 +345,6 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
     </item>
     
     <item>
-      <title>5.多笔查询</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</link>
-      <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
-      
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</guid>
-      <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
-这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
-FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
-现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
-让我们利用上一节的FETCH来完成上述需求。
-define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34;  -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql  open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].</description>
-    </item>
-    
-    <item>
       <title>6.DISPLAY</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/6.display/</link>
       <pubDate>Tue, 29 Aug 2023 15:45:32 +0800</pubDate>
@@ -397,6 +383,20 @@ INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD f
 注意
 块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
 INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：</description>
+    </item>
+    
+    <item>
+      <title>7.多笔查询</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</link>
+      <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</guid>
+      <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
+这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
+FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
+现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
+让我们利用上一节的FETCH来完成上述需求。
+define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34;  -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql  open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].</description>
     </item>
     
     <item>

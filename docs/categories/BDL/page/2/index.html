@@ -15,7 +15,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.bef008b0830ff2d96358ff84088515ad897c0b0affdb947583afa174e1ca1c30.js" integrity="sha256-vvAIsIMP8tljWP&#43;ECIUVrYl8Cwr/25R1g6&#43;hdOHKHDA=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/categories/BDL/index.xml" title="BDL教程" />
@@ -1344,7 +1344,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/4.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/4.transaction_temptable/" class="">4.事务和临时表</a>
   
 
         </li>
@@ -1357,7 +1357,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-rows/" class="">5.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1370,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
   
 
         </li>
@@ -3126,10 +3139,10 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
   
   <article class="markdown book-post">
     <h2>
-      <a href="/docs/BDL/2.medium/14.database/5.select-rows/">5.多笔查询</a>
+      <a href="/docs/BDL/2.medium/17.interface/6.display/">6.DISPLAY</a>
     </h2>
     
-  <h5>2023年8月24日</h5>
+  <h5>2023年8月29日</h5>
 
 
 
@@ -3143,20 +3156,19 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
   
   <div>
     
-      <a href="/tags/SQL/">SQL</a>
+      <a href="/tags/DISPLAY/">DISPLAY</a>
   </div>
   
 
 
 
 
-    <p>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
-这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
-FETCH&ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
-现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
-让我们利用上一节的FETCH来完成上述需求。
-define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &#34;select count(*) from ima_file where ima01 like ? &#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &#34;E%&#34;  -- let l_sql = &#34;select * from ima_file where ima01 like ? &#34; declare ima_sel cursor from l_sql  open ima_sel using &#34;E%&#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].
-        <a href="/docs/BDL/2.medium/14.database/5.select-rows/">...</a>
+    <p>DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
+注意
+因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为表单,表格称为表格。这并不是通用的定义，仅为了在本教程中方便区分两种。
+ 表格 表单  DISPLAY 表单#4fd文件
+database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40),  DateEdit1 date,  Edit1 varchar(40),  CheckBox1 varchar(40)  end record  open window act_w with form &#34;czz/42f/czzi001&#34;   menu &#39;&#39;  on action quit  exit menu  on action setvalue  let sr.FFLabel1 = &#39;FFLabel1 &#39;  let sr.
+        <a href="/docs/BDL/2.medium/17.interface/6.display/">...</a>
       
     </p>
   </article>

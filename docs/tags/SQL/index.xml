@@ -21,11 +21,11 @@
     </item>
     
     <item>
-      <title>5.多笔查询</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</link>
+      <title>7.多笔查询</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</link>
       <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
       
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</guid>
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</guid>
       <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
 这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
 FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。

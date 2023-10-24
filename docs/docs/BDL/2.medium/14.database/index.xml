@@ -57,11 +57,24 @@ database ds main  define l_ima01 like ima_file.ima01  define l_ima02 like ima_fi
     </item>
     
     <item>
+      <title>4.事务和临时表</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/4.transaction_temptable/</link>
+      <pubDate>Tue, 24 Oct 2023 09:49:27 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/4.transaction_temptable/</guid>
+      <description>事务和临时表#事务#事务的特性：
+ 原子性：事务是一个不可分割的工作单位，事务中的操作，要么都发生，要么都不发生。 一致性：事务前后数据的完整性必须保持一致。 隔离性：事务的隔离性是指一个事务的执行不被另一个事务干扰，即一个事务内部的操作及使用的数据对并发的 持久性：一个事务一旦被提交，它对数据库中数据的改变是永久性的，即使数据库发生故障也不应该对其有任何影响。  一个update是一个事务，一次delete也是一次事务，要么都成功，要么都失败，不会出现更新一半的情况。
+事务的开启、回滚、提交#在plsql中操作数据，每次更新之后要提交，这里事务是自动开启的。 但是在 BDL 中事务需要主动开启，否则每个语句运行之后自动提交，即：数据库数据立即修改。
+在某些场景，如工单拆分 LOT 单，订单转工单，期望的是全部成功才生成单据，任何一笔失败了，希望从新开始而不是部分产生单据。 这些场景就我们就需要手动开启事务:
+--开启事务 begin work let g_success = &amp;#39;Y&amp;#39; for i = 1 to 100  update student set name=&amp;#39;xiaoming&amp;#39; where id=i;  if sqlca.sqlcode then  let g_success = &amp;#39;N&amp;#39;  -- 有任何一笔失败，立即回滚事务，回滚事务，即：本次事务中所有操作取消不做，回到初始状态  rollback work  end if end for if g_success = &amp;#39;Y&amp;#39; then  -- 如果成功才会提交事务  commit work end if 事务的特点：</description>
+    </item>
+    
+    <item>
       <title>4.查询单笔资料</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/4.select-single-row/</link>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-single-row/</link>
       <pubDate>Thu, 24 Aug 2023 14:49:27 +0800</pubDate>
       
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/4.select-single-row/</guid>
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-single-row/</guid>
       <description>查询单笔资料#BDL SQL#同插入一样，查询时BDL SQL也有特殊的语法，但仅可以查询单笔资料，如果查询结果包含多笔，程序报错退出。
 define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 select ima01,ima02 into l_ima01,l_ima02 from ima_file where rownum = 1 在select关键之前from关键字之后，可以使用into关键字，后面可以指定查询保存到哪些变量。
 我们在定义变量类型时有使用过一下语法
@@ -71,26 +84,26 @@ define l_sql string define l_ima record like ima_file.* let l_sql = &amp;#34;sel
     </item>
     
     <item>
-      <title>5.多笔查询</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</link>
+      <title>6.练习</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/7.practise/</link>
+      <pubDate>Sun, 27 Aug 2023 15:45:02 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/7.practise/</guid>
+      <description>练习#创建学生资料表student#   字段 数据类型 字段说明     name varchar(20) 姓名   grade varchar(4) 年级   course varchar(40) 课程名称   score number(5) 得分    输入学生资料信息，插入到数据库# 如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入     姓名 年级 课程名称 得分    查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99 查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98 </description>
+    </item>
+    
+    <item>
+      <title>7.多笔查询</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</link>
       <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
       
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/5.select-rows/</guid>
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</guid>
       <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
 这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
 FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
 现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
 让我们利用上一节的FETCH来完成上述需求。
 define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34;  -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql  open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].</description>
-    </item>
-    
-    <item>
-      <title>6.练习</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</link>
-      <pubDate>Sun, 27 Aug 2023 15:45:02 +0800</pubDate>
-      
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</guid>
-      <description>练习#创建学生资料表student#   字段 数据类型 字段说明     name varchar(20) 姓名   grade varchar(4) 年级   course varchar(40) 课程名称   score number(5) 得分    输入学生资料信息，插入到数据库# 如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入     姓名 年级 课程名称 得分    查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99 查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98 </description>
     </item>
     
   </channel>

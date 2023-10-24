@@ -49,10 +49,10 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
     
     <item>
       <title>6.练习</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</link>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/7.practise/</link>
       <pubDate>Sun, 27 Aug 2023 15:45:02 +0800</pubDate>
       
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.practise/</guid>
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/7.practise/</guid>
       <description>练习#创建学生资料表student#   字段 数据类型 字段说明     name varchar(20) 姓名   grade varchar(4) 年级   course varchar(40) 课程名称   score number(5) 得分    输入学生资料信息，插入到数据库# 如果相同已经有该姓名、年级、课程名称的资料那么更新已有成绩 如果得分小于0，或者大于100，报错，跳过这笔资料 当有20笔资料时，停止录入     姓名 年级 课程名称 得分    查询每门课的最高成绩，和平均成绩，并以以下格式显示#课程名称 平均分 最高分a 67 90b 87 99 查询按照课程名称和成绩倒序排列显示成绩单#姓名 年级 课程名称 成绩小米 4 数学 78小红 5 语文 98 </description>
     </item>
     
