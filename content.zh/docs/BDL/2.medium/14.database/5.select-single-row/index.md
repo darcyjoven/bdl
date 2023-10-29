@@ -1,5 +1,5 @@
 ---
-title: "4.查询单笔资料"
+title: "5.查询单笔资料"
 lastmod: 2023-08-24T14:49:27+08:00
 date: 2023-08-24T14:49:27+08:00
 tags: [""]
@@ -47,7 +47,7 @@ select * into l_ima.* from ima_file where rownum = 1
 ```sql
 define l_sql string
 define l_ima record like ima_file.*
-let l_sql = "select * into l_ima.* from ima_file where rownum = ?"
+let l_sql = "select * from ima_file where rownum = ?"
 prepare ima_sel from l_sql
 execute ima_sel using 1 into l_ima.*
 ```
@@ -68,7 +68,7 @@ execute ima_sel using 1 into l_ima.*
 
 1. 由prepare定义
 ```sql
-let l_sql = "select * into l_ima.* from ima_file where rownum = ?"
+let l_sql = "select * from ima_file where rownum = ?"
 prepare ima_sel_p from l_sql
 declare ima_sel_cur cursor for ima_sel_p
 ```
@@ -77,13 +77,13 @@ declare ima_sel_cur cursor for ima_sel_p
 2. 由字符串定义
 
 ```sql
-declare ima_sel_cur cursor from "select * into l_ima.* from ima_file where rownum = ?"
+declare ima_sel_cur cursor from "select * from ima_file where rownum = ?"
 ```
 利用字符串定义，将`cursor for `改为`cursor from`即可。
 
 3. 由BDL SQL定义
 ```sql
-declare ima_sel_cur cursor for select * into l_ima.* from ima_file where rownum = 1
+declare ima_sel_cur cursor for select * from ima_file where rownum = 1
 ```
 
 由BDL SQL定义可以直接跟在`cursor for`即可。

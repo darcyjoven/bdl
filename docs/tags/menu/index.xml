@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/menu/</link>
     <description>Recent content in menu on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 29 Aug 2023 15:44:56 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/menu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.MENU</title>
@@ -12,10 +13,11 @@
       <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
-      <description>MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
-MENU 命令#MENU语法类似下面这样:
-MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [comment]  [ HELP help-number ]   COMMAND KEY ( key-name )  option [comment]  [ HELP help-number ]   ON ACTION action-name   ON IDLE idle-seconds  END MENU 说明：
- 在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&amp;rsquo;default&amp;rsquo;。  属性包括:</description>
+      <description>MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
+MENU 命令#MENU语法类似下面这样:
+MENU [title] ATTRIBUTE ( control-attributes ) BEFORE MENU COMMAND option [comment] [ HELP help-number ] COMMAND KEY ( key-name ) option [comment] [ HELP help-number ] ON ACTION action-name ON IDLE idle-seconds END MENU 说明：
+在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&amp;rsquo;default&amp;rsquo;。 属性包括:
+属性 描述 STYLE = string 定义 menu 型态，值可以为&amp;rsquo;default&amp;rsquo;， &amp;lsquo;dialog&amp;rsquo; or &amp;lsquo;popup&amp;rsquo; COMMENT = string 定义 menu show 出来的讯息 IMAGE = string 定义选单中的图示 BEFORE MENU 可以不写，若有一些特别的控管如隐藏某些menu 功能或参数控管是否进入某menu 功能时， 可在BEFORE MENU 来下一些menu-statemenu 来控管menu 部份。</description>
     </item>
     
   </channel>

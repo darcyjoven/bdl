@@ -3,35 +3,34 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+<meta name="description" content="画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
 在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
 4fd 对应代码的文件的4gl
 42f对应代码文件的42m
-per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
 per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
-以上4fd文件，转为per描述如下：
-SCHEMA formonly  LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly.">
+以上4fd文件，转为per描述如下：
+SCHEMA formonly LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 { [label1 ] } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 { [label2 ] } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="3.画面档文件的编译" />
-<meta property="og:description" content="画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+<meta property="og:description" content="画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
 在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
 4fd 对应代码的文件的4gl
 42f对应代码文件的42m
-per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
 per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
-以上4fd文件，转为per描述如下：
-SCHEMA formonly  LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly." />
+以上4fd文件，转为per描述如下：
+SCHEMA formonly LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 { [label1 ] } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 { [label2 ] } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/3.fglform/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-29T15:02:51+08:00" />
 <meta property="article:modified_time" content="2023-08-30T16:00:31+08:00" />
-
 <title>3.画面档文件的编译 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1372,7 +1371,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1385,7 +1384,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1398,7 +1397,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2227,7 +2226,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/17.interface/3.fglform/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/17.interface/3.fglform/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2238,7 +2237,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/input/" />
-
 <title>input | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/input/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2816,7 +2815,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>输出-处理-输出&ndash;这就是程序#工厂的生产车间生产出来的产品是最终的输出。
+    <p>输出-处理-输出&ndash;这就是程序#工厂的生产车间生产出来的产品是最终的输出。
 比如某药厂生产的保健药，号称是经历了80多道工序。 这些工序，当然是从输入原材料开始，每道工序处理-件事情，最终生产出包装精美的保健药品。
 第一道工序，清洗，输人的是刚刚采摘下来的药材，其中，有不少的烂叶子、烂根。 清洗工序处理完毕后，输出来的是干净的有用的药材。
 第二道工序，榨汁，输人的是干净有用的药材，榨汁工序处理时，添加纯净水，榨出药汁。 接着是萃取工序，将药汁中的有用的部分苹取.来&hellip;.80多道工序就这样一一处理完毕， 保健 药就制作完毕。
@@ -2853,63 +2852,20 @@ BDL语言中有多种多样的输出方式，大部分是封装好的函数，�
 
 
 
-    <p>输入&ndash;键盘与鼠标的交互#之前的程序，我们都是在输出，输入的值，我们都是编写在程序中。
+    <p>输入&ndash;键盘与鼠标的交互#之前的程序，我们都是在输出，输入的值，我们都是编写在程序中。
 但这让程序每次输出的结果都一样，如果我们要其它结果就要重新编写代码。
 为了解决上述问题，我们引入BDL语言可以支持的输入方式。
-Prompt&ndash;初次接触用户界面#请运行一下代码，查看输出情况，运行前请确保打开GDC客户端
+Prompt&ndash;初次接触用户界面#请运行一下代码，查看输出情况，运行前请确保打开GDC客户端
 define birth date prompt &#34;请输入你的生日:&#34; for birth display birth using &#34;yyyy年mm月dd日&#34; 是否出现了这个弹窗，如果未出现，请检查GDC安全性设置，调整为最低，且端口为6400。
-随便输入一点东西试试看，报错了！String to date conversion errr.。 字符串转日期格式失败，它可以帮我自动转为日期格式！而且会检查是否正确！
-我们尝试输入19900101或者900101。
+随便输入一点东西试试看，报错了！String to date conversion errr.。 字符串转日期格式失败，它可以帮我自动转为日期格式！而且会检查是否正确！
+我们尝试输入19900101或者900101。
 现在查看控制台，成功转为了日期！
 1990年01月01日 代码分析
 prompt &quot;请输入你的生日:&quot; for birth 这一行为我们做了不少事情，我们来分析一下
- 弹出一个新窗，且有一个可以输入的地方和确定取消按钮。 可入处有输入说明。 可输入的地方只能输入能转为日期的内容，否则无法确定并完成。 将输入的内容转为birth变量的数据类型。  仅一行代码，就可以做这么多事情，这就是一开始说的BDL抽象级别比较高。 将大量的常使用功能集成到一起，不需要我们为重复的事情编写代码。
+弹出一个新窗，且有一个可以输入的地方和确定取消按钮。 可入处有输入说明。 可输入的地方只能输入能转为日期的内容，否则无法确定并完成。 将输入的内容转为birth变量的数据类型。 仅一行代码，就可以做这么多事情，这就是一开始说的BDL抽象级别比较高。 将大量的常使用功能集成到一起，不需要我们为重复的事情编写代码。
 让我们试一试下面这些代码:
 define birth date define name varchar(6) define sex varchar(1) prompt &#34;请输入你的生日:&#34; for birth prompt &#34;请输入你的姓名:&#34; for name prompt &#34;你是男生吗y/n:&#34; for sex display sfmt(&#34;\n%1你好,你是否是男生(%2),你的生日是%3&#34;,name,sex,birth using &#34;yy/mm/dd&#34;) 你会发现，prompt除了可以转换资料类型，还能够限制可以输入的字数。（一个中文汉字需要yi\一个varchar(3)）
-        <a href="/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/4.input/">...</a>
-      
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/docs/BDL/2.medium/17.interface/7.input/">7.INPUT</a>
-    </h2>
-    
-  <h5>2023年8月29日</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/BDL/">BDL</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/input/">input</a>
-  </div>
-  
-
-
-
-
-    <p>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
-和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&rsquo;Y&rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
-和DISPLAY和语法一样，INPUT也有两种语法。
-INPUT 表单#INPUT p_employee.no FROM no
-INPUT BY NAME p_employee.no
-以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
-除了以上语法INPUT也支持块语法END INPUT。
-INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
-注意
-块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
-INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：
-        <a href="/docs/BDL/2.medium/17.interface/7.input/">...</a>
-      
+练习#编写一个程序，首先输入一个日期a，然后输入一个整数b，计算a经过这个b天后的日期是哪一天。计算后将结果在控制台打印。 
     </p>
   </article>
   
@@ -2930,7 +2886,7 @@ INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD f
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3272,7 +3228,7 @@ INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD f
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

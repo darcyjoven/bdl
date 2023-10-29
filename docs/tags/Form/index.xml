@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/Form/</link>
     <description>Recent content in Form on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 29 Aug 2023 15:43:05 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/Form/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.Window&amp;Form</title>
@@ -12,13 +13,13 @@
       <pubDate>Tue, 29 Aug 2023 15:43:05 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/4.window-form/</guid>
-      <description>Window &amp;amp; Form#在上一章节介绍如何编辑画面，但 WINDOWS 与 FORM 本身是无法执行的，它必须透过 Program 去启动它，以下介绍在程序中启动及显示 WINDOWS &amp;amp; FORM 的指令。
+      <description>Window &amp;amp; Form#在上一章节介绍如何编辑画面，但 WINDOWS 与 FORM 本身是无法执行的，它必须透过 Program 去启动它，以下介绍在程序中启动及显示 WINDOWS &amp;amp; FORM 的指令。
 本节用到画面档时czzi001.4fd，你也可以自己创建一个喜欢的样式。
-WINDOW#OPEN &amp;amp; CLOSE#database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main  open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34;  sleep 10  close window czz_w end main 如果你直接运行发现，并没有打开作业，请通过 debug 调试模式重新运行一下查看。
+WINDOW#OPEN &amp;amp; CLOSE#database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34; sleep 10 close window czz_w end main 如果你直接运行发现，并没有打开作业，请通过 debug 调试模式重新运行一下查看。
 注意
 BDL 中如果没有指定使用操作画面语句块，那么直接打开画面是看不见的。
-运行一下代码：
-database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main  open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34;  call cl_ui_init() -- 这lib函数为初始化画面，如果不调用会出现一个空窗口。  menu &amp;#34;&amp;#34;  on action test  message &amp;#34;test&amp;#34;  on action untest  message &amp;#34;untest&amp;#34;  on action close  exit menu  end menu  close window czz_w end main MENU 就是一个画面操作语句块，后面会讲到，它的功能就是生成一些按钮，tiptop gp 将这些按钮放置到了右侧。</description>
+运行一下代码：
+database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34; call cl_ui_init() -- 这lib函数为初始化画面，如果不调用会出现一个空窗口。 menu &amp;#34;&amp;#34; on action test message &amp;#34;test&amp;#34; on action untest message &amp;#34;untest&amp;#34; on action close exit menu end menu close window czz_w end main MENU 就是一个画面操作语句块，后面会讲到，它的功能就是生成一些按钮，tiptop gp 将这些按钮放置到了右侧。</description>
     </item>
     
   </channel>

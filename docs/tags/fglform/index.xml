@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/fglform/</link>
     <description>Recent content in fglform on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 29 Aug 2023 15:02:51 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/fglform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3.画面档文件的编译</title>
@@ -12,14 +13,14 @@
       <pubDate>Tue, 29 Aug 2023 15:02:51 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/3.fglform/</guid>
-      <description>画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+      <description>画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
 在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
 4fd 对应代码的文件的4gl
 42f对应代码文件的42m
-per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
 per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
-以上4fd文件，转为per描述如下：
-SCHEMA formonly  LAYOUT (text=%&amp;#34;Form&amp;#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&amp;#34;Page1&amp;#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&amp;#34;Page2&amp;#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&amp;#34;Label1&amp;#34;; Label label2:Label2, text=%&amp;#34;Label2&amp;#34;; Edit edit1=formonly.</description>
+以上4fd文件，转为per描述如下：
+SCHEMA formonly LAYOUT (text=%&amp;#34;Form&amp;#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&amp;#34;Page1&amp;#34;) Grid Grid2 { [label1 ] } END -- Grid2 END -- Page1 Page Page2(text=%&amp;#34;Page2&amp;#34;) Grid Grid1 { [label2 ] } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form ATTRIBUTES Label label1:Label1, text=%&amp;#34;Label1&amp;#34;; Label label2:Label2, text=%&amp;#34;Label2&amp;#34;; Edit edit1=formonly.</description>
     </item>
     
   </channel>

@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/categories/BDL/" />
-
 <title>BDL | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/categories/BDL/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2812,7 +2811,44 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>练习#使用cl_null()、cl_replace_str()、cl_digcut()、cl_get_env()# p_findfunc作业可以查询tiptop gp中常用sub、lib函数 请注意以上函数需要的参数和返回值数量  新增一个lib函数cl_get_runtime_line()# 无参数 以下方式返回一个字符串，czz_czzi001.4gl为当前运行的文件名称，7为代码运行的当前行  file:czz_czzi001.4gl line:7 可以使用__FILE__ __LINE__ 两个宏定义标记  
+    <p>练习#使用cl_null()、cl_replace_str()、cl_digcut()、cl_get_env()#p_findfunc作业可以查询tiptop gp中常用sub、lib函数 请注意以上函数需要的参数和返回值数量 新增一个lib函数cl_get_runtime_line()#无参数 以下方式返回一个字符串，czz_czzi001.4gl为当前运行的文件名称，7为代码运行的当前行 file:czz_czzi001.4gl line:7 可以使用__FILE__ __LINE__ 两个宏定义标记 
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/docs/BDL/2.medium/14.database/6.select-rows/">6.多笔查询</a>
+    </h2>
+    
+  <h5>2023年8月24日</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/BDL/">BDL</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/tags/SQL/">SQL</a>
+  </div>
+  
+
+
+
+
+    <p>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
+这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
+FETCH&ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
+现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
+让我们利用上一节的FETCH来完成上述需求。
+define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string -- 获取查询结果的资料总笔数 let l_sql = &#34;select count(*) from ima_file where ima01 like ? &#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &#34;E%&#34; -- let l_sql = &#34;select * from ima_file where ima01 like ? &#34; declare ima_sel cursor from l_sql open ima_sel using &#34;E%&#34; for l_i = 1 to l_cnt fetch absolute l_i ima_sel into l_ima[l_i].
+        <a href="/docs/BDL/2.medium/14.database/6.select-rows/">...</a>
+      
     </p>
   </article>
   
@@ -2842,55 +2878,21 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
+    <p>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
 和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&rsquo;Y&rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
 和DISPLAY和语法一样，INPUT也有两种语法。
-INPUT 表单#INPUT p_employee.no FROM no
+INPUT 表单#INPUT p_employee.no FROM no
 INPUT BY NAME p_employee.no
 以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
 除了以上语法INPUT也支持块语法END INPUT。
-INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
+INPUT variable-list FROM field-list BEFORE INPUT AFTER INPUT BEFORE FIELD field-list AFTER FIELD field-list ON CHANGE field-list ON ACTION action-name ON IDLE idle-seconds END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
 注意
 块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
-INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：
+INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：
+BEFORE FIELD field_name BEFORE FIELD ima01在焦点到ima01字段之前会运行到此处
+AFTER FIELD field_name AFTER FIELD ima01在焦点要离开ima01字段之前会运行
+ON CHANGE field_name ON CHANGE ima01在焦点要离开ima01字段前，如果字段被修改过会运行
         <a href="/docs/BDL/2.medium/17.interface/7.input/">...</a>
-      
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/docs/BDL/2.medium/14.database/6.select-rows/">7.多笔查询</a>
-    </h2>
-    
-  <h5>2023年8月24日</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/BDL/">BDL</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/SQL/">SQL</a>
-  </div>
-  
-
-
-
-
-    <p>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
-这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
-FETCH&ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
-现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
-让我们利用上一节的FETCH来完成上述需求。
-define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &#34;select count(*) from ima_file where ima01 like ? &#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &#34;E%&#34;  -- let l_sql = &#34;select * from ima_file where ima01 like ? &#34; declare ima_sel cursor from l_sql  open ima_sel using &#34;E%&#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].
-        <a href="/docs/BDL/2.medium/14.database/6.select-rows/">...</a>
       
     </p>
   </article>
@@ -2921,13 +2923,11 @@ define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer de
 
 
 
-    <p>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
+    <p>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
 CONSTRUCT运行时，会先清空输入字段的所有资料内容，然后根据录入的内容组成SQL查询条件。
 CONSTRUCT并不区分表单还是表格，因为表格也只能录入第一行资料。
 CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区别，所以放在一起讲
- BY NAME ON  CONSTRUCT BY NAME variable ON column-list  [ ATTRIBUTES ( { display-attribute  | control-attribute }  [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [...] END CONSTRUCT ]  ON FROM  CONSTRUCT variable ON column-list FROM field-list  [ ATTRIBUTES ( { display-attribute  | control-attribute  } [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [.
-        <a href="/docs/BDL/2.medium/17.interface/8.construct/">...</a>
-      
+BY NAME ON CONSTRUCT BY NAME variable ON column-list [ ATTRIBUTES ( { display-attribute | control-attribute } [,...] ) ] [ HELP help-number ] [ dialog-control-block [...] END CONSTRUCT ] ON FROM CONSTRUCT variable ON column-list FROM field-list [ ATTRIBUTES ( { display-attribute | control-attribute } [,...] ) ] [ HELP help-number ] [ dialog-control-block [...] END CONSTRUCT ] 
     </p>
   </article>
   
@@ -2957,8 +2957,8 @@ CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区�
 
 
 
-    <p>练习#学生成绩录入作业# 功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入  进阶#请将上述资料建立合适的表，并保存到数据库
-利用表格显示学生成绩# 可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择  
+    <p>练习#学生成绩录入作业#功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入 进阶#请将上述资料建立合适的表，并保存到数据库
+利用表格显示学生成绩#可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择 
     </p>
   </article>
   
@@ -3002,7 +3002,7 @@ CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区�
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3344,7 +3344,7 @@ CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区�
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

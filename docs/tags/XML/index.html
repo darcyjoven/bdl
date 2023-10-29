@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/XML/" />
-
 <title>XML | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/XML/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2812,16 +2811,18 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
+    <p>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
 XML是一种标记语言，它并不是编程语言。
 你如果了解HTML，那么你就可以轻松理解XML。XML是一种要求严格的HTML，但他们实际并不存在包含不包含关系。
 在百度首页，按下F12，你能看到如下界面，这就是HTML语言。XML也遵循着类似的结构风格。
-XML 语法# XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
- XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
-名词介绍#&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;note name=&#34;n1&#34; &gt;  &lt;to&gt;Tove&lt;/to&gt;  &lt;from&gt;Jani&lt;/from&gt;  &lt;heading&gt;Reminder&lt;/heading&gt;  &lt;body&gt;Don&#39;t forget me this weekend!&lt;/body&gt; &lt;/note&gt; 以上 XML 代码中，
-  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 是 XML 的申明
-  任何一个 &lt;...&gt;到它的&lt;.../&gt;被称作元素，元素也被称为节点，是同一个意思
- 以下是一个元素   &lt;note name=&#34;n1&#34; &gt;  &lt;to&gt;Tove&lt;/to&gt;  &lt;from&gt;Jani&lt;/from&gt;  &lt;heading&gt;Reminder&lt;/heading&gt;  &lt;body&gt;Don&#39;t forget me this weekend!
+XML 语法#XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
+XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
+名词介绍#&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;note name=&#34;n1&#34; &gt; &lt;to&gt;Tove&lt;/to&gt; &lt;from&gt;Jani&lt;/from&gt; &lt;heading&gt;Reminder&lt;/heading&gt; &lt;body&gt;Don&#39;t forget me this weekend!&lt;/body&gt; &lt;/note&gt; 以上 XML 代码中，
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 是 XML 的申明
+任何一个 &lt;...&gt;到它的&lt;.../&gt;被称作元素，元素也被称为节点，是同一个意思
+以下是一个元素 &lt;note name=&#34;n1&#34; &gt; &lt;to&gt;Tove&lt;/to&gt; &lt;from&gt;Jani&lt;/from&gt; &lt;heading&gt;Reminder&lt;/heading&gt; &lt;body&gt;Don&#39;t forget me this weekend!&lt;/body&gt; &lt;/note&gt; 以下也是一个元素 &lt;to&gt;Tove&lt;/to&gt; 元素中可以包含元素
+&lt;to&gt;Tove&lt;/to&gt;中Tove是元素to的值
+&lt;note name=&quot;n1&quot; &gt;中name=&quot;n1&quot;被称作属性，name是属性名，n1是属性值
         <a href="/docs/BDL/2.medium/17.interface/1.interface-tree/">...</a>
       
     </p>
@@ -2844,7 +2845,7 @@ XML是一种标记语言，它并不是编程语言。
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3186,7 +3187,7 @@ XML是一种标记语言，它并不是编程语言。
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

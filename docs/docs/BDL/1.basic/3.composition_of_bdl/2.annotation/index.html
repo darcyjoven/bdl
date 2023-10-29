@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="注释&ndash;为何有必要在代码里留下程序员的解释#database ds --连接数据库 main # 入口函数  display sfmt(&#34;hello world&#34;) {打印} end main 以上代码中出现最多的是“&ndash;”，“#”和“{}”后面或中间包含中文，这些就是注释。
+<meta name="description" content="注释&ndash;为何有必要在代码里留下程序员的解释#database ds --连接数据库 main # 入口函数 display sfmt(&#34;hello world&#34;) {打印} end main 以上代码中出现最多的是“&ndash;”，“#”和“{}”后面或中间包含中文，这些就是注释。
 注释是用来帮助程序员阅读源代码和理解源代码的。 编译器在编译时候，会把注释剔除掉然后再进行编译，当前编译器是不会修改源文件，这些都是在内存中完成。 由于对于注释部分忽略不处理，就如同没有这些字符一样，所以注释不会增加编译后的文件长度，对程序运行不起任何作用。对于注释，有以下几点说明。
- BDL的注释 由“&ndash;”，“#”行注释，和“{}”包裹起来的块注释对。 编译器将行注释后的任何文件，和块注释包裹起来的任何文件都不予处理。 例如  {这些都是注释}--这些都是注释#这个有 空格 注释可以放在任何地方。通常，把注释放在要描述的代码上方，比较合适。对比比较短的代码，也可以放在后面。 注释和代码一定要同步更新。 代码修改而注释不做改变，这样的事情再实际开发中经常看见，而这一的情况可能带来严重后果。 注释内部不能再出现注释  {{这是不允许的}} 适量和恰当的注释是良好的编程风格的重要体现。  注释可以用来概括程序的算法、标识变量和函数的意义，或者解释一段代码的意图。 但是在代码中混杂过多的注释会使得程序更难以理解，反而影响代码阅读。">
+BDL的注释 由“&ndash;”，“#”行注释，和“{}”包裹起来的块注释对。 编译器将行注释后的任何文件，和块注释包裹起来的任何文件都不予处理。 例如 {这些都是注释}--这些都是注释#这个有 空格 注释可以放在任何地方。通常，把注释放在要描述的代码上方，比较合适。对比比较短的代码，也可以放在后面。 注释和代码一定要同步更新。 代码修改而注释不做改变，这样的事情再实际开发中经常看见，而这一的情况可能带来严重后果。 注释内部不能再出现注释 {{这是不允许的}} 适量和恰当的注释是良好的编程风格的重要体现。 注释可以用来概括程序的算法、标识变量和函数的意义，或者解释一段代码的意图。 但是在代码中混杂过多的注释会使得程序更难以理解，反而影响代码阅读。">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="2.为何要注释" />
-<meta property="og:description" content="注释&ndash;为何有必要在代码里留下程序员的解释#database ds --连接数据库 main # 入口函数  display sfmt(&#34;hello world&#34;) {打印} end main 以上代码中出现最多的是“&ndash;”，“#”和“{}”后面或中间包含中文，这些就是注释。
+<meta property="og:description" content="注释&ndash;为何有必要在代码里留下程序员的解释#database ds --连接数据库 main # 入口函数 display sfmt(&#34;hello world&#34;) {打印} end main 以上代码中出现最多的是“&ndash;”，“#”和“{}”后面或中间包含中文，这些就是注释。
 注释是用来帮助程序员阅读源代码和理解源代码的。 编译器在编译时候，会把注释剔除掉然后再进行编译，当前编译器是不会修改源文件，这些都是在内存中完成。 由于对于注释部分忽略不处理，就如同没有这些字符一样，所以注释不会增加编译后的文件长度，对程序运行不起任何作用。对于注释，有以下几点说明。
- BDL的注释 由“&ndash;”，“#”行注释，和“{}”包裹起来的块注释对。 编译器将行注释后的任何文件，和块注释包裹起来的任何文件都不予处理。 例如  {这些都是注释}--这些都是注释#这个有 空格 注释可以放在任何地方。通常，把注释放在要描述的代码上方，比较合适。对比比较短的代码，也可以放在后面。 注释和代码一定要同步更新。 代码修改而注释不做改变，这样的事情再实际开发中经常看见，而这一的情况可能带来严重后果。 注释内部不能再出现注释  {{这是不允许的}} 适量和恰当的注释是良好的编程风格的重要体现。  注释可以用来概括程序的算法、标识变量和函数的意义，或者解释一段代码的意图。 但是在代码中混杂过多的注释会使得程序更难以理解，反而影响代码阅读。" />
+BDL的注释 由“&ndash;”，“#”行注释，和“{}”包裹起来的块注释对。 编译器将行注释后的任何文件，和块注释包裹起来的任何文件都不予处理。 例如 {这些都是注释}--这些都是注释#这个有 空格 注释可以放在任何地方。通常，把注释放在要描述的代码上方，比较合适。对比比较短的代码，也可以放在后面。 注释和代码一定要同步更新。 代码修改而注释不做改变，这样的事情再实际开发中经常看见，而这一的情况可能带来严重后果。 注释内部不能再出现注释 {{这是不允许的}} 适量和恰当的注释是良好的编程风格的重要体现。 注释可以用来概括程序的算法、标识变量和函数的意义，或者解释一段代码的意图。 但是在代码中混杂过多的注释会使得程序更难以理解，反而影响代码阅读。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/2.annotation/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-17T15:01:24+08:00" />
 <meta property="article:modified_time" content="2023-10-08T17:08:52+08:00" />
-
 <title>2.为何要注释 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1362,7 +1361,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1375,7 +1374,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1388,7 +1387,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2135,7 +2134,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/1.basic/3.composition_of_bdl/2.annotation/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/1.basic/3.composition_of_bdl/2.annotation/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2146,7 +2145,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

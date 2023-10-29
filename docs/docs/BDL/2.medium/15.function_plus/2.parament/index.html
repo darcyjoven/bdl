@@ -3,45 +3,44 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
+<meta name="description" content="函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
 这节我们介绍函数的返回值。
-返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
-0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
+返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
+0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
 main end main function main() end function 在无返回值的函数中，依然可以使用关键字return，这时return关键字的作用是结束当前函数运行，返回调用函数处。
-任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
+任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
 所以一个函数在不同情况下调用，返回值的个数有可能不同。
 注意
 返回不同数量的值，影响程序后续维护，除非能够快速解决当前问题，否则建议函数总是返回相同数量的返回值。
 虽然返回个数不会保存，单调用函数时，必须接受每一个返回值，所以调用时，你必须知道这个函数将要返回的返回值的个数。
-返回值的返回，即return后面的常量或者变量，已,作为分隔符。
+返回值的返回，即return后面的常量或者变量，已,作为分隔符。
 例如，以下代码返回2020年的月份，如果当前不是2020年，则返回当前年份和月份。
-main  define yy,mm integer  if year(current) == 2020 then  display currentYM()  else  call currentYM() returning yy,mm  display yy,mm  end if end main function currentYM()  if year(current) != 2020 then  return year(current),month(current)  else  return month(current)  end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。">
+main define yy,mm integer if year(current) == 2020 then display currentYM() else call currentYM() returning yy,mm display yy,mm end if end main function currentYM() if year(current) != 2020 then return year(current),month(current) else return month(current) end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="2.函数的返回值" />
-<meta property="og:description" content="函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
+<meta property="og:description" content="函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
 这节我们介绍函数的返回值。
-返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
-0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
+返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
+0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
 main end main function main() end function 在无返回值的函数中，依然可以使用关键字return，这时return关键字的作用是结束当前函数运行，返回调用函数处。
-任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
+任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
 所以一个函数在不同情况下调用，返回值的个数有可能不同。
 注意
 返回不同数量的值，影响程序后续维护，除非能够快速解决当前问题，否则建议函数总是返回相同数量的返回值。
 虽然返回个数不会保存，单调用函数时，必须接受每一个返回值，所以调用时，你必须知道这个函数将要返回的返回值的个数。
-返回值的返回，即return后面的常量或者变量，已,作为分隔符。
+返回值的返回，即return后面的常量或者变量，已,作为分隔符。
 例如，以下代码返回2020年的月份，如果当前不是2020年，则返回当前年份和月份。
-main  define yy,mm integer  if year(current) == 2020 then  display currentYM()  else  call currentYM() returning yy,mm  display yy,mm  end if end main function currentYM()  if year(current) != 2020 then  return year(current),month(current)  else  return month(current)  end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。" />
+main define yy,mm integer if year(current) == 2020 then display currentYM() else call currentYM() returning yy,mm display yy,mm end if end main function currentYM() if year(current) != 2020 then return year(current),month(current) else return month(current) end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/2.parament/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-28T13:18:50+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
-
 <title>2.函数的返回值 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1382,7 +1381,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1395,7 +1394,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1408,7 +1407,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2242,7 +2241,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/15.function_plus/2.parament/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/15.function_plus/2.parament/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2253,7 +2252,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

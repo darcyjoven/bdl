@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/parament/" />
-
 <title>parament | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/parament/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2812,17 +2811,17 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>函数的参数#在BDL中除了变量定义，其它所有操作都需要在函数中进行。
+    <p>函数的参数#在BDL中除了变量定义，其它所有操作都需要在函数中进行。
 所以能够灵活使用函数是编程能力重要体现，使用函数时，除了程序逻辑需要考虑，如何定义函数的结构也是值得考虑的。
 函数的结构包括两部分，参数与返回值。
-参数个数#函数的参数个数是无上限的，且不是必须含有参数。
-&laquo;&laquo;&laquo;&lt; HEAD#0个参数#       1d67cdd5786f4fafd74c3017d23ade5bb17724be 如果你的函数不受程序的上下文影响，或者说不需要考虑调用之前做了哪些操作，那么你的函数就不要参数。
-       BDL自带函数中有不少类似函数如下：
-fgl_lastkey() --获取最后一次按下的按键 &laquo;&laquo;&laquo;&lt; HEAD#任意个数参数#任意个数的参数需要在在定义function时就确认，参数时变量的一种，需要定义在函数体的括号中，由,作为分隔符。
+参数个数#函数的参数个数是无上限的，且不是必须含有参数。
+&laquo;&laquo;&laquo;&lt; HEAD#0个参数#1d67cdd5786f4fafd74c3017d23ade5bb17724be 如果你的函数不受程序的上下文影响，或者说不需要考虑调用之前做了哪些操作，那么你的函数就不要参数。
+BDL自带函数中有不少类似函数如下：
+fgl_lastkey() --获取最后一次按下的按键 &laquo;&laquo;&laquo;&lt; HEAD#任意个数参数#任意个数的参数需要在在定义function时就确认，参数时变量的一种，需要定义在函数体的括号中，由,作为分隔符。
 在函数中还必须定义所有参数的数据类型。 调用时传入的参数需要和定义的参数个数一样，且数据类型一致(可以转换的数据类型会自动转换)。
-main  display add(1,&#39;2&#39;,3,&#39;4&#39;,...,n) end main function add(x1,x2,x3,x4,...,xn)  return x1+x2+x3+x4+...+xn function 参数类型#字符串、数值参数#在BDL中，基本类型只有两种字符串和数值，如果参数是这两种基础类型之一，那么参数是将实际的值传递到函数中。
+main display add(1,&#39;2&#39;,3,&#39;4&#39;,...,n) end main function add(x1,x2,x3,x4,...,xn) return x1+x2+x3+x4+...+xn function 参数类型#字符串、数值参数#在BDL中，基本类型只有两种字符串和数值，如果参数是这两种基础类型之一，那么参数是将实际的值传递到函数中。
 例如：
-main  define x,y string  define i,j integer  let x = &#39;demo&#39;  let i = 2  let j = 3  display sfmt(&#39;add(i,j) is %1,i is %2 ,j is %3&#39;,add(i,j),i,j)   let y = ext(x)  display sfmt(&#34;x is %1 y is %2&#34;,x,y) end main function add(a,b)  define a,b integer  let a = a + 1  let b = b + 1  return a+b end function function ext(x)  define x string  let x = x+&#34;.
+main define x,y string define i,j integer let x = &#39;demo&#39; let i = 2 let j = 3 display sfmt(&#39;add(i,j) is %1,i is %2 ,j is %3&#39;,add(i,j),i,j) let y = ext(x) display sfmt(&#34;x is %1 y is %2&#34;,x,y) end main function add(a,b) define a,b integer let a = a + 1 let b = b + 1 return a+b end function function ext(x) define x string let x = x+&#34;.
         <a href="/docs/BDL/2.medium/15.function_plus/1.parameter/">...</a>
       
     </p>
@@ -2845,7 +2844,7 @@ main  define x,y string  define i,j integer  let x = &#39;demo&#39;  let i = 2  
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3187,7 +3186,7 @@ main  define x,y string  define i,j integer  let x = &#39;demo&#39;  let i = 2  
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

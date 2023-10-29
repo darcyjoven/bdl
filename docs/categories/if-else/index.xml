@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/categories/if-else/</link>
     <description>Recent content in if else on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Wed, 19 Jul 2023 19:16:40 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/if-else/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.if else--两条岔路的选择</title>
@@ -12,13 +13,13 @@
       <pubDate>Wed, 19 Jul 2023 19:16:40 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/2.if-else/</guid>
-      <description>if else&amp;ndash;两条岔路的选择#还是拿买东西做比方，口袋里只有50块钱，想买一件衣服，衣服的价格标签不见了。这时，你也许会在心里盘算，问一下衣服的价格，如果价格低于50，就说“好，买了”，否则，就说“太贵了，算了”。这种“两条岔路中选一个”的流程，在BDL语言中对应着if else结构。
-关键在else#改写上一章的代码，使用if else 结构，如下：
-define price integer  prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price  if price &amp;lt; 50 then  display &amp;#34;\n好，买好了&amp;#34;  else  displau &amp;#34;\n太贵了，算了&amp;#34;  end if 无论输入多少价格，输出的结果要么是好，买好了，要么是太贵了，算了。
+      <description>if else&amp;ndash;两条岔路的选择#还是拿买东西做比方，口袋里只有50块钱，想买一件衣服，衣服的价格标签不见了。这时，你也许会在心里盘算，问一下衣服的价格，如果价格低于50，就说“好，买了”，否则，就说“太贵了，算了”。这种“两条岔路中选一个”的流程，在BDL语言中对应着if else结构。
+关键在else#改写上一章的代码，使用if else 结构，如下：
+define price integer prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price if price &amp;lt; 50 then display &amp;#34;\n好，买好了&amp;#34; else displau &amp;#34;\n太贵了，算了&amp;#34; end if 无论输入多少价格，输出的结果要么是好，买好了，要么是太贵了，算了。
 代码解析
 第一个代码中采用的是if结构，在price超过50的时候不做出任何反应，一声不吭地走开，如此看来，第二个代码中的顾客似乎更礼貌一点， 在price小于50这个 条件不成立时，会输出拒绝信息“太贵了，算了”。
 如果转为流程图如下：
-mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart TDa([&#34;开始&#34;])--b[/&#34;申明变量price，并输出提示信息，请求用户输入&#34;/]b--c[/&#34;接受用户输入&#34;/]c--d{&#34;pricee[&#34;输出：&#39;好，买好了&#39;&#34;]d--&#34;no&#34;--f[&#34;输出：&#39;太贵了，算了&#39;&#34;]e--g([&#34;结束&#34;])f--g当程序流程来到if else结构时，首先计算关键字if后“表达式”的值，如果表达式的值为“真”(不为0)，代码段1被执行，否则，else关 键字后的代码段2被执行。</description>
+flowchart TDa([&#34;开始&#34;])--&gt;b[/&#34;申明变量price，并输出提示信息，请求用户输入&#34;/]b--&gt;c[/&#34;接受用户输入&#34;/]c--&gt;d{&#34;price&lt;50?&#34;}d--&#34;yes&#34;--&gt;e[&#34;输出：&#39;好，买好了&#39;&#34;]d--&#34;no&#34;--&gt;f[&#34;输出：&#39;太贵了，算了&#39;&#34;]e--&gt;g([&#34;结束&#34;])f--&gt;g当程序流程来到if else结构时，首先计算关键字if后“表达式”的值，如果表达式的值为“真”(不为0)，代码段1被执行，否则，else关 键字后的代码段2被执行。</description>
     </item>
     
   </channel>

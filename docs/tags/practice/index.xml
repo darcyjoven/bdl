@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/practice/</link>
     <description>Recent content in practice on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Thu, 20 Jul 2023 19:13:40 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/practice/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.练习</title>
@@ -12,10 +13,9 @@
       <pubDate>Thu, 20 Jul 2023 19:13:40 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/12.string/2.practice/</guid>
-      <description>练习#将以下数组连接起来组织为依据通顺的英语句子# define a array[3] of string  let a[1] = &amp;#34;You&amp;#34;  let a[2] = &amp;#34;Welcome&amp;#34;  let a[3] = &amp;#34;Are&amp;#34; 编程实现，成绩输入系统#要求：
- 依次输入学生的姓名，语文成绩、数学成绩、英语成绩 按以下格式输出该学生的信息  姓名：小明 语文：80 数学：90 英语：85平均分：85.00 总分：255 进阶
-如果要输入3名学生的成绩，并按上面要求输出，你会做吗？
-</description>
+      <description>练习#将以下数组连接起来组织为依据通顺的英语句子#define a array[3] of string let a[1] = &amp;#34;You&amp;#34; let a[2] = &amp;#34;Welcome&amp;#34; let a[3] = &amp;#34;Are&amp;#34; 编程实现，成绩输入系统#要求：
+依次输入学生的姓名，语文成绩、数学成绩、英语成绩 按以下格式输出该学生的信息 姓名：小明 语文：80 数学：90 英语：85平均分：85.00 总分：255 进阶
+如果要输入3名学生的成绩，并按上面要求输出，你会做吗？</description>
     </item>
     
     <item>
@@ -24,8 +24,8 @@
       <pubDate>Wed, 19 Jul 2023 19:05:11 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/7.atoml_statement/3.practice/</guid>
-      <description>练习#根据以下伪代码，写一个小程序# 大于等于60分的输出“合格”，小于60分的输出“不合格”。
- 用户输入如果（用户输入的数值小于60）执行A操作否则执行B操作 </description>
+      <description>练习#根据以下伪代码，写一个小程序#大于等于60分的输出“合格”，小于60分的输出“不合格”。
+用户输入如果（用户输入的数值小于60）执行A操作否则执行B操作 </description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       <pubDate>Thu, 20 Jul 2023 09:59:33 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/9.over_and_over_again/5.practice/</guid>
-      <description>练习#以下代码输出结果是什么# define i,j integer  let i = 1 let j = 3  while j&amp;lt;5 or i&amp;gt;3  let i = i + 1  let j = j + 1  display &amp;#34;*&amp;#34;  end while 根据以下代码，写出变量a和b的值# define a,b integer  while a &amp;gt; 0  let b = b + 1  let a = a - 2  end while  display sfmt(&amp;#34;\na=%1,b=%2&amp;#34;,a,b) 已以下这种格式控制台打印99乘法表#1*1=11*2=2 2*2=41*3=3 2*3=6 3*3 =9.</description>
+      <description>练习#以下代码输出结果是什么#define i,j integer let i = 1 let j = 3 while j&amp;lt;5 or i&amp;gt;3 let i = i + 1 let j = j + 1 display &amp;#34;*&amp;#34; end while 根据以下代码，写出变量a和b的值#define a,b integer while a &amp;gt; 0 let b = b + 1 let a = a - 2 end while display sfmt(&amp;#34;\na=%1,b=%2&amp;#34;,a,b) 已以下这种格式控制台打印99乘法表#1*1=11*2=2 2*2=41*3=3 2*3=6 3*3 =9.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@
       <pubDate>Wed, 19 Jul 2023 19:58:40 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/5.practice/</guid>
-      <description>练习##</description>
+      <description>练习##</description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@
       <pubDate>Tue, 18 Jul 2023 16:00:50 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/5.interaction_between_keybord_and_mouse/5.practice/</guid>
-      <description>练习# 输出一下样式的数据   +------------------+-----+| 姓名| 年纪|+------------------+-----+| 小| 10|| 小蜜蜂| 9|| 小明| 8|| 小刚| 12|| 小红| 24|+------------------+-----+ 输入身份证号，输出身份证号的后4位。  </description>
+      <description>练习#输出一下样式的数据 +------------------+-----+| 姓名| 年纪|+------------------+-----+| 小| 10|| 小蜜蜂| 9|| 小明| 8|| 小刚| 12|| 小红| 24|+------------------+-----+ 输入身份证号，输出身份证号的后4位。 </description>
     </item>
     
     <item>
@@ -61,15 +61,17 @@
       <pubDate>Tue, 18 Jul 2023 10:22:43 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/4.how_save_and_get_data/5.practice/</guid>
-      <description>练习-几个与变量相关的经典算法#几乎每一个程序 都必须使用到变量，因为程序就是处理数据的，而数据必须存储在变量中。 本节仅举几个简单的变量使用的例子。 这些例子都是一些经 典的做法，请读者深刻理解并记住。
-累加和累乘#所谓累加，就是将一系列的数字分别相加，最后得到一个结果。 如计算1+2+3+4+5：
- define x integer  let x = x + 1  let x = x + 2  let x = x + 3  let x = x + 4  let x = x + 5  display sfmt(&amp;#34;\n1+2+3+4+5=%1&amp;#34;,x) 编译运行，结果为：
+      <description>练习-几个与变量相关的经典算法#几乎每一个程序 都必须使用到变量，因为程序就是处理数据的，而数据必须存储在变量中。 本节仅举几个简单的变量使用的例子。 这些例子都是一些经 典的做法，请读者深刻理解并记住。
+累加和累乘#所谓累加，就是将一系列的数字分别相加，最后得到一个结果。 如计算1+2+3+4+5：
+define x integer let x = x + 1 let x = x + 2 let x = x + 3 let x = x + 4 let x = x + 5 display sfmt(&amp;#34;\n1+2+3+4+5=%1&amp;#34;,x) 编译运行，结果为：
 1+2+3+4+5=15 代码解析
 不要认为这道算术题如此简单，让计算机来计算是大材小用。 读者要知道，通过一些简单的算术计算，可以理解编程中的一些基本技巧，为今后的真正开发软件打基础。
 这些简单的数学题，是在锻炼读者的编程能力。
 define x integer 定义了x为整型，整型的默认初始值为0。
 重点来关注:
-let x = x + 1 这行代码就使用到了一个非常经典的累加算法。 这行代码是一个赋值语句。就是将赋值号“=”右边计算后所得的值，赋给左边的变量。再重申一次，这里的等号“=”是BDL语言中的赋值号，不是数学里表示相等的等号。</description>
+let x = x + 1 这行代码就使用到了一个非常经典的累加算法。 这行代码是一个赋值语句。就是将赋值号“=”右边计算后所得的值，赋给左边的变量。再重申一次，这里的等号“=”是BDL语言中的赋值号，不是数学里表示相等的等号。
+该语句的运算过程是:
+先计算x+1的值，计算得到数值1。 将x+1的值(也就是1)赋给变量x。变量x现在的值是1。 来仔细分析这个过程。</description>
     </item>
     
     <item>
@@ -78,8 +80,8 @@ let x = x + 1 这行代码就使用到了一个非常经典的累加算法。 �
       <pubDate>Wed, 19 Jul 2023 16:56:50 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/6.operators_and_expressions/7.practice/</guid>
-      <description>练习#测试以下代码输出# define m,n integer  define x,y decimal(20,6)  let m = 1 let n = 2  let x=1.41 let t=2.5   display sfmt(&amp;#34;\nm&amp;lt;n and y-1&amp;gt;x=%1&amp;#34;,m&amp;lt;n and y-1&amp;gt;x)  display sfmt(&amp;#34;m&amp;lt;n or y-1&amp;gt;x=%1&amp;#34;,m&amp;lt;n or y-1&amp;gt;x)  display sfmt(&amp;#34;not (y-1&amp;gt;x)=%1&amp;#34;,not (y-1&amp;gt;x)) 用笔计算处以下代码运行结果，然后键入系统。# 看看笔算的结果和系统计算结果一样
-  define a,b integer  let a=5 let b=4   display sfmt(&amp;#34;\n最后输出的结果是%1，但是a的值是%2&amp;#34;,a=2*8,a/4)  let a=2*8  let a=a/4  display sfmt(&amp;#34;a的值是%1&amp;#34;,a)  display sfmt(&amp;#34;a和b的比较结果是=%1&amp;#34;,a==b) </description>
+      <description>练习#测试以下代码输出#define m,n integer define x,y decimal(20,6) let m = 1 let n = 2 let x=1.41 let t=2.5 display sfmt(&amp;#34;\nm&amp;lt;n and y-1&amp;gt;x=%1&amp;#34;,m&amp;lt;n and y-1&amp;gt;x) display sfmt(&amp;#34;m&amp;lt;n or y-1&amp;gt;x=%1&amp;#34;,m&amp;lt;n or y-1&amp;gt;x) display sfmt(&amp;#34;not (y-1&amp;gt;x)=%1&amp;#34;,not (y-1&amp;gt;x)) 用笔计算处以下代码运行结果，然后键入系统。#看看笔算的结果和系统计算结果一样
+define a,b integer let a=5 let b=4 display sfmt(&amp;#34;\n最后输出的结果是%1，但是a的值是%2&amp;#34;,a=2*8,a/4) let a=2*8 let a=a/4 display sfmt(&amp;#34;a的值是%1&amp;#34;,a) display sfmt(&amp;#34;a和b的比较结果是=%1&amp;#34;,a==b) </description>
     </item>
     
     <item>
@@ -88,7 +90,7 @@ let x = x + 1 这行代码就使用到了一个非常经典的累加算法。 �
       <pubDate>Mon, 17 Jul 2023 17:01:03 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/10.practice/</guid>
-      <description>练习#自定义一个函数，实现两个整数求和#找出以下代码的错误#database ds  main()  define a,b integer  define y integer  let a = 10 let b= 20  let y = add(a,b)  display sfmt(&amp;#34;\n the average is %1&amp;#34;,y) end main  function add(a,b)  define a,b integer  a+b end function </description>
+      <description>练习#自定义一个函数，实现两个整数求和#找出以下代码的错误#database ds main() define a,b integer define y integer let a = 10 let b= 20 let y = add(a,b) display sfmt(&amp;#34;\n the average is %1&amp;#34;,y) end main function add(a,b) define a,b integer a+b end function </description>
     </item>
     
     <item>
@@ -97,7 +99,7 @@ let x = x + 1 这行代码就使用到了一个非常经典的累加算法。 �
       <pubDate>Mon, 17 Jul 2023 14:48:01 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/2.first_code/5.practice/</guid>
-      <description>练习#编程输出中文“你好，世界！”#输出5个空行，不显示任何字符或字#输出数字1、2、3、4、5，但是每行显示一个数字#</description>
+      <description>练习#编程输出中文“你好，世界！”#输出5个空行，不显示任何字符或字#输出数字1、2、3、4、5，但是每行显示一个数字#</description>
     </item>
     
   </channel>

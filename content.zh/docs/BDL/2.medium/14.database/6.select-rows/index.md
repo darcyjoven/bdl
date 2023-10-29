@@ -1,10 +1,10 @@
 ---
-title: "7.多笔查询"
+title: "6.多笔查询"
 lastmod: 2023-08-24T16:53:04+08:00
 date: 2023-08-24T16:53:04+08:00
 tags: ["SQL"]
 categories: ["BDL"]
-weight: 7
+weight: 6
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

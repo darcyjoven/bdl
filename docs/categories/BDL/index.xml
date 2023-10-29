@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/categories/BDL/</link>
     <description>Recent content in BDL on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 29 Aug 2023 15:46:01 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/BDL/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.前言--抽象界面</title>
@@ -12,16 +13,18 @@
       <pubDate>Tue, 29 Aug 2023 08:53:19 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/1.interface-tree/</guid>
-      <description>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
+      <description>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
 XML是一种标记语言，它并不是编程语言。
 你如果了解HTML，那么你就可以轻松理解XML。XML是一种要求严格的HTML，但他们实际并不存在包含不包含关系。
 在百度首页，按下F12，你能看到如下界面，这就是HTML语言。XML也遵循着类似的结构风格。
-XML 语法# XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
- XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
-名词介绍#&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt;  &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;  &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;  &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;  &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以上 XML 代码中，
-  &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; 是 XML 的申明
-  任何一个 &amp;lt;...&amp;gt;到它的&amp;lt;.../&amp;gt;被称作元素，元素也被称为节点，是同一个意思
- 以下是一个元素   &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt;  &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;  &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;  &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;  &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!</description>
+XML 语法#XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
+XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
+名词介绍#&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt; &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt; &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt; &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以上 XML 代码中，
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; 是 XML 的申明
+任何一个 &amp;lt;...&amp;gt;到它的&amp;lt;.../&amp;gt;被称作元素，元素也被称为节点，是同一个意思
+以下是一个元素 &amp;lt;note name=&amp;#34;n1&amp;#34; &amp;gt; &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt; &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt; &amp;lt;body&amp;gt;Don&amp;#39;t forget me this weekend!&amp;lt;/body&amp;gt; &amp;lt;/note&amp;gt; 以下也是一个元素 &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt; 元素中可以包含元素
+&amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;中Tove是元素to的值
+&amp;lt;note name=&amp;quot;n1&amp;quot; &amp;gt;中name=&amp;quot;n1&amp;quot;被称作属性，name是属性名，n1是属性值</description>
     </item>
     
     <item>
@@ -30,20 +33,21 @@ XML是一种标记语言，它并不是编程语言。
       <pubDate>Mon, 28 Aug 2023 14:38:36 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/1.%E9%87%8D%E6%96%B0%E5%9B%9E%E9%A1%BE%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/</guid>
-      <description>重新回顾编译链接#在第二章时，我们就介绍了r.c2与r.l2编译链接的命令。 还介绍了exe2运行的命令。
+      <description>重新回顾编译链接#在第二章时，我们就介绍了r.c2与r.l2编译链接的命令。 还介绍了exe2运行的命令。
 现在我们新建一个czzi004.4gl程序：
-main  display &amp;#34;program code is czzi004&amp;#34; end main 我们上传在$TOP/czz/4gl目录中，运行r.c2命令：
+main display &amp;#34;program code is czzi004&amp;#34; end main 我们上传在$TOP/czz/4gl目录中，运行r.c2命令：
 如果环境没有问题，将输出类似下面结果:
 czzi004 .............. 编译成功，因为我们没有调用外部函数，所以不用链接也可以运行。
 我们使用exe2命令运行，如没有意外，会出现以下意外：
-这是因为我们在tiptop gp中，未通过p_zz作业建立程序，所以系统找不到执行文件目录。
+这是因为我们在tiptop gp中，未通过p_zz作业建立程序，所以系统找不到执行文件目录。
 我们运行以下命令
 cd $CZZ/42m fglrun czz_czzi004 ... program code is czzi004 成功运行！这是因为我们的可执行文件是在czz/42m目录下，我们来看下42m生成的文件。
 cd $CZZ/42m ls -l *czzi004* -rw-rw-rw- 1 tiptop tiptop 242 Aug 28 14:46 czz_czzi004.42m -rw-rw-r-- 1 tiptop tiptop 52 Aug 28 14:46 czz_czzi004.4gl czz_czzi004.42m是4gl编译后的二进制文件，czz_czzi004.4gl是我们在使用r.d2+debug调式时需要的文件。
 而fglrun命令是真正的BDL执行文件，exe2命令其实是tiptop gp专用的运行命令，所以p_zz中没有录入的程序无法用exe2运行。
 既然运行有底层命令，那么编译、链接自然也有对应的底层命令。
-fglcomp#还是之前的czzi004.4gl文件，我们切换到4gl目录下，使用底层函数编译。
-cd $CZZ/4gl fglcomp czzi004.</description>
+fglcomp#还是之前的czzi004.4gl文件，我们切换到4gl目录下，使用底层函数编译。
+cd $CZZ/4gl fglcomp czzi004.4gl 注意
+使用fglcomp编译时需要指定文件的全名，包括扩展名。</description>
     </item>
     
     <item>
@@ -52,17 +56,17 @@ cd $CZZ/4gl fglcomp czzi004.</description>
       <pubDate>Thu, 24 Aug 2023 08:06:11 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/</guid>
-      <description>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
+      <description>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
 本章所有内容都是基于ORACLE DB，但大部门内容应该是通用的。
 数据库已经配置的连接可以在文件$FGLPROFILE中看见，这里配置好的数据库都是可以在BDL中使用的。
-连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
+连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
 database就是连接数据库的语句，ds就是要连接的数据库。ds为TIPTOP中一个特殊的数据库，此数据保存了所有表的表结构，和同义词表的数据。
- 同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
- database ds1即可切换到ds1数据库中。
-main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
+同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
+database ds1即可切换到ds1数据库中。
+main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
 这两者在连接数据库时是有区别main end main 会自动连接到 main之外的databse ds数据库。 而function main() end function只会用到databse ds的表结构，而不会自动连接到数据库。
- 使用表结构的方法在下一节将会讲到
- 除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。</description>
+使用表结构的方法在下一节将会讲到
+除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。</description>
     </item>
     
     <item>
@@ -71,10 +75,10 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
       <pubDate>Mon, 17 Jul 2023 14:50:50 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/1.BDL-look/</guid>
-      <description>BDL程序全貌#database ds main  display sfmt(&amp;#34;hello world&amp;#34;) end main 代码很短，只有几行就建立一个可运行的程序。 代码虽小，但五脏俱全，纵观整个代码，可以总结如下特点：
-  代码有单词、符号、空白组成。 单词以英语单词为主，有的单词是纯正的英语单词，如main、display、end、database；有的不是如sfmt。代码中的标点符号并不是随意输入的。 每个符号在编程中都有特定含义。 单词于单词之间用空白分割，空白可以是空格，也可以是tab制表符。个数没有限制
-  BDL源码是从上往下阅读，也就是源码的先后顺序是有讲究的。
-  行与行之前可以有空白行，数量也没有限制。 有的行顶格书写，有的却向后退了几个空格，这种后退，成为“缩进”。如何缩进也是有讲究的。 3. 并没有专门的标识标识文件从哪里开始，也没标识文件从哪里结束。从第一个字符开始，文件就开始了，到最后一个字符结束，文件就结束了。</description>
+      <description>BDL程序全貌#database ds main display sfmt(&amp;#34;hello world&amp;#34;) end main 代码很短，只有几行就建立一个可运行的程序。 代码虽小，但五脏俱全，纵观整个代码，可以总结如下特点：
+代码有单词、符号、空白组成。 单词以英语单词为主，有的单词是纯正的英语单词，如main、display、end、database；有的不是如sfmt。代码中的标点符号并不是随意输入的。 每个符号在编程中都有特定含义。 单词于单词之间用空白分割，空白可以是空格，也可以是tab制表符。个数没有限制
+BDL源码是从上往下阅读，也就是源码的先后顺序是有讲究的。
+行与行之前可以有空白行，数量也没有限制。 有的行顶格书写，有的却向后退了几个空格，这种后退，成为“缩进”。如何缩进也是有讲究的。 3. 并没有专门的标识标识文件从哪里开始，也没标识文件从哪里结束。从第一个字符开始，文件就开始了，到最后一个字符结束，文件就结束了。</description>
     </item>
     
     <item>
@@ -83,17 +87,21 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
       <pubDate>Tue, 29 Aug 2023 14:20:48 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/2.wiget/</guid>
-      <description>控件&amp;amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
- 使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
- 新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
-一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
+      <description>控件&amp;amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
+使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
+新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
+一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
 当然拖拽也是有规律的，否则无法生成你想要的画面，甚至还会报错。
-在顶部菜单中不同名称的按钮，都是一个个控件和容器。
- 控件：  GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
- 容器：  容器是用来包裹控件，让控件已希望的方式展现出来的元素。
-容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
-不同容器清单说明如下：
-   名称 功能说明 可使用的下层容器物件     Grid 简易空白画布 ScrollGrid、Table、GroupBox   ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox   Table 以表格方式显示阵列资料 无   MFArray 以画布方式显示阵列资料 无   GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table    Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。</description>
+在顶部菜单中不同名称的按钮，都是一个个控件和容器。
+控件： GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
+容器： 容器是用来包裹控件，让控件已希望的方式展现出来的元素。
+容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
+不同容器清单说明如下：
+名称 功能说明 可使用的下层容器物件 Grid 简易空白画布 ScrollGrid、Table、GroupBox ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox Table 以表格方式显示阵列资料 无 MFArray 以画布方式显示阵列资料 无 GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。
+Grid 只能处理非阵列资料。Grid 不可以被安排在其他 Grid 容器之内。
+studio
+画面预览
+Floder#当摆放元件空间不足时（或是需要滚动画面，操作上较麻烦时），即可使用切页的功能，以资料夹的形式将资料性质相近的栏位，切分在同样的 page 当中。</description>
     </item>
     
     <item>
@@ -102,16 +110,18 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
       <pubDate>Mon, 28 Aug 2023 16:00:05 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/2.lib-sub/</guid>
-      <description>lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
+      <description>lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
 但是我们来看下一下p_zz.4gl的源码中调用了多少次 lib 函数(lib 函数一般以cl开始，有误差，但误差不大)，$AZZ/4gl目录下。
 cd $AZZ/4gl grep -c &amp;#34;cl&amp;#34; p_zz.4gl ... 265 调用了 265 次 lib 函数，如果按照上一节的办法，我们要找到这 265 个 lib 函数对应的文件，链接后并编译。
 这实在太不方便了，所以 BDL 在链接时其实还隐藏了一个功能。
 不需要额外的命令和源代码，我们依然使用czzi004.4gl和s_czzi004.4gl进行示例。
 我们先删除之前生成的文件，防止影响本次结果。
-cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r   编译 czzi004.4gl和s_czzi004.4gl，和之前一样
-  单独链接 s_czzi004.42m
-  fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m  fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004  一样可以运行，看起来并没有减少步骤。
-但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.</description>
+cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r 编译 czzi004.4gl和s_czzi004.4gl，和之前一样
+单独链接 s_czzi004.42m
+fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004 一样可以运行，看起来并没有减少步骤。
+但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.42x文件，那么之后不管哪个作业调用多少个 lib 函数，那么我们只要在编译这个新作业后，将lib.42x这个文件和主程序链接以下即可。
+只要当lib目录下哪个文件修改了，才需要重新连接lib.42x文件。
+这一步tiptop gp已经替我们做好了，$LIB/42m目录下有一个lib.42x文件。</description>
     </item>
     
     <item>
@@ -120,19 +130,19 @@ cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r   编译 czzi004.4gl和s_czzi004.4
       <pubDate>Mon, 28 Aug 2023 13:18:50 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/2.parament/</guid>
-      <description>函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
+      <description>函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
 这节我们介绍函数的返回值。
-返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
-0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
+返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
+0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
 main end main function main() end function 在无返回值的函数中，依然可以使用关键字return，这时return关键字的作用是结束当前函数运行，返回调用函数处。
-任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
+任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
 所以一个函数在不同情况下调用，返回值的个数有可能不同。
 注意
 返回不同数量的值，影响程序后续维护，除非能够快速解决当前问题，否则建议函数总是返回相同数量的返回值。
 虽然返回个数不会保存，单调用函数时，必须接受每一个返回值，所以调用时，你必须知道这个函数将要返回的返回值的个数。
-返回值的返回，即return后面的常量或者变量，已,作为分隔符。
+返回值的返回，即return后面的常量或者变量，已,作为分隔符。
 例如，以下代码返回2020年的月份，如果当前不是2020年，则返回当前年份和月份。
-main  define yy,mm integer  if year(current) == 2020 then  display currentYM()  else  call currentYM() returning yy,mm  display yy,mm  end if end main function currentYM()  if year(current) != 2020 then  return year(current),month(current)  else  return month(current)  end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。</description>
+main define yy,mm integer if year(current) == 2020 then display currentYM() else call currentYM() returning yy,mm display yy,mm end if end main function currentYM() if year(current) != 2020 then return year(current),month(current) else return month(current) end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。</description>
     </item>
     
     <item>
@@ -141,16 +151,16 @@ main  define yy,mm integer  if year(current) == 2020 then  display currentYM()  
       <pubDate>Thu, 24 Aug 2023 08:36:16 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/2.schema/</guid>
-      <description>数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
+      <description>数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
 在我们使用数据库时，如果你需要大量的数据中的资料，不需要频繁的查询数据中的表结构，通过表结构中字段的数据类型去对应BDL中的数据类型。在BDL中已经为我们做好了这一步，ORACLE中大部分数据类型在BDL中都映射到指定的类型。
 我们只要使用数据库的schema文件，就能通过数据的字段去定义BDL中的数据类型。
 上一章我们学到了function main() end function这种main函数写法，只会使用表结构，而不连接到数据库，指得就是使用schema文件，而不连接到数据库。
-在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
+在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
 其中ds:库名可以省略，如果省略，表示使用当前已经连接到的库。
 例如:
-database ds main  define l_ima01 like ima_file.ima01  define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
- type_file字段清单如下
-    字段名称 数据类型 字段名称 数据类型     chr1000 varchar2(1000) chr6 varchar2(6)   chr1 varchar2(1) chr50 varchar2(50)   num5 number(5) chr37 varchar2(37)   num20_6 number(20,6) chr9 varchar2(9)   dat date chr12 varchar2(12)   chr18 varchar2(18) chr30 varchar2(30)   num10 number(10) chr14 varchar2(14)   chr8 varchar2(8) chr7 varchar2(7)   chr20 varchar2(20) chr10 varchar2(10)   chr21 varchar2(21) chr100 varchar2(100)   num20 number(20) chr200 varchar2(200)   chr3 varchar2(3) chr300 varchar2(300)   num26_10 number(26,10) chr500 varchar2(500)   chr2 varchar2(2) blob blob   chr4 varchar2(4) num15_3 number(15,3)   chr5 varchar2(5) row_id varchar2(18)    进阶使用&amp;ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。</description>
+database ds main define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
+type_file字段清单如下
+字段名称 数据类型 字段名称 数据类型 chr1000 varchar2(1000) chr6 varchar2(6) chr1 varchar2(1) chr50 varchar2(50) num5 number(5) chr37 varchar2(37) num20_6 number(20,6) chr9 varchar2(9) dat date chr12 varchar2(12) chr18 varchar2(18) chr30 varchar2(30) num10 number(10) chr14 varchar2(14) chr8 varchar2(8) chr7 varchar2(7) chr20 varchar2(20) chr10 varchar2(10) chr21 varchar2(21) chr100 varchar2(100) num20 number(20) chr200 varchar2(200) chr3 varchar2(3) chr300 varchar2(300) num26_10 number(26,10) chr500 varchar2(500) chr2 varchar2(2) blob blob chr4 varchar2(4) num15_3 number(15,3) chr5 varchar2(5) row_id varchar2(18) 进阶使用&amp;ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。</description>
     </item>
     
     <item>
@@ -159,17 +169,17 @@ database ds main  define l_ima01 like ima_file.ima01  define l_ima02 like ima_fi
       <pubDate>Mon, 17 Jul 2023 13:31:16 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/2.first_code/2.environment_of_BDL/</guid>
-      <description>BDL开发环境#本书所有代码运行的环境都在fjs-fgl-2.4版本，开发环境为linux系统。 本书不涉及环境如何部署。
-项目目录结构#tiptop gp 和 t100 都有固定的项目结构，点此查看。 建议你在不影响正式使用的程序前提下，建立或修改程序代码。
-tiptop gp编译#tiptop gp环境中需在代码对应的4gl目录下，运行命令r.c2 czzi001，czzi001是你建立的程序编号。即4gl文件去掉后缀名后的内容。
-连接#tiptop gp连接命令为 r.l2 czzi001，注意：这里的czzi001不是4gl文件程序编号，而是在p_zz中注册的程序。所以在运行r.l2连接之前，你还需要做以下这些步骤。
- 新增p_zz资料 如果你现在还不知道p_zz作业的功能，没关系，现在你可以参考czzi001的内容，将czzi001替换为你的程序编号，czz替换为你的程序编号前三位。   需要注意的时czzi001.4gl 一般放在czz/4gl目录下，同样azzi001.4gl 也放在azz/4gl目录下，在你更进一步理解BDL的目录结构前，就一直按照这种方式建立新程序。
- 点击维护链接资料建立连接资料 (链接和连接是同一种说法的不同翻译)  新建程序时，会提示你无资料，是否建立，这里选择是。 看到下方有一笔路径为$CUST/czz/42m/czz_czzi001.42m的资料。 当后续我们程序更复杂时，会主动添加更多需要的连接资料。
+      <description>BDL开发环境#本书所有代码运行的环境都在fjs-fgl-2.4版本，开发环境为linux系统。 本书不涉及环境如何部署。
+项目目录结构#tiptop gp 和 t100 都有固定的项目结构，点此查看。 建议你在不影响正式使用的程序前提下，建立或修改程序代码。
+tiptop gp编译#tiptop gp环境中需在代码对应的4gl目录下，运行命令r.c2 czzi001，czzi001是你建立的程序编号。即4gl文件去掉后缀名后的内容。
+连接#tiptop gp连接命令为 r.l2 czzi001，注意：这里的czzi001不是4gl文件程序编号，而是在p_zz中注册的程序。所以在运行r.l2连接之前，你还需要做以下这些步骤。
+新增p_zz资料 如果你现在还不知道p_zz作业的功能，没关系，现在你可以参考czzi001的内容，将czzi001替换为你的程序编号，czz替换为你的程序编号前三位。 需要注意的时czzi001.4gl 一般放在czz/4gl目录下，同样azzi001.4gl 也放在azz/4gl目录下，在你更进一步理解BDL的目录结构前，就一直按照这种方式建立新程序。
+点击维护链接资料建立连接资料 (链接和连接是同一种说法的不同翻译) 新建程序时，会提示你无资料，是否建立，这里选择是。 看到下方有一笔路径为$CUST/czz/42m/czz_czzi001.42m的资料。 当后续我们程序更复杂时，会主动添加更多需要的连接资料。
 最后保存时此弹窗的意思，是让你自动连接一次，可以选择是，连接失败也不要仅，只要资料有产生就可以。
-t100编译#开始编辑代码#以上设置好之后，你就可以编辑代码了。
-我用的vs code编辑器，配合Informix 4GL这款插件，所以代码可以高亮，不同的单次有不同的颜色，起到了提醒的作用。
+t100编译#开始编辑代码#以上设置好之后，你就可以编辑代码了。
+我用的vs code编辑器，配合Informix 4GL这款插件，所以代码可以高亮，不同的单次有不同的颜色，起到了提醒的作用。
 除了vscode，t100自带的开发平台T100 design、submlime text、4js官方提供的genero studio等工具也能有高亮样式。
-database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使用数据，所以这里必须先连接数据库 MAIN --主函数 入口点  DISPLAY &amp;#34;Hello World&amp;#34; -- 打印字符串 END MAIN  也许你注意到了，database是小写，MAIN是大写，在BDL语言中，大小写是不区分了，类似于SQL。你甚至了混合使用。</description>
+database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使用数据，所以这里必须先连接数据库 MAIN --主函数 入口点 DISPLAY &amp;#34;Hello World&amp;#34; -- 打印字符串 END MAIN 也许你注意到了，database是小写，MAIN是大写，在BDL语言中，大小写是不区分了，类似于SQL。你甚至了混合使用。</description>
     </item>
     
     <item>
@@ -178,14 +188,14 @@ database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使�
       <pubDate>Tue, 29 Aug 2023 15:02:51 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/3.fglform/</guid>
-      <description>画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+      <description>画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
 在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
 4fd 对应代码的文件的4gl
 42f对应代码文件的42m
-per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
 per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
-以上4fd文件，转为per描述如下：
-SCHEMA formonly  LAYOUT (text=%&amp;#34;Form&amp;#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&amp;#34;Page1&amp;#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&amp;#34;Page2&amp;#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&amp;#34;Label1&amp;#34;; Label label2:Label2, text=%&amp;#34;Label2&amp;#34;; Edit edit1=formonly.</description>
+以上4fd文件，转为per描述如下：
+SCHEMA formonly LAYOUT (text=%&amp;#34;Form&amp;#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&amp;#34;Page1&amp;#34;) Grid Grid2 { [label1 ] } END -- Grid2 END -- Page1 Page Page2(text=%&amp;#34;Page2&amp;#34;) Grid Grid1 { [label2 ] } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form ATTRIBUTES Label label1:Label1, text=%&amp;#34;Label1&amp;#34;; Label label2:Label2, text=%&amp;#34;Label2&amp;#34;; Edit edit1=formonly.</description>
     </item>
     
     <item>
@@ -194,21 +204,23 @@ SCHEMA formonly  LAYOUT (text=%&amp;#34;Form&amp;#34;) VBox VBox1 Folder Folder1
       <pubDate>Mon, 28 Aug 2023 16:27:00 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/3.p_link/</guid>
-      <description>p_link作业&amp;ndash;使用r.l2 链接作业#无论是链接所有42m文件，还是先链接为42r文件，再链接到主程序。都需要我们将需要调用程序链接起来，如果只运行一次还好。 但是编写程序过程中难免会出错，即使能力很强，能够保证每次不出错，后续新功能增加时，也需要重新连接编译。
+      <description>p_link作业&amp;ndash;使用r.l2 链接作业#无论是链接所有42m文件，还是先链接为42r文件，再链接到主程序。都需要我们将需要调用程序链接起来，如果只运行一次还好。 但是编写程序过程中难免会出错，即使能力很强，能够保证每次不出错，后续新功能增加时，也需要重新连接编译。
 我们需要一种新的简单的方式去链接主程序。
-p_link#之前我们使用r.c2命令时，此命令自动将42m文件放到42m目录下，如果链接也能够自动链接对应的文件就好了。
+p_link#之前我们使用r.c2命令时，此命令自动将42m文件放到42m目录下，如果链接也能够自动链接对应的文件就好了。
 p_link就是方便程序链接的作业。
 你可以直接运行exe2 p_link打开作业，也可以再p_zz中维护链结档资料按钮中打开。
 让我们用tiptop gp方式重新编译链接czzi004.4gl文件。
- 建立p_zz资料  运行指令其实就是42r文件，$CZZi目录就是czz/42r目录。
-点击维护链结档资料  如果第一次建立，会提示生成链接档资料，选择是会打开p_link作业
-自动新增的p_link资料只包含czzi004.42m主程序文件。
-r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中没有czzi004.42m的话，会报错 完整路径是由模组编号和程序代码组合生成的   输入完成后，会自动链接，如果有报错，先忽略报错，关掉报错窗口
-  回到命令行r.c2 czzi004编译主程序
-  database ds编译前在第一行增加这个语句，否则会报错
-链接主程序r.l2 czzi004  /u1/genero/fgl.dev/bin/fgl2p -o czzi004.42r libgre.42x WSHelper.42m lib.42x sub.42x qry.42x czz_czzi004.42m czz_s_czzi004.42m  czzi004.42r has been generated successfully! 上面为成功通知。
+建立p_zz资料 运行指令其实就是42r文件，$CZZi目录就是czz/42r目录。
+点击维护链结档资料 如果第一次建立，会提示生成链接档资料，选择是会打开p_link作业
+自动新增的p_link资料只包含czzi004.42m主程序文件。
+r.c2 s_czzi004并在p_link中新增 必须先使用r.c2编译，42m目录中没有czzi004.42m的话，会报错 完整路径是由模组编号和程序代码组合生成的 输入完成后，会自动链接，如果有报错，先忽略报错，关掉报错窗口
+回到命令行r.c2 czzi004编译主程序
+database ds编译前在第一行增加这个语句，否则会报错
+链接主程序r.l2 czzi004 /u1/genero/fgl.dev/bin/fgl2p -o czzi004.42r libgre.42x WSHelper.42m lib.42x sub.42x qry.42x czz_czzi004.42m czz_s_czzi004.42m czzi004.42r has been generated successfully! 上面为成功通知。
 我们看链接的过程，和我们直接fgllink有很多区别
- fgl2p r.l2 没有使用fgllink  fgl2p 相比fgllink除了有链接的功能，如果链接文件包含4gl文件，还可以自动将4gl编译为42m后再链接。</description>
+fgl2p r.l2 没有使用fgllink fgl2p 相比fgllink除了有链接的功能，如果链接文件包含4gl文件，还可以自动将4gl编译为42m后再链接。
+libgre.42x WSHelper.42m qry.42x 这几个也是类似lib和sub函数库。
+程序开发流程#</description>
     </item>
     
     <item>
@@ -217,19 +229,19 @@ r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中�
       <pubDate>Mon, 28 Aug 2023 13:54:57 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/3.life-cycle/</guid>
-      <description>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
+      <description>函数生命周期#编程就是写函数，main的开始结束就是程序的开始结束。
 函数的开始就是函数调用，结束就是函数最后一行运行结束，或者运行到return处。
 调用
- call add() returning &amp;hellip; display add() let a = add() call minus(10,add()) &amp;hellip;  mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})graph LRa0([&#34;开始&#34;])--a[&#34;调用&#34;]a--b[&#34;执行语句&#34;]b--c[&#34;end funtion/return&#34;]c--d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
+call add() returning &amp;hellip; display add() let a = add() call minus(10,add()) &amp;hellip; graph LRa0([&#34;开始&#34;])--&gt;a[&#34;调用&#34;]a--&gt;b[&#34;执行语句&#34;]b--&gt;c[&#34;end funtion/return&#34;]c--&gt;d([&#34;结束&#34;])变量的生命周期#编程就是写函数，函数本质是什么呢？ 函数的本质是输入、处理、输出
 输入的是变量，输出的是变量。处理的也是变量。
 如果程序中一直增加功能，那么变量的数量会一直增加，如果不停增加下去，内存迟早有用完的一天。
 但实际上一个规划良好的程序并不会将内存全部占用。
 这是因为，在BDL中变量不是一直加载到内存中，有些变量用到的时候才会分配内存，不用的时候，内存会释放掉。
 那么变量在定义时就会分配内存，那么什么时候释放其内存呢？
 变量所在的作用域，所有语句执行完成时释放内存，在BDL中最小的作用域是函数。
-  所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
-  定义在main函数之前的函数，在main执行结束后才能释放内存。
-  函数中定义的变量 graph LRa[&#34;函数调用&#34;]--b[[&#34;分配内存&#34;]]b--c((&#34;...&#34;))c--d[&#34;end funtion/return&#34;]d--z[[&#34;释放内存&#34;]]</description>
+所以在函数中定义的变量，在函数执行完后，变量就释放内存了。所以我们需要返回值，并用变量接受这个返回值。
+定义在main函数之前的函数，在main执行结束后才能释放内存。
+函数中定义的变量 graph LRa[&#34;函数调用&#34;]--&gt;b[[&#34;分配内存&#34;]]b--&gt;c((&#34;...&#34;))c--&gt;d[&#34;end funtion/return&#34;]d--&gt;z[[&#34;释放内存&#34;]]</description>
     </item>
     
     <item>
@@ -238,12 +250,12 @@ r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中�
       <pubDate>Thu, 24 Aug 2023 09:33:25 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/3.update-insert-delete/</guid>
-      <description>插入更新删除&amp;ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
+      <description>插入更新删除&amp;ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
 不要更新错了库！
- 本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
- 插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
-原生语句# 将要执行SQL语句放到字符串中  let l_sql = &amp;#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&amp;#39;mar-001&amp;#39;,&amp;#39;xxx&amp;#39;,&amp;#39;xxx&amp;#39;)&amp;#34; prepare SQL语句  prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句  execute demo_ins 检查SQL是否执行成功  在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
- define sqlca record  sqlcode integer, -- 报错代码 100 表示未找到 &amp;lt;0表示有错误  sqlerrm string, --错误消息数量  sqlerrp string,  sqlerrd array[6] integer,  -- 1.</description>
+本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
+插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
+原生语句#将要执行SQL语句放到字符串中 let l_sql = &amp;#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&amp;#39;mar-001&amp;#39;,&amp;#39;xxx&amp;#39;,&amp;#39;xxx&amp;#39;)&amp;#34; prepare SQL语句 prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句 execute demo_ins 检查SQL是否执行成功 在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
+define sqlca record sqlcode integer, -- 报错代码 100 表示未找到 &amp;lt;0表示有错误 sqlerrm string, --错误消息数量 sqlerrp string, sqlerrd array[6] integer, -- 1. 未使用 -- 2. 最后一个Serial或错误代码 -- 3. 最后一条语句处理的行数 -- 4. CPU使用时间 -- 5. SQL文件错误偏移量 -- 6.</description>
     </item>
     
     <item>
@@ -252,19 +264,19 @@ r.c2 s_czzi004并在p_link中新增   必须先使用r.c2编译，42m目录中�
       <pubDate>Mon, 17 Jul 2023 15:12:04 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/3.main-function/</guid>
-      <description>main函数&amp;ndash;从哪里开始，到哪里结束#先看以下代码
-main  display sfmt(&amp;#34;hello world&amp;#34;) end main 代码解析
+      <description>main函数&amp;ndash;从哪里开始，到哪里结束#先看以下代码
+main display sfmt(&amp;#34;hello world&amp;#34;) end main 代码解析
 main ...end main这一段是在定义BDL程序的主函数。 函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。
 每一个BDL程序必须有且仅有一个main函数，它是由程序员提供的。
 请读者思考一个问题:操作系统是如何开始运行调用一个程序的?
 这个问题的意思是操作系统怎么知道一个程序的入口点在哪里?所谓入口点，就是程序的第一条指令。 操作系统调入程序二进制代码到内存后，从哪条指令开始运行程序呢?
 一种办法是从文件第一行开始，一行一行往下执行，直到文件结束。 很多语言就是采用这种方式。 比如QBASIC语言。 这种方法的好处显而易见，人类是怎么阅读的，计算机就是怎么执行的。 但是缺点也很多，当有两个源文件的时候，从哪个文件开始呢? 另一种办法是和运行程序的启动者协商一个规定的入口名字，从这个名字开始进入。这种方法就是BDL语言采用的方法。
 main函数就是BDL程序的入口点。无论整个工程有多少个C源文件，必须编写且只能编写一个main函数。程序就是从main的第一条语句开始执行，然后在main函数中，顺序执行其他语句，在这些语句中，调用其他函数，从而使整个程序运行起来。 main函数结束了，整个程序也就结束了。 由此可见，写BDL程序，就是写main函数。
- 简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
- 对于BDL语言，定义函数的语法规则如下：
+简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
+对于BDL语言，定义函数的语法规则如下：
 function 函数名称(参数1，参数2)函数体return 返回值end function 对比上面的语法规则可以看出，在main这一行中，main是函数名称。 函数可以是BDL语言系统提供的系统函数，也可以是用户自己编写的函数。 用户自己编写的函数，函数名字可以自行决定。
 例如：
-funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。
+funtion add(x,y) define x,y integer return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。
 类似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
 每个参数都有一个数据类型。本例中的参数的数据类型是integer（整数）。 在function ... end funtion之间的的代码就是add函数实现的功能，被称做函数体。 在函数体里能做哪些事情，也是有规定的。在函数一章里再详细说明。</description>
     </item>
@@ -275,10 +287,11 @@ funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，
       <pubDate>Tue, 29 Aug 2023 15:44:56 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/5.menu/</guid>
-      <description>MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
-MENU 命令#MENU语法类似下面这样:
-MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [comment]  [ HELP help-number ]   COMMAND KEY ( key-name )  option [comment]  [ HELP help-number ]   ON ACTION action-name   ON IDLE idle-seconds  END MENU 说明：
- 在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&amp;rsquo;default&amp;rsquo;。  属性包括:</description>
+      <description>MENU#Genero BDL 所提供的 MENU 命令，是一种环状显示的功能表（Ring Menu）。以下介绍如何操作并设定想要的功能。
+MENU 命令#MENU语法类似下面这样:
+MENU [title] ATTRIBUTE ( control-attributes ) BEFORE MENU COMMAND option [comment] [ HELP help-number ] COMMAND KEY ( key-name ) option [comment] [ HELP help-number ] ON ACTION action-name ON IDLE idle-seconds END MENU 说明：
+在一个 MENU 中，可以定义 menu 的属性，STYLE 属性预设&amp;rsquo;default&amp;rsquo;。 属性包括:
+属性 描述 STYLE = string 定义 menu 型态，值可以为&amp;rsquo;default&amp;rsquo;， &amp;lsquo;dialog&amp;rsquo; or &amp;lsquo;popup&amp;rsquo; COMMENT = string 定义 menu show 出来的讯息 IMAGE = string 定义选单中的图示 BEFORE MENU 可以不写，若有一些特别的控管如隐藏某些menu 功能或参数控管是否进入某menu 功能时， 可在BEFORE MENU 来下一些menu-statemenu 来控管menu 部份。</description>
     </item>
     
     <item>
@@ -287,13 +300,13 @@ MENU [title] ATTRIBUTE ( control-attributes )   BEFORE MENU   COMMAND option [co
       <pubDate>Tue, 29 Aug 2023 15:43:05 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/4.window-form/</guid>
-      <description>Window &amp;amp; Form#在上一章节介绍如何编辑画面，但 WINDOWS 与 FORM 本身是无法执行的，它必须透过 Program 去启动它，以下介绍在程序中启动及显示 WINDOWS &amp;amp; FORM 的指令。
+      <description>Window &amp;amp; Form#在上一章节介绍如何编辑画面，但 WINDOWS 与 FORM 本身是无法执行的，它必须透过 Program 去启动它，以下介绍在程序中启动及显示 WINDOWS &amp;amp; FORM 的指令。
 本节用到画面档时czzi001.4fd，你也可以自己创建一个喜欢的样式。
-WINDOW#OPEN &amp;amp; CLOSE#database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main  open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34;  sleep 10  close window czz_w end main 如果你直接运行发现，并没有打开作业，请通过 debug 调试模式重新运行一下查看。
+WINDOW#OPEN &amp;amp; CLOSE#database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34; sleep 10 close window czz_w end main 如果你直接运行发现，并没有打开作业，请通过 debug 调试模式重新运行一下查看。
 注意
 BDL 中如果没有指定使用操作画面语句块，那么直接打开画面是看不见的。
-运行一下代码：
-database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main  open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34;  call cl_ui_init() -- 这lib函数为初始化画面，如果不调用会出现一个空窗口。  menu &amp;#34;&amp;#34;  on action test  message &amp;#34;test&amp;#34;  on action untest  message &amp;#34;untest&amp;#34;  on action close  exit menu  end menu  close window czz_w end main MENU 就是一个画面操作语句块，后面会讲到，它的功能就是生成一些按钮，tiptop gp 将这些按钮放置到了右侧。</description>
+运行一下代码：
+database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据库 main open window czz_w with form &amp;#34;czz/42f/czzi001&amp;#34; call cl_ui_init() -- 这lib函数为初始化画面，如果不调用会出现一个空窗口。 menu &amp;#34;&amp;#34; on action test message &amp;#34;test&amp;#34; on action untest message &amp;#34;untest&amp;#34; on action close exit menu end menu close window czz_w end main MENU 就是一个画面操作语句块，后面会讲到，它的功能就是生成一些按钮，tiptop gp 将这些按钮放置到了右侧。</description>
     </item>
     
     <item>
@@ -302,16 +315,16 @@ database ds -- 之后的代码默认都通过r.c2 编译，都必须指定数据
       <pubDate>Mon, 28 Aug 2023 20:06:19 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/4.module/</guid>
-      <description>BDL中的模块#BDL源代码从编译主程序、子程序，链接主程序，过程中会产生多个文件。
+      <description>BDL中的模块#BDL源代码从编译主程序、子程序，链接主程序，过程中会产生多个文件。
 所以按照模块可以将BDL程序划分为不同的块，一个程序的执行往往依赖大量的模块。
-globals#如果说不同文件之间的通过链接的形式，组成不同模组最终组成了一个可执行程序。
+globals#如果说不同文件之间的通过链接的形式，组成不同模组最终组成了一个可执行程序。
 那么globals就是使不同模块中共享变量不可缺少的关键字。
 我们已知的变量最大的作用域，也就是函数外，即全局变量。在本文件中所有函数都可以使用。但是随之我们编写程序复杂度增加，我们使用很多不同文件，不同的模块，这个时候即使是全局变量也无法在不同文件中使用。
 globals就是解决这个问题的，在globals中定义的变量，在程序整个运行周期都是可用的，无论你是哪个文件、模块中的函数。
 globals是一个块语句，它有对于的end globals结束语。只能定义在函数外。 它的用法是，在块中包裹变量或者自定义类型&amp;ndash;即define和type语句。
 使用方法有两种
- 在源代码中直接定义  globals  define g_cnt integer end globals main end main 定义一个globals文件，然后在源码中引入文件   文件czzi004.global  globals  define g_cnt integer end globals  文件czzi004.4gl  globals &amp;#34;./czzi004.global&amp;#34; main end main 第二种方式是我们常用的方式，这样不同文件只要引入同一个global文件即可，不需要每次修改globals变量，都修改所有文件。
-练习#观察分析azz/4gl/p_zz.4gl和lib/4gl/cl_null.4gl文件中globals的使用。</description>
+在源代码中直接定义 globals define g_cnt integer end globals main end main 定义一个globals文件，然后在源码中引入文件 文件czzi004.global globals define g_cnt integer end globals 文件czzi004.4gl globals &amp;#34;./czzi004.global&amp;#34; main end main 第二种方式是我们常用的方式，这样不同文件只要引入同一个global文件即可，不需要每次修改globals变量，都修改所有文件。
+练习#观察分析azz/4gl/p_zz.4gl和lib/4gl/cl_null.4gl文件中globals的使用。</description>
     </item>
     
     <item>
@@ -320,9 +333,9 @@ globals是一个块语句，它有对于的end globals结束语。只能定义�
       <pubDate>Mon, 28 Aug 2023 14:21:21 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/15.function_plus/4.practise/</guid>
-      <description>练习#生成一个长度为100的整数数组，并输出数组中可以被5整除的个数# 长度100的整数数组，每个元素都为随机数，大于0且小于1000的整数  提示
+      <description>练习#生成一个长度为100的整数数组，并输出数组中可以被5整除的个数#长度100的整数数组，每个元素都为随机数，大于0且小于1000的整数 提示
 util.Math.rand(100)可以获取小于等于100的随机整数。
-import util main  display util.Math.rand(100) end main 生成随机数功能写为一个函数，且接受两个参数，生成数组的长度和随机数最大整数  生成一个长度为50的整数数组，并从小到大排序，排序后输出到屏幕# 随机数生成请参考上一题  </description>
+import util main display util.Math.rand(100) end main 生成随机数功能写为一个函数，且接受两个参数，生成数组的长度和随机数最大整数 生成一个长度为50的整数数组，并从小到大排序，排序后输出到屏幕#随机数生成请参考上一题 </description>
     </item>
     
     <item>
@@ -331,17 +344,19 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
       <pubDate>Mon, 28 Aug 2023 20:52:53 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/5.preprocessor/</guid>
-      <description>预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
+      <description>预编译#预处理器指令通常用于简化源程序在不同的执行环境中的更改和编译。 源文件中的指令告知预处理器采取特定操作。 例如，预处理器可以替换文本中的标记，将其他文件的内容插入源文件，或通过移除几个部分的文本来取消一部分文件的编译。 在扩展宏之前，将识别并执行预处理器行。 因此，如果宏扩展到类似于预处理器命令的内容，该预处理器无法识别该内容。
 预编译指令在编译之后就不影响程序了，所以不会影响程序运行效能。
 预编译执行可以在程序任何位置写入。
-&amp;amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;amp;include。
+&amp;amp;include 文件引入#在编写函数中，我们有些重复的逻辑，又无法封装为一个函数的场景。为了避免重复代码，我们可以使用&amp;amp;include。
 &amp;amp;include并不是一个语法，而是一个预编译指令&amp;ndash;在编译时就生效。
 &amp;amp;include用法是，后续跟需要导入的源代码文件，当编译时，编译到&amp;amp;include指令行数时，将后面文件原样导入到当前文件中。所以此指令不会影响到运行时效率。在编译后此指令依据不存在了。
 当然这样也有缺点，我们在debug调试的时候，无法通过step in进入到&amp;amp;include中查看了，为排查错误带来了负向影响。
-&amp;amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
-&amp;amp;define MAX_TEST 12 &amp;amp;define HW &amp;#34;Hello world&amp;#34;  MAIN  DEFINE i INTEGER  FOR i=1 TO MAX_TEST  DISPLAY HW  END FOR END MAIN 你甚至可以定义&amp;amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
-&amp;amp;define mian main mian  display &amp;#34;123&amp;#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
-&amp;amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef</description>
+&amp;amp;define 宏定义#宏定义的时将任意一个东西替换为宏定义内容，宏定义并不是定义常量，而是将定义的内容原样替换。
+&amp;amp;define MAX_TEST 12 &amp;amp;define HW &amp;#34;Hello world&amp;#34; MAIN DEFINE i INTEGER FOR i=1 TO MAX_TEST DISPLAY HW END FOR END MAIN 你甚至可以定义&amp;amp;define mian main 这样你代码中所有的mian都会替换为main。而替换后的main可以正常使用。
+&amp;amp;define mian main mian display &amp;#34;123&amp;#34; end main 字符串替换符号##在宏定义中可以使用#，类似参数传递，会将内容转化为字符串
+&amp;amp;define disp(x) DISPLAY #x disp(abcdef) 如以上代码将输出abcdef
+标记粘贴运算 ###在宏定义中使用##可以将两个标记合并。
+&amp;amp;define disp(x) DISPLAY ok##x main define ok34 string let ok34 =&amp;#34;ok is ok !</description>
     </item>
     
     <item>
@@ -350,11 +365,11 @@ import util main  display util.Math.rand(100) end main 生成随机数功能�
       <pubDate>Tue, 29 Aug 2023 15:45:32 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/6.display/</guid>
-      <description>DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
+      <description>DISPLAY#在之前终端执行程序时，我们一直使用DISPLAY讲字符串显示到终端。 在程序升级到GUI版本后，我们不需要再回去看终端了，DISPLAY有了新的用法。
 注意
 因为BDL中，表格和非表格的控件方式有明显区别，所以讲非表格控件称为表单,表格称为表格。这并不是通用的定义，仅为了在本教程中方便区分两种。
- 表格 表单  DISPLAY 表单#4fd文件
-database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40),  DateEdit1 date,  Edit1 varchar(40),  CheckBox1 varchar(40)  end record  open window act_w with form &amp;#34;czz/42f/czzi001&amp;#34;   menu &amp;#39;&amp;#39;  on action quit  exit menu  on action setvalue  let sr.FFLabel1 = &amp;#39;FFLabel1 &amp;#39;  let sr.</description>
+表格 表单 DISPLAY 表单#4fd文件
+database ds main define sr record FFLabel1 varchar(40), ComboBox1 varchar(40), DateEdit1 date, Edit1 varchar(40), CheckBox1 varchar(40) end record open window act_w with form &amp;#34;czz/42f/czzi001&amp;#34; menu &amp;#39;&amp;#39; on action quit exit menu on action setvalue let sr.FFLabel1 = &amp;#39;FFLabel1 &amp;#39; let sr.ComboBox1 = &amp;#39;Item2&amp;#39; let sr.DateEdit1 = today let sr.Edit1 = &amp;#39;Edit1&amp;#39; let sr.CheckBox1 = &amp;#39;1&amp;#39; on action dispall display by name sr.</description>
     </item>
     
     <item>
@@ -363,7 +378,21 @@ database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40)
       <pubDate>Tue, 29 Aug 2023 08:13:19 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/16.module/6.practise/</guid>
-      <description>练习#使用cl_null()、cl_replace_str()、cl_digcut()、cl_get_env()# p_findfunc作业可以查询tiptop gp中常用sub、lib函数 请注意以上函数需要的参数和返回值数量  新增一个lib函数cl_get_runtime_line()# 无参数 以下方式返回一个字符串，czz_czzi001.4gl为当前运行的文件名称，7为代码运行的当前行  file:czz_czzi001.4gl line:7 可以使用__FILE__ __LINE__ 两个宏定义标记  </description>
+      <description>练习#使用cl_null()、cl_replace_str()、cl_digcut()、cl_get_env()#p_findfunc作业可以查询tiptop gp中常用sub、lib函数 请注意以上函数需要的参数和返回值数量 新增一个lib函数cl_get_runtime_line()#无参数 以下方式返回一个字符串，czz_czzi001.4gl为当前运行的文件名称，7为代码运行的当前行 file:czz_czzi001.4gl line:7 可以使用__FILE__ __LINE__ 两个宏定义标记 </description>
+    </item>
+    
+    <item>
+      <title>6.多笔查询</title>
+      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</link>
+      <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
+      
+      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</guid>
+      <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
+这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
+FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
+现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
+让我们利用上一节的FETCH来完成上述需求。
+define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34; -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt fetch absolute l_i ima_sel into l_ima[l_i].</description>
     </item>
     
     <item>
@@ -372,31 +401,20 @@ database ds main  define sr record  FFLabel1 varchar(40),  ComboBox1 varchar(40)
       <pubDate>Tue, 29 Aug 2023 15:45:38 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/7.input/</guid>
-      <description>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
+      <description>INPUT#INPUT 和DISPLAY 一样可以将资料显示在已打开的画面上。
 和DISPLAY不同的地方在于，DISPLAY中用户只能点击按钮操作，而INPUT中每个栏位(entry设置为&amp;rsquo;Y&amp;rsquo;)都变为可输入的状态，用户输入后将输入的内容赋值给INPUT中的变量。
 和DISPLAY和语法一样，INPUT也有两种语法。
-INPUT 表单#INPUT p_employee.no FROM no
+INPUT 表单#INPUT p_employee.no FROM no
 INPUT BY NAME p_employee.no
 以上两种语法和DISPLAY一致，INPUT BY NAME语法中，结构体的成员名称必须和画面中控件名称相同。
 除了以上语法INPUT也支持块语法END INPUT。
-INPUT variable-list FROM field-list  BEFORE INPUT   AFTER INPUT   BEFORE FIELD field-list   AFTER FIELD field-list   ON CHANGE field-list   ON ACTION action-name   ON IDLE idle-seconds  END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
+INPUT variable-list FROM field-list BEFORE INPUT AFTER INPUT BEFORE FIELD field-list AFTER FIELD field-list ON CHANGE field-list ON ACTION action-name ON IDLE idle-seconds END INPUT 因为在表单录入时，我们需要校验字段值、或者指定字段输入顺序、带出默认值等限制性操作，所以在表单时就提供了块级别语法，在块语法中，我们可以加上我们想限制的语法。
 注意
 块语法中所有内容都是可选的，如果任何语句都没有，那么和不写END INPUT是一样的。
-INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：</description>
-    </item>
-    
-    <item>
-      <title>7.多笔查询</title>
-      <link>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</link>
-      <pubDate>Thu, 24 Aug 2023 16:53:04 +0800</pubDate>
-      
-      <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/6.select-rows/</guid>
-      <description>多笔查询#在上一节中我们学会了多种方式查询数据中数据，且即使多条结果，也能够灵活查询。
-这节我们将重点介绍多笔查询的注意点，和进阶查询语法FOREACH。
-FETCH&amp;ndash;进行多笔查询#在上一节中我们用FETCH可以查询一条数据，也可以查询多比数据。
-现在我们假设有一个需求，查询数据中ima_file中字段ima01以E开头的所以资料。并将查询的结果保存到一个数组中。
-让我们利用上一节的FETCH来完成上述需求。
-define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer define l_sql string  -- 获取查询结果的资料总笔数 let l_sql = &amp;#34;select count(*) from ima_file where ima01 like ? &amp;#34; prepare ima_cnt from l_sql execute ima_cnt into l_cnt using &amp;#34;E%&amp;#34;  -- let l_sql = &amp;#34;select * from ima_file where ima01 like ? &amp;#34; declare ima_sel cursor from l_sql  open ima_sel using &amp;#34;E%&amp;#34; for l_i = 1 to l_cnt  fetch absolute l_i ima_sel into l_ima[l_i].</description>
+INPUT额外支持语法#DISPLAY 中所有语法INPUT都支持，除了之前讲过的语法，还支持以下语法：
+BEFORE FIELD field_name BEFORE FIELD ima01在焦点到ima01字段之前会运行到此处
+AFTER FIELD field_name AFTER FIELD ima01在焦点要离开ima01字段之前会运行
+ON CHANGE field_name ON CHANGE ima01在焦点要离开ima01字段前，如果字段被修改过会运行</description>
     </item>
     
     <item>
@@ -405,11 +423,11 @@ define l_ima dynamic array of record like ima_file.* define l_cnt,l_i integer de
       <pubDate>Tue, 29 Aug 2023 15:45:47 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/8.construct/</guid>
-      <description>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
+      <description>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
 CONSTRUCT运行时，会先清空输入字段的所有资料内容，然后根据录入的内容组成SQL查询条件。
 CONSTRUCT并不区分表单还是表格，因为表格也只能录入第一行资料。
 CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区别，所以放在一起讲
- BY NAME ON  CONSTRUCT BY NAME variable ON column-list  [ ATTRIBUTES ( { display-attribute  | control-attribute }  [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [...] END CONSTRUCT ]  ON FROM  CONSTRUCT variable ON column-list FROM field-list  [ ATTRIBUTES ( { display-attribute  | control-attribute  } [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [.</description>
+BY NAME ON CONSTRUCT BY NAME variable ON column-list [ ATTRIBUTES ( { display-attribute | control-attribute } [,...] ) ] [ HELP help-number ] [ dialog-control-block [...] END CONSTRUCT ] ON FROM CONSTRUCT variable ON column-list FROM field-list [ ATTRIBUTES ( { display-attribute | control-attribute } [,...] ) ] [ HELP help-number ] [ dialog-control-block [...] END CONSTRUCT ] </description>
     </item>
     
     <item>
@@ -418,8 +436,8 @@ CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区�
       <pubDate>Tue, 29 Aug 2023 15:46:01 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/9.practise/</guid>
-      <description>练习#学生成绩录入作业# 功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入  进阶#请将上述资料建立合适的表，并保存到数据库
-利用表格显示学生成绩# 可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择  </description>
+      <description>练习#学生成绩录入作业#功能录入每个学生三门成绩，语文、数学、英语 每次录入完毕在后台显示改学生出成绩 成绩为0~100的整数 学生姓名不能重复录入 进阶#请将上述资料建立合适的表，并保存到数据库
+利用表格显示学生成绩#可修改成绩，但不能修改学生姓名 不可增加、删除 可以查询，学生栏位可以开窗选择 </description>
     </item>
     
   </channel>

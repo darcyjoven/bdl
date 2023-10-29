@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/bite/" />
-
 <title>bite | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/bite/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2814,7 +2813,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>字节和为&ndash;计算机表示数据的方法#程序员编写的程序以及所使用的数据在计算机中是以二进制位序列的方式保存的。 典型的计算机内存段二进制位如下：
+    <p>字节和为&ndash;计算机表示数据的方法#程序员编写的程序以及所使用的数据在计算机中是以二进制位序列的方式保存的。 典型的计算机内存段二进制位如下：
 ...010010101010101010010001100111001100... 上面的二进制位序列中，每个数字，要么是0，要么是1。在计算机中，位（bit）是包含-或者1的一个单元。在物理上，它的值是一负或者一个正电荷。 也就是计算机中通过电压高低来表示以为所含有的值。 如果是0，则用低电压表示；如果是1，则用高电压表示。
 在上述的二进制位序这个层次上，位的集合没有结构，很难解释这些系列的意义。 为了能够从整体上考虑这些位，于是给这些位序列枪架上结构的概念，这样的结构被称为字节（byte）和字（word）。 通常，一个字节由8位构成，而一个字由32位构成，或者说4个字节构成。
 经常可能被问到的一个问题是：“存款有几位数了？”如果回答是4位数，那了不起也就是万元少点。如果回答是6位数，那就是几十万了。 日常生活中，通过十进制的位数，就可以发现要表达的数越大，需要十进制的位数也就越多。
@@ -2822,7 +2821,7 @@ https://github.com/alex-shpak/hugo-book
 26个英文字母可以用26个数字分别对应，如果算上大小写，也就52个数字。再加上英文标点符号和10个数字，总共加起来也不足127个字符。 于是美国有关的标准化组织就出台了所谓的美国标准信息交换码（ASCII编码），同意规定了上述常用符号用那些二进制数来表示。
 如果汉字要在计算机中表示，就没那么简单了。 汉字由上万个，用一个字节表示一个汉字的话，最多只能表示256个汉字，必须使用两个字节才能把所有汉字表示完全。 所以在计算机中，一个汉字用两个字节表示。 假设一篇文章由100个汉字组成，那么至少需要2*100=200个字节表示。
 计算机中物理内存的空间大小是有限的，现在内存条一般是8G大小。 硬盘的空间也有限，现在的硬盘一般都超过了512G大小。 在这里8G 和512G是什么意思呢？ 这里其实是一个简单的单位换算。
-1字节=8位1K字节=1024字节=2&lt;sup&gt;10&lt;/sup&gt;字节，也就是1K=10241M字节=1024K字节=1024*1024字节=2&lt;sup&gt;20&lt;/sup&gt;字节，也就是1M=1024K1G字节=1024M=1024*1024*1024字节=2&lt;sup&gt;30&lt;/sup&gt;字节，也就是1G =1024M 所以如果一个512G大小的硬盘用来全部储存汉字，可以储存多少个字呢？ 512G =512*1024*1024*1024/2个汉字=274,877,906,944个汉字。
+1字节=8位1K字节=1024字节=2&lt;sup&gt;10&lt;/sup&gt;字节，也就是1K=10241M字节=1024K字节=1024*1024字节=2&lt;sup&gt;20&lt;/sup&gt;字节，也就是1M=1024K1G字节=1024M=1024*1024*1024字节=2&lt;sup&gt;30&lt;/sup&gt;字节，也就是1G =1024M所以如果一个512G大小的硬盘用来全部储存汉字，可以储存多少个字呢？ 512G =512*1024*1024*1024/2个汉字=274,877,906,944个汉字。
     </p>
   </article>
   
@@ -2843,7 +2842,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3185,7 +3184,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

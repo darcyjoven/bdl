@@ -3,31 +3,30 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="插入更新删除&ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
+<meta name="description" content="插入更新删除&ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
 不要更新错了库！
- 本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
- 插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
-原生语句# 将要执行SQL语句放到字符串中  let l_sql = &#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&#39;mar-001&#39;,&#39;xxx&#39;,&#39;xxx&#39;)&#34; prepare SQL语句  prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句  execute demo_ins 检查SQL是否执行成功  在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
- define sqlca record  sqlcode integer, -- 报错代码 100 表示未找到 &lt;0表示有错误  sqlerrm string, --错误消息数量  sqlerrp string,  sqlerrd array[6] integer,  -- 1.">
+本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
+插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
+原生语句#将要执行SQL语句放到字符串中 let l_sql = &#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&#39;mar-001&#39;,&#39;xxx&#39;,&#39;xxx&#39;)&#34; prepare SQL语句 prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句 execute demo_ins 检查SQL是否执行成功 在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
+define sqlca record sqlcode integer, -- 报错代码 100 表示未找到 &lt;0表示有错误 sqlerrm string, --错误消息数量 sqlerrp string, sqlerrd array[6] integer, -- 1. 未使用 -- 2. 最后一个Serial或错误代码 -- 3. 最后一条语句处理的行数 -- 4. CPU使用时间 -- 5. SQL文件错误偏移量 -- 6.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="3.插入更新删除" />
-<meta property="og:description" content="插入更新删除&ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
+<meta property="og:description" content="插入更新删除&ndash;BDL操作数据#提前确认#在每次操作数据之前，请确认当前连接的数据库是否正确。
 不要更新错了库！
- 本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
- 插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
-原生语句# 将要执行SQL语句放到字符串中  let l_sql = &#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&#39;mar-001&#39;,&#39;xxx&#39;,&#39;xxx&#39;)&#34; prepare SQL语句  prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句  execute demo_ins 检查SQL是否执行成功  在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
- define sqlca record  sqlcode integer, -- 报错代码 100 表示未找到 &lt;0表示有错误  sqlerrm string, --错误消息数量  sqlerrp string,  sqlerrd array[6] integer,  -- 1." />
+本节内容需要你了解SQL基础语法，如果不了解可以参考此教程一篇文章学会SQL。
+插入INSERT#在BDL中操作数据库有两种方式，一种是直接使用SQL原生语句，另一种是使用BDL的SQL语句。
+原生语句#将要执行SQL语句放到字符串中 let l_sql = &#34;INSERT INTO demo_file (demo001,demo002,demo003) values(&#39;mar-001&#39;,&#39;xxx&#39;,&#39;xxx&#39;)&#34; prepare SQL语句 prepare demo_ins from l_sql -- demo_ins为标识符 执行SQL语句 execute demo_ins 检查SQL是否执行成功 在BDL中有一个特殊的全局变量sqlca用来记录SQL执行情况。
+define sqlca record sqlcode integer, -- 报错代码 100 表示未找到 &lt;0表示有错误 sqlerrm string, --错误消息数量 sqlerrp string, sqlerrd array[6] integer, -- 1. 未使用 -- 2. 最后一个Serial或错误代码 -- 3. 最后一条语句处理的行数 -- 4. CPU使用时间 -- 5. SQL文件错误偏移量 -- 6." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/14.database/3.update-insert-delete/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-08-24T09:33:25+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
-
 <title>3.插入更新删除 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1368,7 +1367,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1381,7 +1380,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1394,7 +1393,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2267,7 +2266,7 @@ graph LR
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/14.database/3.update-insert-delete/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/14.database/3.update-insert-delete/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2278,7 +2277,7 @@ graph LR
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

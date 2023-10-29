@@ -3,31 +3,34 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="二维数组#一维数组常称为向量，本节介绍二维数组。所谓二维数组，最简单的理解是“有两个下标’如果把一维数组理解为一行数据，那么，二维数组可形象地表示为行列结构，如图所示,左侧表示的是一个大小为M的一维数组：
-   A[1] A[2] &hellip; A[M]    右侧表示的是-一个大小为M*N的二维数组：
-   A[0,1] A[0,2] &hellip; A[0,N]     A[1,1] A[1,2] &hellip; A[1,N]   &hellip; &hellip; &hellip; &hellip;   A[M,1] A[M,2] &hellip; A[M,N]    二维数组的定义#和一维数组一样，定义二维数组时，要告诉编译器以下信息：数组名、元素类型、元素的个数。对二维数组来说，元素个数时两位大小的成绩。
+<meta name="description" content="二维数组#一维数组常称为向量，本节介绍二维数组。所谓二维数组，最简单的理解是“有两个下标’如果把一维数组理解为一行数据，那么，二维数组可形象地表示为行列结构，如图所示,左侧表示的是一个大小为M的一维数组：
+A[1] A[2] &hellip; A[M] 右侧表示的是-一个大小为M*N的二维数组：
+A[0,1] A[0,2] &hellip; A[0,N] A[1,1] A[1,2] &hellip; A[1,N] &hellip; &hellip; &hellip; &hellip; A[M,1] A[M,2] &hellip; A[M,N] 二维数组的定义#和一维数组一样，定义二维数组时，要告诉编译器以下信息：数组名、元素类型、元素的个数。对二维数组来说，元素个数时两位大小的成绩。
 动态数组时只要定义数组的维度即可。
 示例如下：
- define a array [2,3] integer -- 定义一个2x3的定长数组，一共有2*3=6个元素。  define b dynamic with dimension 2 of string --定义一个二维的动态字符串数组 定长和动态二维数组都可以访问的语法都是一样的。">
+define a array [2,3] integer -- 定义一个2x3的定长数组，一共有2*3=6个元素。 define b dynamic with dimension 2 of string --定义一个二维的动态字符串数组 定长和动态二维数组都可以访问的语法都是一样的。
+array[m,n] 二维数组应用举例#查看以下代码，演示二维数组的使用方式。
+define score array[6,3] of integer --表示6个学生的3门成绩 define s array[3] of integer --每门课的总成绩 define i , j integer -- 输入总共18门成绩 for i = 1 to 6 prompt sfmt(&#34;请输入第%1位学生的成绩%2：&#34;,i,1) for score[i,1] prompt sfmt(&#34;请输入第%1位学生的成绩%2：&#34;,i,2) for score[i,2] prompt sfmt(&#34;请输入第%1位学生的成绩%2：&#34;,i,3) for score[i,3] end for -- 计算每门课总成绩 for i = 1 to 3 let s[i] = 0 for j = 1 to 6 let s[i] = s[i] &#43; score[j,i] end for end for display &#34;\n平均成绩：&#34; for i = 1 to 3 display sfmt(&#34;第%1门课的平均成绩为%2&#34;,i,(s[i]/6 using &#34;&lt;&lt;&lt;&lt;&lt;&lt;##.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="3.二维数组" />
-<meta property="og:description" content="二维数组#一维数组常称为向量，本节介绍二维数组。所谓二维数组，最简单的理解是“有两个下标’如果把一维数组理解为一行数据，那么，二维数组可形象地表示为行列结构，如图所示,左侧表示的是一个大小为M的一维数组：
-   A[1] A[2] &hellip; A[M]    右侧表示的是-一个大小为M*N的二维数组：
-   A[0,1] A[0,2] &hellip; A[0,N]     A[1,1] A[1,2] &hellip; A[1,N]   &hellip; &hellip; &hellip; &hellip;   A[M,1] A[M,2] &hellip; A[M,N]    二维数组的定义#和一维数组一样，定义二维数组时，要告诉编译器以下信息：数组名、元素类型、元素的个数。对二维数组来说，元素个数时两位大小的成绩。
+<meta property="og:description" content="二维数组#一维数组常称为向量，本节介绍二维数组。所谓二维数组，最简单的理解是“有两个下标’如果把一维数组理解为一行数据，那么，二维数组可形象地表示为行列结构，如图所示,左侧表示的是一个大小为M的一维数组：
+A[1] A[2] &hellip; A[M] 右侧表示的是-一个大小为M*N的二维数组：
+A[0,1] A[0,2] &hellip; A[0,N] A[1,1] A[1,2] &hellip; A[1,N] &hellip; &hellip; &hellip; &hellip; A[M,1] A[M,2] &hellip; A[M,N] 二维数组的定义#和一维数组一样，定义二维数组时，要告诉编译器以下信息：数组名、元素类型、元素的个数。对二维数组来说，元素个数时两位大小的成绩。
 动态数组时只要定义数组的维度即可。
 示例如下：
- define a array [2,3] integer -- 定义一个2x3的定长数组，一共有2*3=6个元素。  define b dynamic with dimension 2 of string --定义一个二维的动态字符串数组 定长和动态二维数组都可以访问的语法都是一样的。" />
+define a array [2,3] integer -- 定义一个2x3的定长数组，一共有2*3=6个元素。 define b dynamic with dimension 2 of string --定义一个二维的动态字符串数组 定长和动态二维数组都可以访问的语法都是一样的。
+array[m,n] 二维数组应用举例#查看以下代码，演示二维数组的使用方式。
+define score array[6,3] of integer --表示6个学生的3门成绩 define s array[3] of integer --每门课的总成绩 define i , j integer -- 输入总共18门成绩 for i = 1 to 6 prompt sfmt(&#34;请输入第%1位学生的成绩%2：&#34;,i,1) for score[i,1] prompt sfmt(&#34;请输入第%1位学生的成绩%2：&#34;,i,2) for score[i,2] prompt sfmt(&#34;请输入第%1位学生的成绩%2：&#34;,i,3) for score[i,3] end for -- 计算每门课总成绩 for i = 1 to 3 let s[i] = 0 for j = 1 to 6 let s[i] = s[i] &#43; score[j,i] end for end for display &#34;\n平均成绩：&#34; for i = 1 to 3 display sfmt(&#34;第%1门课的平均成绩为%2&#34;,i,(s[i]/6 using &#34;&lt;&lt;&lt;&lt;&lt;&lt;##." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/docs/BDL/2.medium/11.array/3.two-dimensional/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-07-20T16:20:31+08:00" />
 <meta property="article:modified_time" content="2023-08-28T21:34:27+08:00" />
-
 <title>3.二维数组 | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -1368,7 +1371,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1381,7 +1384,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1394,7 +1397,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2194,7 +2197,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content.zh/docs/BDL/2.medium/11.array/3.two-dimensional/index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcyjoven/bdl/edit/main/content/docs/BDL/2.medium/11.array/3.two-dimensional/index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -2205,7 +2208,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

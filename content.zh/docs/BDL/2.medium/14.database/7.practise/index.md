@@ -1,10 +1,10 @@
 ---
-title: "6.练习"
+title: "7.练习"
 lastmod: 2023-08-27T15:45:02+08:00
 date: 2023-08-27T15:45:02+08:00
 tags: ["practise"]
 categories: ["practise"]
-weight: 6
+weight: 7
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

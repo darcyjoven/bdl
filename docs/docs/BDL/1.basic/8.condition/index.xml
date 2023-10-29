@@ -4,19 +4,20 @@
     <title>第八章 条件判断-分支结构 on BDL教程</title>
     <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/</link>
     <description>Recent content in 第八章 条件判断-分支结构 on BDL教程</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.if语句--简单条件判断</title>
       <link>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/1.judgment-statement-if/</link>
       <pubDate>Wed, 19 Jul 2023 19:08:57 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/1.judgment-statement-if/</guid>
-      <description>if语句&amp;ndash;简单条件判断#生活中充满了选择，在BDL语言编程中同样如此。 最简单的条件判断语句是if语句，其基本格式为：
-if 判断表达式 then语句1语句2...end if 判断表达式#判断表达式可以是简单的逻辑语句(逻辑表达式或关系表达式)，可以是多个逻辑语句的“与”、“或”、“非”组合，也可以是一般表达式，甚至还可以是一个变量或常量。
+      <description>if语句&amp;ndash;简单条件判断#生活中充满了选择，在BDL语言编程中同样如此。 最简单的条件判断语句是if语句，其基本格式为：
+if 判断表达式 then语句1语句2...end if 判断表达式#判断表达式可以是简单的逻辑语句(逻辑表达式或关系表达式)，可以是多个逻辑语句的“与”、“或”、“非”组合，也可以是一般表达式，甚至还可以是一个变量或常量。
 执行到if结构时，该表达式的值被首先计算，当判断表达式的值不为0 (真) 时，if then后花括号中的结构体代码被执行，否则，跳过if end if中的代码。
 做个形象的比方，在街上购物的时候，看到某件商品，常常会这样想:如果不高于50块，就买下了，否则，就继续逛街。用if结构可表述为:
 if 商品价格&amp;lt;50 then买下它end if 看一下下列代码:
- define price integer  prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price  if price &amp;lt; 50 then  display &amp;#34;\n好，买好了&amp;#34;  end if 当输入的金额小于50时，控制台输出的结果为
+define price integer prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price if price &amp;lt; 50 then display &amp;#34;\n好，买好了&amp;#34; end if 当输入的金额小于50时，控制台输出的结果为
 好，买好了 否则为空。</description>
     </item>
     
@@ -26,13 +27,13 @@ if 商品价格&amp;lt;50 then买下它end if 看一下下列代码:
       <pubDate>Wed, 19 Jul 2023 19:16:40 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/2.if-else/</guid>
-      <description>if else&amp;ndash;两条岔路的选择#还是拿买东西做比方，口袋里只有50块钱，想买一件衣服，衣服的价格标签不见了。这时，你也许会在心里盘算，问一下衣服的价格，如果价格低于50，就说“好，买了”，否则，就说“太贵了，算了”。这种“两条岔路中选一个”的流程，在BDL语言中对应着if else结构。
-关键在else#改写上一章的代码，使用if else 结构，如下：
-define price integer  prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price  if price &amp;lt; 50 then  display &amp;#34;\n好，买好了&amp;#34;  else  displau &amp;#34;\n太贵了，算了&amp;#34;  end if 无论输入多少价格，输出的结果要么是好，买好了，要么是太贵了，算了。
+      <description>if else&amp;ndash;两条岔路的选择#还是拿买东西做比方，口袋里只有50块钱，想买一件衣服，衣服的价格标签不见了。这时，你也许会在心里盘算，问一下衣服的价格，如果价格低于50，就说“好，买了”，否则，就说“太贵了，算了”。这种“两条岔路中选一个”的流程，在BDL语言中对应着if else结构。
+关键在else#改写上一章的代码，使用if else 结构，如下：
+define price integer prompt &amp;#34;请输入商品价格（正整数）：&amp;#34; for price if price &amp;lt; 50 then display &amp;#34;\n好，买好了&amp;#34; else displau &amp;#34;\n太贵了，算了&amp;#34; end if 无论输入多少价格，输出的结果要么是好，买好了，要么是太贵了，算了。
 代码解析
 第一个代码中采用的是if结构，在price超过50的时候不做出任何反应，一声不吭地走开，如此看来，第二个代码中的顾客似乎更礼貌一点， 在price小于50这个 条件不成立时，会输出拒绝信息“太贵了，算了”。
 如果转为流程图如下：
-mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart TDa([&#34;开始&#34;])--b[/&#34;申明变量price，并输出提示信息，请求用户输入&#34;/]b--c[/&#34;接受用户输入&#34;/]c--d{&#34;pricee[&#34;输出：&#39;好，买好了&#39;&#34;]d--&#34;no&#34;--f[&#34;输出：&#39;太贵了，算了&#39;&#34;]e--g([&#34;结束&#34;])f--g当程序流程来到if else结构时，首先计算关键字if后“表达式”的值，如果表达式的值为“真”(不为0)，代码段1被执行，否则，else关 键字后的代码段2被执行。</description>
+flowchart TDa([&#34;开始&#34;])--&gt;b[/&#34;申明变量price，并输出提示信息，请求用户输入&#34;/]b--&gt;c[/&#34;接受用户输入&#34;/]c--&gt;d{&#34;price&lt;50?&#34;}d--&#34;yes&#34;--&gt;e[&#34;输出：&#39;好，买好了&#39;&#34;]d--&#34;no&#34;--&gt;f[&#34;输出：&#39;太贵了，算了&#39;&#34;]e--&gt;g([&#34;结束&#34;])f--&gt;g当程序流程来到if else结构时，首先计算关键字if后“表达式”的值，如果表达式的值为“真”(不为0)，代码段1被执行，否则，else关 键字后的代码段2被执行。</description>
     </item>
     
     <item>
@@ -41,9 +42,10 @@ define price integer  prompt &amp;#34;请输入商品价格（正整数）：&am
       <pubDate>Wed, 19 Jul 2023 19:25:12 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/3.multi-branch/</guid>
-      <description>多分枝语句和分支语句嵌套#讲过了“2选1”， 那如果出现“3选1”， 甚至是“N选1”怎么办?可使用多分支语句和分支语句嵌套。此外，BDL语言还提供了开关语句case,这是一种特殊的选择分支结构，稍后一节会讨论case的用法。本节来看一下分支语句嵌套的问题。
-多分支#用实例说明似乎更好理解，假设需要编制-一个程序，根据学生的得分判定其类别，具体是:少于60分判为D (不及格)，60到74分判为C (一般)， 75到89分判为B (良好)，大于等于90分判为A (优秀)，学习分支结构后读者编写的代码可能如下所示。
- define mark integer  prompt &amp;#34;请输入该学生成绩：&amp;#34; for mark  if mark &amp;gt;= 90 then  display &amp;#34;A&amp;#34;  end if  if mark &amp;gt;= 75 and mark &amp;lt;90 then  display &amp;#34;B&amp;#34;  end if  if mark &amp;gt;= 60 and mark mark &amp;lt;75 then  display &amp;#34;C&amp;#34;  end if  if mark &amp;lt;60 then  display &amp;#34;D&amp;#34;  end if 代码解析</description>
+      <description>多分枝语句和分支语句嵌套#讲过了“2选1”， 那如果出现“3选1”， 甚至是“N选1”怎么办?可使用多分支语句和分支语句嵌套。此外，BDL语言还提供了开关语句case,这是一种特殊的选择分支结构，稍后一节会讨论case的用法。本节来看一下分支语句嵌套的问题。
+多分支#用实例说明似乎更好理解，假设需要编制-一个程序，根据学生的得分判定其类别，具体是:少于60分判为D (不及格)，60到74分判为C (一般)， 75到89分判为B (良好)，大于等于90分判为A (优秀)，学习分支结构后读者编写的代码可能如下所示。
+define mark integer prompt &amp;#34;请输入该学生成绩：&amp;#34; for mark if mark &amp;gt;= 90 then display &amp;#34;A&amp;#34; end if if mark &amp;gt;= 75 and mark &amp;lt;90 then display &amp;#34;B&amp;#34; end if if mark &amp;gt;= 60 and mark mark &amp;lt;75 then display &amp;#34;C&amp;#34; end if if mark &amp;lt;60 then display &amp;#34;D&amp;#34; end if 代码解析
+代码的结果符合要求，但使用4个并列if结构在效率上会大打折扣，画出其流程图，如图所示。 flowchart TDa([&#34;开始&#34;])--&gt;b[&#34;申明变量mark、并输出提示，请用户输入&#34;]b--&gt;c[/&#34;接受用户输入&#34;/]c--&gt;d{&#34;mark&gt;=90?&#34;}d--&#34;</description>
     </item>
     
     <item>
@@ -52,12 +54,12 @@ define price integer  prompt &amp;#34;请输入商品价格（正整数）：&am
       <pubDate>Wed, 19 Jul 2023 19:44:34 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/4.case/</guid>
-      <description>case&amp;ndash;开关语句#用多分支if结构和if结构嵌套都可实现“多选1”,但带来的负面影响是程序的可读性差，面对一大堆的if和if else搅和在一起，很多读代码的人都会觉得头皮发麻，要耐心地去“脱壳&amp;quot;。 实际上，BDL语言还提供了另&amp;ndash;种更简洁的多分支结构，即case结构。
-一般形式#case机构一般形式为:
-case 表达式1  when 常量表达式1  语句1  when 常量表达式2  语句2  when 常量表达式3  语句3  ...  default  语句4 end case 语句执行时，首先对case后的表达式进行计算，将计算的结果逐个与when后的常量表达式进行比较，当表达式的值与某个常量表达式的值相等时，即执行该when后的对应的代码段，如果表达式的值与所有when后的常量均不相同时，则执行default后的语句。
+      <description>case&amp;ndash;开关语句#用多分支if结构和if结构嵌套都可实现“多选1”,但带来的负面影响是程序的可读性差，面对一大堆的if和if else搅和在一起，很多读代码的人都会觉得头皮发麻，要耐心地去“脱壳&amp;quot;。 实际上，BDL语言还提供了另&amp;ndash;种更简洁的多分支结构，即case结构。
+一般形式#case机构一般形式为:
+case 表达式1 when 常量表达式1 语句1 when 常量表达式2 语句2 when 常量表达式3 语句3 ... default 语句4 end case 语句执行时，首先对case后的表达式进行计算，将计算的结果逐个与when后的常量表达式进行比较，当表达式的值与某个常量表达式的值相等时，即执行该when后的对应的代码段，如果表达式的值与所有when后的常量均不相同时，则执行default后的语句。
 case 的算法流程如下：
-mermaid.initialize({&#34;theme&#34;: &#34;neutral&#34;})flowchart TDa[&#34;表达式计算&#34;]--b{&#34;常量表达式1&#34;}b--&#34;no&#34;--c{&#34;常量表达式2&#34;}c--&#34;no&#34;--d{&#34;常量表达式3&#34;}d--&#34;no&#34;--e{&#34;常量表达式n&#34;}e--&#34;no&#34;--f[&#34;defalut:语句m+1&#34;]b--&#34;yes&#34;--g[&#34;语句1&#34;]c--&#34;yes&#34;--h[&#34;语句2&#34;]d--&#34;yes&#34;--i[&#34;语句3&#34;]e--&#34;yes&#34;--j[&#34;语句m&#34;]来看一个具体的应用实例，由用户输入一个1到7之间的数字，程序自动输出对应星期几的英文形式，如输入1，程序输出Monday。如果用户输入的数字不在1到7之间，提示出错，如下:
- define index integer  prompt &amp;#34;请输入一个1到7之间的整数：&amp;#34; for index  display &amp;#34;&amp;#34;  case index  when 1  display &amp;#34;Monday&amp;#34;  when 2  display &amp;#34;Tuesday&amp;#34;  when 3  display &amp;#34;Wednesday&amp;#34;  when 4  display &amp;#34;Thursday&amp;#34;  when 5  display &amp;#34;Friday&amp;#34;  when 6  display &amp;#34;Saturday&amp;#34;  when 7  display &amp;#34;Sunday&amp;#34;  default  display &amp;#34;请检查输入是否正确&amp;#34;  end case 代码解析</description>
+flowchart TDa[&#34;表达式计算&#34;]--&gt;b{&#34;常量表达式1&#34;}b--&#34;no&#34;--&gt;c{&#34;常量表达式2&#34;}c--&#34;no&#34;--&gt;d{&#34;常量表达式3&#34;}d--&#34;no&#34;--&gt;e{&#34;常量表达式n&#34;}e--&#34;no&#34;--&gt;f[&#34;defalut:语句m+1&#34;]b--&#34;yes&#34;--&gt;g[&#34;语句1&#34;]c--&#34;yes&#34;--&gt;h[&#34;语句2&#34;]d--&#34;yes&#34;--&gt;i[&#34;语句3&#34;]e--&#34;yes&#34;--&gt;j[&#34;语句m&#34;]来看一个具体的应用实例，由用户输入一个1到7之间的数字，程序自动输出对应星期几的英文形式，如输入1，程序输出Monday。如果用户输入的数字不在1到7之间，提示出错，如下:
+define index integer prompt &amp;#34;请输入一个1到7之间的整数：&amp;#34; for index display &amp;#34;&amp;#34; case index when 1 display &amp;#34;Monday&amp;#34; when 2 display &amp;#34;Tuesday&amp;#34; when 3 display &amp;#34;Wednesday&amp;#34; when 4 display &amp;#34;Thursday&amp;#34; when 5 display &amp;#34;Friday&amp;#34; when 6 display &amp;#34;Saturday&amp;#34; when 7 display &amp;#34;Sunday&amp;#34; default display &amp;#34;请检查输入是否正确&amp;#34; end case 代码解析</description>
     </item>
     
     <item>
@@ -66,7 +68,7 @@ case 的算法流程如下：
       <pubDate>Wed, 19 Jul 2023 19:58:40 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/8.condition/5.practice/</guid>
-      <description>练习##</description>
+      <description>练习##</description>
     </item>
     
   </channel>

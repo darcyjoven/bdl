@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/case/" />
-
 <title>case | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/case/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2812,12 +2811,12 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>case&ndash;开关语句#用多分支if结构和if结构嵌套都可实现“多选1”,但带来的负面影响是程序的可读性差，面对一大堆的if和if else搅和在一起，很多读代码的人都会觉得头皮发麻，要耐心地去“脱壳&quot;。 实际上，BDL语言还提供了另&ndash;种更简洁的多分支结构，即case结构。
-一般形式#case机构一般形式为:
-case 表达式1  when 常量表达式1  语句1  when 常量表达式2  语句2  when 常量表达式3  语句3  ...  default  语句4 end case 语句执行时，首先对case后的表达式进行计算，将计算的结果逐个与when后的常量表达式进行比较，当表达式的值与某个常量表达式的值相等时，即执行该when后的对应的代码段，如果表达式的值与所有when后的常量均不相同时，则执行default后的语句。
+    <p>case&ndash;开关语句#用多分支if结构和if结构嵌套都可实现“多选1”,但带来的负面影响是程序的可读性差，面对一大堆的if和if else搅和在一起，很多读代码的人都会觉得头皮发麻，要耐心地去“脱壳&quot;。 实际上，BDL语言还提供了另&ndash;种更简洁的多分支结构，即case结构。
+一般形式#case机构一般形式为:
+case 表达式1 when 常量表达式1 语句1 when 常量表达式2 语句2 when 常量表达式3 语句3 ... default 语句4 end case 语句执行时，首先对case后的表达式进行计算，将计算的结果逐个与when后的常量表达式进行比较，当表达式的值与某个常量表达式的值相等时，即执行该when后的对应的代码段，如果表达式的值与所有when后的常量均不相同时，则执行default后的语句。
 case 的算法流程如下：
-mermaid.initialize({"theme": "neutral"})flowchart TDa["表达式计算"]--b{"常量表达式1"}b--"no"--c{"常量表达式2"}c--"no"--d{"常量表达式3"}d--"no"--e{"常量表达式n"}e--"no"--f["defalut:语句m+1"]b--"yes"--g["语句1"]c--"yes"--h["语句2"]d--"yes"--i["语句3"]e--"yes"--j["语句m"]来看一个具体的应用实例，由用户输入一个1到7之间的数字，程序自动输出对应星期几的英文形式，如输入1，程序输出Monday。如果用户输入的数字不在1到7之间，提示出错，如下:
- define index integer  prompt &#34;请输入一个1到7之间的整数：&#34; for index  display &#34;&#34;  case index  when 1  display &#34;Monday&#34;  when 2  display &#34;Tuesday&#34;  when 3  display &#34;Wednesday&#34;  when 4  display &#34;Thursday&#34;  when 5  display &#34;Friday&#34;  when 6  display &#34;Saturday&#34;  when 7  display &#34;Sunday&#34;  default  display &#34;请检查输入是否正确&#34;  end case 代码解析
+flowchart TDa["表达式计算"]-->b{"常量表达式1"}b--"no"-->c{"常量表达式2"}c--"no"-->d{"常量表达式3"}d--"no"-->e{"常量表达式n"}e--"no"-->f["defalut:语句m+1"]b--"yes"-->g["语句1"]c--"yes"-->h["语句2"]d--"yes"-->i["语句3"]e--"yes"-->j["语句m"]来看一个具体的应用实例，由用户输入一个1到7之间的数字，程序自动输出对应星期几的英文形式，如输入1，程序输出Monday。如果用户输入的数字不在1到7之间，提示出错，如下:
+define index integer prompt &#34;请输入一个1到7之间的整数：&#34; for index display &#34;&#34; case index when 1 display &#34;Monday&#34; when 2 display &#34;Tuesday&#34; when 3 display &#34;Wednesday&#34; when 4 display &#34;Thursday&#34; when 5 display &#34;Friday&#34; when 6 display &#34;Saturday&#34; when 7 display &#34;Sunday&#34; default display &#34;请检查输入是否正确&#34; end case 代码解析
         <a href="/docs/BDL/1.basic/8.condition/4.case/">...</a>
       
     </p>
@@ -2840,7 +2839,7 @@ case 的算法流程如下：
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3182,7 +3181,7 @@ case 的算法流程如下：
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

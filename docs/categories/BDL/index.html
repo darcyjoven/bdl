@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/categories/BDL/" />
-
 <title>BDL | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/categories/BDL/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2812,16 +2811,18 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
+    <p>抽象界面#在编程领域中，GUI 界面如何描述一直是桌面程序开发中的一个难题。 在 BDL 中，我们使用 XML 来描述界面，BDL 操作界面作为补充。
 XML是一种标记语言，它并不是编程语言。
 你如果了解HTML，那么你就可以轻松理解XML。XML是一种要求严格的HTML，但他们实际并不存在包含不包含关系。
 在百度首页，按下F12，你能看到如下界面，这就是HTML语言。XML也遵循着类似的结构风格。
-XML 语法# XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
- XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
-名词介绍#&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;note name=&#34;n1&#34; &gt;  &lt;to&gt;Tove&lt;/to&gt;  &lt;from&gt;Jani&lt;/from&gt;  &lt;heading&gt;Reminder&lt;/heading&gt;  &lt;body&gt;Don&#39;t forget me this weekend!&lt;/body&gt; &lt;/note&gt; 以上 XML 代码中，
-  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 是 XML 的申明
-  任何一个 &lt;...&gt;到它的&lt;.../&gt;被称作元素，元素也被称为节点，是同一个意思
- 以下是一个元素   &lt;note name=&#34;n1&#34; &gt;  &lt;to&gt;Tove&lt;/to&gt;  &lt;from&gt;Jani&lt;/from&gt;  &lt;heading&gt;Reminder&lt;/heading&gt;  &lt;body&gt;Don&#39;t forget me this weekend!
+XML 语法#XML 语法仅需要了解即可，并不会要求能够写出一个标准的 XML。只需要了解即可。
+XML的语法非常简单，它由标签组成，标签分为开始标签和结束标签。
+名词介绍#&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;note name=&#34;n1&#34; &gt; &lt;to&gt;Tove&lt;/to&gt; &lt;from&gt;Jani&lt;/from&gt; &lt;heading&gt;Reminder&lt;/heading&gt; &lt;body&gt;Don&#39;t forget me this weekend!&lt;/body&gt; &lt;/note&gt; 以上 XML 代码中，
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 是 XML 的申明
+任何一个 &lt;...&gt;到它的&lt;.../&gt;被称作元素，元素也被称为节点，是同一个意思
+以下是一个元素 &lt;note name=&#34;n1&#34; &gt; &lt;to&gt;Tove&lt;/to&gt; &lt;from&gt;Jani&lt;/from&gt; &lt;heading&gt;Reminder&lt;/heading&gt; &lt;body&gt;Don&#39;t forget me this weekend!&lt;/body&gt; &lt;/note&gt; 以下也是一个元素 &lt;to&gt;Tove&lt;/to&gt; 元素中可以包含元素
+&lt;to&gt;Tove&lt;/to&gt;中Tove是元素to的值
+&lt;note name=&quot;n1&quot; &gt;中name=&quot;n1&quot;被称作属性，name是属性名，n1是属性值
         <a href="/docs/BDL/2.medium/17.interface/1.interface-tree/">...</a>
       
     </p>
@@ -2853,20 +2854,21 @@ XML是一种标记语言，它并不是编程语言。
 
 
 
-    <p>重新回顾编译链接#在第二章时，我们就介绍了r.c2与r.l2编译链接的命令。 还介绍了exe2运行的命令。
+    <p>重新回顾编译链接#在第二章时，我们就介绍了r.c2与r.l2编译链接的命令。 还介绍了exe2运行的命令。
 现在我们新建一个czzi004.4gl程序：
-main  display &#34;program code is czzi004&#34; end main 我们上传在$TOP/czz/4gl目录中，运行r.c2命令：
+main display &#34;program code is czzi004&#34; end main 我们上传在$TOP/czz/4gl目录中，运行r.c2命令：
 如果环境没有问题，将输出类似下面结果:
 czzi004 .............. 编译成功，因为我们没有调用外部函数，所以不用链接也可以运行。
 我们使用exe2命令运行，如没有意外，会出现以下意外：
-这是因为我们在tiptop gp中，未通过p_zz作业建立程序，所以系统找不到执行文件目录。
+这是因为我们在tiptop gp中，未通过p_zz作业建立程序，所以系统找不到执行文件目录。
 我们运行以下命令
 cd $CZZ/42m fglrun czz_czzi004 ... program code is czzi004 成功运行！这是因为我们的可执行文件是在czz/42m目录下，我们来看下42m生成的文件。
 cd $CZZ/42m ls -l *czzi004* -rw-rw-rw- 1 tiptop tiptop 242 Aug 28 14:46 czz_czzi004.42m -rw-rw-r-- 1 tiptop tiptop 52 Aug 28 14:46 czz_czzi004.4gl czz_czzi004.42m是4gl编译后的二进制文件，czz_czzi004.4gl是我们在使用r.d2+debug调式时需要的文件。
 而fglrun命令是真正的BDL执行文件，exe2命令其实是tiptop gp专用的运行命令，所以p_zz中没有录入的程序无法用exe2运行。
 既然运行有底层命令，那么编译、链接自然也有对应的底层命令。
-fglcomp#还是之前的czzi004.4gl文件，我们切换到4gl目录下，使用底层函数编译。
-cd $CZZ/4gl fglcomp czzi004.
+fglcomp#还是之前的czzi004.4gl文件，我们切换到4gl目录下，使用底层函数编译。
+cd $CZZ/4gl fglcomp czzi004.4gl 注意
+使用fglcomp编译时需要指定文件的全名，包括扩展名。
         <a href="/docs/BDL/2.medium/16.module/1.%E9%87%8D%E6%96%B0%E5%9B%9E%E9%A1%BE%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/">...</a>
       
     </p>
@@ -2898,17 +2900,17 @@ cd $CZZ/4gl fglcomp czzi004.
 
 
 
-    <p>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
+    <p>数据库连接#TIPTOP GP/T100 在按照时会配置号数据库，一般为ORACLE DB，也可能是postgresql。
 本章所有内容都是基于ORACLE DB，但大部门内容应该是通用的。
 数据库已经配置的连接可以在文件$FGLPROFILE中看见，这里配置好的数据库都是可以在BDL中使用的。
-连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
+连接数据库#在已有的BDL代码中我们经常见到在main函数外，有一个databse ds语句。
 database就是连接数据库的语句，ds就是要连接的数据库。ds为TIPTOP中一个特殊的数据库，此数据保存了所有表的表结构，和同义词表的数据。
- 同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
- database ds1即可切换到ds1数据库中。
-main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
+同义词值得是不同库之间都可以使用的一个表，但此表实际只保存在ds库，每个库查看的数据内容都是相同的。
+database ds1即可切换到ds1数据库中。
+main funtion main()的区别#main end main 还可以写出function的格式function main() end function。
 这两者在连接数据库时是有区别main end main 会自动连接到 main之外的databse ds数据库。 而function main() end function只会用到databse ds的表结构，而不会自动连接到数据库。
- 使用表结构的方法在下一节将会讲到
- 除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。
+使用表结构的方法在下一节将会讲到
+除此之外他们还有另一个区别main end main需定义在一个模块所有函数之前，而function main() end function的位置没有限制。
     </p>
   </article>
   
@@ -2938,10 +2940,10 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
 
 
 
-    <p>BDL程序全貌#database ds main  display sfmt(&#34;hello world&#34;) end main 代码很短，只有几行就建立一个可运行的程序。 代码虽小，但五脏俱全，纵观整个代码，可以总结如下特点：
-  代码有单词、符号、空白组成。 单词以英语单词为主，有的单词是纯正的英语单词，如main、display、end、database；有的不是如sfmt。代码中的标点符号并不是随意输入的。 每个符号在编程中都有特定含义。 单词于单词之间用空白分割，空白可以是空格，也可以是tab制表符。个数没有限制
-  BDL源码是从上往下阅读，也就是源码的先后顺序是有讲究的。
-  行与行之前可以有空白行，数量也没有限制。 有的行顶格书写，有的却向后退了几个空格，这种后退，成为“缩进”。如何缩进也是有讲究的。 3. 并没有专门的标识标识文件从哪里开始，也没标识文件从哪里结束。从第一个字符开始，文件就开始了，到最后一个字符结束，文件就结束了。
+    <p>BDL程序全貌#database ds main display sfmt(&#34;hello world&#34;) end main 代码很短，只有几行就建立一个可运行的程序。 代码虽小，但五脏俱全，纵观整个代码，可以总结如下特点：
+代码有单词、符号、空白组成。 单词以英语单词为主，有的单词是纯正的英语单词，如main、display、end、database；有的不是如sfmt。代码中的标点符号并不是随意输入的。 每个符号在编程中都有特定含义。 单词于单词之间用空白分割，空白可以是空格，也可以是tab制表符。个数没有限制
+BDL源码是从上往下阅读，也就是源码的先后顺序是有讲究的。
+行与行之前可以有空白行，数量也没有限制。 有的行顶格书写，有的却向后退了几个空格，这种后退，成为“缩进”。如何缩进也是有讲究的。 3. 并没有专门的标识标识文件从哪里开始，也没标识文件从哪里结束。从第一个字符开始，文件就开始了，到最后一个字符结束，文件就结束了。
     </p>
   </article>
   
@@ -2972,17 +2974,21 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
 
 
 
-    <p>控件&amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
- 使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
- 新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
-一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
+    <p>控件&amp;容器#打开genero studio，我的版本为2.40.11，请打开和 ERP 版本相对应的genero studio。
+使用fglform -V可以查看版本，只要大版本一直即可，即2.40.xx
+新建一个 4fd 文件，我这里命名为czzi002.4fd，你可以按照喜好自己行命名。
+一个空的 4fd 文件看起来就是一张空白纸，我们只要将你需要的东西用鼠标拖拽到这张之上即可。
 当然拖拽也是有规律的，否则无法生成你想要的画面，甚至还会报错。
-在顶部菜单中不同名称的按钮，都是一个个控件和容器。
- 控件：  GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
- 容器：  容器是用来包裹控件，让控件已希望的方式展现出来的元素。
-容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
-不同容器清单说明如下：
-   名称 功能说明 可使用的下层容器物件     Grid 简易空白画布 ScrollGrid、Table、GroupBox   ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox   Table 以表格方式显示阵列资料 无   MFArray 以画布方式显示阵列资料 无   GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table   HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table    Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。
+在顶部菜单中不同名称的按钮，都是一个个控件和容器。
+控件： GUI 中数据操作方法的合集叫做控件，它能够对数据进行操作。
+容器： 容器是用来包裹控件，让控件已希望的方式展现出来的元素。
+容器#容器均具有本身的属性及特殊用途，容器间可相互包覆（基本物件除外），以呈现不同的效果。
+不同容器清单说明如下：
+名称 功能说明 可使用的下层容器物件 Grid 简易空白画布 ScrollGrid、Table、GroupBox ScrollGrid 有卷轴的空白画布 ScrollGrid、Table、GroupBox Table 以表格方式显示阵列资料 无 MFArray 以画布方式显示阵列资料 无 GroupBox 将外层加上框线 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table PageControl 以分页方式显示资料 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table VBOX(Vertical layout) 将内含的物件以垂直方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table HBOX(Horizontal layout) 将内含的物件以水平方式排列 VBOX、HBOX、GroupBox、PageControl、Grid、ScrollGrid、Table Grid#可将此容器视为一块空白的画布，布置在上方的元件都可以显示在画面相对位置上。
+Grid 只能处理非阵列资料。Grid 不可以被安排在其他 Grid 容器之内。
+studio
+画面预览
+Floder#当摆放元件空间不足时（或是需要滚动画面，操作上较麻烦时），即可使用切页的功能，以资料夹的形式将资料性质相近的栏位，切分在同样的 page 当中。
         <a href="/docs/BDL/2.medium/17.interface/2.wiget/">...</a>
       
     </p>
@@ -3009,16 +3015,18 @@ main funtion main()的区别#main end main 还可以写出function的格式fu
 
 
 
-    <p>lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
+    <p>lib 和 sub 函数#42x 文件#回顾上一节的练习，调用cl_null()函数，是不是比较简单。
 但是我们来看下一下p_zz.4gl的源码中调用了多少次 lib 函数(lib 函数一般以cl开始，有误差，但误差不大)，$AZZ/4gl目录下。
 cd $AZZ/4gl grep -c &#34;cl&#34; p_zz.4gl ... 265 调用了 265 次 lib 函数，如果按照上一节的办法，我们要找到这 265 个 lib 函数对应的文件，链接后并编译。
 这实在太不方便了，所以 BDL 在链接时其实还隐藏了一个功能。
 不需要额外的命令和源代码，我们依然使用czzi004.4gl和s_czzi004.4gl进行示例。
 我们先删除之前生成的文件，防止影响本次结果。
-cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r   编译 czzi004.4gl和s_czzi004.4gl，和之前一样
-  单独链接 s_czzi004.42m
-  fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m  fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004  一样可以运行，看起来并没有减少步骤。
-但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.
+cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r 编译 czzi004.4gl和s_czzi004.4gl，和之前一样
+单独链接 s_czzi004.42m
+fgllink -o czzi004_sub.42x s_czzi004.42m 编译 czzi004_sub.42x和czzi004.42m fgllink -o czzi004.42r czzi004.42m czzi004_sub.42x fglrun czzi004 一样可以运行，看起来并没有减少步骤。
+但是我们可以将第二步运用到整个 lib 目录下的所有文件，将所有 lib 目录下源代码都链接为lib.42x文件，那么之后不管哪个作业调用多少个 lib 函数，那么我们只要在编译这个新作业后，将lib.42x这个文件和主程序链接以下即可。
+只要当lib目录下哪个文件修改了，才需要重新连接lib.42x文件。
+这一步tiptop gp已经替我们做好了，$LIB/42m目录下有一个lib.42x文件。
         <a href="/docs/BDL/2.medium/16.module/2.lib-sub/">...</a>
       
     </p>
@@ -3045,19 +3053,19 @@ cd $CZZ/4gl rm *czzi004*.42m rm *czzi004*.42r   编译 czzi004.4gl和s_czzi004.4
 
 
 
-    <p>函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
+    <p>函数的返回值#上一节中我们讲到，函数结构由参数和返回值决定。
 这节我们介绍函数的返回值。
-返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
-0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
+返回值个数#和参数一样，函数的返回值个数可以是0，也可以是任意个。
+0个返回值#main 函数就是一个无返回值的参数，没有函数能够接受main函数的返回值。 同时main也是一个没有参数的函数。
 main end main function main() end function 在无返回值的函数中，依然可以使用关键字return，这时return关键字的作用是结束当前函数运行，返回调用函数处。
-任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
+任意数量的返回值#和参数不一样，函数的返回值个数是不需要提前定义好的。在程序执行到return处，才能确定返回值的个数和数据类型。
 所以一个函数在不同情况下调用，返回值的个数有可能不同。
 注意
 返回不同数量的值，影响程序后续维护，除非能够快速解决当前问题，否则建议函数总是返回相同数量的返回值。
 虽然返回个数不会保存，单调用函数时，必须接受每一个返回值，所以调用时，你必须知道这个函数将要返回的返回值的个数。
-返回值的返回，即return后面的常量或者变量，已,作为分隔符。
+返回值的返回，即return后面的常量或者变量，已,作为分隔符。
 例如，以下代码返回2020年的月份，如果当前不是2020年，则返回当前年份和月份。
-main  define yy,mm integer  if year(current) == 2020 then  display currentYM()  else  call currentYM() returning yy,mm  display yy,mm  end if end main function currentYM()  if year(current) != 2020 then  return year(current),month(current)  else  return month(current)  end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。
+main define yy,mm integer if year(current) == 2020 then display currentYM() else call currentYM() returning yy,mm display yy,mm end if end main function currentYM() if year(current) != 2020 then return year(current),month(current) else return month(current) end if end function 返回值类型#字符串、数值#作为基础类型，字符串和数值返回时使用对应的变量调用即可。
         <a href="/docs/BDL/2.medium/15.function_plus/2.parament/">...</a>
       
     </p>
@@ -3089,16 +3097,16 @@ main  define yy,mm integer  if year(current) == 2020 then  display currentYM()  
 
 
 
-    <p>数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
+    <p>数据表结构在 BDL 中的使用#在数据库中，每个表的建立都会产生表结构文件，叫做schema文件。
 在我们使用数据库时，如果你需要大量的数据中的资料，不需要频繁的查询数据中的表结构，通过表结构中字段的数据类型去对应BDL中的数据类型。在BDL中已经为我们做好了这一步，ORACLE中大部分数据类型在BDL中都映射到指定的类型。
 我们只要使用数据库的schema文件，就能通过数据的字段去定义BDL中的数据类型。
 上一章我们学到了function main() end function这种main函数写法，只会使用表结构，而不连接到数据库，指得就是使用schema文件，而不连接到数据库。
-在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
+在 BDL 中使用 schema 定义变量#只要将之前定义变量中的数据类型修改为like ds:table.cloumn 即可定义这个变量类型为 ds 库中 table 这个表的 column 这个字段在数据库中的类型。
 其中ds:库名可以省略，如果省略，表示使用当前已经连接到的库。
 例如:
-database ds main  define l_ima01 like ima_file.ima01  define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
- type_file字段清单如下
-    字段名称 数据类型 字段名称 数据类型     chr1000 varchar2(1000) chr6 varchar2(6)   chr1 varchar2(1) chr50 varchar2(50)   num5 number(5) chr37 varchar2(37)   num20_6 number(20,6) chr9 varchar2(9)   dat date chr12 varchar2(12)   chr18 varchar2(18) chr30 varchar2(30)   num10 number(10) chr14 varchar2(14)   chr8 varchar2(8) chr7 varchar2(7)   chr20 varchar2(20) chr10 varchar2(10)   chr21 varchar2(21) chr100 varchar2(100)   num20 number(20) chr200 varchar2(200)   chr3 varchar2(3) chr300 varchar2(300)   num26_10 number(26,10) chr500 varchar2(500)   chr2 varchar2(2) blob blob   chr4 varchar2(4) num15_3 number(15,3)   chr5 varchar2(5) row_id varchar2(18)    进阶使用&ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。
+database ds main define l_ima01 like ima_file.ima01 define l_ima02 like ima_file.ima02 end main 除了在使用ima_file字段时，可以依据ima_file字段的名称定义，在 TIPTOP 中，常用的字段类型都定义在了type_file中，可以根据 type_file 类型定义我们经常使用的变量，如金额、库存数量、单价这些常用变量。
+type_file字段清单如下
+字段名称 数据类型 字段名称 数据类型 chr1000 varchar2(1000) chr6 varchar2(6) chr1 varchar2(1) chr50 varchar2(50) num5 number(5) chr37 varchar2(37) num20_6 number(20,6) chr9 varchar2(9) dat date chr12 varchar2(12) chr18 varchar2(18) chr30 varchar2(30) num10 number(10) chr14 varchar2(14) chr8 varchar2(8) chr7 varchar2(7) chr20 varchar2(20) chr10 varchar2(10) chr21 varchar2(21) chr100 varchar2(100) num20 number(20) chr200 varchar2(200) chr3 varchar2(3) chr300 varchar2(300) num26_10 number(26,10) chr500 varchar2(500) chr2 varchar2(2) blob blob chr4 varchar2(4) num15_3 number(15,3) chr5 varchar2(5) row_id varchar2(18) 进阶使用&ndash;record#在实际业务中，我们经常使用的场景是，查询一个表每个字段的数据，更新/新增一个表所有字段。
         <a href="/docs/BDL/2.medium/14.database/2.schema/">...</a>
       
     </p>
@@ -3130,19 +3138,17 @@ database ds main  define l_ima01 like ima_file.ima01  define l_ima02 like ima_fi
 
 
 
-    <p>BDL开发环境#本书所有代码运行的环境都在fjs-fgl-2.4版本，开发环境为linux系统。 本书不涉及环境如何部署。
-项目目录结构#tiptop gp 和 t100 都有固定的项目结构，点此查看。 建议你在不影响正式使用的程序前提下，建立或修改程序代码。
-tiptop gp编译#tiptop gp环境中需在代码对应的4gl目录下，运行命令r.c2 czzi001，czzi001是你建立的程序编号。即4gl文件去掉后缀名后的内容。
-连接#tiptop gp连接命令为 r.l2 czzi001，注意：这里的czzi001不是4gl文件程序编号，而是在p_zz中注册的程序。所以在运行r.l2连接之前，你还需要做以下这些步骤。
- 新增p_zz资料 如果你现在还不知道p_zz作业的功能，没关系，现在你可以参考czzi001的内容，将czzi001替换为你的程序编号，czz替换为你的程序编号前三位。   需要注意的时czzi001.4gl 一般放在czz/4gl目录下，同样azzi001.4gl 也放在azz/4gl目录下，在你更进一步理解BDL的目录结构前，就一直按照这种方式建立新程序。
- 点击维护链接资料建立连接资料 (链接和连接是同一种说法的不同翻译)  新建程序时，会提示你无资料，是否建立，这里选择是。 看到下方有一笔路径为$CUST/czz/42m/czz_czzi001.42m的资料。 当后续我们程序更复杂时，会主动添加更多需要的连接资料。
+    <p>BDL开发环境#本书所有代码运行的环境都在fjs-fgl-2.4版本，开发环境为linux系统。 本书不涉及环境如何部署。
+项目目录结构#tiptop gp 和 t100 都有固定的项目结构，点此查看。 建议你在不影响正式使用的程序前提下，建立或修改程序代码。
+tiptop gp编译#tiptop gp环境中需在代码对应的4gl目录下，运行命令r.c2 czzi001，czzi001是你建立的程序编号。即4gl文件去掉后缀名后的内容。
+连接#tiptop gp连接命令为 r.l2 czzi001，注意：这里的czzi001不是4gl文件程序编号，而是在p_zz中注册的程序。所以在运行r.l2连接之前，你还需要做以下这些步骤。
+新增p_zz资料 如果你现在还不知道p_zz作业的功能，没关系，现在你可以参考czzi001的内容，将czzi001替换为你的程序编号，czz替换为你的程序编号前三位。 需要注意的时czzi001.4gl 一般放在czz/4gl目录下，同样azzi001.4gl 也放在azz/4gl目录下，在你更进一步理解BDL的目录结构前，就一直按照这种方式建立新程序。
+点击维护链接资料建立连接资料 (链接和连接是同一种说法的不同翻译) 新建程序时，会提示你无资料，是否建立，这里选择是。 看到下方有一笔路径为$CUST/czz/42m/czz_czzi001.42m的资料。 当后续我们程序更复杂时，会主动添加更多需要的连接资料。
 最后保存时此弹窗的意思，是让你自动连接一次，可以选择是，连接失败也不要仅，只要资料有产生就可以。
-t100编译#开始编辑代码#以上设置好之后，你就可以编辑代码了。
-我用的vs code编辑器，配合Informix 4GL这款插件，所以代码可以高亮，不同的单次有不同的颜色，起到了提醒的作用。
+t100编译#开始编辑代码#以上设置好之后，你就可以编辑代码了。
+我用的vs code编辑器，配合Informix 4GL这款插件，所以代码可以高亮，不同的单次有不同的颜色，起到了提醒的作用。
 除了vscode，t100自带的开发平台T100 design、submlime text、4js官方提供的genero studio等工具也能有高亮样式。
-database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使用数据，所以这里必须先连接数据库 MAIN --主函数 入口点  DISPLAY &#34;Hello World&#34; -- 打印字符串 END MAIN  也许你注意到了，database是小写，MAIN是大写，在BDL语言中，大小写是不区分了，类似于SQL。你甚至了混合使用。
-        <a href="/docs/BDL/1.basic/2.first_code/2.environment_of_BDL/">...</a>
-      
+database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使用数据，所以这里必须先连接数据库 MAIN --主函数 入口点 DISPLAY &#34;Hello World&#34; -- 打印字符串 END MAIN 也许你注意到了，database是小写，MAIN是大写，在BDL语言中，大小写是不区分了，类似于SQL。你甚至了混合使用。
     </p>
   </article>
   
@@ -3172,14 +3178,14 @@ database ds -- 指定数据库，因为t100和tiptop gp有部分功能必须使�
 
 
 
-    <p>画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
+    <p>画面档文件的编译#4fd文件是我们的使用studio开发后保存的文件，但我们无法直接调用这个文件。
 在BDL中我们最终能使用的画面档文件是42f，从4fd到42f还需要经历一个编译的过程。
 4fd 对应代码的文件的4gl
 42f对应代码文件的42m
-per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
+per文件#在上个世纪，和这个世纪初，编写画面档并不是鼠标拖拽这么简单，画面档也需要编写代码实现。
 per就是BDL之前的画面档文件，和4fd不同，per文件是纯代码编写。
-以上4fd文件，转为per描述如下：
-SCHEMA formonly  LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 {   [label1 ]  } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 {   [label2 ]   } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form  ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly.
+以上4fd文件，转为per描述如下：
+SCHEMA formonly LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Page1(text=%&#34;Page1&#34;) Grid Grid2 { [label1 ] } END -- Grid2 END -- Page1 Page Page2(text=%&#34;Page2&#34;) Grid Grid1 { [label2 ] } END -- Grid1- END -- Page2 END -- Folder1 Table Table1 { [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] [edit1 |edit2 ] } END -- Table1 END -- VBox1 END -- Form ATTRIBUTES Label label1:Label1, text=%&#34;Label1&#34;; Label label2:Label2, text=%&#34;Label2&#34;; Edit edit1=formonly.
         <a href="/docs/BDL/2.medium/17.interface/3.fglform/">...</a>
       
     </p>
@@ -3225,7 +3231,7 @@ SCHEMA formonly  LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Pa
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3567,7 +3573,7 @@ SCHEMA formonly  LAYOUT (text=%&#34;Form&#34;) VBox VBox1 Folder Folder1 Page Pa
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

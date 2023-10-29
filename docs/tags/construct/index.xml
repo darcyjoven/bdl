@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/tags/construct/</link>
     <description>Recent content in construct on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 29 Aug 2023 15:45:47 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/tags/construct/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>8.CONSTRUCT</title>
@@ -12,11 +13,11 @@
       <pubDate>Tue, 29 Aug 2023 15:45:47 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/2.medium/17.interface/8.construct/</guid>
-      <description>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
+      <description>CONSTRUCT#为了避免SQL注入安全问题，BDL提供了CONSTRUCT语法，用来输入SQL查询条件的场景。
 CONSTRUCT运行时，会先清空输入字段的所有资料内容，然后根据录入的内容组成SQL查询条件。
 CONSTRUCT并不区分表单还是表格，因为表格也只能录入第一行资料。
 CONSTRUCT 有两种写法，两者只在开头处有区别，块语法中无区别，所以放在一起讲
- BY NAME ON  CONSTRUCT BY NAME variable ON column-list  [ ATTRIBUTES ( { display-attribute  | control-attribute }  [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [...] END CONSTRUCT ]  ON FROM  CONSTRUCT variable ON column-list FROM field-list  [ ATTRIBUTES ( { display-attribute  | control-attribute  } [,...] ) ]  [ HELP help-number ] [ dialog-control-block  [.</description>
+BY NAME ON CONSTRUCT BY NAME variable ON column-list [ ATTRIBUTES ( { display-attribute | control-attribute } [,...] ) ] [ HELP help-number ] [ dialog-control-block [...] END CONSTRUCT ] ON FROM CONSTRUCT variable ON column-list FROM field-list [ ATTRIBUTES ( { display-attribute | control-attribute } [,...] ) ] [ HELP help-number ] [ dialog-control-block [...] END CONSTRUCT ] </description>
     </item>
     
   </channel>

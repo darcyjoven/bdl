@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/main-function/" />
-
 <title>main function | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/main-function/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2812,19 +2811,19 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>main函数&ndash;从哪里开始，到哪里结束#先看以下代码
-main  display sfmt(&#34;hello world&#34;) end main 代码解析
+    <p>main函数&ndash;从哪里开始，到哪里结束#先看以下代码
+main display sfmt(&#34;hello world&#34;) end main 代码解析
 main ...end main这一段是在定义BDL程序的主函数。 函数是可以完成一定功能的子程序。main函数是BDL语言程序的起始执行点。
 每一个BDL程序必须有且仅有一个main函数，它是由程序员提供的。
 请读者思考一个问题:操作系统是如何开始运行调用一个程序的?
 这个问题的意思是操作系统怎么知道一个程序的入口点在哪里?所谓入口点，就是程序的第一条指令。 操作系统调入程序二进制代码到内存后，从哪条指令开始运行程序呢?
 一种办法是从文件第一行开始，一行一行往下执行，直到文件结束。 很多语言就是采用这种方式。 比如QBASIC语言。 这种方法的好处显而易见，人类是怎么阅读的，计算机就是怎么执行的。 但是缺点也很多，当有两个源文件的时候，从哪个文件开始呢? 另一种办法是和运行程序的启动者协商一个规定的入口名字，从这个名字开始进入。这种方法就是BDL语言采用的方法。
 main函数就是BDL程序的入口点。无论整个工程有多少个C源文件，必须编写且只能编写一个main函数。程序就是从main的第一条语句开始执行，然后在main函数中，顺序执行其他语句，在这些语句中，调用其他函数，从而使整个程序运行起来。 main函数结束了，整个程序也就结束了。 由此可见，写BDL程序，就是写main函数。
- 简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
- 对于BDL语言，定义函数的语法规则如下：
+简单地说明一下定义函数的语法。对函数的详细讲解请参考后续章节。
+对于BDL语言，定义函数的语法规则如下：
 function 函数名称(参数1，参数2)函数体return 返回值end function 对比上面的语法规则可以看出，在main这一行中，main是函数名称。 函数可以是BDL语言系统提供的系统函数，也可以是用户自己编写的函数。 用户自己编写的函数，函数名字可以自行决定。
 例如：
-funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。
+funtion add(x,y) define x,y integer return x+y end function 看以上代码，add为函数名，函数名后有小括号对“()，括号里是传递给函数的参数。
 类似初、高中学习的代数里的函数y=f(x)一样，x就是参数，f是函数名称。 参数可以是一个，也可以是多个，也可以没有参数。
 每个参数都有一个数据类型。本例中的参数的数据类型是integer（整数）。 在function ... end funtion之间的的代码就是add函数实现的功能，被称做函数体。 在函数体里能做哪些事情，也是有规定的。在函数一章里再详细说明。
     </p>
@@ -2847,7 +2846,7 @@ funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3189,7 +3188,7 @@ funtion add(x,y)  define x,y integer  return x+y end function 看以上代码，
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

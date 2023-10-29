@@ -9,13 +9,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bdl.darcyjoven.com/tags/dynamic-string/" />
-
 <title>dynamic string | BDL教程</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ac63924880c7cd243ea90c2ad44653a2371275b292c12cd7bd0fcbafe3f6a0f3.css" integrity="sha256-rGOSSIDHzSQ&#43;qQwq1EZTojcSdbKSwSzXvQ/Lr&#43;P2oPM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.031cf50cca118cba86b96b08e580f16d2c324ba752e42562a771f2480cbfe1e3.js" integrity="sha256-Axz1DMoRjLqGuWsI5YDxbSwyS6dS5CVip3HySAy/4eM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.2a46b824243eb115fadd3fc25fa7bcecc7a6e1cde58a859cefb33da8e908351a.js" integrity="sha256-Kka4JCQ&#43;sRX63T/CX6e87Mem4c3lioWc77M9qOkINRo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://bdl.darcyjoven.com/tags/dynamic-string/index.xml" title="BDL教程" />
@@ -1357,7 +1356,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">4.查询单笔资料</a>
+    <a href="/docs/BDL/2.medium/14.database/5.select-single-row/" class="">5.查询单笔资料</a>
   
 
         </li>
@@ -1370,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">6.练习</a>
+    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">6.多笔查询</a>
   
 
         </li>
@@ -1383,7 +1382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/BDL/2.medium/14.database/6.select-rows/" class="">7.多笔查询</a>
+    <a href="/docs/BDL/2.medium/14.database/7.practise/" class="">7.练习</a>
   
 
         </li>
@@ -2377,7 +2376,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -2812,19 +2811,20 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>动态长度字符串#我们知道BDL中可以存放数据类型的类型有好几种，string、char、varchar。text和byte有特殊不再本章讨论范围。
+    <p>动态长度字符串#我们知道BDL中可以存放数据类型的类型有好几种，string、char、varchar。text和byte有特殊不再本章讨论范围。
 对于定长类型varchar、char也不再本章讨论范围内。之后所说字符串特指string类型的字符串。
 所以要处理除了string类型的字符串，需要先转换为string类型。
 如果最大长度允许，string 与char、varchar在大部分地方都可以自动转换。但在SQL语句中无法自动转换。
 注意
 BDL4.01版本之后string类型也可以用于SQL中。
-字符串的方法#字符串的处理，就是通过BDL预定义的方式实现的，因为方法是绑定数据类型，所以char和varchar都是不能调用字符串string的方法的。
-拼接字符串#语法
+字符串的方法#字符串的处理，就是通过BDL预定义的方式实现的，因为方法是绑定数据类型，所以char和varchar都是不能调用字符串string的方法的。
+拼接字符串#语法
 append(a string) returning s string 使用案例
- define s stringlet s = &#34;darcy&#34;let s = s.append(&#34;.joven&#34;) 除了调用方法，拼接字符串还有很多其它方式。
- 逗号拼接   define s string  let s = &#34;darcy&#34;,&#34;.joven&#34; 这是最常用的字符串拼接方法 2. ||拼接
- define s string  let s = &#34;darcyjoven&#34;||&#34;&#39;s blog&#34; 这种方式与逗号拼接区别在于，不能存在空值，有任意一个字符串为空值，最后的结果都为空值 3. sfmt()拼接
- define s string  let s = sfmt(&#34;darcy%1&#34;,&#34;joven&#34;) sfmt()拼接的好处在于：非字符串类型为显示转换。
+define s stringlet s = &#34;darcy&#34;let s = s.append(&#34;.joven&#34;) 除了调用方法，拼接字符串还有很多其它方式。
+逗号拼接 define s string let s = &#34;darcy&#34;,&#34;.joven&#34; 这是最常用的字符串拼接方法 2. ||拼接
+define s string let s = &#34;darcyjoven&#34;||&#34;&#39;s blog&#34; 这种方式与逗号拼接区别在于，不能存在空值，有任意一个字符串为空值，最后的结果都为空值 3. sfmt()拼接
+define s string let s = sfmt(&#34;darcy%1&#34;,&#34;joven&#34;) sfmt()拼接的好处在于：非字符串类型为显示转换。
+字符串比较#equals(s string) return b boolean 使用示例：
         <a href="/docs/BDL/2.medium/12.string/1.dynamic-string/">...</a>
       
     </p>
@@ -2847,7 +2847,7 @@ append(a string) returning s string 使用案例
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -3189,7 +3189,7 @@ append(a string) returning s string 使用案例
       
         <li class="flex justify-between">
           <a href="/tags/input/">input</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">

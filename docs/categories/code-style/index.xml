@@ -5,6 +5,7 @@
     <link>https://bdl.darcyjoven.com/categories/code-style/</link>
     <description>Recent content in code style on BDL教程</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Mon, 17 Jul 2023 16:58:11 +0800</lastBuildDate><atom:link href="https://bdl.darcyjoven.com/categories/code-style/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>9.代码风格</title>
@@ -12,7 +13,7 @@
       <pubDate>Mon, 17 Jul 2023 16:58:11 +0800</pubDate>
       
       <guid>https://bdl.darcyjoven.com/docs/BDL/1.basic/3.composition_of_bdl/9.code-style/</guid>
-      <description>代码风格&amp;ndash;向优秀程序员看齐#所谓代码风格，是编写代码时对代码的排版布局、如何命名代码中的变量名称、函数名称等。 一个优秀的程序员，除了代码质量高、错误少之外，另一个非常重要的标准就是代码风格。
+      <description>代码风格&amp;ndash;向优秀程序员看齐#所谓代码风格，是编写代码时对代码的排版布局、如何命名代码中的变量名称、函数名称等。 一个优秀的程序员，除了代码质量高、错误少之外，另一个非常重要的标准就是代码风格。
 在很多时候，代码风格比程序的效率更加重要，代码风格的好坏可以直接看出一个程序员编程 的素质。
 优秀的代码风格如同一身得体的打扮，能够给人以良好的印象。
 初学程序设计，首先必须建立良好的编程习惯，这其中就包括代码风格。
