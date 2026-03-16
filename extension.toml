@@ -1,0 +1,11 @@
+id = "bdl"
+name = "Business Development Language"
+schema_version = 1
+version = "1.0.0"
+authors = ["darcy"]
+description = "Business Development Language support."
+repository = "https://darcyjoven/darcyjoven/bdl"
+
+[grammars.bdl]
+repository = "https://github.com/darcyjoven/tree-sitter-bdl"
+commit = "5b18b02ee57448545851007db49e22942287dc33"

@@ -1,0 +1,4 @@
+name = "BDL"
+grammar = "bdl"
+path_suffixes = ["4gl","global"]
+line_comments = ["--","#"]
