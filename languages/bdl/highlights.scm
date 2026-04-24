@@ -68,7 +68,7 @@
 ; parameter
 (report
     params:(_) @variable.parameter)
-(call 
+(call
     params:(_) @variable.parameter)
 (function
     params:(_) @variable.parameter)
@@ -152,4 +152,15 @@
     "APPEND"
     "TO"
     "STEP"
+    "BEGIN"
+    "ROLLBACK"
+    "COMMIT"
+    "IMMEDIATE"
+    "DEFER"
+    "RECORD"
+    "END"
+    "INITIALIZE"
 ]@keyword
+
+; 给所有的 sql_body 节点打上一个自定义标签
+(sql_body) @sql_body

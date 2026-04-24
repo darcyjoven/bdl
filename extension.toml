@@ -8,4 +8,4 @@ repository = "https://darcyjoven/darcyjoven/bdl"
 
 [grammars.bdl]
 repository = "https://github.com/darcyjoven/tree-sitter-bdl"
-commit = "5b18b02ee57448545851007db49e22942287dc33"
+commit = "303638b0bdb866c572b2b919d7904740b082a33b"
