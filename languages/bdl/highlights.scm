@@ -8,7 +8,7 @@
 (constant
   const: (identifier) @constant)
 
-(buildin)@constant.builtin
+(builtin) @constant.builtin
 
 (function
     name:(identifier) @function)

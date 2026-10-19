@@ -4,8 +4,8 @@ schema_version = 1
 version = "1.0.0"
 authors = ["darcy"]
 description = "Business Development Language support."
-repository = "https://darcyjoven/darcyjoven/bdl"
+repository = "https://github.com/darcyjoven/bdl"
 
 [grammars.bdl]
 repository = "https://github.com/darcyjoven/tree-sitter-bdl"
-commit = "303638b0bdb866c572b2b919d7904740b082a33b"
+rev = "c832493e7aaf15f134c0ecae2623679bf6332209"

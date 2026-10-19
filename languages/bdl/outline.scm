@@ -3,7 +3,7 @@
 
 
 (display
-  fields: (identifier) @name) @item
+  field: (variable) @name) @item
 
 (menu
     title:(_) @name) @item
